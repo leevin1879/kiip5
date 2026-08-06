@@ -8,5 +8,10 @@
     "id": "round4",
     "file": "round4.json",
     "title": "Mô phỏng KIIP cấp 5 - 5단계 4회"
+  },
+  {
+    "id": "round2",
+    "file": "round2.json",
+    "title": "Mô phỏng KIIP cấp 5 - 5단계 2회"
   }
 ]
