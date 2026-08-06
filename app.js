@@ -188,6 +188,16 @@
           if (correctEl) correctEl.classList.add('correct');
         }
 
+        if (q.explanation) {
+          const label = isCorrect ? 'Vì sao đúng' : 'Giải thích';
+          card.appendChild(el(`
+            <div class="explain-box">
+              <div class="explain-title">${label}</div>
+              <div class="explain-text">${escapeHtml(q.explanation)}</div>
+            </div>
+          `));
+        }
+
         const nextBtn = el(`<button class="primary">${s.index + 1 < s.questions.length ? 'Câu tiếp →' : 'Xem kết quả'}</button>`);
         nextBtn.addEventListener('click', () => {
           if (s.index + 1 < s.questions.length) {
@@ -262,6 +272,14 @@
             <div class="ans-line correct">Đáp án đúng: ${CIRCLE[correctOpt.label]} ${escapeHtml(correctOpt.text)}</div>
           </div>
         `);
+        if (q.explanation) {
+          item.appendChild(el(`
+            <div class="explain-box">
+              <div class="explain-title">Giải thích</div>
+              <div class="explain-text">${escapeHtml(q.explanation)}</div>
+            </div>
+          `));
+        }
         wrap.appendChild(item);
       });
     }
