@@ -160,6 +160,11 @@
     const card = el('<div class="card"></div>');
     if (q.correct_source === 'inferred') {
       card.appendChild(el('<div class="badge">Đáp án do AI suy luận — đề gốc không đánh dấu, nên kiểm tra lại</div>'));
+    } else if (q.correct_source === 'corrected') {
+      card.appendChild(el('<div class="badge">Đáp án đã được sửa lại — khác với chỗ đánh dấu đậm trong file gốc</div>'));
+    }
+    if (q.options_source === 'reconstructed') {
+      card.appendChild(el('<div class="badge badge-warn">Một số phương án nhiễu do AI tự dựng lại — tài liệu gốc không liệt kê đủ 4 đáp án</div>'));
     }
     card.appendChild(el(`<div class="stem">${escapeHtml(String(q.num) + '. ' + q.stem)}</div>`));
 

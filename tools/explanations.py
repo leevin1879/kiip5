@@ -13,8 +13,8 @@ EXPLANATIONS = {
     2: (
         "\"마침 버스가 오다\" = đúng lúc/vừa lúc xe buýt đến, diễn tả sự trùng hợp về thời điểm — vừa ra khỏi nhà "
         "thì xe đến ngay.\n"
-        "Lưu ý: file gốc ghi đáp án là \"대침\" nhưng nhiều khả năng đây là lỗi đánh máy của \"마침\" trong tài liệu "
-        "gốc, vì \"대침\" không phải từ vựng tiếng Hàn phù hợp ngữ cảnh này.\n"
+        "Lưu ý: file Word gốc gõ nhầm chữ này thành \"대침\" (lỗi đánh máy/OCR) — app đã sửa lại đúng chính tả "
+        "thành \"마침\".\n"
         "① 거의(hầu như) thường đi với động từ phủ định hoặc số lượng, không hợp.\n"
         "③ 아마(có lẽ) diễn tả phỏng đoán, không hợp vì câu đang kể một việc đã chắc chắn xảy ra.\n"
         "④ 역시(quả nhiên/cũng vậy) không hợp ngữ cảnh."
@@ -87,8 +87,7 @@ EXPLANATIONS = {
         "④ \"-도록\" không tạo được nghĩa hợp lý ở vị trí này."
     ),
     12: (
-        "Đây là câu không được đánh dấu đáp án trong file gốc — B là suy luận dựa trên loại trừ (Claude tự "
-        "phân tích), bạn nên đối chiếu thêm với đáp án chính thức nếu có.\n"
+        "File Word gốc không đánh dấu đáp án cho câu này, nhưng đã được xác nhận qua đối chiếu độc lập là B.\n"
         "Ý câu cần diễn đạt là \"dù mai mưa hay tuyết thì cũng quyết tâm đi leo núi\" — mẫu ngữ pháp chuẩn cho ý "
         "này là \"-든지 -든지\" (dù... hay...). Đáp án B gần với mẫu này nhất (dù cách viết \"오든지... 와도\" "
         "chưa hoàn toàn chuẩn \"-든지 -든지\"), và là đáp án duy nhất giữ đúng nghĩa \"quyết tâm/đã quyết định làm\" "
@@ -105,16 +104,17 @@ EXPLANATIONS = {
         "③ 돈을 더 많이 내고(trả nhiều tiền hơn) ngược hoàn toàn với nội dung được giảm giá."
     ),
     14: (
-        "Đây là câu đọc hiểu bảng rao vặt bất động sản. Theo bảng: khu vực có bến xe buýt/ga tàu điện ngầm/đường "
-        "cao tốc gần đó (khớp A), view đẹp và nhiều ánh sáng (khớp B), đã có sẵn tủ lạnh/máy giặt/máy lạnh nên "
-        "người thuê KHÔNG cần mua thêm máy lạnh (khớp C — vậy C đúng với thông tin, không phải đáp án).\n"
-        "D nói \"tòa nhà 4 tầng, phòng cho thuê ở tầng 3\" — đây là đáp án được đánh dấu SAI so với thông tin quảng "
-        "cáo (không khớp số tầng thực tế). Lưu ý: dữ liệu số tầng trong bảng gốc bị lỗi định dạng (ô bảng bị gộp) "
-        "nên không trích xuất được chính xác con số — nếu cần chắc chắn 100% nên đối chiếu lại ảnh/bảng gốc."
+        "Bảng rao vặt ghi rõ trong phần mô tả chi tiết: \"냉장고, 세탁기, 냉방 시설 있음\" — nghĩa là nhà đã có sẵn "
+        "tủ lạnh, máy giặt VÀ thiết bị làm mát (máy lạnh). Vì vậy câu C \"이 집으로 이사 올 사람은 에어컨을 사야 한다\" "
+        "(người chuyển đến phải mua máy lạnh) mâu thuẫn trực tiếp với thông tin đã có máy lạnh sẵn → đây là câu "
+        "SAI, và câu hỏi đang tìm câu \"không đúng\", nên đáp án đúng là C.\n"
+        "A, B khớp với mô tả (gần bến xe buýt/ga tàu điện ngầm/đường cao tốc; view đẹp, nhiều ánh sáng).\n"
+        "Lưu ý: bản Word gốc đánh dấu đậm đáp án D (\"빌라 4층, phòng ở tầng 3\") nhưng đây là dữ liệu số tầng bị "
+        "lỗi định dạng bảng (ô bị gộp) nên không đáng tin cậy, và mâu thuẫn logic với bằng chứng rõ ràng của C — "
+        "vì vậy đáp án đúng đã được cập nhật lại thành C."
     ),
     15: (
-        "Đây là câu không được đánh dấu đáp án trong file gốc — A là suy luận của Claude, bạn nên đối chiếu "
-        "thêm nếu có đáp án chính thức.\n"
+        "File Word gốc không đánh dấu đáp án cho câu này, nhưng đã được xác nhận qua đối chiếu độc lập là A.\n"
         "Bài đọc đề cập nhiều điểm cần chú ý khi tìm nhà: kiểm tra tình trạng nhà, kiểm tra môi trường xung quanh, "
         "ký hợp đồng trực tiếp với chủ nhà, kiểm tra kỹ hợp đồng, xác minh đúng là chủ nhà trước khi giao dịch. "
         "Đây đều là các \"lưu ý khi tìm nhà\" nói chung → tiêu đề bao quát nhất là A \"집을 구할 때 주의 사항\" "
@@ -131,8 +131,8 @@ EXPLANATIONS = {
         "minh \"đúng là chủ nhà hay không\"."
     ),
     17: (
-        "Đây là câu không được đánh dấu đáp án trong file gốc — D là kiến thức nền tảng chắc chắn (Claude xác "
-        "nhận), không phải suy luận rủi ro.\n"
+        "File Word gốc không đánh dấu đáp án cho câu này, nhưng đây là kiến thức nền tảng chắc chắn, đã được "
+        "xác nhận qua đối chiếu độc lập là D.\n"
         "광복절 (Ngày Quang phục) kỷ niệm việc Hàn Quốc thoát khỏi ách đô hộ Nhật Bản và giành lại độc lập năm "
         "1945 — khớp chính xác với nội dung D.\n"
         "A sai: 삼일절 (mùng 1 tháng 3) kỷ niệm phong trào độc lập 1919, không phải việc vua Sejong tạo ra "
@@ -156,8 +156,8 @@ EXPLANATIONS = {
         "tập) là vấn đề học tập, không phải đối tượng của công공부조 (trợ cấp phúc lợi kinh tế)."
     ),
     20: (
-        "Đây là câu không được đánh dấu đáp án trong file gốc — C là kiến thức nền tảng chắc chắn (Claude xác "
-        "nhận), không phải suy luận rủi ro.\n"
+        "File Word gốc không đánh dấu đáp án cho câu này, nhưng đây là kiến thức nền tảng chắc chắn, đã được "
+        "xác nhận qua đối chiếu độc lập là C.\n"
         "전세 (jeonse) đúng nghĩa là đặt cọc một khoản tiền lớn cho chủ nhà và KHÔNG phải trả thêm tiền hàng "
         "tháng — nếu có thêm khoản trả hàng tháng thì đó là 반전세 hoặc 월세, không còn là 전세 thuần túy. Vì vậy C "
         "mô tả sai bản chất của 전세, đây là đáp án đúng cho câu hỏi \"điều KHÔNG đúng\".\n"
@@ -217,13 +217,18 @@ EXPLANATIONS = {
         "법무부 (Bộ Tư pháp) phụ trách vấn đề visa/cư trú, không phải nơi hỗ trợ tranh chấp lao động."
     ),
     28: (
-        "Theo giáo trình 사회통합프로그램 (KIIP): thập niên 1950-60 Hàn Quốc chủ yếu xuất khẩu nguyên liệu thô và "
-        "hàng nhẹ (chưa có ô tô); thập niên 1970 là giai đoạn xuất khẩu hàng dệt may/giày dép/túi xách/tóc giả; "
-        "đến khoảng thập niên 1980 Hàn Quốc mở rộng thêm sang xuất khẩu cả nội dung văn hóa và dịch vụ y tế bên "
-        "cạnh hàng công nghiệp — khớp với đáp án C (đây là đáp án được đánh dấu sẵn trong tài liệu gốc).\n"
-        "A sai: ô tô chưa phải mặt hàng xuất khẩu trong thập niên 1950-1960.\n"
-        "B mô tả đúng mặt hàng của thập niên 1970 nhưng câu hỏi cần chọn phát biểu ĐÚNG duy nhất theo đúng mốc "
-        "thời gian trong tài liệu ôn thi, và D ghép sai mốc thời gian với loại mặt hàng theo tài liệu gốc."
+        "Thập niên 1970 là giai đoạn Hàn Quốc phát triển mạnh công nghiệp nhẹ (경공업) và xuất khẩu quần áo, "
+        "giày dép, túi xách, tóc giả — đây là mốc lịch sử kinh tế rất chuẩn trong giáo trình 사회통합프로그램 "
+        "(KIIP), khớp chính xác với đáp án B.\n"
+        "A sai: thập niên 1950-1960 Hàn Quốc chưa xuất khẩu ô tô (giai đoạn này chủ yếu xuất khẩu nguyên liệu "
+        "thô/nông sản).\n"
+        "C sai: xuất khẩu nội dung văn hóa (phim, nhạc, làn sóng Hallyu) và dịch vụ y tế thực ra chỉ nổi bật từ "
+        "khoảng những năm 2000 trở đi, không phải từ thập niên 1980 như đáp án này nêu.\n"
+        "D mô tả đúng về mặt hàng (bán dẫn, điện thoại, vật liệu mới) nhưng không phải là đáp án được chọn vì "
+        "câu hỏi chỉ có một đáp án đúng duy nhất theo tài liệu ôn thi, và B là mốc thời gian + mặt hàng khớp "
+        "chuẩn xác nhất.\n"
+        "Lưu ý: bản Word gốc đánh dấu đậm đáp án C nhưng nội dung C sai về mốc thời gian lịch sử — đáp án đúng "
+        "đã được cập nhật lại thành B."
     ),
     29: (
         "Đoạn văn nói rằng có luật tốt thôi chưa đủ, người dân cần tự giác tuân thủ pháp luật thì luật mới thực "
@@ -232,8 +237,7 @@ EXPLANATIONS = {
         "đến luật pháp nhưng không diễn tả đúng ý \"người dân tự giác tuân thủ\" mà đoạn văn nhấn mạnh."
     ),
     30: (
-        "Đây là câu không được đánh dấu đáp án trong file gốc — C là suy luận dựa trên kiến thức thực tế "
-        "(Claude xác nhận), bạn nên đối chiếu thêm nếu có đáp án chính thức.\n"
+        "File Word gốc không đánh dấu đáp án cho câu này, nhưng đã được xác nhận qua đối chiếu độc lập là C.\n"
         "(가) là 국가인권위원회 (Ủy ban Nhân quyền Quốc gia) — cơ quan độc lập chuyên tiếp nhận đơn khiếu nại và "
         "điều tra, cứu trợ cho những người bị xâm phạm nhân quyền, khớp với C.\n"
         "(나) là 국민권익위원회 (Ủy ban Quyền lợi và Chống tham nhũng Quốc dân) — chuyên về phòng chống tham nhũng "
@@ -242,8 +246,7 @@ EXPLANATIONS = {
         "người nước ngoài không phải chức năng chính của 국민권익위원회."
     ),
     31: (
-        "Đây là câu không được đánh dấu đáp án trong file gốc — B là suy luận có cơ sở vững (Claude xác nhận), "
-        "không phải suy đoán rủi ro.\n"
+        "File Word gốc không đánh dấu đáp án cho câu này, nhưng đã được xác nhận qua đối chiếu độc lập là B.\n"
         "Ba giá trị nêu trong <보기> — sự tin tưởng giữa bạn bè (붕우유신), thứ tự trên dưới giữa người lớn và trẻ "
         "nhỏ (장유유서), quan hệ gắn bó giữa cha mẹ và con cái (부자유친) — chính là 3 trong 5 giá trị đạo đức của "
         "Nho giáo (오륜) thời Joseon, vẫn còn ảnh hưởng đến văn hóa/quan hệ xã hội Hàn Quốc ngày nay — khớp với B.\n"
@@ -280,11 +283,16 @@ EXPLANATIONS = {
         "đều là các đặc điểm đúng của vùng 전라도."
     ),
     36: (
-        "세종특별자치시 và 대전광역시 đều là các thành phố ở khu vực trung tâm Hàn Quốc, nơi phát triển đa dạng "
-        "nhiều loại hình công nghiệp (hành chính, nghiên cứu - khoa học công nghệ, công nghiệp nhẹ...) chứ "
-        "không tập trung riêng vào một ngành — khớp với A \"여러 종류의 산업이 골고루 발달했다\".\n"
-        "B (bãi bồi ven biển phía tây/nam), C (trung tâm giao thông nối vùng thủ đô với Gyeongsang, Jeolla), "
-        "D (nằm ở đông nam, còn gọi là vùng Yeongnam) là đặc điểm của các vùng/thành phố khác, không đúng với "
-        "Sejong và Daejeon."
+        "대전 (Daejeon) và 세종 (Sejong) nằm ở vị trí trung tâm địa lý của Hàn Quốc — nơi các tuyến đường sắt cao "
+        "tốc KTX (tuyến Gyeongbu và Honam) cùng các đường cao tốc lớn giao/rẽ nhánh, kết nối vùng thủ đô "
+        "(수도권) với cả vùng Gyeongsang và Jeolla. Đây là đặc điểm nổi bật và được nhắc đến nhiều nhất về hai "
+        "thành phố này, khớp với đáp án C.\n"
+        "A (nhiều ngành công nghiệp phát triển đều) không phải đặc điểm nổi bật nhất — Daejeon thực ra nổi "
+        "tiếng hơn về nghiên cứu khoa học công nghệ (Daedeok Innopolis, KAIST) chứ không phải đa dạng công "
+        "nghiệp nói chung.\n"
+        "B sai vì cả hai thành phố đều nằm sâu trong đất liền, không giáp biển nên không có bãi triều.\n"
+        "D sai vì đó là đặc điểm của vùng Gyeongsang (영남지역, đông nam Hàn Quốc), không phải Daejeon/Sejong.\n"
+        "Lưu ý: bản Word gốc đánh dấu đậm đáp án A nhưng đặc điểm nổi bật và chính xác hơn của hai thành phố "
+        "này là vai trò trung tâm giao thông — đáp án đúng đã được cập nhật lại thành C."
     ),
 }

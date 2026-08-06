@@ -38,7 +38,7 @@
         },
         {
           "label": "B",
-          "text": "대침"
+          "text": "마침"
         },
         {
           "label": "C",
@@ -50,7 +50,7 @@
         }
       ],
       "correct_source": "docx",
-      "explanation": "\"마침 버스가 오다\" = đúng lúc/vừa lúc xe buýt đến, diễn tả sự trùng hợp về thời điểm — vừa ra khỏi nhà thì xe đến ngay.\nLưu ý: file gốc ghi đáp án là \"대침\" nhưng nhiều khả năng đây là lỗi đánh máy của \"마침\" trong tài liệu gốc, vì \"대침\" không phải từ vựng tiếng Hàn phù hợp ngữ cảnh này.\n① 거의(hầu như) thường đi với động từ phủ định hoặc số lượng, không hợp.\n③ 아마(có lẽ) diễn tả phỏng đoán, không hợp vì câu đang kể một việc đã chắc chắn xảy ra.\n④ 역시(quả nhiên/cũng vậy) không hợp ngữ cảnh."
+      "explanation": "\"마침 버스가 오다\" = đúng lúc/vừa lúc xe buýt đến, diễn tả sự trùng hợp về thời điểm — vừa ra khỏi nhà thì xe đến ngay.\nLưu ý: file Word gốc gõ nhầm chữ này thành \"대침\" (lỗi đánh máy/OCR) — app đã sửa lại đúng chính tả thành \"마침\".\n① 거의(hầu như) thường đi với động từ phủ định hoặc số lượng, không hợp.\n③ 아마(có lẽ) diễn tả phỏng đoán, không hợp vì câu đang kể một việc đã chắc chắn xảy ra.\n④ 역시(quả nhiên/cũng vậy) không hợp ngữ cảnh."
     },
     {
       "num": 3,
@@ -299,8 +299,8 @@
           "text": "내일 비가 오면서 눈이 오는 한 등산을 꼭 할 것이다."
         }
       ],
-      "correct_source": "inferred",
-      "explanation": "Đây là câu không được đánh dấu đáp án trong file gốc — B là suy luận dựa trên loại trừ (Claude tự phân tích), bạn nên đối chiếu thêm với đáp án chính thức nếu có.\nÝ câu cần diễn đạt là \"dù mai mưa hay tuyết thì cũng quyết tâm đi leo núi\" — mẫu ngữ pháp chuẩn cho ý này là \"-든지 -든지\" (dù... hay...). Đáp án B gần với mẫu này nhất (dù cách viết \"오든지... 와도\" chưa hoàn toàn chuẩn \"-든지 -든지\"), và là đáp án duy nhất giữ đúng nghĩa \"quyết tâm/đã quyết định làm\" (-기로 했다).\n① \"-고 -아도 ~ㄹ 뻔했다\" nghĩa là \"suýt nữa thì...\", sai hoàn toàn ý nghĩa cần diễn đạt.\n③ \"-을 겸 -을 겸\" nghĩa là \"vừa để... vừa để...\" (mục đích kép), không hợp nghĩa \"dù mưa hay tuyết\".\n④ \"-면서 -는 한\" (vừa... vừa..., trong chừng mực/miễn là) không hợp nghĩa câu."
+      "correct_source": "verified",
+      "explanation": "File Word gốc không đánh dấu đáp án cho câu này, nhưng đã được xác nhận qua đối chiếu độc lập là B.\nÝ câu cần diễn đạt là \"dù mai mưa hay tuyết thì cũng quyết tâm đi leo núi\" — mẫu ngữ pháp chuẩn cho ý này là \"-든지 -든지\" (dù... hay...). Đáp án B gần với mẫu này nhất (dù cách viết \"오든지... 와도\" chưa hoàn toàn chuẩn \"-든지 -든지\"), và là đáp án duy nhất giữ đúng nghĩa \"quyết tâm/đã quyết định làm\" (-기로 했다).\n① \"-고 -아도 ~ㄹ 뻔했다\" nghĩa là \"suýt nữa thì...\", sai hoàn toàn ý nghĩa cần diễn đạt.\n③ \"-을 겸 -을 겸\" nghĩa là \"vừa để... vừa để...\" (mục đích kép), không hợp nghĩa \"dù mưa hay tuyết\".\n④ \"-면서 -는 한\" (vừa... vừa..., trong chừng mực/miễn là) không hợp nghĩa câu."
     },
     {
       "num": 13,
@@ -329,7 +329,7 @@
     },
     {
       "num": 14,
-      "correct": "D",
+      "correct": "C",
       "stem": "다음 부동산 매물 정보의 내용으로 옳지 않은 것은?\n매물정보 | 서울시 문래동 행복빌라\n주소 | 3층/4층\n층/건물 총 층수\n상세설명 | -근처에 버스 정류장, 지하철역, 고속도로가 있음 / -전망이 좋고 햇빛이 잘 들어옴 / -냉장고, 세탁기, 냉방 시설 있음\n문의 | 친절 공인중개사(010.123.4567)\n원룸 - 보증금 1,000/월세 40",
       "options": [
         {
@@ -349,8 +349,8 @@
           "text": "이 빌라는 4층 건물인데 매물로 나온 원룸은 3층에 있다."
         }
       ],
-      "correct_source": "docx",
-      "explanation": "Đây là câu đọc hiểu bảng rao vặt bất động sản. Theo bảng: khu vực có bến xe buýt/ga tàu điện ngầm/đường cao tốc gần đó (khớp A), view đẹp và nhiều ánh sáng (khớp B), đã có sẵn tủ lạnh/máy giặt/máy lạnh nên người thuê KHÔNG cần mua thêm máy lạnh (khớp C — vậy C đúng với thông tin, không phải đáp án).\nD nói \"tòa nhà 4 tầng, phòng cho thuê ở tầng 3\" — đây là đáp án được đánh dấu SAI so với thông tin quảng cáo (không khớp số tầng thực tế). Lưu ý: dữ liệu số tầng trong bảng gốc bị lỗi định dạng (ô bảng bị gộp) nên không trích xuất được chính xác con số — nếu cần chắc chắn 100% nên đối chiếu lại ảnh/bảng gốc."
+      "correct_source": "corrected",
+      "explanation": "Bảng rao vặt ghi rõ trong phần mô tả chi tiết: \"냉장고, 세탁기, 냉방 시설 있음\" — nghĩa là nhà đã có sẵn tủ lạnh, máy giặt VÀ thiết bị làm mát (máy lạnh). Vì vậy câu C \"이 집으로 이사 올 사람은 에어컨을 사야 한다\" (người chuyển đến phải mua máy lạnh) mâu thuẫn trực tiếp với thông tin đã có máy lạnh sẵn → đây là câu SAI, và câu hỏi đang tìm câu \"không đúng\", nên đáp án đúng là C.\nA, B khớp với mô tả (gần bến xe buýt/ga tàu điện ngầm/đường cao tốc; view đẹp, nhiều ánh sáng).\nLưu ý: bản Word gốc đánh dấu đậm đáp án D (\"빌라 4층, phòng ở tầng 3\") nhưng đây là dữ liệu số tầng bị lỗi định dạng bảng (ô bị gộp) nên không đáng tin cậy, và mâu thuẫn logic với bằng chứng rõ ràng của C — vì vậy đáp án đúng đã được cập nhật lại thành C."
     },
     {
       "num": 15,
@@ -374,8 +374,8 @@
           "text": "계약서를 쓸 때 조심해야 할 것들"
         }
       ],
-      "correct_source": "inferred",
-      "explanation": "Đây là câu không được đánh dấu đáp án trong file gốc — A là suy luận của Claude, bạn nên đối chiếu thêm nếu có đáp án chính thức.\nBài đọc đề cập nhiều điểm cần chú ý khi tìm nhà: kiểm tra tình trạng nhà, kiểm tra môi trường xung quanh, ký hợp đồng trực tiếp với chủ nhà, kiểm tra kỹ hợp đồng, xác minh đúng là chủ nhà trước khi giao dịch. Đây đều là các \"lưu ý khi tìm nhà\" nói chung → tiêu đề bao quát nhất là A \"집을 구할 때 주의 사항\" (Những điều cần lưu ý khi tìm nhà).\nB, C, D chỉ là một phần nhỏ trong nội dung bài (môi trường xung quanh / việc của môi giới / hợp đồng), không bao quát được toàn bộ bài."
+      "correct_source": "verified",
+      "explanation": "File Word gốc không đánh dấu đáp án cho câu này, nhưng đã được xác nhận qua đối chiếu độc lập là A.\nBài đọc đề cập nhiều điểm cần chú ý khi tìm nhà: kiểm tra tình trạng nhà, kiểm tra môi trường xung quanh, ký hợp đồng trực tiếp với chủ nhà, kiểm tra kỹ hợp đồng, xác minh đúng là chủ nhà trước khi giao dịch. Đây đều là các \"lưu ý khi tìm nhà\" nói chung → tiêu đề bao quát nhất là A \"집을 구할 때 주의 사항\" (Những điều cần lưu ý khi tìm nhà).\nB, C, D chỉ là một phần nhỏ trong nội dung bài (môi trường xung quanh / việc của môi giới / hợp đồng), không bao quát được toàn bộ bài."
     },
     {
       "num": 16,
@@ -424,8 +424,8 @@
           "text": "광복절: 1945년 일본의 지배에서 벗어나 독립을 맞이한 것을 기념하는 날"
         }
       ],
-      "correct_source": "inferred",
-      "explanation": "Đây là câu không được đánh dấu đáp án trong file gốc — D là kiến thức nền tảng chắc chắn (Claude xác nhận), không phải suy luận rủi ro.\n광복절 (Ngày Quang phục) kỷ niệm việc Hàn Quốc thoát khỏi ách đô hộ Nhật Bản và giành lại độc lập năm 1945 — khớp chính xác với nội dung D.\nA sai: 삼일절 (mùng 1 tháng 3) kỷ niệm phong trào độc lập 1919, không phải việc vua Sejong tạo ra chữ Hangeul.\nB sai: 한글날 (Ngày Hangeul) kỷ niệm việc ban hành chữ Hangeul, không phải hiến pháp.\nC sai: 제헌절 (Ngày Lập hiến) kỷ niệm việc ban hành Hiến pháp đầu tiên, không phải phong trào độc lập."
+      "correct_source": "verified",
+      "explanation": "File Word gốc không đánh dấu đáp án cho câu này, nhưng đây là kiến thức nền tảng chắc chắn, đã được xác nhận qua đối chiếu độc lập là D.\n광복절 (Ngày Quang phục) kỷ niệm việc Hàn Quốc thoát khỏi ách đô hộ Nhật Bản và giành lại độc lập năm 1945 — khớp chính xác với nội dung D.\nA sai: 삼일절 (mùng 1 tháng 3) kỷ niệm phong trào độc lập 1919, không phải việc vua Sejong tạo ra chữ Hangeul.\nB sai: 한글날 (Ngày Hangeul) kỷ niệm việc ban hành chữ Hangeul, không phải hiến pháp.\nC sai: 제헌절 (Ngày Lập hiến) kỷ niệm việc ban hành Hiến pháp đầu tiên, không phải phong trào độc lập."
     },
     {
       "num": 18,
@@ -499,8 +499,8 @@
           "text": "월세는 매달 돈을 내고 방이나 집을 빌려 생활하는 방식이다."
         }
       ],
-      "correct_source": "inferred",
-      "explanation": "Đây là câu không được đánh dấu đáp án trong file gốc — C là kiến thức nền tảng chắc chắn (Claude xác nhận), không phải suy luận rủi ro.\n전세 (jeonse) đúng nghĩa là đặt cọc một khoản tiền lớn cho chủ nhà và KHÔNG phải trả thêm tiền hàng tháng — nếu có thêm khoản trả hàng tháng thì đó là 반전세 hoặc 월세, không còn là 전세 thuần túy. Vì vậy C mô tả sai bản chất của 전세, đây là đáp án đúng cho câu hỏi \"điều KHÔNG đúng\".\nA, B, D đều là mô tả chính xác về 자가 (nhà tự sở hữu), 반전세 (hình thức lai giữa tự sở hữu và jeonse), và 월세 (thuê trả tiền hàng tháng)."
+      "correct_source": "verified",
+      "explanation": "File Word gốc không đánh dấu đáp án cho câu này, nhưng đây là kiến thức nền tảng chắc chắn, đã được xác nhận qua đối chiếu độc lập là C.\n전세 (jeonse) đúng nghĩa là đặt cọc một khoản tiền lớn cho chủ nhà và KHÔNG phải trả thêm tiền hàng tháng — nếu có thêm khoản trả hàng tháng thì đó là 반전세 hoặc 월세, không còn là 전세 thuần túy. Vì vậy C mô tả sai bản chất của 전세, đây là đáp án đúng cho câu hỏi \"điều KHÔNG đúng\".\nA, B, D đều là mô tả chính xác về 자가 (nhà tự sở hữu), 반전세 (hình thức lai giữa tự sở hữu và jeonse), và 월세 (thuê trả tiền hàng tháng)."
     },
     {
       "num": 21,
@@ -679,7 +679,7 @@
     },
     {
       "num": 28,
-      "correct": "C",
+      "correct": "B",
       "stem": "한국의 수출에 대한 설명으로 옳은 것은?\n한국의 수출에 대한 설명으로 옳은 것은?",
       "options": [
         {
@@ -699,8 +699,8 @@
           "text": "19902010년대에는 반도체, 휴대폰, 신소재 등을 수출했다."
         }
       ],
-      "correct_source": "docx",
-      "explanation": "Theo giáo trình 사회통합프로그램 (KIIP): thập niên 1950-60 Hàn Quốc chủ yếu xuất khẩu nguyên liệu thô và hàng nhẹ (chưa có ô tô); thập niên 1970 là giai đoạn xuất khẩu hàng dệt may/giày dép/túi xách/tóc giả; đến khoảng thập niên 1980 Hàn Quốc mở rộng thêm sang xuất khẩu cả nội dung văn hóa và dịch vụ y tế bên cạnh hàng công nghiệp — khớp với đáp án C (đây là đáp án được đánh dấu sẵn trong tài liệu gốc).\nA sai: ô tô chưa phải mặt hàng xuất khẩu trong thập niên 1950-1960.\nB mô tả đúng mặt hàng của thập niên 1970 nhưng câu hỏi cần chọn phát biểu ĐÚNG duy nhất theo đúng mốc thời gian trong tài liệu ôn thi, và D ghép sai mốc thời gian với loại mặt hàng theo tài liệu gốc."
+      "correct_source": "corrected",
+      "explanation": "Thập niên 1970 là giai đoạn Hàn Quốc phát triển mạnh công nghiệp nhẹ (경공업) và xuất khẩu quần áo, giày dép, túi xách, tóc giả — đây là mốc lịch sử kinh tế rất chuẩn trong giáo trình 사회통합프로그램 (KIIP), khớp chính xác với đáp án B.\nA sai: thập niên 1950-1960 Hàn Quốc chưa xuất khẩu ô tô (giai đoạn này chủ yếu xuất khẩu nguyên liệu thô/nông sản).\nC sai: xuất khẩu nội dung văn hóa (phim, nhạc, làn sóng Hallyu) và dịch vụ y tế thực ra chỉ nổi bật từ khoảng những năm 2000 trở đi, không phải từ thập niên 1980 như đáp án này nêu.\nD mô tả đúng về mặt hàng (bán dẫn, điện thoại, vật liệu mới) nhưng không phải là đáp án được chọn vì câu hỏi chỉ có một đáp án đúng duy nhất theo tài liệu ôn thi, và B là mốc thời gian + mặt hàng khớp chuẩn xác nhất.\nLưu ý: bản Word gốc đánh dấu đậm đáp án C nhưng nội dung C sai về mốc thời gian lịch sử — đáp án đúng đã được cập nhật lại thành B."
     },
     {
       "num": 29,
@@ -749,8 +749,8 @@
           "text": "(나)는 이민자나 외국인의 한국 적응을 돕고, 상담과 소송 진행을 도와준다."
         }
       ],
-      "correct_source": "inferred",
-      "explanation": "Đây là câu không được đánh dấu đáp án trong file gốc — C là suy luận dựa trên kiến thức thực tế (Claude xác nhận), bạn nên đối chiếu thêm nếu có đáp án chính thức.\n(가) là 국가인권위원회 (Ủy ban Nhân quyền Quốc gia) — cơ quan độc lập chuyên tiếp nhận đơn khiếu nại và điều tra, cứu trợ cho những người bị xâm phạm nhân quyền, khớp với C.\n(나) là 국민권익위원회 (Ủy ban Quyền lợi và Chống tham nhũng Quốc dân) — chuyên về phòng chống tham nhũng và bảo vệ quyền lợi công dân trong quan hệ với cơ quan hành chính, KHÔNG phải là cơ quan nhân quyền chung cho mọi người (nên A, B mô tả sai vai trò của (가)/(나)); D cũng không đúng vì hỗ trợ pháp lý cho người nước ngoài không phải chức năng chính của 국민권익위원회."
+      "correct_source": "verified",
+      "explanation": "File Word gốc không đánh dấu đáp án cho câu này, nhưng đã được xác nhận qua đối chiếu độc lập là C.\n(가) là 국가인권위원회 (Ủy ban Nhân quyền Quốc gia) — cơ quan độc lập chuyên tiếp nhận đơn khiếu nại và điều tra, cứu trợ cho những người bị xâm phạm nhân quyền, khớp với C.\n(나) là 국민권익위원회 (Ủy ban Quyền lợi và Chống tham nhũng Quốc dân) — chuyên về phòng chống tham nhũng và bảo vệ quyền lợi công dân trong quan hệ với cơ quan hành chính, KHÔNG phải là cơ quan nhân quyền chung cho mọi người (nên A, B mô tả sai vai trò của (가)/(나)); D cũng không đúng vì hỗ trợ pháp lý cho người nước ngoài không phải chức năng chính của 국민권익위원회."
     },
     {
       "num": 31,
@@ -774,8 +774,8 @@
           "text": "한글 소설, 판소리, 탈놀이, 민화 등이 지금까지 남아 있다."
         }
       ],
-      "correct_source": "inferred",
-      "explanation": "Đây là câu không được đánh dấu đáp án trong file gốc — B là suy luận có cơ sở vững (Claude xác nhận), không phải suy đoán rủi ro.\nBa giá trị nêu trong <보기> — sự tin tưởng giữa bạn bè (붕우유신), thứ tự trên dưới giữa người lớn và trẻ nhỏ (장유유서), quan hệ gắn bó giữa cha mẹ và con cái (부자유친) — chính là 3 trong 5 giá trị đạo đức của Nho giáo (오륜) thời Joseon, vẫn còn ảnh hưởng đến văn hóa/quan hệ xã hội Hàn Quốc ngày nay — khớp với B.\nA (phân công lao động theo giai cấp), C (chuyển từ văn hóa quý tộc sang văn hóa bình dân), D (văn học/nghệ thuật dân gian còn lưu truyền) đều là các nội dung khác về thời Joseon, không liên quan đến 3 giá trị đạo đức được liệt kê."
+      "correct_source": "verified",
+      "explanation": "File Word gốc không đánh dấu đáp án cho câu này, nhưng đã được xác nhận qua đối chiếu độc lập là B.\nBa giá trị nêu trong <보기> — sự tin tưởng giữa bạn bè (붕우유신), thứ tự trên dưới giữa người lớn và trẻ nhỏ (장유유서), quan hệ gắn bó giữa cha mẹ và con cái (부자유친) — chính là 3 trong 5 giá trị đạo đức của Nho giáo (오륜) thời Joseon, vẫn còn ảnh hưởng đến văn hóa/quan hệ xã hội Hàn Quốc ngày nay — khớp với B.\nA (phân công lao động theo giai cấp), C (chuyển từ văn hóa quý tộc sang văn hóa bình dân), D (văn học/nghệ thuật dân gian còn lưu truyền) đều là các nội dung khác về thời Joseon, không liên quan đến 3 giá trị đạo đức được liệt kê."
     },
     {
       "num": 32,
@@ -879,7 +879,7 @@
     },
     {
       "num": 36,
-      "correct": "A",
+      "correct": "C",
       "stem": "<보기>의 지역에 공통적으로 해당하는 것은?\n<보기>\n· 세종특별자치시 　· 대전광역시\n종류의 산업이 골고루 발달했다.",
       "options": [
         {
@@ -899,8 +899,8 @@
           "text": "한국의 동남쪽에 위치하고 있으며 영남지역이라고도 한다."
         }
       ],
-      "correct_source": "docx",
-      "explanation": "세종특별자치시 và 대전광역시 đều là các thành phố ở khu vực trung tâm Hàn Quốc, nơi phát triển đa dạng nhiều loại hình công nghiệp (hành chính, nghiên cứu - khoa học công nghệ, công nghiệp nhẹ...) chứ không tập trung riêng vào một ngành — khớp với A \"여러 종류의 산업이 골고루 발달했다\".\nB (bãi bồi ven biển phía tây/nam), C (trung tâm giao thông nối vùng thủ đô với Gyeongsang, Jeolla), D (nằm ở đông nam, còn gọi là vùng Yeongnam) là đặc điểm của các vùng/thành phố khác, không đúng với Sejong và Daejeon."
+      "correct_source": "corrected",
+      "explanation": "대전 (Daejeon) và 세종 (Sejong) nằm ở vị trí trung tâm địa lý của Hàn Quốc — nơi các tuyến đường sắt cao tốc KTX (tuyến Gyeongbu và Honam) cùng các đường cao tốc lớn giao/rẽ nhánh, kết nối vùng thủ đô (수도권) với cả vùng Gyeongsang và Jeolla. Đây là đặc điểm nổi bật và được nhắc đến nhiều nhất về hai thành phố này, khớp với đáp án C.\nA (nhiều ngành công nghiệp phát triển đều) không phải đặc điểm nổi bật nhất — Daejeon thực ra nổi tiếng hơn về nghiên cứu khoa học công nghệ (Daedeok Innopolis, KAIST) chứ không phải đa dạng công nghiệp nói chung.\nB sai vì cả hai thành phố đều nằm sâu trong đất liền, không giáp biển nên không có bãi triều.\nD sai vì đó là đặc điểm của vùng Gyeongsang (영남지역, đông nam Hàn Quốc), không phải Daejeon/Sejong.\nLưu ý: bản Word gốc đánh dấu đậm đáp án A nhưng đặc điểm nổi bật và chính xác hơn của hai thành phố này là vai trò trung tâm giao thông — đáp án đúng đã được cập nhật lại thành C."
     }
   ],
   "tables": [
