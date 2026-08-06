@@ -1,0 +1,258 @@
+# -*- coding: utf-8 -*-
+# Question set built from "5단계_8-지리_종합평가_기출문제_—_Giải_thích_chi_tiết.docx".
+# Unlike the previous 3 files, this one stores each question as a clean table
+# (label / content / correct-or-not / reason), so almost everything is direct
+# from the source. Only Q19-20 (fill-in-the-blank, no options given at all)
+# needed Claude to build the other 3 distractors.
+
+QUESTIONS = [
+    dict(num=1, correct='A', options_source='docx',
+         stem='한국의 기후와 계절에 대한 설명으로 옳은 것은?',
+         options=[
+             ('A', '봄은 꽃샘추위가 있지만 따뜻해지면서 꽃이 핀다.'),
+             ('B', '여름은 무덥고 비가 많이 내리며 황사가 불어오는 날이 많다.'),
+             ('C', '가을은 비가 많이 오지만 화창한 날씨인 경우도 많다.'),
+             ('D', '겨울은 차가운 바람의 영향으로 춥고 눈이 와서 습하다.'),
+         ],
+         explanation=(
+             'Mùa xuân Hàn Quốc có đặc trưng là "꽃샘추위" (đợt rét cuối xuân) nhưng dần ấm lên và hoa nở — khớp với A.\n'
+             'B sai: 황사 (bụi vàng) là hiện tượng của mùa XUÂN, không phải mùa hè.\n'
+             'C sai: mùa thu Hàn Quốc đặc trưng là ÍT mưa, trời trong xanh và hanh khô, không phải "mưa nhiều".\n'
+             'D sai: mùa đông Hàn Quốc lạnh và KHÔ (건조하다), không phải ẩm (습하다).'
+         )),
+    dict(num=2, correct='C', options_source='docx',
+         stem='한국의 지형에 대한 설명으로 옳지 않은 것은?',
+         options=[
+             ('A', '한국은 산이 국토의 약 65%를 차지하고 있는 나라다.'),
+             ('B', '한국의 서쪽과 남쪽에는 강을 따라서 넓은 평야가 있다.'),
+             ('C', '한국은 삼면이 바다로 둘러싸여 있고 다양한 지형을 볼 수 있다.'),
+             ('D', '한국의 남쪽에 있는 제주도에는 한국에서 제일 높은 산인 한라산이 있다.'),
+         ],
+         explanation=(
+             '⚠️ Bản thân tài liệu nguồn tự ghi chú mâu thuẫn ở câu này: đáp án C được đánh dấu là câu "sai", nhưng phần '
+             'lý do lại viết rõ "Hàn Quốc là bán đảo, tiếp giáp biển ở 3 mặt (Đông, Tây, Nam). Câu này thực ra ĐÚNG. Câu '
+             'SAI phải là câu khác." — tức là chính tài liệu nguồn cũng không chắc chắn đâu mới là câu sai thật sự trong '
+             '4 lựa chọn.\n'
+             'A đúng: khoảng 70% lãnh thổ Hàn Quốc là đồi núi (số liệu trong lý do chi tiết ghi ~70%, gần khớp với "65%" '
+             'nêu trong câu).\n'
+             'B đúng: đồng bằng phù sa rộng lớn nằm ở phía Tây và Nam.\n'
+             'D đúng: Hallasan (1.950m) ở đảo Jeju là núi cao nhất Hàn Quốc.\n'
+             'Mình giữ đáp án C theo tài liệu gốc nhưng bạn nên lưu ý câu này có độ tin cậy thấp — nếu gặp bản đề khác, '
+             'đáp án có thể khác.'
+         )),
+    dict(num=3, correct='C', options_source='docx',
+         stem='서울에 대한 설명으로 옳지 않은 것은?',
+         options=[
+             ('A', '문화 시설과 편의시설이 서울에 집중되어 있다.'),
+             ('B', '서울에는 정부의 주요 기관들이 집중되어 있다.'),
+             ('C', '최근에는 관공서를 서울로 옮기는 경우가 많다.'),
+             ('D', '대한민국의 수도로 중앙에 한강이 흐른다.'),
+         ],
+         explanation=(
+             'Thực tế thì ngược lại: các cơ quan chính phủ (관공서) đang được chuyển RA KHỎI Seoul đến Sejong (세종시), '
+             'không phải chuyển VÀO Seoul — nên C là câu SAI, đây là đáp án đúng.\n'
+             'A, B, D đều là mô tả đúng về Seoul: là trung tâm văn hóa/tiện ích cả nước, nhiều cơ quan chính phủ vẫn còn '
+             'ở đây, và sông Hàn chảy qua trung tâm thành phố.\n'
+             'Lưu ý: câu C trong tài liệu gốc ghi là "관광시" (có vẻ lỗi đánh máy) — theo đúng nội dung lý do đưa ra (nói '
+             'về cơ quan chính phủ), từ đúng phải là "관공서" (cơ quan hành chính) — app đã sửa lại cho đúng chính tả.'
+         )),
+    dict(num=4, correct='A', options_source='docx',
+         stem=(
+             '다음 빈칸에 알맞은 답어는? (Tỉnh có dân số đông nhất trong 7 tỉnh, liên tục xây dựng thành phố vệ tinh, cơ '
+             'sở hạ tầng tốt, nhiều ngành công nghiệp phát triển đều)'
+         ),
+         options=[('A', '경기도'), ('B', '충청북도'), ('C', '경상북도'), ('D', '전라남도')],
+         explanation=(
+             'Gyeonggi-do (경기도) là tỉnh đông dân nhất Hàn Quốc, bao quanh Seoul, liên tục xây dựng thành phố mới để '
+             'giải quyết dân số tràn từ Seoul — khớp với A.\n'
+             'B 충청북도 là tỉnh nội địa nhỏ, không phải đông dân nhất. C 경상북도 nằm ở Đông Nam. D 전라남도 nằm ở Tây Nam '
+             '— cả 3 đều không khớp đặc điểm "đông dân nhất, bao quanh Seoul" được mô tả.'
+         )),
+    dict(num=5, correct='A', options_source='docx',
+         stem='인천에 대한 설명으로 옳지 않은 것은?',
+         options=[
+             ('A', '서울과 경기도의 동쪽에 위치해 있으며 인천국제공항이 있다.'),
+             ('B', '무역이 많이 이루어지고 있는 한국의 대표적인 항구 도시다.'),
+             ('C', '2014년에는 인천 아시안게임을 주최하여 이름을 널리 알렸다.'),
+             ('D', '서울을 제외한 수도권의 도시 중 가장 큰 도시로 발달했다.'),
+         ],
+         explanation=(
+             'Incheon nằm ở phía TÂY của Seoul và Gyeonggi, không phải phía Đông — nên A là câu SAI, đây là đáp án đúng.\n'
+             'B, C, D đều là mô tả đúng: Incheon là cảng thương mại lớn nhất Hàn Quốc, tổ chức Đại hội Thể thao châu Á '
+             '2014, và là thành phố lớn nhất vùng thủ đô sau Seoul.'
+         )),
+    dict(num=6, correct='D', options_source='docx',
+         stem='한반도의 동쪽에 위치한 주요산맥으로 남북을 가로지르는 산맥의 이름은?',
+         options=[('A', '차령산맥'), ('B', '설악산맥'), ('C', '호남산맥'), ('D', '태백산맥')],
+         explanation=(
+             'Dãy núi Taebaek (태백산맥) chạy dọc phía Đông bán đảo Triều Tiên từ Bắc xuống Nam, được coi là "xương sống" '
+             'của bán đảo — khớp với D.\n'
+             'A 차령산맥 nằm ở miền Trung. B 설악산맥 không phải tên một dãy núi chạy dọc bán đảo (Seoraksan là một ngọn '
+             'núi cụ thể thuộc dãy Taebaek). C 호남산맥 nằm ở phía Tây Nam.'
+         )),
+    dict(num=7, correct='A', options_source='docx',
+         stem='다음 빈칸에 알맞은 답어는? (Bờ biển đơn giản, nhiều bãi tắm, gần có Seoraksan, Odaesan, du lịch phát triển)',
+         options=[('A', '동해'), ('B', '남해'), ('C', '서해'), ('D', '다도해')],
+         explanation=(
+             'Biển Đông (동해): bờ biển đơn giản (단조롭다), nhiều bãi tắm (해수욕장), gần núi Seoraksan và Odaesan — khớp với A.\n'
+             'B 남해 có bờ biển phức tạp, nhiều đảo nhỏ. C 서해 có bãi bùn rộng lớn, chênh lệch thủy triều lớn. D 다도해 chỉ '
+             'là tên gọi vùng biển nhiều đảo ở Biển Nam, không phải tên một vùng biển riêng.'
+         )),
+    dict(num=8, correct='B', options_source='docx',
+         stem='충청지역에 대한 설명으로 옳지 않은 것은?',
+         options=[
+             ('A', '수도권과 영남, 호남을 이어주며 교통의 중심지 역할을 한다.'),
+             ('B', '충청남도는 남한에서 유일하게 바다를 접하지 않는 지역이다.'),
+             ('C', '이곳에는 국제공항이 있는 청주와 호수로 유명한 충주가 있다.'),
+             ('D', '충청남도에는 옛날 백제의 도읍지였던 공주와 부여 등이 있다.'),
+         ],
+         explanation=(
+             'Tỉnh duy nhất ở miền Nam không giáp biển thực ra là Chungcheongbuk-do (충청북도, Chungcheong Bắc), không '
+             'phải Chungcheongnam-do (충청남도, Chungcheong Nam — tỉnh này giáp Biển Tây) — nên B là câu SAI, đây là đáp '
+             'án đúng.\n'
+             'A, C, D đều là mô tả đúng: Chungcheong là trung tâm giao thông kết nối cả nước, Cheongju có sân bay quốc '
+             'tế và Chungju nổi tiếng với hồ nước, còn Gongju/Buyeo là cố đô của Baekje.'
+         )),
+    dict(num=9, correct='C', options_source='docx',
+         stem=(
+             '다음 빈칸에 알맞은 답어는? (Gọi là vùng Yeongnam, nhiều khu công nghiệp, di sản Silla ở Gyeongju, di sản '
+             'Nho giáo Joseon ở Andong, đảo Dokdo)'
+         ),
+         options=[('A', '강원지역'), ('B', '전라지역'), ('C', '경상지역'), ('D', '충청지역')],
+         explanation=(
+             'Gyeongsang (경상지역, còn gọi là Yeongnam): công nghiệp nặng, di sản Silla ở Gyeongju, di sản Nho giáo ở '
+             'Andong (Dosan Seowon, làng Hahoe), đảo Dokdo — khớp chính xác với C.\n'
+             'A 강원지역 nằm ở Đông Bắc. B 전라지역 nằm ở Tây Nam. D 충청지역 nằm ở miền Trung — không khớp các đặc điểm nêu.'
+         )),
+    dict(num=10, correct='C', options_source='docx',
+         stem='한국의 지역별 특징으로 옳지 않은 것은?',
+         options=[
+             ('A', '제주지역은 바람, 여자, 돌이 많기로 유명하다.'),
+             ('B', '호남지역은 다양한 식재료가 생산되는 곳으로 유명하다.'),
+             ('C', '전라지역의 동해안은 갯벌이 발달하여 조개류 등을 양식한다.'),
+             ('D', '경상지역은 한국의 동남쪽에 위치해 영남지역으로 불리기도 한다.'),
+         ],
+         explanation=(
+             'Bãi bùn (갯벌) phát triển ở bờ biển phía Tây và Nam, không phải bờ biển phía Đông — mà vùng Jeolla vốn chỉ '
+             'giáp Biển Tây và Nam, không hề giáp Biển Đông — nên C là câu SAI, đây là đáp án đúng.\n'
+             'A, B, D đều là mô tả đúng: Jeju nổi tiếng "Tam đa" (đá/gió/phụ nữ), Honam (Jeolla) nổi tiếng về nông sản/'
+             'ẩm thực, và Gyeongsang nằm ở Đông Nam còn gọi là Yeongnam.'
+         )),
+    dict(num=11, correct='D', options_source='docx',
+         stem='수도권의 인구 집중 문제를 해결하고 국가 균형 발전을 위해서 만들어진 도시는?',
+         options=[('A', '서울특별시'), ('B', '인천광역시'), ('C', '제주특별자치도'), ('D', '세종특별자치시')],
+         explanation=(
+             'Sejong (세종특별자치시) được thành lập để chuyển các cơ quan chính phủ ra khỏi Seoul, giải quyết tình trạng '
+             'tập trung dân số và thúc đẩy phát triển cân bằng quốc gia — khớp với D.\n'
+             'A Seoul chính là nguyên nhân gây ra vấn đề tập trung dân số. B Incheon là thành phố cảng, không được lập '
+             'vì lý do này. C Jeju là đảo, không liên quan đến việc giải quyết tập trung dân số thủ đô.'
+         )),
+    dict(num=12, correct='C', options_source='docx',
+         stem='도시와 관련 있는 문화유산을 연결한 것으로 옳은 것은?',
+         options=[
+             ('A', '상주 - 석굴암'),
+             ('B', '영주 - 불국사'),
+             ('C', '안동 - 도산서원'),
+             ('D', '경주 - 하회마을'),
+         ],
+         explanation=(
+             'Dosan Seowon (Thư viện Dosan) nằm ở Andong (안동), là nơi học trò thờ và học theo Yi Hwang (이황) — khớp '
+             'với C.\n'
+             'A, B sai: Seokguram và Bulguksa đều nằm ở Gyeongju (경주), không phải Sangju hay Yeongju.\n'
+             'D sai: làng Hahoe (하회마을) nằm ở Andong, không phải Gyeongju.'
+         )),
+    dict(num=13, correct='D', options_source='docx',
+         stem='다음 중 강원지역의 명소가 아닌 것은?',
+         options=[('A', '설악산'), ('B', '오죽헌'), ('C', '춘천 남이섬'), ('D', '보성 녹차밭')],
+         explanation=(
+             'Boseong (보성) là vùng trồng chè nổi tiếng thuộc tỉnh Jeollanam-do (전라남도), không phải Gangwon — nên D '
+             'không phải danh thắng Gangwon, đây là đáp án đúng.\n'
+             'A, B, C đều là danh thắng thuộc Gangwon: Seoraksan, Ojukheon (Gangneung, nơi sinh của Yi I), và đảo Nami '
+             'ở Chuncheon.'
+         )),
+    dict(num=14, correct='B', options_source='docx',
+         stem='지역별 관광 명소로 옳지 않은 것은?',
+         options=[
+             ('A', '인천 - 강화도 갯벌'),
+             ('B', '전라 - 창녕 우포늪'),
+             ('C', '서울 - 명동, 남대문, 경복궁'),
+             ('D', '강원 - 경포대, 낙산해수욕장'),
+         ],
+         explanation=(
+             'Đầm lầy Upo (창녕 우포늪) nằm ở Changnyeong, tỉnh Gyeongsangnam-do (경상남도), không phải Jeolla — nên B là '
+             'câu SAI, đây là đáp án đúng.\n'
+             'A, C, D đều là mô tả đúng: bãi bùn Ganghwa-do thuộc Incheon, các danh thắng Myeongdong/Namdaemun/'
+             'Gyeongbokgung thuộc Seoul, và Gyeongpodae/bãi biển Naksan thuộc Gangwon.'
+         )),
+    dict(num=15, correct='B', options_source='docx',
+         stem='지역 축제에 대한 설명으로 옳지 않은 것은?',
+         options=[
+             ('A', '전주 세계 소리 축제와 남원 춘향제는 전라지역의 대표적인 축제이다.'),
+             ('B', '경상지역에서는 평창 대관령 눈꽃 축제와 화천 산천어 축제 등이 있다.'),
+             ('C', '충청지역의 대표적인 축제로 백제 문화제, 보령 머드 축제를 꼽을 수 있다.'),
+             ('D', '경기지역의 대표적인 축제로는 이천 도자기 축제와 고양 국제꽃 박람회가 있다.'),
+         ],
+         explanation=(
+             'Pyeongchang (평창) và Hwacheon (화천) đều thuộc Gangwon (강원), không phải Gyeongsang — nên B là câu SAI, '
+             'đây là đáp án đúng.\n'
+             'A, C, D đều là mô tả đúng về các lễ hội đặc trưng của Jeolla, Chungcheong, và Gyeonggi.'
+         )),
+    dict(num=16, correct='B', options_source='docx',
+         stem="제주도는 세 가지가 많기 때문에 '삼다도'라고 불리기도 했는데, 이 세 가지에 해당하지 않는 것은?",
+         options=[('A', '돌 (Đá)'), ('B', '태풍 (Bão)'), ('C', '여자 (Phụ nữ)'), ('D', '바람 (Gió)')],
+         explanation=(
+             'Tam đa (삼다도) của Jeju là: Đá (돌), Gió (바람), Phụ nữ (여자) — Bão (태풍) không thuộc nhóm "Tam đa" này, '
+             'dù Jeju cũng hay có bão — nên B là đáp án đúng cho câu hỏi "không thuộc về".\n'
+             'A, C, D đều là 3 yếu tố chính thức của "Tam đa đảo" (삼다도).'
+         )),
+    dict(num=17, correct='A', options_source='docx',
+         stem='전라지역에 속해 있는 광역시는?',
+         options=[('A', '광주광역시'), ('B', '대전광역시'), ('C', '울산광역시'), ('D', '대구광역시')],
+         explanation=(
+             'Gwangju (광주광역시) là thành phố trực thuộc trung ương duy nhất thuộc vùng Jeolla (Honam) — khớp với A.\n'
+             'B Daejeon thuộc vùng Chungcheong. C Ulsan và D Daegu đều thuộc vùng Gyeongsang.'
+         )),
+    dict(num=18, correct='A', options_source='docx',
+         stem='다음 중 지역과 그 지역의 축제를 연결한 것으로 옳은 것은?',
+         options=[
+             ('A', '강원지역 - 강릉 단오제'),
+             ('B', '전라지역 - 부산 국제 영화제'),
+             ('C', '충청지역 - 광주 디자인 비엔날레'),
+             ('D', '경상지역 - 대전 사이언스 페스티벌'),
+         ],
+         explanation=(
+             'Lễ hội Dano Gangneung (강릉 단오제) là Di sản Văn hóa Phi vật thể của UNESCO, thuộc Gangwon — khớp với A.\n'
+             'B sai: Liên hoan phim Busan (BIFF) thuộc Gyeongsang (Busan), không phải Jeolla.\n'
+             'C sai: Gwangju Design Biennale thuộc Jeolla (Gwangju), không phải Chungcheong.\n'
+             'D sai: Lễ hội Khoa học Daejeon thuộc Chungcheong (Daejeon), không phải Gyeongsang.'
+         )),
+    dict(num=19, correct='C', options_source='reconstructed',
+         stem='한국은 전체적으로 동쪽에 산이 많아서 동쪽이 높고 서쪽은 낮다. 이러한 한국의 지형을 의미하는 말은?',
+         options=[('A', '북고남저'), ('B', '서고동저'), ('C', '동고서저'), ('D', '남고북저')],
+         explanation=(
+             'Địa hình Hàn Quốc có đặc điểm phía Đông cao (nhiều núi, dãy Taebaek) và phía Tây thấp (đồng bằng, giáp '
+             'biển) — đây là đặc điểm địa hình nổi bật nhất của bán đảo Triều Tiên, gọi là 동고서저 (Đông cao Tây thấp, '
+             '東高西低) — khớp với C.\n'
+             'A, B, D là các hoán vị hướng khác của cùng cấu trúc từ, không đúng với đặc điểm địa hình Hàn Quốc.\n'
+             'Lưu ý: tài liệu nguồn chỉ cho biết đáp án đúng dạng điền từ, không có sẵn 4 phương án trắc nghiệm — A, B, '
+             'D là do Claude tự dựng lại theo cùng kiểu thuật ngữ địa lý 4 hướng.'
+         )),
+    dict(num=20, correct='B', options_source='reconstructed',
+         stem=(
+             '국제적인 약속에 따라서 무장이 금지된 지역을 이르는 말로, 남한과 북한 사이에 있는 휴전선을 중심으로 남북으로 '
+             '각각 2km, 좌우로는 250km를 차지하고 있는 곳은?'
+         ),
+         options=[('A', '군사분계선'), ('B', '비무장지대'), ('C', '판문점'), ('D', '휴전선')],
+         explanation=(
+             'Khu vực phi quân sự (비무장지대, DMZ) là vùng đệm dọc theo đường ngừng bắn giữa Hàn Quốc và Bắc Triều Tiên, '
+             'mỗi bên rộng 2km (tổng 4km) và kéo dài khoảng 250km từ Đông sang Tây theo Hiệp định đình chiến 1953 — khớp '
+             'với B.\n'
+             'A 군사분계선 (đường ranh giới quân sự, MDL) là đường CHÍNH GIỮA của khu DMZ, không phải bản thân vùng đệm '
+             'rộng 4km. C 판문점 (Panmunjom) chỉ là MỘT địa điểm cụ thể trong khu DMZ, không phải tên gọi cả vùng. D '
+             '휴전선 (đường ngừng bắn) thường được dùng để chỉ đường ranh giới trung tâm, tương tự MDL, không phải khu '
+             'vực rộng 4km xung quanh nó.\n'
+             'Lưu ý: tài liệu nguồn chỉ cho biết đáp án đúng dạng điền từ, không có sẵn 4 phương án trắc nghiệm — A, C, '
+             'D là do Claude tự dựng lại bằng các thuật ngữ liên quan thực sự tồn tại (dễ gây nhầm lẫn thật) để tăng '
+             'tính thử thách.'
+         )),
+]

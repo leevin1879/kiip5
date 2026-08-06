@@ -8,6 +8,7 @@
     screen: 'home',
     selectedSetId: (window.QUIZ_INDEX && window.QUIZ_INDEX[0]) ? window.QUIZ_INDEX[0].id : null,
     mode: 'all',
+    startFrom: 1,
     session: null,
   };
 
@@ -107,6 +108,30 @@
     });
     wrap.appendChild(modeWrap);
 
+    if (state.mode === 'all') {
+      const data = window.QUIZ_DATA[state.selectedSetId];
+      const max = data.questions.length;
+      if (state.startFrom > max) state.startFrom = 1;
+      const startFromWrap = el(`
+        <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          <div>
+            <div class="title" style="font-weight:600;">Bắt đầu từ câu số</div>
+            <div class="meta">Bỏ qua các câu trước nếu đã làm rồi</div>
+          </div>
+          <input type="number" class="start-from-input" min="1" max="${max}" value="${state.startFrom}">
+        </div>
+      `);
+      const input = startFromWrap.querySelector('input');
+      input.addEventListener('change', () => {
+        let v = parseInt(input.value, 10);
+        if (!v || v < 1) v = 1;
+        if (v > max) v = max;
+        state.startFrom = v;
+        input.value = v;
+      });
+      wrap.appendChild(startFromWrap);
+    }
+
     const startBtn = el('<button class="primary">Bắt đầu</button>');
     startBtn.addEventListener('click', startQuiz);
     wrap.appendChild(startBtn);
@@ -124,6 +149,8 @@
       questions = shuffle(questions);
     } else if (state.mode === 'shuffle') {
       questions = shuffle(questions);
+    } else if (state.mode === 'all' && state.startFrom > 1) {
+      questions = questions.slice(state.startFrom - 1);
     }
     if (questions.length === 0) return;
     state.session = {
@@ -170,6 +197,17 @@
 
     const optsWrap = el('<div class="options"></div>');
     let locked = false;
+    const skipBtn = el('<button type="button" class="secondary">Bỏ qua câu này →</button>');
+    skipBtn.addEventListener('click', () => {
+      if (locked) return;
+      if (s.index + 1 < s.questions.length) {
+        s.index += 1;
+        render();
+      } else {
+        state.screen = 'result';
+        render();
+      }
+    });
     q.options.forEach(opt => {
       const optEl = el(`
         <button type="button" class="option">
@@ -180,6 +218,7 @@
       optEl.addEventListener('click', () => {
         if (locked) return;
         locked = true;
+        skipBtn.style.display = 'none';
         const isCorrect = opt.label === q.correct;
         recordAnswer(s.setId, q.num, isCorrect);
         s.answers.push({ num: q.num, chosen: opt.label, correct: isCorrect });
@@ -218,6 +257,8 @@
       optsWrap.appendChild(optEl);
     });
     card.appendChild(optsWrap);
+    card.appendChild(skipBtn);
+
     wrap.appendChild(card);
     return wrap;
   }

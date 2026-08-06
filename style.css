@@ -118,6 +118,17 @@ button.primary {
 button.primary:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; }
 button.primary:not(:disabled):hover { background: var(--primary-dark); }
 
+.start-from-input {
+  width: 64px;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+}
+
 button.secondary {
   width: 100%;
   padding: 12px;

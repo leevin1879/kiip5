@@ -18,5 +18,15 @@
     "id": "round1",
     "file": "round1.json",
     "title": "Mô phỏng KIIP cấp 5 - 5단계 1회"
+  },
+  {
+    "id": "geo8",
+    "file": "geo8.json",
+    "title": "Ôn tập Địa lý - 5단계 bài 8"
+  },
+  {
+    "id": "hist7",
+    "file": "hist7.json",
+    "title": "Ôn tập Lịch sử - 5단계 bài 7"
   }
 ]
