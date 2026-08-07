@@ -370,6 +370,7 @@
     state.session = {
       setId: state.selectedSetId,
       setTitle: data.title,
+      total: data.questions.length,
       questions,
       index: 0,
       answers: [],
@@ -395,7 +396,7 @@
 
     const pct = Math.round((s.index / s.questions.length) * 100);
     wrap.appendChild(el(`
-      <div class="progress-row"><span>Câu ${s.index + 1}/${s.questions.length}</span><span>${s.answers.filter(a => a.correct).length} đúng</span></div>
+      <div class="progress-row"><span>Câu ${q.num}/${s.total}</span><span>${s.answers.filter(a => a.correct).length} đúng</span></div>
     `));
     wrap.appendChild(el(`<div class="progress-bar"><div style="width:${pct}%"></div></div>`));
 
@@ -518,6 +519,7 @@
         state.session = {
           setId: s.setId,
           setTitle: s.setTitle,
+          total: data.questions.length,
           questions: shuffle(data.questions.filter(q => nums.has(q.num))),
           index: 0,
           answers: [],
