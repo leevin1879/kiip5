@@ -117,16 +117,16 @@ QUESTIONS = [
          ],
          explanation='Kết hợp "-려고"(mục đích: để bắt xe buýt), "-다가"(hành động đang làm thì bị ngắt quãng: đang băng qua đường trái phép), và "-ㄹ 뻔하다"(suýt nữa thì xảy ra: suýt bị xe máy tông) — khớp với A.\nB, C, D đều sai ngữ pháp hoặc sai nghĩa so với 3 vế cho trước.'),
     dict(num=13, correct='B', options_source='reconstructed',
-         stem='[Ngữ cảnh (tóm tắt từ tài liệu, không phải nguyên văn tiếng Hàn — bài đọc gốc không có trong tài liệu nguồn): đoạn văn nói về bệnh trầm cảm — nếu không thoát khỏi tâm trạng u uất]\n다음 ( )에 알맞은 것을 고르시오.',
+         stem='누구나 가끔 기분이 우울할 때가 있다. 하지만 특별한 이유 없이 ( ), 단순한 기분 문제로 넘기지 말고 우울증을 의심해 전문가와 상담을 받는 것이 좋다.\n다음 ( )에 알맞은 것을 고르시오.',
          options=[
              ('A', '기분이 좋아진다면'),
              ('B', '우울한 기분이 지속된다면'),
              ('C', '운동을 많이 한다면'),
              ('D', '친구를 많이 만난다면'),
          ],
-         explanation='Theo tài liệu gốc: câu trước nói về việc "không thoát khỏi tâm trạng u uất", câu sau nêu mốc thời gian "2주 이상" (trên 2 tuần) — nên chỗ trống cần điền điều kiện "nếu tâm trạng u uất đó kéo dài" — khớp với B.'),
+         explanation='Đoạn văn nói: nếu không có lý do đặc biệt mà ( ), thì không nên xem nhẹ mà nên nghi ngờ trầm cảm và đi khám — nên chỗ trống cần điền điều kiện "nếu tâm trạng u uất cứ kéo dài" — khớp với B.\nA(nếu tâm trạng tốt lên) ngược nghĩa. C(nếu tập thể dục nhiều) và D(nếu gặp bạn bè nhiều) đều là gợi ý cách cải thiện chứ không phải dấu hiệu cảnh báo cần đi khám.'),
     dict(num=14, correct='B', options_source='reconstructed',
-         stem='[Bảng thông tin 문화유산 아카데미 (tóm tắt): phí tham gia miễn phí (chỉ tự túc vé vào cửa + phí đi lại); diễn ra vào thứ Bảy; dành cho người lớn, giới hạn 20 người; phải tham gia đầy đủ các buổi mới được cấp giấy chứng nhận]\n다음 문화유산 아카데미에 대한 설명으로 옳은 것은?',
+         stem='[문화유산 아카데미 안내]\n대상: 성인 (선착순 20명)\n일시: 매주 토요일\n비용: 무료 (단, 입장료와 교통비는 개인 부담)\n※ 전 과정을 모두 참여한 분에게만 수료증을 발급합니다.\n다음 문화유산 아카데미에 대한 설명으로 옳은 것은?',
          options=[
              ('A', '매주 평일 저녁에 진행된다.'),
              ('B', '입장료와 교통비는 개인이 각자 준비해야 한다.'),
@@ -135,7 +135,7 @@ QUESTIONS = [
          ],
          explanation='Bảng thông tin ghi rõ "비용: 무료 (단, 입장료와 교통비는 개인 부담)" — khớp với B.\nA sai: chương trình học vào thứ Bảy chứ không phải các buổi tối ngày thường.\nC sai: phải tham gia đầy đủ các buổi mới được cấp giấy chứng nhận, không phải cứ đăng ký là có.\nD sai: chương trình chỉ dành cho người lớn và giới hạn 20 người, không phải ai cũng đăng ký được.'),
     dict(num=15, correct='D', options_source='reconstructed',
-         stem='[Ngữ cảnh (tóm tắt, không phải nguyên văn): đoạn văn nói về bệnh người lớn (성인병) xuất phát từ thói quen xấu, và cách phòng ngừa bằng thói quen sinh hoạt lành mạnh (vận động, ăn uống)]\n윗글의 제목으로 가장 알맞은 것을 고르시오.',
+         stem='고혈압, 당뇨병과 같은 성인병은 대부분 ( )에서 시작된다. 짜게 먹는 습관, 운동 부족, 스트레스 등이 오랫동안 쌓이면 성인병으로 이어지기 쉽다. 따라서 규칙적으로 운동하고 싱겁게 먹는 등 건강한 생활 습관을 만드는 것이 성인병을 예방하는 가장 좋은 방법이다.\n윗글의 제목으로 가장 알맞은 것을 고르시오.',
          options=[
              ('A', '성인병의 종류와 증상'),
              ('B', '규칙적인 운동의 중요성'),
@@ -144,7 +144,7 @@ QUESTIONS = [
          ],
          explanation='Đoạn văn nói về việc bệnh người lớn xuất phát từ thói quen xấu, và cách phòng ngừa là xây dựng thói quen sinh hoạt lành mạnh — tiêu đề bao quát nhất là D.\nA chỉ nói về loại bệnh/triệu chứng, B chỉ là một phần nhỏ (vận động), C không phải nội dung chính của bài — đều hẹp hơn D.'),
     dict(num=16, correct='B', options_source='reconstructed',
-         stem='[Ngữ cảnh (tóm tắt, không phải nguyên văn): cùng bài đọc về bệnh người lớn (성인병) ở câu 15 — bệnh này còn được gọi là "생활습관병" (bệnh thói quen sinh hoạt), gây ra bởi các thói quen xấu như ăn mặn, thiếu vận động, căng thẳng]\n윗글의 (ㄱ)에 들어갈 내용으로 알맞은 것을 고르시오.',
+         stem='고혈압, 당뇨병과 같은 성인병은 짜게 먹는 습관, 운동 부족, 스트레스 등 (ㄱ) 때문에 생기는 경우가 많아서 "생활습관병"이라고도 불린다. 그래서 규칙적으로 운동하고 싱겁게 먹는 등 건강한 생활 습관을 만드는 것이 성인병을 예방하는 가장 좋은 방법이다.\n윗글의 (ㄱ)에 들어갈 내용으로 알맞은 것을 고르시오.',
          options=[
              ('A', '유전적인 요인'),
              ('B', '잘못된 생활 습관'),
@@ -153,7 +153,7 @@ QUESTIONS = [
          ],
          explanation='Bệnh người lớn được gọi là "생활 습관병" (bệnh thói quen sinh hoạt), và bài liệt kê các thói quen xấu (ăn mặn, thiếu vận động, stress...) là nguyên nhân — nên (ㄱ) cần điền là "thói quen sinh hoạt sai lầm" — khớp với B.\nA(yếu tố di truyền), C(biến chứng của bệnh khác), D(hiện tượng tự nhiên do lão hóa) đều không phải nguyên nhân được bài nhấn mạnh.'),
     dict(num=17, correct='A', options_source='docx',
-         stem='<보기>: đảm bảo mức sống cơ bản cho người dân / hỗ trợ chi phí sinh hoạt cho người thu nhập thấp\n<보기>의 내용에 공통적으로 해당되는 것은?',
+         stem='<보기>\n· 국민의 기본적인 생활 수준을 보장한다\n· 소득이 낮은 사람들에게 생활비를 지원한다\n<보기>의 내용에 공통적으로 해당되는 것은?',
          options=[
              ('A', '공공부조'),
              ('B', '사회보험'),
@@ -180,7 +180,7 @@ QUESTIONS = [
          ],
          explanation='"고등 교육기관" (giáo dục bậc cao) ở Hàn Quốc chỉ gồm Đại học (대학교) và Cao học (대학원) — trường cấp 3 (고등학교) thuộc "중등 교육기관" (giáo dục trung học), không phải giáo dục bậc cao — nên A là câu SAI, đây là đáp án đúng.\nB, C, D đều là mô tả đúng về hệ thống giáo dục đại học/sau đại học Hàn Quốc.'),
     dict(num=20, correct='D', options_source='reconstructed',
-         stem='<보기>: 포크(nĩa) / 휴지(giấy vệ sinh) / 찹쌀떡(bánh nếp)\n<보기>에 제시된 용어로 설명할 수 있는 한국의 사회 현상으로 가장 적절한 것은?',
+         stem='<보기>\n포크 · 휴지 · 찹쌀떡\n<보기>에 제시된 용어로 설명할 수 있는 한국의 사회 현상으로 가장 적절한 것은?',
          options=[
              ('A', '명절에 조상들께 감사의 의미로 드리는 선물이다.'),
              ('B', '결혼식에서 신랑 신부에게 주는 전통 선물이다.'),
@@ -207,7 +207,7 @@ QUESTIONS = [
          ],
          explanation='ㄱ đúng: người Hàn dùng thìa và đũa để ăn cơm, canh. ㄷ đúng: có phong tục ăn bánh tteok vào dịp sinh nhật, lễ Tết — khớp với B.\nㄴ sai: 불고기 (thịt nướng) không phải món ăn lên men.\nㄹ sai: 국 (canh) là món nấu bằng nước, không phải chế biến bằng cách nướng.'),
     dict(num=23, correct='B', options_source='reconstructed',
-         stem='<보기>: văn hóa được đông đảo người dân yêu thích trong đời sống hàng ngày (phim ảnh, âm nhạc, thời trang)\n<보기>의 ( )에 공통으로 들어갈 말은?',
+         stem='<보기>\n영화, 음악, 패션처럼 많은 사람들이 일상생활에서 즐기고 좋아하는 문화\n<보기>의 ( )에 공통으로 들어갈 말은?',
          options=[
              ('A', '전통문화'),
              ('B', '대중문화'),
@@ -225,7 +225,7 @@ QUESTIONS = [
          ],
          explanation='Ở Hàn Quốc, độ tuổi có quyền bầu cử hiện tại là đủ 18 tuổi (만 18세), không phải 20 tuổi như A nêu — nên A là câu SAI, đây là đáp án đúng.\nB, C, D là mô tả đúng về 3 nguyên tắc còn lại trong 4 nguyên tắc bầu cử cơ bản (bình đẳng, trực tiếp, bí mật).'),
     dict(num=25, correct='B', options_source='reconstructed',
-         stem='<보기>: người nước ngoài có thẻ cư trú vĩnh viễn (F-5) trên 3 năm\n<보기>의 내용에 해당하는 사람이 할 수 있는 것은?',
+         stem='<보기>\n영주(F-5) 자격을 얻은 후 3년이 지난 외국인\n<보기>의 내용에 해당하는 사람이 할 수 있는 것은?',
          options=[
              ('A', '대통령 선거'),
              ('B', '지방 선거'),
@@ -234,7 +234,7 @@ QUESTIONS = [
          ],
          explanation='Người nước ngoài có thẻ vĩnh trú (F-5) trên 3 năm được quyền tham gia bỏ phiếu trong Bầu cử ĐỊA PHƯƠNG (지방 선거) để bầu thị trưởng, hội đồng địa phương — khớp với B.\nA(bầu Tổng thống), C(bầu Quốc hội), D(trưng cầu dân ý toàn quốc) đều chỉ dành cho công dân Hàn Quốc.'),
     dict(num=26, correct='C', options_source='reconstructed',
-         stem='<보기>: cơ quan giải quyết tranh chấp bằng pháp luật / Tòa án tối cao, Tòa án địa phương...\n<보기>의 내용에 공통적으로 해당되는 것은?',
+         stem='<보기>\n· 법에 따라 다툼을 해결하는 곳이다\n· 대법원, 지방법원 등이 있다\n<보기>의 내용에 공통적으로 해당되는 것은?',
          options=[
              ('A', '입법부'),
              ('B', '행정부'),
@@ -315,7 +315,7 @@ QUESTIONS = [
          ],
          explanation='Thời Joseon (đặc biệt thời vua Sejong), khoa học công nghệ được phát triển nhằm mục đích hỗ trợ nông nghiệp và đời sống bách tính (ví dụ: máy đo lượng mưa để biết thời điểm gieo trồng), chứ không phải để thu nhiều thuế hơn — nên A là câu SAI, đây là đáp án đúng.\nB, C, D đều là thành tựu khoa học kỹ thuật có thật thời Joseon: đồng hồ mặt trời/nước do vua Sejong cho chế tạo, máy đo lượng mưa (측우기) đầu tiên trên thế giới, và cần cẩu (거중기) giúp rút ngắn thời gian xây thành Suwon Hwaseong.'),
     dict(num=35, correct='C', options_source='docx',
-         stem='<보기>: Bờ biển phía Tây và phía Nam Hàn Quốc có mực nước nông và chênh lệch thủy triều lớn nên ( ) rất phát triển. Đặc biệt ( ) ở bờ biển phía Tây là một trong 5 ( ) lớn nhất thế giới.\n<보기>의 ( )에 공통으로 들어갈 말은?',
+         stem='<보기>\n한국의 서해안과 남해안은 수심이 얕고 밀물과 썰물의 차이가 커서 ( )이/가 발달했다. 특히 서해안의 ( )은/는 세계 5대 ( ) 중 하나로 꼽힌다.\n<보기>의 ( )에 공통으로 들어갈 말은?',
          options=[
              ('A', '산지'),
              ('B', '평야'),
@@ -324,7 +324,7 @@ QUESTIONS = [
          ],
          explanation='Bờ biển phía Tây Hàn Quốc nổi tiếng thế giới với các bãi bùn/bãi triều (갯벌) rộng lớn, hình thành do chênh lệch thủy triều (밀물과 썰물) rất lớn — khớp với C.\nA 산지(vùng núi), B 평야(đồng bằng), D 하천(sông ngòi) đều không liên quan đến hiện tượng thủy triều ven biển được mô tả.'),
     dict(num=36, correct='C', options_source='docx',
-         stem='<보기>: văn hóa ẩm thực phát triển / văn hóa truyền thống được bảo tồn tốt / gần đây giao lưu với Trung Quốc đang tăng lên\n<보기>의 내용과 가장 관계가 깊은 지역은?',
+         stem='<보기>\n· 음식 문화가 발달했다\n· 전통문화가 잘 보존되어 있다\n· 최근 중국과의 교류가 늘고 있다\n<보기>의 내용과 가장 관계가 깊은 지역은?',
          options=[
              ('A', '경기지역'),
              ('B', '강원지역'),

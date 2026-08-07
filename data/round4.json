@@ -317,7 +317,7 @@
     {
       "num": 13,
       "correct": "B",
-      "stem": "[Ngữ cảnh (tóm tắt từ tài liệu, không phải nguyên văn tiếng Hàn — bài đọc gốc không có trong tài liệu nguồn): đoạn văn nói về bệnh trầm cảm — nếu không thoát khỏi tâm trạng u uất]\n다음 ( )에 알맞은 것을 고르시오.",
+      "stem": "누구나 가끔 기분이 우울할 때가 있다. 하지만 특별한 이유 없이 ( ), 단순한 기분 문제로 넘기지 말고 우울증을 의심해 전문가와 상담을 받는 것이 좋다.\n다음 ( )에 알맞은 것을 고르시오.",
       "options": [
         {
           "label": "A",
@@ -338,12 +338,12 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Theo tài liệu gốc: câu trước nói về việc \"không thoát khỏi tâm trạng u uất\", câu sau nêu mốc thời gian \"2주 이상\" (trên 2 tuần) — nên chỗ trống cần điền điều kiện \"nếu tâm trạng u uất đó kéo dài\" — khớp với B."
+      "explanation": "Đoạn văn nói: nếu không có lý do đặc biệt mà ( ), thì không nên xem nhẹ mà nên nghi ngờ trầm cảm và đi khám — nên chỗ trống cần điền điều kiện \"nếu tâm trạng u uất cứ kéo dài\" — khớp với B.\nA(nếu tâm trạng tốt lên) ngược nghĩa. C(nếu tập thể dục nhiều) và D(nếu gặp bạn bè nhiều) đều là gợi ý cách cải thiện chứ không phải dấu hiệu cảnh báo cần đi khám."
     },
     {
       "num": 14,
       "correct": "B",
-      "stem": "[Bảng thông tin 문화유산 아카데미 (tóm tắt): phí tham gia miễn phí (chỉ tự túc vé vào cửa + phí đi lại); diễn ra vào thứ Bảy; dành cho người lớn, giới hạn 20 người; phải tham gia đầy đủ các buổi mới được cấp giấy chứng nhận]\n다음 문화유산 아카데미에 대한 설명으로 옳은 것은?",
+      "stem": "[문화유산 아카데미 안내]\n대상: 성인 (선착순 20명)\n일시: 매주 토요일\n비용: 무료 (단, 입장료와 교통비는 개인 부담)\n※ 전 과정을 모두 참여한 분에게만 수료증을 발급합니다.\n다음 문화유산 아카데미에 대한 설명으로 옳은 것은?",
       "options": [
         {
           "label": "A",
@@ -369,7 +369,7 @@
     {
       "num": 15,
       "correct": "D",
-      "stem": "[Ngữ cảnh (tóm tắt, không phải nguyên văn): đoạn văn nói về bệnh người lớn (성인병) xuất phát từ thói quen xấu, và cách phòng ngừa bằng thói quen sinh hoạt lành mạnh (vận động, ăn uống)]\n윗글의 제목으로 가장 알맞은 것을 고르시오.",
+      "stem": "고혈압, 당뇨병과 같은 성인병은 대부분 ( )에서 시작된다. 짜게 먹는 습관, 운동 부족, 스트레스 등이 오랫동안 쌓이면 성인병으로 이어지기 쉽다. 따라서 규칙적으로 운동하고 싱겁게 먹는 등 건강한 생활 습관을 만드는 것이 성인병을 예방하는 가장 좋은 방법이다.\n윗글의 제목으로 가장 알맞은 것을 고르시오.",
       "options": [
         {
           "label": "A",
@@ -395,7 +395,7 @@
     {
       "num": 16,
       "correct": "B",
-      "stem": "[Ngữ cảnh (tóm tắt, không phải nguyên văn): cùng bài đọc về bệnh người lớn (성인병) ở câu 15 — bệnh này còn được gọi là \"생활습관병\" (bệnh thói quen sinh hoạt), gây ra bởi các thói quen xấu như ăn mặn, thiếu vận động, căng thẳng]\n윗글의 (ㄱ)에 들어갈 내용으로 알맞은 것을 고르시오.",
+      "stem": "고혈압, 당뇨병과 같은 성인병은 짜게 먹는 습관, 운동 부족, 스트레스 등 (ㄱ) 때문에 생기는 경우가 많아서 \"생활습관병\"이라고도 불린다. 그래서 규칙적으로 운동하고 싱겁게 먹는 등 건강한 생활 습관을 만드는 것이 성인병을 예방하는 가장 좋은 방법이다.\n윗글의 (ㄱ)에 들어갈 내용으로 알맞은 것을 고르시오.",
       "options": [
         {
           "label": "A",
@@ -421,7 +421,7 @@
     {
       "num": 17,
       "correct": "A",
-      "stem": "<보기>: đảm bảo mức sống cơ bản cho người dân / hỗ trợ chi phí sinh hoạt cho người thu nhập thấp\n<보기>의 내용에 공통적으로 해당되는 것은?",
+      "stem": "<보기>\n· 국민의 기본적인 생활 수준을 보장한다\n· 소득이 낮은 사람들에게 생활비를 지원한다\n<보기>의 내용에 공통적으로 해당되는 것은?",
       "options": [
         {
           "label": "A",
@@ -499,7 +499,7 @@
     {
       "num": 20,
       "correct": "D",
-      "stem": "<보기>: 포크(nĩa) / 휴지(giấy vệ sinh) / 찹쌀떡(bánh nếp)\n<보기>에 제시된 용어로 설명할 수 있는 한국의 사회 현상으로 가장 적절한 것은?",
+      "stem": "<보기>\n포크 · 휴지 · 찹쌀떡\n<보기>에 제시된 용어로 설명할 수 있는 한국의 사회 현상으로 가장 적절한 것은?",
       "options": [
         {
           "label": "A",
@@ -577,7 +577,7 @@
     {
       "num": 23,
       "correct": "B",
-      "stem": "<보기>: văn hóa được đông đảo người dân yêu thích trong đời sống hàng ngày (phim ảnh, âm nhạc, thời trang)\n<보기>의 ( )에 공통으로 들어갈 말은?",
+      "stem": "<보기>\n영화, 음악, 패션처럼 많은 사람들이 일상생활에서 즐기고 좋아하는 문화\n<보기>의 ( )에 공통으로 들어갈 말은?",
       "options": [
         {
           "label": "A",
@@ -629,7 +629,7 @@
     {
       "num": 25,
       "correct": "B",
-      "stem": "<보기>: người nước ngoài có thẻ cư trú vĩnh viễn (F-5) trên 3 năm\n<보기>의 내용에 해당하는 사람이 할 수 있는 것은?",
+      "stem": "<보기>\n영주(F-5) 자격을 얻은 후 3년이 지난 외국인\n<보기>의 내용에 해당하는 사람이 할 수 있는 것은?",
       "options": [
         {
           "label": "A",
@@ -655,7 +655,7 @@
     {
       "num": 26,
       "correct": "C",
-      "stem": "<보기>: cơ quan giải quyết tranh chấp bằng pháp luật / Tòa án tối cao, Tòa án địa phương...\n<보기>의 내용에 공통적으로 해당되는 것은?",
+      "stem": "<보기>\n· 법에 따라 다툼을 해결하는 곳이다\n· 대법원, 지방법원 등이 있다\n<보기>의 내용에 공통적으로 해당되는 것은?",
       "options": [
         {
           "label": "A",
@@ -889,7 +889,7 @@
     {
       "num": 35,
       "correct": "C",
-      "stem": "<보기>: Bờ biển phía Tây và phía Nam Hàn Quốc có mực nước nông và chênh lệch thủy triều lớn nên ( ) rất phát triển. Đặc biệt ( ) ở bờ biển phía Tây là một trong 5 ( ) lớn nhất thế giới.\n<보기>의 ( )에 공통으로 들어갈 말은?",
+      "stem": "<보기>\n한국의 서해안과 남해안은 수심이 얕고 밀물과 썰물의 차이가 커서 ( )이/가 발달했다. 특히 서해안의 ( )은/는 세계 5대 ( ) 중 하나로 꼽힌다.\n<보기>의 ( )에 공통으로 들어갈 말은?",
       "options": [
         {
           "label": "A",
@@ -915,7 +915,7 @@
     {
       "num": 36,
       "correct": "C",
-      "stem": "<보기>: văn hóa ẩm thực phát triển / văn hóa truyền thống được bảo tồn tốt / gần đây giao lưu với Trung Quốc đang tăng lên\n<보기>의 내용과 가장 관계가 깊은 지역은?",
+      "stem": "<보기>\n· 음식 문화가 발달했다\n· 전통문화가 잘 보존되어 있다\n· 최근 중국과의 교류가 늘고 있다\n<보기>의 내용과 가장 관계가 깊은 지역은?",
       "options": [
         {
           "label": "A",

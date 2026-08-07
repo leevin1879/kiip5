@@ -160,7 +160,7 @@ QUESTIONS = [
          ],
          explanation='Ở Hàn Quốc hiện nay, loại hình nhà ở phổ biến nhất là chung cư (아파트), không phải nhà riêng (단독 주택) — nên A là câu SAI, đây là đáp án đúng.\nB, C, D đều là xu hướng thực tế đúng trong sự thay đổi văn hóa cư trú của Hàn Quốc.'),
     dict(num=18, correct='A', options_source='reconstructed',
-         stem='<보기>의 (가), (나)에 들어갈 용어로 적절한 것은?',
+         stem='<보기>\n감기처럼 가벼운 증상이 있을 때는 집 근처에 있는 (가)에 가서 편하게 진료를 받을 수 있다. 예방접종이나 건강 상담은 국가에서 운영하는 (나)에서 저렴한 비용으로 받을 수 있다.\n<보기>의 (가), (나)에 들어갈 용어로 적절한 것은?',
          options=[
              ('A', '(가) 동네 의원 - (나) 보건소'),
              ('B', '(가) 종합병원 - (나) 보건소'),
@@ -241,7 +241,7 @@ QUESTIONS = [
          ],
          explanation='Thứ tự xuất khẩu đúng theo thời gian: thập niên 1970 (나, quần áo/giày dép) → thập niên 1980 (가, thép/đóng tàu) → thập niên 1990 (라, ô tô/điện tử) → 2000 trở đi (다, bán dẫn/điện thoại) — khớp với C.\nA, B, D đều sắp xếp sai thứ tự thời gian giữa các mặt hàng.'),
     dict(num=27, correct='C', options_source='reconstructed',
-         stem='<보기>의 (가), (나)에 해당하는 제도의 명칭으로 옳은 것은?',
+         stem='<보기>\n(가)는 소비자가 제품의 원산지, 유통기한 등의 정보를 반드시 확인할 수 있도록 제조사가 표시해야 하는 제도이다. (나)는 소비자에게 피해를 줄 수 있는 불량품이 발견되었을 때 기업이 해당 제품을 회수하여 고치거나 교환해 주는 제도이다.\n<보기>의 (가), (나)에 해당하는 제도의 명칭으로 옳은 것은?',
          options=[
              ('A', '(가) 리콜 제도 - (나) 의무표시제'),
              ('B', '(가) 의무표시제 - (나) 원산지 표시제'),
