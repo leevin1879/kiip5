@@ -1,5 +1,6 @@
 (function () {
   const STATS_KEY = 'kiip5_stats_v1';
+  const AUTH_KEY = 'kiip5_auth_v1';
   const CIRCLE = { A: '①', B: '②', C: '③', D: '④' };
 
   const root = document.getElementById('app');
@@ -10,7 +11,24 @@
     mode: 'all',
     startFrom: 1,
     session: null,
+    auth: loadAuth(),
   };
+
+  function loadAuth() {
+    try {
+      return JSON.parse(localStorage.getItem(AUTH_KEY)) || null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveAuth(auth) {
+    localStorage.setItem(AUTH_KEY, JSON.stringify(auth));
+  }
+
+  function clearAuth() {
+    localStorage.removeItem(AUTH_KEY);
+  }
 
   function loadStats() {
     try {
@@ -24,6 +42,36 @@
     localStorage.setItem(STATS_KEY, JSON.stringify(stats));
   }
 
+  let syncTimer = null;
+  function syncPush() {
+    if (!state.auth) return;
+    clearTimeout(syncTimer);
+    syncTimer = setTimeout(() => {
+      fetch('/.netlify/functions/sync-progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${state.auth.token}` },
+        body: JSON.stringify({ stats: loadStats() }),
+      }).catch(() => {});
+    }, 800);
+  }
+
+  async function syncPull() {
+    if (!state.auth) return;
+    try {
+      const res = await fetch('/.netlify/functions/sync-progress', {
+        headers: { Authorization: `Bearer ${state.auth.token}` },
+      });
+      if (res.status === 401) { clearAuth(); state.auth = null; return; }
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.stats && Object.keys(data.stats).length > 0) {
+        saveStats(data.stats);
+      } else {
+        syncPush();
+      }
+    } catch (e) { /* offline or unreachable, keep local data */ }
+  }
+
   function recordAnswer(setId, num, isCorrect) {
     const stats = loadStats();
     if (!stats[setId]) stats[setId] = {};
@@ -33,6 +81,7 @@
     if (isCorrect) { s.correct += 1; s.lastWrong = false; }
     else { s.wrong += 1; s.lastWrong = true; }
     saveStats(stats);
+    syncPush();
   }
 
   function wrongNums(setId) {
@@ -107,6 +156,7 @@
     `);
     wrap.appendChild(hero);
 
+    wrap.appendChild(renderAccountBar());
     wrap.appendChild(renderSupportButtons());
     wrap.appendChild(renderFeedbackButton());
 
@@ -190,6 +240,143 @@
 
     wrap.appendChild(el('<div class="footer-note">Tiến trình được lưu trên trình duyệt này.</div>'));
     return wrap;
+  }
+
+  function renderAccountBar() {
+    if (state.auth) {
+      const bar = el(`
+        <div class="feedback-entry" style="cursor:default;">
+          <span class="feedback-entry-icon" aria-hidden="true">👋</span>
+          <span><strong>Xin chào, ${escapeHtml(state.auth.displayName || state.auth.username)}</strong><small>Tiến trình của bạn đang được đồng bộ</small></span>
+        </div>
+      `);
+      const logoutBtn = el('<button type="button" class="link-btn" style="margin-left:auto;">Đăng xuất</button>');
+      bar.style.cursor = 'default';
+      bar.appendChild(logoutBtn);
+      logoutBtn.addEventListener('click', () => {
+        clearAuth();
+        state.auth = null;
+        render();
+      });
+      return bar;
+    }
+    const button = el(`
+      <button type="button" class="feedback-entry">
+        <span class="feedback-entry-icon" aria-hidden="true">👤</span>
+        <span><strong>Đăng nhập</strong><small>Lưu tiến trình và đồng bộ giữa các thiết bị</small></span>
+        <span class="feedback-arrow" aria-hidden="true">›</span>
+      </button>
+    `);
+    button.addEventListener('click', () => showAuthModal('login'));
+    return button;
+  }
+
+  function showAuthModal(initialMode) {
+    let mode = initialMode;
+    const modal = el(`
+      <div class="support-modal" role="dialog" aria-modal="true" aria-label="Đăng nhập">
+        <div class="support-backdrop"></div>
+        <div class="support-dialog feedback-dialog">
+          <button type="button" class="support-close" aria-label="Đóng">×</button>
+          <div class="feedback-modal-icon" aria-hidden="true">👤</div>
+          <div class="support-modal-title auth-title"></div>
+          <div class="feedback-intro">Lưu tiến trình ôn tập và đồng bộ giữa điện thoại, máy tính.</div>
+          <form class="feedback-form auth-form">
+            <label class="auth-display-name-label" style="display:none;">
+              Tên hiển thị <span>(không bắt buộc)</span>
+              <input name="displayName" type="text" maxlength="60" autocomplete="nickname" placeholder="Ví dụ: Minh">
+            </label>
+            <label>
+              Tên đăng nhập
+              <input name="username" type="text" maxlength="20" autocomplete="username" placeholder="3-20 ký tự, chữ thường/số/gạch dưới" required>
+            </label>
+            <label>
+              Mật khẩu
+              <input name="password" type="password" maxlength="100" autocomplete="current-password" placeholder="Ít nhất 6 ký tự" required>
+            </label>
+            <div class="feedback-status" role="status" aria-live="polite"></div>
+            <button type="submit" class="primary auth-submit"></button>
+          </form>
+          <button type="button" class="link-btn auth-toggle" style="display:block;margin:10px auto 0;"></button>
+        </div>
+      </div>
+    `);
+
+    const titleEl = modal.querySelector('.auth-title');
+    const submitBtn = modal.querySelector('.auth-submit');
+    const toggleBtn = modal.querySelector('.auth-toggle');
+    const displayNameLabel = modal.querySelector('.auth-display-name-label');
+    const status = modal.querySelector('.feedback-status');
+
+    const applyMode = () => {
+      status.textContent = '';
+      status.className = 'feedback-status';
+      if (mode === 'login') {
+        titleEl.textContent = 'Đăng nhập';
+        submitBtn.textContent = 'Đăng nhập';
+        toggleBtn.textContent = 'Chưa có tài khoản? Đăng ký ngay';
+        displayNameLabel.style.display = 'none';
+      } else {
+        titleEl.textContent = 'Đăng ký tài khoản';
+        submitBtn.textContent = 'Đăng ký';
+        toggleBtn.textContent = 'Đã có tài khoản? Đăng nhập';
+        displayNameLabel.style.display = 'block';
+      }
+    };
+    applyMode();
+    toggleBtn.addEventListener('click', () => { mode = mode === 'login' ? 'register' : 'login'; applyMode(); });
+
+    const close = () => {
+      document.removeEventListener('keydown', onKeydown);
+      modal.remove();
+    };
+    const onKeydown = event => { if (event.key === 'Escape') close(); };
+    modal.querySelector('.support-close').addEventListener('click', close);
+    modal.querySelector('.support-backdrop').addEventListener('click', close);
+    document.addEventListener('keydown', onKeydown);
+    document.body.appendChild(modal);
+
+    const form = modal.querySelector('.auth-form');
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const username = String(formData.get('username') || '').trim();
+      const password = String(formData.get('password') || '');
+      const displayName = String(formData.get('displayName') || '').trim();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = mode === 'login' ? 'Đang đăng nhập...' : 'Đang đăng ký...';
+      status.textContent = '';
+
+      try {
+        const endpoint = mode === 'login' ? '/.netlify/functions/auth-login' : '/.netlify/functions/auth-register';
+        const payload = mode === 'login' ? { username, password } : { username, password, displayName };
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const result = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(result.error || 'Có lỗi xảy ra.');
+
+        state.auth = { token: result.token, username: result.username, displayName: result.displayName, role: result.role || 'user' };
+        saveAuth(state.auth);
+        if (state.auth.role === 'admin') {
+          window.location.href = '/admin.html';
+          return;
+        }
+        status.className = 'feedback-status success';
+        status.textContent = 'Thành công! Đang đồng bộ dữ liệu...';
+        await syncPull();
+        setTimeout(() => { close(); render(); }, 600);
+      } catch (error) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = mode === 'login' ? 'Đăng nhập' : 'Đăng ký';
+        status.className = 'feedback-status error';
+        status.textContent = error.message || 'Có lỗi xảy ra. Vui lòng thử lại.';
+      }
+    });
+    modal.querySelector('input[name="username"]').focus();
   }
 
   function renderSupportButtons() {
@@ -571,5 +758,20 @@
       .replace(/>/g, '&gt;');
   }
 
+  function trackVisit() {
+    try {
+      fetch('/.netlify/functions/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ page: location.pathname, referrer: document.referrer }),
+        keepalive: true,
+      }).catch(() => {});
+    } catch (e) { /* ignore */ }
+  }
+
   render();
+  trackVisit();
+  if (state.auth) {
+    syncPull().then(() => { if (state.screen === 'home') render(); });
+  }
 })();

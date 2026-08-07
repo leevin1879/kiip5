@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#6d5ef8">
+<title>Thống kê truy cập - KIIP5</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+<link rel="stylesheet" href="style.css">
+<style>
+  .admin-wrap { max-width: 720px; margin: 0 auto; padding: 20px 16px 60px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px; }
+  .stat-card { text-align: center; padding: 16px 10px; }
+  .stat-card b { display: block; font-size: 26px; font-weight: 900; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stat-card span { display: block; margin-top: 4px; font-size: 12px; color: var(--muted); font-weight: 600; }
+  .day-bars { display: flex; align-items: flex-end; gap: 4px; height: 90px; margin-bottom: 4px; }
+  .day-bar { flex: 1; background: var(--grad); border-radius: 5px 5px 0 0; min-height: 3px; }
+  .day-labels { display: flex; gap: 4px; font-size: 10px; color: var(--muted); text-align: center; margin-bottom: 18px; }
+  .day-labels span { flex: 1; }
+  table.visits { width: 100%; border-collapse: collapse; font-size: 12px; }
+  table.visits th, table.visits td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); }
+  table.visits th { color: var(--muted); font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: .04em; }
+  table.visits td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+  .login-box { max-width: 360px; margin: 60px auto 0; }
+  .login-box input { width: 100%; padding: 13px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text); font: inherit; margin-bottom: 10px; }
+  .err-msg { color: var(--bad); font-size: 13px; text-align: center; margin-top: 8px; min-height: 18px; }
+</style>
+</head>
+<body>
+<div id="admin-app" class="admin-wrap"></div>
+<script src="admin.js"></script>
+</body>
+</html>
