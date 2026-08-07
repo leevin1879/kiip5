@@ -63,22 +63,68 @@
     else if (state.screen === 'result') root.appendChild(renderResult());
   }
 
+  function getSetEmoji(set) {
+    const id = (set.id || '').toLowerCase();
+    const title = (set.title || '').toLowerCase();
+    if (id.includes('geo') || title.includes('địa lý')) return '🗺️';
+    if (id.includes('hist') || title.includes('lịch sử')) return '🏛️';
+    return '📝';
+  }
+
+  function overallStats() {
+    const stats = loadStats();
+    let seen = 0;
+    let correct = 0;
+    Object.keys(stats).forEach(setId => {
+      Object.keys(stats[setId]).forEach(num => {
+        seen += stats[setId][num].seen || 0;
+        correct += stats[setId][num].correct || 0;
+      });
+    });
+    return { seen, correct, pct: seen ? Math.round((correct / seen) * 100) : 0 };
+  }
+
   function renderHome() {
     const wrap = el('<div></div>');
-    wrap.appendChild(el('<h1>Ôn thi KIIP cấp 5</h1>'));
-    wrap.appendChild(el('<div class="subtitle">Chọn đề và chế độ ôn tập</div>'));
+
+    const overall = overallStats();
+    const hero = el(`
+      <div class="hero">
+        <div class="hero-top">
+          <div class="hero-emoji">🇰🇷</div>
+          <div>
+            <div class="hero-title">Ôn thi KIIP cấp 5</div>
+            <div class="hero-sub">Luyện trắc nghiệm mỗi ngày, tự tin đi thi!</div>
+          </div>
+        </div>
+        ${overall.seen > 0 ? `
+        <div class="hero-stats">
+          <div class="hero-stat"><b>${overall.seen}</b><span>Câu đã làm</span></div>
+          <div class="hero-stat"><b>${overall.pct}%</b><span>Tỉ lệ đúng</span></div>
+          <div class="hero-stat"><b>${(window.QUIZ_INDEX || []).length}</b><span>Bộ đề</span></div>
+        </div>` : ''}
+      </div>
+    `);
+    wrap.appendChild(hero);
+
     wrap.appendChild(renderSupportButtons());
     wrap.appendChild(renderFeedbackButton());
 
+    wrap.appendChild(el('<div class="section-label">Chọn đề</div>'));
     const setsWrap = el('<div></div>');
     (window.QUIZ_INDEX || []).forEach(set => {
       const data = window.QUIZ_DATA[set.id];
+      const selected = set.id === state.selectedSetId;
       const card = el(`
-        <button type="button" class="card set-card ${set.id === state.selectedSetId ? 'selected' : ''}">
-          <div>
-            <div class="title">${escapeHtml(set.title)}</div>
-            <div class="meta">${data.questions.length} câu</div>
+        <button type="button" class="card set-card ${selected ? 'selected' : ''}">
+          <div class="set-card-main">
+            <div class="set-emoji">${getSetEmoji(set)}</div>
+            <div>
+              <div class="title">${escapeHtml(set.title)}</div>
+              <div class="meta">${data.questions.length} câu</div>
+            </div>
           </div>
+          ${selected ? '<div class="set-check">✓</div>' : ''}
         </button>
       `);
       card.addEventListener('click', () => {
@@ -91,18 +137,22 @@
 
     const wrongCount = wrongNums(state.selectedSetId).length;
     const modes = [
-      { id: 'all', title: 'Làm toàn bộ (theo thứ tự)', meta: 'Đi từ câu 1 đến câu cuối' },
-      { id: 'shuffle', title: 'Làm toàn bộ (trộn ngẫu nhiên)', meta: 'Thứ tự câu hỏi được xáo trộn' },
-      { id: 'wrong', title: 'Chỉ ôn câu từng làm sai', meta: wrongCount > 0 ? `${wrongCount} câu` : 'Chưa có câu sai nào được ghi nhận' },
+      { id: 'all', emoji: '📋', title: 'Làm toàn bộ (theo thứ tự)', meta: 'Đi từ câu 1 đến câu cuối' },
+      { id: 'shuffle', emoji: '🔀', title: 'Làm toàn bộ (trộn ngẫu nhiên)', meta: 'Thứ tự câu hỏi được xáo trộn' },
+      { id: 'wrong', emoji: '🎯', title: 'Chỉ ôn câu từng làm sai', meta: wrongCount > 0 ? `${wrongCount} câu` : 'Chưa có câu sai nào được ghi nhận' },
     ];
 
+    wrap.appendChild(el('<div class="section-label">Chế độ ôn tập</div>'));
     const modeWrap = el('<div class="mode-grid"></div>');
     modes.forEach(m => {
       const disabled = m.id === 'wrong' && wrongCount === 0;
       const opt = el(`
         <button type="button" class="mode-option ${state.mode === m.id ? 'selected' : ''}" style="${disabled ? 'opacity:.5;pointer-events:none;' : ''}" ${disabled ? 'disabled' : ''}>
-          <div class="title">${m.title}</div>
-          <div class="meta">${m.meta}</div>
+          <div class="mode-emoji">${m.emoji}</div>
+          <div>
+            <div class="title">${m.title}</div>
+            <div class="meta">${m.meta}</div>
+          </div>
         </button>
       `);
       opt.addEventListener('click', () => { state.mode = m.id; render(); });
@@ -362,10 +412,11 @@
 
     const showExplanation = answer => {
       if (!q.explanation || card.querySelector('.explain-box')) return;
+      const emoji = answer.correct ? '✅' : '💡';
       const label = answer.correct ? 'Vì sao đúng' : 'Giải thích';
       const box = el(`
         <div class="explain-box">
-          <div class="explain-title">${label}</div>
+          <div class="explain-title"><span aria-hidden="true">${emoji}</span> ${label}</div>
           <div class="explain-text">${escapeHtml(q.explanation)}</div>
         </div>
       `);
@@ -431,17 +482,27 @@
     return wrap;
   }
 
+  function scoreReaction(pct) {
+    if (pct >= 90) return { emoji: '🏆', msg: 'Xuất sắc! Bạn đã sẵn sàng đi thi!' };
+    if (pct >= 70) return { emoji: '🎉', msg: 'Rất tốt! Chỉ cần ôn thêm chút nữa.' };
+    if (pct >= 50) return { emoji: '💪', msg: 'Khá ổn, cố gắng luyện thêm nhé!' };
+    return { emoji: '📚', msg: 'Đừng nản, luyện thêm vài lần nữa là ăn chắc!' };
+  }
+
   function renderResult() {
     const s = state.session;
     const total = s.answers.length;
     const correctCount = s.answers.filter(a => a.correct).length;
     const pct = total ? Math.round((correctCount / total) * 100) : 0;
+    const reaction = scoreReaction(pct);
 
     const wrap = el('<div></div>');
     wrap.appendChild(el('<h1>Kết quả</h1>'));
-    const card = el('<div class="card"></div>');
+    const card = el('<div class="card score-hero"></div>');
+    card.appendChild(el(`<div class="score-emoji">${reaction.emoji}</div>`));
     card.appendChild(el(`<div class="score-big">${correctCount}/${total}</div>`));
     card.appendChild(el(`<div class="score-sub">${pct}% đúng</div>`));
+    card.appendChild(el(`<div class="score-msg">${reaction.msg}</div>`));
     wrap.appendChild(card);
 
     const retryBtn = el('<button class="primary">Làm lại toàn bộ đề này</button>');
@@ -489,7 +550,7 @@
         if (q.explanation) {
           item.appendChild(el(`
             <div class="explain-box">
-              <div class="explain-title">Giải thích</div>
+              <div class="explain-title"><span aria-hidden="true">💡</span> Giải thích</div>
               <div class="explain-text">${escapeHtml(q.explanation)}</div>
             </div>
           `));
