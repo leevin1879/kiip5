@@ -2,6 +2,9 @@
   const STATS_KEY = 'kiip5_stats_v1';
   const AUTH_KEY = 'kiip5_auth_v1';
   const CIRCLE = { A: '①', B: '②', C: '③', D: '④' };
+  const supabaseClient = window.supabase && window.KIIP5_SUPABASE
+    ? window.supabase.createClient(window.KIIP5_SUPABASE.url, window.KIIP5_SUPABASE.publishableKey)
+    : null;
 
   const root = document.getElementById('app');
 
@@ -28,6 +31,33 @@
 
   function clearAuth() {
     localStorage.removeItem(AUTH_KEY);
+  }
+
+  async function hydrateGoogleAuth() {
+    if (!supabaseClient) return;
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (error || !data.session || (state.auth && state.auth.provider !== 'google')) return;
+    try {
+      const res = await fetch('/.netlify/functions/auth-supabase', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ accessToken: data.session.access_token }),
+      });
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(result.error || 'Không thể hoàn tất đăng nhập Google.');
+      state.auth = {
+        token: result.token,
+        username: result.username,
+        displayName: result.displayName,
+        role: result.role || 'user',
+        provider: 'google',
+      };
+      saveAuth(state.auth);
+      await syncPull();
+      render();
+    } catch (authError) {
+      console.error('Google session exchange failed:', authError.message);
+    }
   }
 
   function loadStats() {
@@ -253,7 +283,8 @@
       const logoutBtn = el('<button type="button" class="link-btn" style="margin-left:auto;">Đăng xuất</button>');
       bar.style.cursor = 'default';
       bar.appendChild(logoutBtn);
-      logoutBtn.addEventListener('click', () => {
+      logoutBtn.addEventListener('click', async () => {
+        if (state.auth?.provider === 'google' && supabaseClient) await supabaseClient.auth.signOut();
         clearAuth();
         state.auth = null;
         render();
@@ -297,6 +328,11 @@
             <div class="feedback-status" role="status" aria-live="polite"></div>
             <button type="submit" class="primary auth-submit"></button>
           </form>
+          <div class="auth-divider"><span>hoặc</span></div>
+          <button type="button" class="google-auth-button">
+            <span class="google-g" aria-hidden="true">G</span>
+            Đăng nhập bằng Google
+          </button>
           <button type="button" class="link-btn auth-toggle" style="display:block;margin:10px auto 0;"></button>
         </div>
       </div>
@@ -307,6 +343,7 @@
     const toggleBtn = modal.querySelector('.auth-toggle');
     const displayNameLabel = modal.querySelector('.auth-display-name-label');
     const status = modal.querySelector('.feedback-status');
+    const googleBtn = modal.querySelector('.google-auth-button');
 
     const applyMode = () => {
       status.textContent = '';
@@ -325,6 +362,24 @@
     };
     applyMode();
     toggleBtn.addEventListener('click', () => { mode = mode === 'login' ? 'register' : 'login'; applyMode(); });
+    googleBtn.addEventListener('click', async () => {
+      if (!supabaseClient) {
+        status.className = 'feedback-status error';
+        status.textContent = 'Đăng nhập Google chưa tải được. Vui lòng tải lại trang.';
+        return;
+      }
+      googleBtn.disabled = true;
+      status.textContent = 'Đang chuyển tới Google...';
+      const { error } = await supabaseClient.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: `${window.location.origin}/` },
+      });
+      if (error) {
+        googleBtn.disabled = false;
+        status.className = 'feedback-status error';
+        status.textContent = error.message || 'Không thể đăng nhập bằng Google.';
+      }
+    });
 
     const close = () => {
       document.removeEventListener('keydown', onKeydown);
@@ -773,6 +828,7 @@
 
   render();
   trackVisit();
+  hydrateGoogleAuth();
   if (state.auth) {
     syncPull().then(() => { if (state.screen === 'home') render(); });
   }
