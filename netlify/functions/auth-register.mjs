@@ -40,15 +40,12 @@ export default async request => {
     return response(400, { error: 'Mật khẩu phải có ít nhất 6 ký tự.' });
   }
   const adminUsername = normalizeUsername(process.env.ADMIN_USERNAME || 'admin');
-  if (username === adminUsername) {
-    return response(403, { error: 'Tên đăng nhập này được dành riêng cho quản trị viên.' });
-  }
 
   const store = getStore('kiip5-users');
   const existing = await store.get(`users/${username}`, { type: 'json' }).catch(() => null);
   if (existing) return response(409, { error: 'Tên đăng nhập đã được sử dụng.' });
 
-  const role = 'user';
+  const role = username === adminUsername ? 'admin' : 'user';
   const record = {
     username,
     displayName,
