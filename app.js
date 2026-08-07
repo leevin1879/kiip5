@@ -120,6 +120,16 @@
     return Object.keys(setStats).filter(n => setStats[n].lastWrong).map(Number);
   }
 
+  function setProgress(setId, total) {
+    const setStats = loadStats()[setId] || {};
+    const learned = Object.values(setStats).filter(item => (item.seen || 0) > 0).length;
+    return {
+      learned,
+      total,
+      pct: total > 0 ? Math.min(100, Math.round((learned / total) * 100)) : 0,
+    };
+  }
+
   function shuffle(arr) {
     const a = arr.slice();
     for (let i = a.length - 1; i > 0; i--) {
@@ -195,13 +205,23 @@
     (window.QUIZ_INDEX || []).forEach(set => {
       const data = window.QUIZ_DATA[set.id];
       const selected = set.id === state.selectedSetId;
+      const progress = state.auth ? setProgress(set.id, data.questions.length) : null;
       const card = el(`
         <button type="button" class="card set-card ${selected ? 'selected' : ''}">
           <div class="set-card-main">
             <div class="set-emoji">${getSetEmoji(set)}</div>
-            <div>
+            <div class="set-card-content">
               <div class="title">${escapeHtml(set.title)}</div>
               <div class="meta">${data.questions.length} câu</div>
+              ${progress ? `
+                <div class="set-progress-row">
+                  <span>Đã học ${progress.learned}/${progress.total} câu</span>
+                  <strong>${progress.pct}%</strong>
+                </div>
+                <div class="set-progress-bar" role="progressbar" aria-label="Tiến độ ${escapeHtml(set.title)}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${progress.pct}">
+                  <span style="width:${progress.pct}%"></span>
+                </div>
+              ` : ''}
             </div>
           </div>
           ${selected ? '<div class="set-check">✓</div>' : ''}
