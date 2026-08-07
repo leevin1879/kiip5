@@ -35,17 +35,19 @@ export default async request => {
     return response(502, { error: 'Không thể đọc dữ liệu thống kê.' });
   }
 
-  const total = entries.length;
   const uniqueIps = new Set();
-  const perDay = new Map();
+  const perDayIps = new Map();
   entries.forEach(entry => {
     const { date, ipKey } = parseKey(entry.key);
     if (ipKey) uniqueIps.add(ipKey);
-    if (date) perDay.set(date, (perDay.get(date) || 0) + 1);
+    if (date && ipKey) {
+      if (!perDayIps.has(date)) perDayIps.set(date, new Set());
+      perDayIps.get(date).add(ipKey);
+    }
   });
 
-  const perDayList = Array.from(perDay.entries())
-    .map(([date, count]) => ({ date, count }))
+  const perDayList = Array.from(perDayIps.entries())
+    .map(([date, ips]) => ({ date, count: ips.size }))
     .sort((a, b) => (a.date < b.date ? 1 : -1))
     .slice(0, 30);
 
@@ -54,23 +56,30 @@ export default async request => {
   const recentKeys = entries
     .map(entry => entry.key)
     .sort()
-    .reverse()
-    .slice(0, 60);
+    .reverse();
 
   const recent = [];
+  const recentIpKeys = new Set();
   for (const key of recentKeys) {
+    const { ipKey } = parseKey(key);
+    if (!ipKey || recentIpKeys.has(ipKey)) continue;
     try {
       const data = await store.get(key, { type: 'json' });
-      if (data) recent.push(data);
+      if (data) {
+        recent.push(data);
+        recentIpKeys.add(ipKey);
+      }
     } catch {
       // skip unreadable entry
     }
+    if (recent.length >= 500) break;
   }
 
   return response(200, {
-    total,
+    total: uniqueIps.size,
+    totalVisits: entries.length,
     uniqueIps: uniqueIps.size,
-    today: perDay.get(todayKey) || 0,
+    today: perDayIps.get(todayKey)?.size || 0,
     perDay: perDayList,
     recent,
   });

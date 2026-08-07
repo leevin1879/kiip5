@@ -116,9 +116,9 @@
     root.appendChild(topBar);
 
     const statGrid = el('<div class="stat-grid"></div>');
-    statGrid.appendChild(el(`<div class="card stat-card"><b>${data.total}</b><span>Tổng lượt truy cập</span></div>`));
-    statGrid.appendChild(el(`<div class="card stat-card"><b>${data.uniqueIps}</b><span>IP khác nhau</span></div>`));
-    statGrid.appendChild(el(`<div class="card stat-card"><b>${data.today}</b><span>Hôm nay</span></div>`));
+    statGrid.appendChild(el(`<div class="card stat-card"><b>${data.total}</b><span>Tổng IP truy cập</span></div>`));
+    statGrid.appendChild(el(`<div class="card stat-card"><b>${data.totalVisits || 0}</b><span>Lượt ghi nhận</span></div>`));
+    statGrid.appendChild(el(`<div class="card stat-card"><b>${data.today}</b><span>IP hôm nay</span></div>`));
     root.appendChild(statGrid);
 
     if (usersData && usersData.users) {
@@ -154,22 +154,37 @@
       </table>
     `);
     const tbody = table.querySelector('tbody');
-    (data.recent || []).forEach(v => {
-      const time = v.ts ? new Date(v.ts).toLocaleString('vi-VN') : '';
-      const loc = [v.city, v.country].filter(Boolean).join(', ') || '—';
-      const row = el(`
-        <tr>
-          <td>${escapeHtml(time)}</td>
-          <td>${escapeHtml(v.ip || '')}</td>
-          <td>${escapeHtml(loc)}</td>
-          <td>${escapeHtml(v.page || '')}</td>
-          <td title="${escapeHtml(v.userAgent || '')}">${escapeHtml((v.userAgent || '').slice(0, 40))}</td>
-        </tr>
-      `);
-      tbody.appendChild(row);
-    });
+    const visits = data.recent || [];
+    let visibleCount = 0;
+    const renderMore = () => {
+      visits.slice(visibleCount, visibleCount + 20).forEach(v => {
+        const time = v.ts ? new Date(v.ts).toLocaleString('vi-VN') : '';
+        const loc = [v.city, v.country].filter(Boolean).join(', ') || '—';
+        const row = el(`
+          <tr>
+            <td>${escapeHtml(time)}</td>
+            <td>${escapeHtml(v.ip || '')}</td>
+            <td>${escapeHtml(loc)}</td>
+            <td>${escapeHtml(v.page || '')}</td>
+            <td title="${escapeHtml(v.userAgent || '')}">${escapeHtml((v.userAgent || '').slice(0, 40))}</td>
+          </tr>
+        `);
+        tbody.appendChild(row);
+      });
+      visibleCount = Math.min(visibleCount + 20, visits.length);
+    };
+    renderMore();
     tableWrap.appendChild(table);
     root.appendChild(tableWrap);
+
+    if (visits.length > 20) {
+      const moreBtn = el('<button class="secondary" style="display:block;margin:12px auto;">더보기</button>');
+      moreBtn.addEventListener('click', () => {
+        renderMore();
+        if (visibleCount >= visits.length) moreBtn.remove();
+      });
+      root.appendChild(moreBtn);
+    }
 
     const refreshBtn = el('<button class="secondary">Làm mới</button>');
     refreshBtn.addEventListener('click', loadStats);
