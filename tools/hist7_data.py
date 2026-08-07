@@ -9,7 +9,7 @@
 QUESTIONS = [
     dict(num=1, correct='D', options_source='docx',
          stem='한국 역사에서 처음으로 등장한 나라는?',
-         options=[('A', '고려 (Goryeo)'), ('B', '신라 (Silla)'), ('C', '조선 (Joseon)'), ('D', '고조선 (Gojoseon)')],
+         options=[('A', '고려'), ('B', '신라'), ('C', '조선'), ('D', '고조선')],
          explanation=(
              'Gojoseon (고조선, Cổ Triều Tiên) là nhà nước đầu tiên trong lịch sử Hàn Quốc, do Dangun Wanggeom lập ra — '
              'khớp với D.\n'
@@ -18,7 +18,7 @@ QUESTIONS = [
          )),
     dict(num=2, correct='C', options_source='docx',
          stem='삼국 중에 가장 늦게 발전하였으나 꾸준히 성장해서 삼국을 통일한 국가는?',
-         options=[('A', '고려 (Goryeo)'), ('B', '백제 (Baekje)'), ('C', '신라 (Silla)'), ('D', '고구려 (Goguryeo)')],
+         options=[('A', '고려'), ('B', '백제'), ('C', '신라'), ('D', '고구려')],
          explanation=(
              'Silla phát triển muộn nhất trong Tam Quốc nhưng liên minh với nhà Đường (Trung Quốc) để thống nhất Tam '
              'Quốc vào năm 676 — khớp với C.\n'
@@ -27,7 +27,7 @@ QUESTIONS = [
          )),
     dict(num=3, correct='B', options_source='docx',
          stem="'나라의 교육과 역사가 없어지지 아니하면 그 나라는 망하지 않는다'라고 말한 사람은?",
-         options=[('A', '김대중'), ('B', '박은식 (Park Eun-sik)'), ('C', '유관순'), ('D', '허난설헌')],
+         options=[('A', '김대중'), ('B', '박은식'), ('C', '유관순'), ('D', '허난설헌')],
          explanation=(
              'Nhà sử học và nhà hoạt động độc lập Park Eun-sik đã nói câu này, nhấn mạnh tầm quan trọng của giáo dục '
              'và lịch sử trong việc bảo tồn dân tộc dưới thời Nhật thuộc — khớp với B.\n'
@@ -50,7 +50,7 @@ QUESTIONS = [
          )),
     dict(num=5, correct='D', options_source='docx',
          stem='세계 최초의 금속활자로 찍은 책의 이름은?',
-         options=[('A', '경국대전'), ('B', '삼강행실도'), ('C', '팔만대장경'), ('D', '직지심체요절 (Jikji)')],
+         options=[('A', '경국대전'), ('B', '삼강행실도'), ('C', '팔만대장경'), ('D', '직지심체요절')],
          explanation=(
              'Jikji (직지심체요절) in năm 1377 thời Goryeo là cuốn sách được in bằng chữ kim loại (금속활자) sớm nhất thế '
              'giới còn tồn tại đến nay, được UNESCO công nhận — khớp với D.\n'
@@ -75,7 +75,7 @@ QUESTIONS = [
          )),
     dict(num=7, correct='A', options_source='docx',
          stem='조선 시대 제주도에 심한 흉년이 들어 사람들이 굶어 죽게 되었을 때 자신의 돈으로 쌀을 사서 사람들에게 나누어 주어 백성을 구한 사람은?',
-         options=[('A', '김만덕 (Kim Man-deok)'), ('B', '유관순'), ('C', '신사임당'), ('D', '허난설헌')],
+         options=[('A', '김만덕'), ('B', '유관순'), ('C', '신사임당'), ('D', '허난설헌')],
          explanation=(
              'Kim Man-deok là nữ thương gia thời Joseon ở Jeju. Khi đảo Jeju bị nạn đói, bà đã dùng toàn bộ tài sản '
              'tích lũy được để mua gạo từ đất liền về phát cho dân cứu đói — khớp với A.\n'
@@ -86,7 +86,7 @@ QUESTIONS = [
          stem='불교의 문화유산이 아닌 것은?',
          options=[
              ('A', '불국사'),
-             ('B', '삼강행실도 (Samgang Haengsildo)'),
+             ('B', '삼강행실도'),
              ('C', '팔만대장경'),
              ('D', '정림사지 5층 석탑'),
          ],

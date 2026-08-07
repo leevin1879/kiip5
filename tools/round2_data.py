@@ -121,9 +121,8 @@ QUESTIONS = [
          )),
     dict(num=13, correct='C', options_source='reconstructed',
          stem=(
-             '[Ngữ cảnh (tóm tắt, không phải nguyên văn — bài đọc gốc không có trong tài liệu nguồn): đoạn văn nói về nghi '
-             'lễ thôi nôi truyền thống Hàn Quốc — em bé chọn đồ vật (tiền, bút chì, micro...) trong tiệc thôi nôi]\n'
-             '( )에 알맞은 것을 고르시오.'
+             '돌잔치에서는 아기 앞에 실, 돈, 연필, 마이크 등 여러 가지 물건을 놓고 아기가 그중 하나를 고르게 하는 순서가 '
+             '있다. 사람들은 아기가 어떤 물건을 집는지 보면서 아기의 미래를 상상해 보곤 한다. 이것은 ( ).'
          ),
          options=[
              ('A', '아기의 건강을 기원하는 백일잔치였다'),
@@ -140,9 +139,8 @@ QUESTIONS = [
          )),
     dict(num=14, correct='A', options_source='reconstructed',
          stem=(
-             '[Poster bầu cử (tóm tắt): mục "준비물" ghi phải mang theo giấy tờ tùy thân; giờ bỏ phiếu đến 18:00; ngày 14 '
-             'là ngày bỏ phiếu chính thức (không phải ngày bỏ phiếu sớm)]\n'
-             '다음 선거 포스터의 내용과 같은 것은?'
+             '[선거 포스터]\n○○시장 선거\n투표일: 6월 14일(수) 오전 6시 ~ 오후 6시\n사전투표일: 6월 9일(금) ~ 10일(토)\n'
+             '준비물: 신분증 지참\n\n다음 선거 포스터의 내용과 같은 것은?'
          ),
          options=[
              ('A', '투표를 하려면 주민등록증을 가져가야 한다.'),
@@ -161,8 +159,9 @@ QUESTIONS = [
          )),
     dict(num=15, correct='A', options_source='reconstructed',
          stem=(
-             '[Ngữ cảnh (tóm tắt, không phải nguyên văn): đoạn văn nói về điện thoại thông minh — đoạn đầu nói về sự tiện '
-             'lợi, đoạn sau nói về nhược điểm (ít giao tiếp trực tiếp, dễ gây nghiện)]\n'
+             '스마트폰은 이제 우리 생활에서 없어서는 안 될 물건이 되었다. 스마트폰 하나만 있으면 길을 찾거나 물건을 사거나 '
+             '은행 업무를 보는 등 많은 일을 신속하고 편리하게 해결할 수 있게 되었다. 하지만 스마트폰에 지나치게 의존하다 '
+             '보면 사람들과 직접 얼굴을 보고 대화하는 시간이 줄어들고, 심한 경우에는 스마트폰 중독으로 이어지기도 한다.\n'
              '윗글의 제목으로 가장 알맞은 것을 고르시오.'
          ),
          options=[
@@ -179,8 +178,9 @@ QUESTIONS = [
          )),
     dict(num=16, correct='D', options_source='reconstructed',
          stem=(
-             '[Ngữ cảnh (tóm tắt, không phải nguyên văn): cùng bài đọc về smartphone ở câu 15 — chỗ trống nằm ở phần nói '
-             'về ƯU ĐIỂM]\n'
+             '스마트폰은 이제 우리 생활에서 없어서는 안 될 물건이 되었다. 스마트폰 하나만 있으면 길을 찾거나 물건을 사거나 '
+             '은행 업무를 보는 등 ( ). 하지만 스마트폰에 지나치게 의존하다 보면 사람들과 직접 얼굴을 보고 대화하는 시간이 '
+             '줄어들고, 심한 경우에는 스마트폰 중독으로 이어지기도 한다.\n'
              '윗글의 ( )에 들어갈 내용으로 알맞은 것을 고르시오.'
          ),
          options=[
@@ -226,9 +226,8 @@ QUESTIONS = [
          )),
     dict(num=19, correct='A', options_source='reconstructed',
          stem=(
-             '<보기>: học hỏi bất kể tuổi tác / giáo dục xóa mù chữ, giáo dục nghề nghiệp / diễn ra tại thư viện, trung '
-             'tâm văn hóa\n'
-             '<보기>의 내용과 가장 관계가 깊은 것은?'
+             '<보기>\n· 나이에 관계없이 배울 수 있다\n· 문해 교육, 직업 교육 등을 포함한다\n· 도서관, 문화센터 등에서 '
+             '이루어진다\n<보기>의 내용과 가장 관계가 깊은 것은?'
          ),
          options=[('A', '평생교육'), ('B', '직업교육'), ('C', '의무교육'), ('D', '특수교육')],
          explanation=(
@@ -377,8 +376,8 @@ QUESTIONS = [
          )),
     dict(num=28, correct='C', options_source='reconstructed',
          stem=(
-             '<보기>: Ở Hàn Quốc, hai người kết hôn phải làm thủ tục ( ) tại Tòa thị chính/Quận/Huyện. Nếu không làm thì '
-             'không được pháp luật bảo vệ về tài sản, nuôi con. Nếu làm thì được công nhận là vợ chồng.\n'
+             '<보기>\n결혼을 하는 두 사람은 주민센터나 구청에 가서 ( )를 해야 한다. ( )를 하지 않으면 재산이나 자녀 '
+             '양육 등에서 법의 보호를 받을 수 없다. ( )를 하면 부부로 인정받아 법의 보호를 받을 수 있다.\n'
              '<보기>의 ( )에 공통으로 들어갈 말은?'
          ),
          options=[('A', '출생 신고'), ('B', '이혼 신고'), ('C', '혼인 신고'), ('D', '전입 신고')],
@@ -391,8 +390,7 @@ QUESTIONS = [
          )),
     dict(num=29, correct='D', options_source='reconstructed',
          stem=(
-             '<보기>: 국가인권위원회 (Ủy ban Nhân quyền Quốc gia) / 국민권익위원회 (Ủy ban Quyền lợi Quốc dân)\n'
-             '<보기>의 내용에 공통적으로 해당되는 것은?'
+             '<보기>\n국가인권위원회\n국민권익위원회\n<보기>의 내용에 공통적으로 해당되는 것은?'
          ),
          options=[
              ('A', '국가 기관의 잘못으로 피해를 입었을 때 소송을 제기할 수 있는 기관이다.'),
@@ -410,8 +408,7 @@ QUESTIONS = [
          )),
     dict(num=30, correct='A', options_source='reconstructed',
          stem=(
-             '<보기>: Người nước ngoài kết hôn với công dân Hàn Quốc, cư trú liên tục tại Hàn Quốc trên 2 năm.\n'
-             '<보기>의 설명에 해당하는 것은?'
+             '<보기>\n한국 국민과 혼인하여 한국에 2년 이상 계속 거주하고 있는 외국인\n<보기>의 설명에 해당하는 것은?'
          ),
          options=[('A', '간이귀화'), ('B', '일반귀화'), ('C', '특별귀화'), ('D', '인지')],
          explanation=(
@@ -433,8 +430,7 @@ QUESTIONS = [
          )),
     dict(num=32, correct='A', options_source='docx',
          stem=(
-             '<보기>: thống nhất Tam Quốc / được thành lập muộn nhất trong Tam Quốc → đây là nước Silla (신라).\n'
-             '<보기>에 해당하는 나라에 대한 설명으로 옳지 않은 것은?'
+             '<보기>\n· 삼국을 통일하였다\n· 삼국 중 가장 늦게 발전하였다\n<보기>에 해당하는 나라에 대한 설명으로 옳지 않은 것은?'
          ),
          options=[
              ('A', '유교 사상을 바탕으로 나라를 다스렸다.'),
@@ -470,9 +466,8 @@ QUESTIONS = [
          )),
     dict(num=34, correct='D', options_source='docx',
          stem=(
-             '<보기>: tổ chức Olympic Mùa đông 2018 / núi Seoraksan, Gyeongpodae, bãi biển Naksan → đây là vùng Gangwon '
-             '(강원도).\n'
-             '<보기>와 관련된 지역에 대한 설명으로 옳지 않은 것은?'
+             '<보기>\n· 2018년 평창 동계 올림픽을 개최하였다\n· 설악산, 경포대, 낙산해수욕장이 있다\n<보기>와 관련된 지역에 '
+             '대한 설명으로 옳지 않은 것은?'
          ),
          options=[
              ('A', '산이 많아 고랭지 농업과 축산업이 발달했다.'),
@@ -503,8 +498,8 @@ QUESTIONS = [
          )),
     dict(num=36, correct='C', options_source='reconstructed',
          stem=(
-             '<보기>: (가) mọi người đi ngắm lá vàng lá đỏ nhiều (mùa Thu) / (나) xảy ra thiên tai như bão tuyết (mùa Đông).\n'
-             '(가), (나)에서 설명하는 계절의 현상에 알맞은 날씨는?'
+             '<보기>\n(가) 사람들이 단풍을 구경하러 많이 간다\n(나) 폭설과 같은 자연재해가 발생하기도 한다\n(가), (나)에서 '
+             '설명하는 계절의 현상에 알맞은 날씨는?'
          ),
          options=[
              ('A', '(가) 따뜻하고 습한 날씨 - (나) 덥고 습한 날씨'),

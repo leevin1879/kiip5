@@ -9,19 +9,19 @@
       "options": [
         {
           "label": "A",
-          "text": "고려 (Goryeo)"
+          "text": "고려"
         },
         {
           "label": "B",
-          "text": "신라 (Silla)"
+          "text": "신라"
         },
         {
           "label": "C",
-          "text": "조선 (Joseon)"
+          "text": "조선"
         },
         {
           "label": "D",
-          "text": "고조선 (Gojoseon)"
+          "text": "고조선"
         }
       ],
       "correct_source": "docx",
@@ -35,19 +35,19 @@
       "options": [
         {
           "label": "A",
-          "text": "고려 (Goryeo)"
+          "text": "고려"
         },
         {
           "label": "B",
-          "text": "백제 (Baekje)"
+          "text": "백제"
         },
         {
           "label": "C",
-          "text": "신라 (Silla)"
+          "text": "신라"
         },
         {
           "label": "D",
-          "text": "고구려 (Goguryeo)"
+          "text": "고구려"
         }
       ],
       "correct_source": "docx",
@@ -65,7 +65,7 @@
         },
         {
           "label": "B",
-          "text": "박은식 (Park Eun-sik)"
+          "text": "박은식"
         },
         {
           "label": "C",
@@ -125,7 +125,7 @@
         },
         {
           "label": "D",
-          "text": "직지심체요절 (Jikji)"
+          "text": "직지심체요절"
         }
       ],
       "correct_source": "docx",
@@ -156,7 +156,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Ghép đôi đúng: tờ 1.000 won in hình Yi Hwang (퇴계 이황), tờ 5.000 won in hình Yi I (율곡 이이), tờ 10.000 won in hình vua Sejong, tờ 50.000 won in hình Shin Saimdang (mẹ của Yi I) — khớp với A.\nB đảo ngược cặp 1.000/5.000. C đảo ngược cặp 10.000/50.000. D đảo ngược cặp 1.000/10.000 — đều là các hoán vị sai của cùng 4 mệnh giá."
+      "explanation": "Ghép đôi đúng: tờ 1.000 won in hình Yi Hwang (퇴계 이황), tờ 5.000 won in hình Yi I (율곡 이이), tờ 10.000 won in hình vua Sejong, tờ 50.000 won in hình Shin Saimdang (mẹ của Yi I) — khớp với A.\nB đảo ngược cặp 1.000/5.000. C đảo ngược cặp 10.000/50.000. D đảo ngược cặp 1.000/10.000 — đều là các hoán vị sai của cùng 4 mệnh giá.\nLưu ý: tài liệu nguồn chỉ cho bảng ghép đôi đúng (không có sẵn 4 phương án trắc nghiệm dạng câu hỏi thi) — B, C, D là do Claude tự dựng lại bằng cách hoán đổi các cặp trong bảng gốc."
     },
     {
       "num": 7,
@@ -165,7 +165,7 @@
       "options": [
         {
           "label": "A",
-          "text": "김만덕 (Kim Man-deok)"
+          "text": "김만덕"
         },
         {
           "label": "B",
@@ -195,7 +195,7 @@
         },
         {
           "label": "B",
-          "text": "삼강행실도 (Samgang Haengsildo)"
+          "text": "삼강행실도"
         },
         {
           "label": "C",
@@ -494,7 +494,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Tướng Eulji Mundeok của Goguryeo đã đánh bại đại quân nhà Tùy (Trung Quốc) tại trận Salsu (살수대첩, năm 612) — một trong những chiến thắng vĩ đại nhất trong lịch sử Hàn Quốc, tiêu diệt hơn 300.000 quân Tùy — khớp với D.\nA Seo Hui dùng ngoại giao chống Khiết Đan (thời Goryeo, không phải chiến trận với nhà Tùy). B Yi Sun-sin là đô đốc thời Joseon chống Nhật Bản. C Kim Yu-sin là tướng thời Silla, liên quan việc thống nhất Tam Quốc, không liên quan trận Salsu."
+      "explanation": "Tướng Eulji Mundeok của Goguryeo đã đánh bại đại quân nhà Tùy (Trung Quốc) tại trận Salsu (살수대첩, năm 612) — một trong những chiến thắng vĩ đại nhất trong lịch sử Hàn Quốc, tiêu diệt hơn 300.000 quân Tùy — khớp với D.\nA Seo Hui dùng ngoại giao chống Khiết Đan (thời Goryeo, không phải chiến trận với nhà Tùy). B Yi Sun-sin là đô đốc thời Joseon chống Nhật Bản. C Kim Yu-sin là tướng thời Silla, liên quan việc thống nhất Tam Quốc, không liên quan trận Salsu.\nLưu ý: tài liệu nguồn chỉ cho biết đáp án đúng dạng điền từ, không có sẵn 4 phương án trắc nghiệm — A, B, C là do Claude tự dựng lại bằng các danh tướng lịch sử khác để tăng tính thử thách."
     },
     {
       "num": 20,
@@ -520,7 +520,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Đô đốc Yi Sun-sin là người phát minh ra thuyền rùa (거북선) và lãnh đạo hải quân Joseon đánh bại quân Nhật trong chiến tranh Imjin (임진왜란, 1592-1598) — ông là anh hùng dân tộc vĩ đại nhất của Hàn Quốc — khớp với C.\nA Kim Gu là nhà lãnh đạo phong trào độc lập đầu thế kỷ 20, không liên quan chiến tranh Imjin. B Eulji Mundeok đánh quân Tùy thời Goguryeo. D Seo Hui dùng ngoại giao chống Khiết Đan thời Goryeo — cả 3 đều là nhân vật lịch sử khác thời kỳ."
+      "explanation": "Đô đốc Yi Sun-sin là người phát minh ra thuyền rùa (거북선) và lãnh đạo hải quân Joseon đánh bại quân Nhật trong chiến tranh Imjin (임진왜란, 1592-1598) — ông là anh hùng dân tộc vĩ đại nhất của Hàn Quốc — khớp với C.\nA Kim Gu là nhà lãnh đạo phong trào độc lập đầu thế kỷ 20, không liên quan chiến tranh Imjin. B Eulji Mundeok đánh quân Tùy thời Goguryeo. D Seo Hui dùng ngoại giao chống Khiết Đan thời Goryeo — cả 3 đều là nhân vật lịch sử khác thời kỳ.\nLưu ý: tài liệu nguồn chỉ cho biết đáp án đúng dạng điền từ, không có sẵn 4 phương án trắc nghiệm — A, B, D là do Claude tự dựng lại bằng các danh nhân lịch sử khác để tăng tính thử thách."
     }
   ],
   "tables": []

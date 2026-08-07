@@ -58,8 +58,8 @@ QUESTIONS = [
          )),
     dict(num=4, correct='A', options_source='docx',
          stem=(
-             '다음 빈칸에 알맞은 답어는? (Tỉnh có dân số đông nhất trong 7 tỉnh, liên tục xây dựng thành phố vệ tinh, cơ '
-             'sở hạ tầng tốt, nhiều ngành công nghiệp phát triển đều)'
+             '<보기>\n· 7개 도 중에서 인구가 가장 많다\n· 신도시를 계속 건설하고 있다\n· 기반 시설이 잘 갖춰져 있고 '
+             '다양한 산업이 고르게 발달했다\n<보기>의 설명에 알맞은 지역은?'
          ),
          options=[('A', '경기도'), ('B', '충청북도'), ('C', '경상북도'), ('D', '전라남도')],
          explanation=(
@@ -91,7 +91,10 @@ QUESTIONS = [
              'núi cụ thể thuộc dãy Taebaek). C 호남산맥 nằm ở phía Tây Nam.'
          )),
     dict(num=7, correct='A', options_source='docx',
-         stem='다음 빈칸에 알맞은 답어는? (Bờ biển đơn giản, nhiều bãi tắm, gần có Seoraksan, Odaesan, du lịch phát triển)',
+         stem=(
+             '<보기>\n· 해안선이 단조롭다\n· 해수욕장이 많다\n· 설악산, 오대산과 가까워서 관광업이 발달했다\n<보기>의 '
+             '설명에 알맞은 것은?'
+         ),
          options=[('A', '동해'), ('B', '남해'), ('C', '서해'), ('D', '다도해')],
          explanation=(
              'Biển Đông (동해): bờ biển đơn giản (단조롭다), nhiều bãi tắm (해수욕장), gần núi Seoraksan và Odaesan — khớp với A.\n'
@@ -115,8 +118,8 @@ QUESTIONS = [
          )),
     dict(num=9, correct='C', options_source='docx',
          stem=(
-             '다음 빈칸에 알맞은 답어는? (Gọi là vùng Yeongnam, nhiều khu công nghiệp, di sản Silla ở Gyeongju, di sản '
-             'Nho giáo Joseon ở Andong, đảo Dokdo)'
+             '<보기>\n· 영남지역이라고도 불린다\n· 공업 단지가 많다\n· 경주에는 신라의 문화유산이, 안동에는 조선 유교의 '
+             '문화유산이 있다\n· 독도가 있다\n<보기>의 설명에 알맞은 지역은?'
          ),
          options=[('A', '강원지역'), ('B', '전라지역'), ('C', '경상지역'), ('D', '충청지역')],
          explanation=(
@@ -199,7 +202,7 @@ QUESTIONS = [
          )),
     dict(num=16, correct='B', options_source='docx',
          stem="제주도는 세 가지가 많기 때문에 '삼다도'라고 불리기도 했는데, 이 세 가지에 해당하지 않는 것은?",
-         options=[('A', '돌 (Đá)'), ('B', '태풍 (Bão)'), ('C', '여자 (Phụ nữ)'), ('D', '바람 (Gió)')],
+         options=[('A', '돌'), ('B', '태풍'), ('C', '여자'), ('D', '바람')],
          explanation=(
              'Tam đa (삼다도) của Jeju là: Đá (돌), Gió (바람), Phụ nữ (여자) — Bão (태풍) không thuộc nhóm "Tam đa" này, '
              'dù Jeju cũng hay có bão — nên B là đáp án đúng cho câu hỏi "không thuộc về".\n'

@@ -83,7 +83,7 @@
     {
       "num": 4,
       "correct": "A",
-      "stem": "다음 빈칸에 알맞은 답어는? (Tỉnh có dân số đông nhất trong 7 tỉnh, liên tục xây dựng thành phố vệ tinh, cơ sở hạ tầng tốt, nhiều ngành công nghiệp phát triển đều)",
+      "stem": "<보기>\n· 7개 도 중에서 인구가 가장 많다\n· 신도시를 계속 건설하고 있다\n· 기반 시설이 잘 갖춰져 있고 다양한 산업이 고르게 발달했다\n<보기>의 설명에 알맞은 지역은?",
       "options": [
         {
           "label": "A",
@@ -161,7 +161,7 @@
     {
       "num": 7,
       "correct": "A",
-      "stem": "다음 빈칸에 알맞은 답어는? (Bờ biển đơn giản, nhiều bãi tắm, gần có Seoraksan, Odaesan, du lịch phát triển)",
+      "stem": "<보기>\n· 해안선이 단조롭다\n· 해수욕장이 많다\n· 설악산, 오대산과 가까워서 관광업이 발달했다\n<보기>의 설명에 알맞은 것은?",
       "options": [
         {
           "label": "A",
@@ -213,7 +213,7 @@
     {
       "num": 9,
       "correct": "C",
-      "stem": "다음 빈칸에 알맞은 답어는? (Gọi là vùng Yeongnam, nhiều khu công nghiệp, di sản Silla ở Gyeongju, di sản Nho giáo Joseon ở Andong, đảo Dokdo)",
+      "stem": "<보기>\n· 영남지역이라고도 불린다\n· 공업 단지가 많다\n· 경주에는 신라의 문화유산이, 안동에는 조선 유교의 문화유산이 있다\n· 독도가 있다\n<보기>의 설명에 알맞은 지역은?",
       "options": [
         {
           "label": "A",
@@ -399,19 +399,19 @@
       "options": [
         {
           "label": "A",
-          "text": "돌 (Đá)"
+          "text": "돌"
         },
         {
           "label": "B",
-          "text": "태풍 (Bão)"
+          "text": "태풍"
         },
         {
           "label": "C",
-          "text": "여자 (Phụ nữ)"
+          "text": "여자"
         },
         {
           "label": "D",
-          "text": "바람 (Gió)"
+          "text": "바람"
         }
       ],
       "correct_source": "docx",
@@ -494,7 +494,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Địa hình Hàn Quốc có đặc điểm phía Đông cao (nhiều núi, dãy Taebaek) và phía Tây thấp (đồng bằng, giáp biển) — đây là đặc điểm địa hình nổi bật nhất của bán đảo Triều Tiên, gọi là 동고서저 (Đông cao Tây thấp, 東高西低) — khớp với C.\nA, B, D là các hoán vị hướng khác của cùng cấu trúc từ, không đúng với đặc điểm địa hình Hàn Quốc."
+      "explanation": "Địa hình Hàn Quốc có đặc điểm phía Đông cao (nhiều núi, dãy Taebaek) và phía Tây thấp (đồng bằng, giáp biển) — đây là đặc điểm địa hình nổi bật nhất của bán đảo Triều Tiên, gọi là 동고서저 (Đông cao Tây thấp, 東高西低) — khớp với C.\nA, B, D là các hoán vị hướng khác của cùng cấu trúc từ, không đúng với đặc điểm địa hình Hàn Quốc.\nLưu ý: tài liệu nguồn chỉ cho biết đáp án đúng dạng điền từ, không có sẵn 4 phương án trắc nghiệm — A, B, D là do Claude tự dựng lại theo cùng kiểu thuật ngữ địa lý 4 hướng."
     },
     {
       "num": 20,
@@ -520,7 +520,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Khu vực phi quân sự (비무장지대, DMZ) là vùng đệm dọc theo đường ngừng bắn giữa Hàn Quốc và Bắc Triều Tiên, mỗi bên rộng 2km (tổng 4km) và kéo dài khoảng 250km từ Đông sang Tây theo Hiệp định đình chiến 1953 — khớp với B.\nA 군사분계선 (đường ranh giới quân sự, MDL) là đường CHÍNH GIỮA của khu DMZ, không phải bản thân vùng đệm rộng 4km. C 판문점 (Panmunjom) chỉ là MỘT địa điểm cụ thể trong khu DMZ, không phải tên gọi cả vùng. D 휴전선 (đường ngừng bắn) thường được dùng để chỉ đường ranh giới trung tâm, tương tự MDL, không phải khu vực rộng 4km xung quanh nó."
+      "explanation": "Khu vực phi quân sự (비무장지대, DMZ) là vùng đệm dọc theo đường ngừng bắn giữa Hàn Quốc và Bắc Triều Tiên, mỗi bên rộng 2km (tổng 4km) và kéo dài khoảng 250km từ Đông sang Tây theo Hiệp định đình chiến 1953 — khớp với B.\nA 군사분계선 (đường ranh giới quân sự, MDL) là đường CHÍNH GIỮA của khu DMZ, không phải bản thân vùng đệm rộng 4km. C 판문점 (Panmunjom) chỉ là MỘT địa điểm cụ thể trong khu DMZ, không phải tên gọi cả vùng. D 휴전선 (đường ngừng bắn) thường được dùng để chỉ đường ranh giới trung tâm, tương tự MDL, không phải khu vực rộng 4km xung quanh nó.\nLưu ý: tài liệu nguồn chỉ cho biết đáp án đúng dạng điền từ, không có sẵn 4 phương án trắc nghiệm — A, C, D là do Claude tự dựng lại bằng các thuật ngữ liên quan thực sự tồn tại (dễ gây nhầm lẫn thật) để tăng tính thử thách."
     }
   ],
   "tables": []

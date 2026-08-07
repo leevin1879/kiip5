@@ -133,9 +133,8 @@ QUESTIONS = [
          )),
     dict(num=13, correct='B', options_source='reconstructed',
          stem=(
-             '[Ngữ cảnh (tóm tắt, không phải nguyên văn — bài đọc gốc không có trong tài liệu nguồn): đoạn văn nói về '
-             '"인맥 다이어트" (giảm bớt/sắp xếp lại mạng lưới quan hệ để tránh áp lực từ quá nhiều mối quan hệ)]\n'
-             '( )에 알맞은 것을 고르시오.'
+             '요즘 사람들은 휴대폰 속에 저장된 사람이 너무 많아서 오히려 스트레스를 받는다고 한다. 그래서 자주 연락하지 '
+             '않거나 불편한 관계는 정리하는 사람들이 늘고 있다. 이런 "인맥 다이어트"는 ( ).'
          ),
          options=[
              ('A', '새로운 친구를 많이 사귀는 것을 의미하는'),
@@ -152,9 +151,8 @@ QUESTIONS = [
          )),
     dict(num=14, correct='B', options_source='reconstructed',
          stem=(
-             '[Quảng cáo tuyển dụng (구인 광고, tóm tắt): có ghi ngành nghề tuyển dụng, giờ làm việc, và cách thức nộp hồ '
-             'sơ là "방문 접수" (đến nộp trực tiếp) — không có thông tin về việc nộp hồ sơ online]\n'
-             '다음 구인 광고를 보고 알 수 없는 것은?'
+             '[구인 광고]\n모집 분야: 주방 보조\n근무 시간: 09:00 ~ 18:00\n접수 방법: 방문 접수\n\n다음 구인 광고를 보고 '
+             '알 수 없는 것은?'
          ),
          options=[('A', '채용 직종'), ('B', '온라인 접수 방법'), ('C', '근무 시간'), ('D', '접수 방법')],
          explanation=(
@@ -166,9 +164,9 @@ QUESTIONS = [
          )),
     dict(num=15, correct='B', options_source='reconstructed',
          stem=(
-             '[Ngữ cảnh (tóm tắt, không phải nguyên văn): đoạn văn nói về các năng lực/thái độ cần thiết trong thời đại '
-             'quốc tế hóa — ngoại ngữ, tôn trọng văn hóa khác, kiến thức nền]\n'
-             '윗글의 제목으로 가장 알맞은 것을 고르시오.'
+             '세계화 시대에는 외국어 능력뿐만 아니라 다른 나라의 문화를 이해하고 존중하는 태도, 그리고 폭넓은 기초 '
+             '지식이 함께 필요하다. 이 세 가지를 고루 갖추어야 국제 사회에서 다양한 사람들과 원활하게 소통하고 협력할 '
+             '수 있다.\n윗글의 제목으로 가장 알맞은 것을 고르시오.'
          ),
          options=[
              ('A', '외국어를 배우는 방법'),
@@ -185,9 +183,9 @@ QUESTIONS = [
          )),
     dict(num=16, correct='C', options_source='reconstructed',
          stem=(
-             '[Ngữ cảnh (tóm tắt, không phải nguyên văn): cùng bài đọc ở câu 15 — đoạn văn nói cần giáo dục trẻ em từ nhỏ '
-             'để loại bỏ định kiến và tôn trọng văn hóa lẫn nhau]\n'
-             '윗글의 ( )에 들어갈 내용으로 알맞은 것을 고르시오.'
+             '세계화 시대에는 외국어 능력뿐만 아니라 다른 나라의 문화를 이해하고 존중하는 태도, 그리고 폭넓은 기초 '
+             '지식이 함께 필요하다. 다른 문화에 대한 편견을 없애려면 어릴 때부터 ( ). 그래야 서로 다른 문화를 자연스럽게 '
+             '받아들이고 존중할 수 있다.\n윗글의 ( )에 들어갈 내용으로 알맞은 것을 고르시오.'
          ),
          options=[
              ('A', '외국어를 유창하게 구사해야 한다'),
@@ -284,8 +282,8 @@ QUESTIONS = [
          )),
     dict(num=22, correct='C', options_source='reconstructed',
          stem=(
-             '<보기>: chương trình hội nhập xã hội (사회통합프로그램) / hỗ trợ thích ứng sớm với đời sống Hàn Quốc\n'
-             '<보기>의 내용을 통해 알 수 있는 것으로 가장 적절한 것은?'
+             '<보기>\n· 사회통합프로그램\n· 한국 생활에 빨리 적응할 수 있도록 도와줌\n<보기>의 내용을 통해 알 수 있는 '
+             '것으로 가장 적절한 것은?'
          ),
          options=[
              ('A', '외국인 근로자의 취업을 알선하기 위한 제도이다.'),
@@ -301,8 +299,7 @@ QUESTIONS = [
          )),
     dict(num=23, correct='C', options_source='reconstructed',
          stem=(
-             '<보기>: Tết Nguyên đán (설날)\n'
-             '<보기>에 해당하는 한국의 명절에 대한 설명으로 옳지 않은 것은?'
+             '<보기>\n설날\n<보기>에 해당하는 한국의 명절에 대한 설명으로 옳지 않은 것은?'
          ),
          options=[
              ('A', '세배를 하고 어른들께 새해 인사를 드린다.'),
@@ -414,8 +411,8 @@ QUESTIONS = [
          )),
     dict(num=31, correct='A', options_source='reconstructed',
          stem=(
-             '<보기>: Khi cho vay tiền nên nhận (가) từ người vay. Khi trả tiền nên nhận (나) để chứng minh đã trả.\n'
-             '<보기>의 (가), (나)에 들어갈 말로 알맞은 것은?'
+             '<보기>\n돈을 빌려줄 때는 (가)를 받아 두고, 돈을 갚을 때는 갚았다는 것을 증명할 수 있는 (나)를 받아 두는 '
+             '것이 좋다.\n<보기>의 (가), (나)에 들어갈 말로 알맞은 것은?'
          ),
          options=[
              ('A', '차용증 - 영수증'),
@@ -465,9 +462,7 @@ QUESTIONS = [
          )),
     dict(num=34, correct='C', options_source='docx',
          stem=(
-             '<보기>: chùa Buseoksa / Seokguram và Bulguksa / Đài Dosan Seowon và làng Hahoe → đây là vùng Gyeongsang '
-             '(경상도).\n'
-             '<보기>에 해당하는 지역에 대한 설명으로 옳지 않은 것은?'
+             '<보기>\n· 부석사\n· 석굴암, 불국사\n· 도산서원, 하회마을\n<보기>에 해당하는 지역에 대한 설명으로 옳지 않은 것은?'
          ),
          options=[
              ('A', '창녕에 우포늪이라는 습지가 있다.'),
@@ -483,9 +478,8 @@ QUESTIONS = [
          )),
     dict(num=35, correct='B', options_source='reconstructed',
          stem=(
-             '<보기>: (가) từng là cảng nhỏ, nay là thành phố cảng lớn giao thương quốc tế. Sân bay (나) là sân bay quốc '
-             'tế lớn nhất Hàn Quốc.\n'
-             '<보기>의 (가), (나)에 들어갈 말로 알맞은 것은?'
+             '<보기>\n(가)는 옛날에는 작은 포구였지만 지금은 국제 무역이 활발한 큰 항구 도시로 성장했다. (나) 공항은 '
+             '한국에서 가장 큰 국제공항이다.\n<보기>의 (가), (나)에 들어갈 말로 알맞은 것은?'
          ),
          options=[
              ('A', '제물포 - 김포국제공항'),
