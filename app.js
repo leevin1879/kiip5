@@ -155,10 +155,17 @@
     };
   }
 
-  function nextUnseenQuestion(setId, questions) {
+  function nextResumeQuestion(setId, questions) {
     const setStats = loadStats()[setId] || {};
-    const next = questions.find(question => !(setStats[question.num]?.seen > 0));
-    return next ? next.num : questions[0]?.num || 1;
+    const seenNums = questions
+      .filter(question => setStats[question.num]?.seen > 0)
+      .map(question => question.num);
+    if (seenNums.length === 0) return questions[0]?.num || 1;
+    const highestSeen = Math.max(...seenNums);
+    const next = questions.find(question => question.num > highestSeen);
+    if (next) return next.num;
+    const firstUnseen = questions.find(question => !(setStats[question.num]?.seen > 0));
+    return firstUnseen ? firstUnseen.num : questions[0]?.num || 1;
   }
 
   function shuffle(arr) {
@@ -262,12 +269,12 @@
       card.addEventListener('click', () => {
         state.selectedSetId = set.id;
         state.mode = 'all';
-        state.startFrom = nextUnseenQuestion(set.id, data.questions);
+        state.startFrom = nextResumeQuestion(set.id, data.questions);
         render();
       });
       setsWrap.appendChild(card);
       if (selected) {
-        const resumeFrom = nextUnseenQuestion(set.id, data.questions);
+        const resumeFrom = nextResumeQuestion(set.id, data.questions);
         const completed = learning.total > 0 && learning.learned >= learning.total;
         const quickStart = el(`
           <button type="button" class="primary set-quick-start">
