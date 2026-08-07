@@ -325,9 +325,16 @@
           <span><strong>Xin chào, ${escapeHtml(state.auth.displayName || state.auth.username)}</strong><small>Tiến trình của bạn đang được đồng bộ</small></span>
         </div>
       `);
-      const logoutBtn = el('<button type="button" class="link-btn" style="margin-left:auto;">Đăng xuất</button>');
+      const accountActions = el('<span style="display:flex;align-items:center;gap:12px;margin-left:auto;"></span>');
+      if (state.auth.role === 'admin') {
+        const adminBtn = el('<button type="button" class="link-btn">관리자</button>');
+        adminBtn.addEventListener('click', () => { window.location.href = '/admin.html'; });
+        accountActions.appendChild(adminBtn);
+      }
+      const logoutBtn = el('<button type="button" class="link-btn">Đăng xuất</button>');
       bar.style.cursor = 'default';
-      bar.appendChild(logoutBtn);
+      accountActions.appendChild(logoutBtn);
+      bar.appendChild(accountActions);
       logoutBtn.addEventListener('click', async () => {
         if (state.auth?.provider === 'google' && supabaseClient) await supabaseClient.auth.signOut({ scope: 'local' });
         clearAuth();
@@ -461,10 +468,6 @@
 
         state.auth = { token: result.token, username: result.username, displayName: result.displayName, role: result.role || 'user' };
         saveAuth(state.auth);
-        if (state.auth.role === 'admin') {
-          window.location.href = '/admin.html';
-          return;
-        }
         status.className = 'feedback-status success';
         status.textContent = 'Thành công! Đang đồng bộ dữ liệu...';
         await syncPull();
