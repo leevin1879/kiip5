@@ -317,7 +317,7 @@
     {
       "num": 13,
       "correct": "B",
-      "stem": "[Ngữ cảnh (tóm tắt từ tài liệu, không phải nguyên văn tiếng Hàn — bài đọc gốc không có trong tài liệu nguồn): đoạn văn nói về bệnh trầm cảm — nếu không thoát khỏi tâm trạng u uất]\n다음 ( )에 알맞은 것을 고르시오.",
+      "stem": "[문맥 요약: 우울한 기분에서 벗어나지 못하는 경우에 대한 글이며, 원문은 자료에 포함되어 있지 않습니다.]\n다음 ( )에 알맞은 것을 고르시오.",
       "options": [
         {
           "label": "A",
@@ -343,7 +343,7 @@
     {
       "num": 14,
       "correct": "B",
-      "stem": "[Bảng thông tin 문화유산 아카데미 (tóm tắt): phí tham gia miễn phí (chỉ tự túc vé vào cửa + phí đi lại); diễn ra vào thứ Bảy; dành cho người lớn, giới hạn 20 người; phải tham gia đầy đủ các buổi mới được cấp giấy chứng nhận]\n다음 문화유산 아카데미에 대한 설명으로 옳은 것은?",
+      "stem": "[문화유산 아카데미 안내: 참가비는 무료이지만 입장료와 교통비는 개인이 부담합니다. 토요일에 진행되며, 성인 20명으로 인원이 제한됩니다. 모든 수업에 참석해야 수료증을 받을 수 있습니다.]\n다음 문화유산 아카데미에 대한 설명으로 옳은 것은?",
       "options": [
         {
           "label": "A",
@@ -369,7 +369,7 @@
     {
       "num": 15,
       "correct": "D",
-      "stem": "[Ngữ cảnh (tóm tắt, không phải nguyên văn): đoạn văn nói về bệnh người lớn (성인병) xuất phát từ thói quen xấu, và cách phòng ngừa bằng thói quen sinh hoạt lành mạnh (vận động, ăn uống)]\n윗글의 제목으로 가장 알맞은 것을 고르시오.",
+      "stem": "[문맥 요약: 성인병은 잘못된 생활 습관에서 생기며, 운동과 올바른 식습관 등 건강한 생활 습관으로 예방할 수 있다는 내용입니다.]\n윗글의 제목으로 가장 알맞은 것을 고르시오.",
       "options": [
         {
           "label": "A",
@@ -395,7 +395,7 @@
     {
       "num": 16,
       "correct": "B",
-      "stem": "[Ngữ cảnh (tóm tắt, không phải nguyên văn): cùng bài đọc về bệnh người lớn (성인병) ở câu 15 — bệnh này còn được gọi là \"생활습관병\" (bệnh thói quen sinh hoạt), gây ra bởi các thói quen xấu như ăn mặn, thiếu vận động, căng thẳng]\n윗글의 (ㄱ)에 들어갈 내용으로 알맞은 것을 고르시오.",
+      "stem": "[문맥 요약: 성인병은 생활습관병이라고도 하며, 짜게 먹는 습관, 운동 부족, 스트레스 등 잘못된 생활 습관 때문에 생깁니다.]\n윗글의 (ㄱ)에 들어갈 내용으로 알맞은 것을 고르시오.",
       "options": [
         {
           "label": "A",
@@ -421,7 +421,7 @@
     {
       "num": 17,
       "correct": "A",
-      "stem": "<보기>: đảm bảo mức sống cơ bản cho người dân / hỗ trợ chi phí sinh hoạt cho người thu nhập thấp\n<보기>의 내용에 공통적으로 해당되는 것은?",
+      "stem": "<보기>: 국민의 기본 생활 수준을 보장한다. / 저소득층의 생활비를 지원한다.\n<보기>의 내용에 공통적으로 해당되는 것은?",
       "options": [
         {
           "label": "A",
@@ -499,7 +499,7 @@
     {
       "num": 20,
       "correct": "D",
-      "stem": "<보기>: 포크(nĩa) / 휴지(giấy vệ sinh) / 찹쌀떡(bánh nếp)\n<보기>에 제시된 용어로 설명할 수 있는 한국의 사회 현상으로 가장 적절한 것은?",
+      "stem": "<보기>: 포크 / 휴지 / 찹쌀떡\n<보기>에 제시된 용어로 설명할 수 있는 한국의 사회 현상으로 가장 적절한 것은?",
       "options": [
         {
           "label": "A",
@@ -577,7 +577,7 @@
     {
       "num": 23,
       "correct": "B",
-      "stem": "<보기>: văn hóa được đông đảo người dân yêu thích trong đời sống hàng ngày (phim ảnh, âm nhạc, thời trang)\n<보기>의 ( )에 공통으로 들어갈 말은?",
+      "stem": "<보기>: 많은 사람들이 일상생활에서 즐기는 문화로 영화, 음악, 패션 등이 이에 해당한다.\n<보기>의 ( )에 공통으로 들어갈 말은?",
       "options": [
         {
           "label": "A",
@@ -629,7 +629,7 @@
     {
       "num": 25,
       "correct": "B",
-      "stem": "<보기>: người nước ngoài có thẻ cư trú vĩnh viễn (F-5) trên 3 năm\n<보기>의 내용에 해당하는 사람이 할 수 있는 것은?",
+      "stem": "<보기>: 영주 자격을 취득한 지 3년이 지난 외국인\n<보기>의 내용에 해당하는 사람이 할 수 있는 것은?",
       "options": [
         {
           "label": "A",
@@ -655,7 +655,7 @@
     {
       "num": 26,
       "correct": "C",
-      "stem": "<보기>: cơ quan giải quyết tranh chấp bằng pháp luật / Tòa án tối cao, Tòa án địa phương...\n<보기>의 내용에 공통적으로 해당되는 것은?",
+      "stem": "<보기>: 법에 따라 분쟁을 해결하는 기관 / 대법원, 지방법원 등이 있다.\n<보기>의 내용에 공통적으로 해당되는 것은?",
       "options": [
         {
           "label": "A",
@@ -889,7 +889,7 @@
     {
       "num": 35,
       "correct": "C",
-      "stem": "<보기>: Bờ biển phía Tây và phía Nam Hàn Quốc có mực nước nông và chênh lệch thủy triều lớn nên ( ) rất phát triển. Đặc biệt ( ) ở bờ biển phía Tây là một trong 5 ( ) lớn nhất thế giới.\n<보기>의 ( )에 공통으로 들어갈 말은?",
+      "stem": "<보기>: 한국의 서해안과 남해안은 바다가 얕고 조수 간만의 차가 커서 ( )이/가 매우 발달하였다. 특히 서해안의 ( )은/는 세계 5대 ( ) 가운데 하나이다.\n<보기>의 ( )에 공통으로 들어갈 말은?",
       "options": [
         {
           "label": "A",
@@ -915,7 +915,7 @@
     {
       "num": 36,
       "correct": "C",
-      "stem": "<보기>: văn hóa ẩm thực phát triển / văn hóa truyền thống được bảo tồn tốt / gần đây giao lưu với Trung Quốc đang tăng lên\n<보기>의 내용과 가장 관계가 깊은 지역은?",
+      "stem": "<보기>: 음식 문화가 발달하였다. / 전통문화가 잘 보존되어 있다. / 최근 중국과의 교류가 증가하고 있다.\n<보기>의 내용과 가장 관계가 깊은 지역은?",
       "options": [
         {
           "label": "A",

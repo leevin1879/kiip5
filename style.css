@@ -55,6 +55,111 @@ h1 {
   margin-bottom: 24px;
 }
 
+.support-section {
+  margin: -10px 0 22px;
+}
+.support-heading {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.support-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.support-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: transform .15s, border-color .15s, box-shadow .15s;
+}
+.support-button:hover {
+  border-color: #e59a34;
+  box-shadow: 0 4px 12px rgba(160, 100, 20, .12);
+  transform: translateY(-1px);
+}
+.support-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #fff3dc;
+  font-size: 21px;
+}
+.support-button strong,
+.support-button small { display: block; }
+.support-button strong { font-size: 13px; }
+.support-button small { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+.support-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+.support-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 25, .68);
+  backdrop-filter: blur(3px);
+}
+.support-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+  max-height: calc(100vh - 36px);
+  overflow: auto;
+  padding: 22px;
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+  text-align: center;
+}
+.support-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 1;
+}
+.support-modal-icon { font-size: 30px; }
+.support-modal-title { margin-top: 6px; font-size: 18px; font-weight: 700; }
+.support-amount { margin: 3px 0 14px; color: #d97706; font-size: 17px; font-weight: 700; }
+.support-qr {
+  display: block;
+  width: 100%;
+  max-height: 58vh;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+}
+.support-tip { margin-top: 12px; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 390px) {
+  .support-actions { grid-template-columns: 1fr; }
+}
+
 .card {
   background: var(--card);
   border: 1px solid var(--border);

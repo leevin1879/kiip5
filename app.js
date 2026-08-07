@@ -67,6 +67,7 @@
     const wrap = el('<div></div>');
     wrap.appendChild(el('<h1>Ôn thi KIIP cấp 5</h1>'));
     wrap.appendChild(el('<div class="subtitle">Chọn đề và chế độ ôn tập</div>'));
+    wrap.appendChild(renderSupportButtons());
 
     const setsWrap = el('<div></div>');
     (window.QUIZ_INDEX || []).forEach(set => {
@@ -138,6 +139,57 @@
 
     wrap.appendChild(el('<div class="footer-note">Tiến trình được lưu trên trình duyệt này.</div>'));
     return wrap;
+  }
+
+  function renderSupportButtons() {
+    const support = el(`
+      <section class="support-section" aria-label="Ủng hộ admin">
+        <div class="support-heading">Ủng hộ admin</div>
+        <div class="support-actions">
+          <button type="button" class="support-button" data-support="coffee">
+            <span class="support-icon" aria-hidden="true">☕</span>
+            <span><strong>Mời ly cà phê</strong><small>10.000₫</small></span>
+          </button>
+          <button type="button" class="support-button" data-support="pho">
+            <span class="support-icon" aria-hidden="true">🍜</span>
+            <span><strong>Mời tô phở</strong><small>20.000₫</small></span>
+          </button>
+        </div>
+      </section>
+    `);
+    support.querySelector('[data-support="coffee"]').addEventListener('click', () => {
+      showSupportQr('Mời admin ly cà phê', '10.000₫', 'assets/qr-coffee-10k.jpg');
+    });
+    support.querySelector('[data-support="pho"]').addEventListener('click', () => {
+      showSupportQr('Mời admin tô phở', '20.000₫', 'assets/qr-pho-20k.jpg');
+    });
+    return support;
+  }
+
+  function showSupportQr(title, amount, imageSrc) {
+    const modal = el(`
+      <div class="support-modal" role="dialog" aria-modal="true" aria-label="${escapeHtml(title)}">
+        <div class="support-backdrop"></div>
+        <div class="support-dialog">
+          <button type="button" class="support-close" aria-label="Đóng">×</button>
+          <div class="support-modal-icon" aria-hidden="true">${amount === '10.000₫' ? '☕' : '🍜'}</div>
+          <div class="support-modal-title">${escapeHtml(title)}</div>
+          <div class="support-amount">${escapeHtml(amount)}</div>
+          <img class="support-qr" src="${imageSrc}" alt="Mã QR ${escapeHtml(title)} ${escapeHtml(amount)}">
+          <div class="support-tip">Mở ứng dụng ngân hàng và quét mã QR</div>
+        </div>
+      </div>
+    `);
+    const close = () => {
+      document.removeEventListener('keydown', onKeydown);
+      modal.remove();
+    };
+    const onKeydown = event => { if (event.key === 'Escape') close(); };
+    modal.querySelector('.support-close').addEventListener('click', close);
+    modal.querySelector('.support-backdrop').addEventListener('click', close);
+    document.addEventListener('keydown', onKeydown);
+    document.body.appendChild(modal);
+    modal.querySelector('.support-close').focus();
   }
 
   function startQuiz() {
