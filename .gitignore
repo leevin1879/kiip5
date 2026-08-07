@@ -2,3 +2,7 @@ __pycache__/
 *.py[cod]
 Thumbs.db
 .DS_Store
+.env
+.env.*
+!.env.example
+.netlify/

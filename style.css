@@ -156,6 +156,55 @@ h1 {
 }
 .support-tip { margin-top: 12px; color: var(--muted); font-size: 13px; }
 
+.feedback-entry {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  margin: -10px 0 20px;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, var(--border));
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--primary) 5%, var(--card));
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+.feedback-entry:hover { border-color: var(--primary); }
+.feedback-entry-icon { font-size: 23px; }
+.feedback-entry strong,
+.feedback-entry small { display: block; }
+.feedback-entry strong { font-size: 14px; }
+.feedback-entry small { margin-top: 2px; color: var(--muted); font-size: 12px; }
+.feedback-arrow { margin-left: auto; color: var(--muted); font-size: 25px; }
+.feedback-dialog { text-align: left; }
+.feedback-dialog .support-modal-title { text-align: center; }
+.feedback-modal-icon { text-align: center; font-size: 30px; }
+.feedback-intro { margin: 5px 0 18px; color: var(--muted); font-size: 13px; text-align: center; }
+.feedback-form label { display: block; margin-top: 13px; font-size: 13px; font-weight: 600; }
+.feedback-form label span { color: var(--muted); font-weight: 400; }
+.feedback-form input,
+.feedback-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+.feedback-form input:focus,
+.feedback-form textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 18%, transparent); }
+.feedback-honeypot { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; }
+.feedback-status { min-height: 20px; margin-top: 10px; font-size: 13px; text-align: center; }
+.feedback-status.success { color: var(--good); }
+.feedback-status.error { color: var(--bad); }
+
 @media (max-width: 390px) {
   .support-actions { grid-template-columns: 1fr; }
 }

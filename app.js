@@ -68,6 +68,7 @@
     wrap.appendChild(el('<h1>Ôn thi KIIP cấp 5</h1>'));
     wrap.appendChild(el('<div class="subtitle">Chọn đề và chế độ ôn tập</div>'));
     wrap.appendChild(renderSupportButtons());
+    wrap.appendChild(renderFeedbackButton());
 
     const setsWrap = el('<div></div>');
     (window.QUIZ_INDEX || []).forEach(set => {
@@ -192,6 +193,96 @@
     modal.querySelector('.support-close').focus();
   }
 
+  function renderFeedbackButton() {
+    const button = el(`
+      <button type="button" class="feedback-entry">
+        <span class="feedback-entry-icon" aria-hidden="true">💬</span>
+        <span><strong>Góp ý cải thiện ứng dụng</strong><small>Báo lỗi câu hỏi hoặc gửi đề xuất cho admin</small></span>
+        <span class="feedback-arrow" aria-hidden="true">›</span>
+      </button>
+    `);
+    button.addEventListener('click', showFeedbackModal);
+    return button;
+  }
+
+  function showFeedbackModal() {
+    const modal = el(`
+      <div class="support-modal" role="dialog" aria-modal="true" aria-label="Góp ý cải thiện ứng dụng">
+        <div class="support-backdrop"></div>
+        <div class="support-dialog feedback-dialog">
+          <button type="button" class="support-close" aria-label="Đóng">×</button>
+          <div class="feedback-modal-icon" aria-hidden="true">💬</div>
+          <div class="support-modal-title">Góp ý cải thiện ứng dụng</div>
+          <div class="feedback-intro">Ý kiến của bạn sẽ được gửi trực tiếp đến admin.</div>
+          <form class="feedback-form">
+            <label>
+              Tên của bạn <span>(không bắt buộc)</span>
+              <input name="name" type="text" maxlength="80" autocomplete="name" placeholder="Nhập tên hoặc biệt danh">
+            </label>
+            <label>
+              Nội dung góp ý
+              <textarea name="message" maxlength="1500" rows="6" required placeholder="Ví dụ: Câu 16 bị sai, đề xuất thêm chức năng..."></textarea>
+            </label>
+            <input class="feedback-honeypot" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="feedback-status" role="status" aria-live="polite"></div>
+            <button type="submit" class="primary feedback-submit">Gửi góp ý</button>
+          </form>
+        </div>
+      </div>
+    `);
+    const close = () => {
+      document.removeEventListener('keydown', onKeydown);
+      modal.remove();
+    };
+    const onKeydown = event => { if (event.key === 'Escape') close(); };
+    modal.querySelector('.support-close').addEventListener('click', close);
+    modal.querySelector('.support-backdrop').addEventListener('click', close);
+    document.addEventListener('keydown', onKeydown);
+    document.body.appendChild(modal);
+
+    const form = modal.querySelector('.feedback-form');
+    const status = modal.querySelector('.feedback-status');
+    const submit = modal.querySelector('.feedback-submit');
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const message = String(formData.get('message') || '').trim();
+      if (message.length < 5) {
+        status.className = 'feedback-status error';
+        status.textContent = 'Vui lòng nhập nội dung góp ý rõ hơn.';
+        return;
+      }
+      submit.disabled = true;
+      submit.textContent = 'Đang gửi...';
+      status.textContent = '';
+      try {
+        const response = await fetch('/.netlify/functions/feedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: String(formData.get('name') || '').trim(),
+            message,
+            website: String(formData.get('website') || ''),
+            page: location.href,
+          }),
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.error || 'Không thể gửi góp ý.');
+        form.reset();
+        status.className = 'feedback-status success';
+        status.textContent = 'Cảm ơn bạn! Góp ý đã được gửi đến admin.';
+        submit.textContent = 'Đã gửi';
+        setTimeout(close, 1800);
+      } catch (error) {
+        status.className = 'feedback-status error';
+        status.textContent = error.message || 'Có lỗi xảy ra. Vui lòng thử lại.';
+        submit.disabled = false;
+        submit.textContent = 'Gửi lại';
+      }
+    });
+    modal.querySelector('textarea').focus();
+  }
+
   function startQuiz() {
     const data = window.QUIZ_DATA[state.selectedSetId];
     let questions = data.questions.slice();
@@ -237,9 +328,7 @@
     wrap.appendChild(el(`<div class="progress-bar"><div style="width:${pct}%"></div></div>`));
 
     const card = el('<div class="card"></div>');
-    if (q.correct_source === 'inferred') {
-      card.appendChild(el('<div class="badge">Đáp án do AI suy luận — đề gốc không đánh dấu, nên kiểm tra lại</div>'));
-    } else if (q.correct_source === 'corrected') {
+    if (q.correct_source === 'corrected') {
       card.appendChild(el('<div class="badge">Đáp án đã được sửa lại — khác với chỗ đánh dấu đậm trong file gốc</div>'));
     }
     card.appendChild(el(`<div class="stem">${escapeHtml(String(q.num) + '. ' + q.stem)}</div>`));

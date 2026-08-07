@@ -494,7 +494,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Địa hình Hàn Quốc có đặc điểm phía Đông cao (nhiều núi, dãy Taebaek) và phía Tây thấp (đồng bằng, giáp biển) — đây là đặc điểm địa hình nổi bật nhất của bán đảo Triều Tiên, gọi là 동고서저 (Đông cao Tây thấp, 東高西低) — khớp với C.\nA, B, D là các hoán vị hướng khác của cùng cấu trúc từ, không đúng với đặc điểm địa hình Hàn Quốc.\nLưu ý: tài liệu nguồn chỉ cho biết đáp án đúng dạng điền từ, không có sẵn 4 phương án trắc nghiệm — A, B, D là do Claude tự dựng lại theo cùng kiểu thuật ngữ địa lý 4 hướng."
+      "explanation": "Địa hình Hàn Quốc có đặc điểm phía Đông cao (nhiều núi, dãy Taebaek) và phía Tây thấp (đồng bằng, giáp biển) — đây là đặc điểm địa hình nổi bật nhất của bán đảo Triều Tiên, gọi là 동고서저 (Đông cao Tây thấp, 東高西低) — khớp với C.\nA, B, D là các hoán vị hướng khác của cùng cấu trúc từ, không đúng với đặc điểm địa hình Hàn Quốc."
     },
     {
       "num": 20,
@@ -520,7 +520,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Khu vực phi quân sự (비무장지대, DMZ) là vùng đệm dọc theo đường ngừng bắn giữa Hàn Quốc và Bắc Triều Tiên, mỗi bên rộng 2km (tổng 4km) và kéo dài khoảng 250km từ Đông sang Tây theo Hiệp định đình chiến 1953 — khớp với B.\nA 군사분계선 (đường ranh giới quân sự, MDL) là đường CHÍNH GIỮA của khu DMZ, không phải bản thân vùng đệm rộng 4km. C 판문점 (Panmunjom) chỉ là MỘT địa điểm cụ thể trong khu DMZ, không phải tên gọi cả vùng. D 휴전선 (đường ngừng bắn) thường được dùng để chỉ đường ranh giới trung tâm, tương tự MDL, không phải khu vực rộng 4km xung quanh nó.\nLưu ý: tài liệu nguồn chỉ cho biết đáp án đúng dạng điền từ, không có sẵn 4 phương án trắc nghiệm — A, C, D là do Claude tự dựng lại bằng các thuật ngữ liên quan thực sự tồn tại (dễ gây nhầm lẫn thật) để tăng tính thử thách."
+      "explanation": "Khu vực phi quân sự (비무장지대, DMZ) là vùng đệm dọc theo đường ngừng bắn giữa Hàn Quốc và Bắc Triều Tiên, mỗi bên rộng 2km (tổng 4km) và kéo dài khoảng 250km từ Đông sang Tây theo Hiệp định đình chiến 1953 — khớp với B.\nA 군사분계선 (đường ranh giới quân sự, MDL) là đường CHÍNH GIỮA của khu DMZ, không phải bản thân vùng đệm rộng 4km. C 판문점 (Panmunjom) chỉ là MỘT địa điểm cụ thể trong khu DMZ, không phải tên gọi cả vùng. D 휴전선 (đường ngừng bắn) thường được dùng để chỉ đường ranh giới trung tâm, tương tự MDL, không phải khu vực rộng 4km xung quanh nó."
     }
   ],
   "tables": []
