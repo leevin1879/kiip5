@@ -33,12 +33,13 @@ export default async request => {
   const store = getStore('kiip5-users');
   const record = await store.get(`users/${username}`, { type: 'json' }).catch(() => null);
 
-  recent.push(now);
-  attempts.set(ip, recent);
-
   if (!record || !verifyPassword(password, record.passwordHash)) {
+    recent.push(now);
+    attempts.set(ip, recent);
     return response(401, { error: 'Sai tên đăng nhập hoặc mật khẩu.' });
   }
+
+  attempts.delete(ip);
 
   const adminUsername = normalizeUsername(process.env.ADMIN_USERNAME || 'admin');
   const role = record.role === 'admin' || username === adminUsername ? 'admin' : 'user';
