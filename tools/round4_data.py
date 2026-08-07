@@ -297,7 +297,7 @@ QUESTIONS = [
          ],
          explanation='Gojoseon (고조선) do Dangun Wanggeom lập ra (ㅁ đúng), hình thành trên nền tảng văn hóa đồ đồng (ㄷ đúng), và xã hội được duy trì trật tự bằng Luật 8 điều — 8조법 (ㄴ đúng) — khớp với B.\nㄱ sai: việc tiếp nhận Phật giáo làm quốc giáo là của các vương triều sau này (như Silla, Goguryeo), không phải Gojoseon.\nㄹ sai: chữ Hangeul được vua Sejong triều Joseon sáng tạo, cách Gojoseon hàng nghìn năm.'),
     dict(num=33, correct='C', options_source='reconstructed',
-         stem='<보기>\n(가) 3·1 운동 (1919년)\n(나) 8·15 광복 (1945년)\n(다) 대한제국 수립 (1897년)\n(라) 대한민국 임시정부 수립 (1919년, 3·1 운동 이후)\n<보기>를 시간 순서대로 배열한 것은?',
+         stem='<보기>\n(가) 3·1 운동\n(나) 8·15 광복\n(다) 대한제국 수립\n(라) 대한민국 임시정부 수립\n<보기>를 시간 순서대로 배열한 것은?',
          options=[
              ('A', '(가)-(다)-(나)-(라)'),
              ('B', '(다)-(라)-(가)-(나)'),

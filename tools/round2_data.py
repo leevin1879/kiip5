@@ -232,7 +232,7 @@ QUESTIONS = [
          ],
          explanation='ㄱ đúng: bầu cử trực tiếp nghĩa là tự mình bỏ phiếu, không qua đại diện. ㄷ đúng: bầu cử kín nghĩa là không để người khác biết mình bầu cho ai — khớp với B.\nㄴ sai: đây thực ra là định nghĩa NGƯỢC của bầu cử bình đẳng — bình đẳng nghĩa là MỌI người có SỐ PHIẾU NGANG NHAU, không phải khác nhau.\nㄹ sai: đây là định nghĩa NGƯỢC của bầu cử phổ thông — phổ thông đầu phiếu nghĩa là KHÔNG phân biệt tài sản, ai đủ tuổi cũng được bầu.'),
     dict(num=26, correct='C', options_source='reconstructed',
-         stem='<보기>는 한국의 수출 상품들이다.\n(가) 1980년대: 철강, 조선\n(나) 1970년대: 옷, 신발\n(다) 2000년대 이후: 반도체, 휴대폰\n(라) 1990년대: 자동차, 전자제품\n이를 연도 순서대로 배열한 것은?',
+         stem='<보기>는 한국의 시대별 수출 상품들이다.\n(가) 철강, 조선\n(나) 옷, 신발\n(다) 반도체, 휴대폰\n(라) 자동차, 전자제품\n이를 연도 순서대로 배열한 것은?',
          options=[
              ('A', '(가)-(나)-(다)-(라)'),
              ('B', '(나)-(다)-(가)-(라)'),

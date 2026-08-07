@@ -28,5 +28,20 @@
     "id": "hist7",
     "file": "hist7.json",
     "title": "Ôn tập Lịch sử - 5단계 bài 7"
+  },
+  {
+    "id": "law6",
+    "file": "law6.json",
+    "title": "Ôn tập Pháp luật - 5단계 bài 6"
+  },
+  {
+    "id": "econ5",
+    "file": "econ5.json",
+    "title": "Ôn tập Kinh tế - 5단계 bài 5"
+  },
+  {
+    "id": "pol4",
+    "file": "pol4.json",
+    "title": "Ôn tập Chính trị - 5단계 bài 4"
   }
 ]
