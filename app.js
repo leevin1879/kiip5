@@ -205,7 +205,27 @@
     return button;
   }
 
-  function showFeedbackModal() {
+  function renderQuizQuickActions(questionNum) {
+    const actions = el(`
+      <div class="quiz-quick-actions" aria-label="Góp ý và ủng hộ admin">
+        <button type="button" data-action="feedback">💬 <span>Góp ý câu ${questionNum}</span></button>
+        <button type="button" data-action="coffee">☕ <span>Cà phê</span></button>
+        <button type="button" data-action="pho">🍜 <span>Tô phở</span></button>
+      </div>
+    `);
+    actions.querySelector('[data-action="feedback"]').addEventListener('click', () => {
+      showFeedbackModal(`Góp ý về câu ${questionNum}: `);
+    });
+    actions.querySelector('[data-action="coffee"]').addEventListener('click', () => {
+      showSupportQr('Mời admin ly cà phê', '10.000₫', 'assets/qr-coffee-10k.jpg');
+    });
+    actions.querySelector('[data-action="pho"]').addEventListener('click', () => {
+      showSupportQr('Mời admin tô phở', '20.000₫', 'assets/qr-pho-20k.jpg');
+    });
+    return actions;
+  }
+
+  function showFeedbackModal(initialMessage = '') {
     const modal = el(`
       <div class="support-modal" role="dialog" aria-modal="true" aria-label="Góp ý cải thiện ứng dụng">
         <div class="support-backdrop"></div>
@@ -241,6 +261,7 @@
     document.body.appendChild(modal);
 
     const form = modal.querySelector('.feedback-form');
+    form.elements.message.value = initialMessage;
     const status = modal.querySelector('.feedback-status');
     const submit = modal.querySelector('.feedback-submit');
     form.addEventListener('submit', async event => {
@@ -320,6 +341,7 @@
     topBar.appendChild(exitBtn);
     topBar.appendChild(el(`<div class="meta" style="color:var(--muted);font-size:13px">${escapeHtml(s.setTitle)}</div>`));
     wrap.appendChild(topBar);
+    wrap.appendChild(renderQuizQuickActions(q.num));
 
     const pct = Math.round((s.index / s.questions.length) * 100);
     wrap.appendChild(el(`
@@ -334,18 +356,33 @@
     card.appendChild(el(`<div class="stem">${escapeHtml(String(q.num) + '. ' + q.stem)}</div>`));
 
     const optsWrap = el('<div class="options"></div>');
-    let locked = false;
-    const skipBtn = el('<button type="button" class="secondary">Bỏ qua câu này →</button>');
-    skipBtn.addEventListener('click', () => {
-      if (locked) return;
-      if (s.index + 1 < s.questions.length) {
-        s.index += 1;
-        render();
-      } else {
-        state.screen = 'result';
-        render();
-      }
-    });
+    let currentAnswer = s.answers.find(answer => answer.num === q.num) || null;
+    let locked = Boolean(currentAnswer);
+    let nav;
+
+    const showExplanation = answer => {
+      if (!q.explanation || card.querySelector('.explain-box')) return;
+      const label = answer.correct ? 'Vì sao đúng' : 'Giải thích';
+      const box = el(`
+        <div class="explain-box">
+          <div class="explain-title">${label}</div>
+          <div class="explain-text">${escapeHtml(q.explanation)}</div>
+        </div>
+      `);
+      if (nav) card.insertBefore(box, nav);
+      else card.appendChild(box);
+    };
+
+    const showAnswerState = answer => {
+      Array.from(optsWrap.children).forEach((child, index) => {
+        child.classList.add('locked');
+        const label = q.options[index].label;
+        if (label === q.correct) child.classList.add('correct');
+        if (!answer.correct && label === answer.chosen) child.classList.add('wrong');
+      });
+      showExplanation(answer);
+    };
+
     q.options.forEach(opt => {
       const optEl = el(`
         <button type="button" class="option">
@@ -356,46 +393,39 @@
       optEl.addEventListener('click', () => {
         if (locked) return;
         locked = true;
-        skipBtn.style.display = 'none';
         const isCorrect = opt.label === q.correct;
         recordAnswer(s.setId, q.num, isCorrect);
-        s.answers.push({ num: q.num, chosen: opt.label, correct: isCorrect });
-
-        Array.from(optsWrap.children).forEach(child => child.classList.add('locked'));
-        if (isCorrect) {
-          optEl.classList.add('correct');
-        } else {
-          optEl.classList.add('wrong');
-          const correctEl = Array.from(optsWrap.children).find((_, i) => q.options[i].label === q.correct);
-          if (correctEl) correctEl.classList.add('correct');
-        }
-
-        if (q.explanation) {
-          const label = isCorrect ? 'Vì sao đúng' : 'Giải thích';
-          card.appendChild(el(`
-            <div class="explain-box">
-              <div class="explain-title">${label}</div>
-              <div class="explain-text">${escapeHtml(q.explanation)}</div>
-            </div>
-          `));
-        }
-
-        const nextBtn = el(`<button class="primary">${s.index + 1 < s.questions.length ? 'Câu tiếp →' : 'Xem kết quả'}</button>`);
-        nextBtn.addEventListener('click', () => {
-          if (s.index + 1 < s.questions.length) {
-            s.index += 1;
-            render();
-          } else {
-            state.screen = 'result';
-            render();
-          }
-        });
-        card.appendChild(nextBtn);
+        currentAnswer = { num: q.num, chosen: opt.label, correct: isCorrect };
+        s.answers.push(currentAnswer);
+        showAnswerState(currentAnswer);
       });
       optsWrap.appendChild(optEl);
     });
     card.appendChild(optsWrap);
-    card.appendChild(skipBtn);
+
+    if (currentAnswer) showAnswerState(currentAnswer);
+
+    nav = el(`
+      <div class="quiz-nav">
+        <button type="button" class="secondary quiz-prev" ${s.index === 0 ? 'disabled' : ''}>← Câu trước</button>
+        <button type="button" class="primary quiz-next">${s.index + 1 < s.questions.length ? 'Câu tiếp →' : 'Xem kết quả'}</button>
+      </div>
+    `);
+    nav.querySelector('.quiz-prev').addEventListener('click', () => {
+      if (s.index === 0) return;
+      s.index -= 1;
+      render();
+    });
+    nav.querySelector('.quiz-next').addEventListener('click', () => {
+      if (s.index + 1 < s.questions.length) {
+        s.index += 1;
+        render();
+      } else {
+        state.screen = 'result';
+        render();
+      }
+    });
+    card.appendChild(nav);
 
     wrap.appendChild(card);
     return wrap;

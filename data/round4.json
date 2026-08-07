@@ -728,7 +728,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "⚠️ Câu này ngay trong tài liệu nguồn cũng tự ghi chú không chắc chắn (\"Trong đề không có lựa chọn ㄱ, ㄴ, ㄷ\"). Theo lý luận của tài liệu: ㄱ (Nonghyup/bưu điện an toàn, tiện lợi) ĐÚNG, ㄴ (ngân hàng địa phương lãi cao nhưng quy mô nhỏ) ĐÚNG, ㄷ (ngân hàng internet thủ tục đơn giản, phí thấp) ĐÚNG, chỉ ㄹ (Ngân hàng Trung ương giao dịch trực tiếp với cá nhân) là SAI — nhưng đáp án được chọn chỉ là \"ㄱ, ㄷ\" (bỏ ㄴ dù ㄴ được coi là đúng), tài liệu nguồn không giải thích rõ vì sao. Mình giữ theo đáp án B như tài liệu gốc ghi nhưng bạn nên lưu ý sự thiếu nhất quán này khi ôn tập."
+      "explanation": "ㄱ đúng: 농협 (Nonghyup) và 우체국 (bưu điện) cung cấp các dịch vụ tài chính an toàn, phổ biến và thuận tiện.\nㄴ sai: ngân hàng địa phương thường có quy mô và phạm vi hoạt động nhỏ hơn ngân hàng toàn quốc, nhưng không thể khẳng định chung rằng lãi suất luôn cao.\nㄷ đúng: ngân hàng trực tuyến có thủ tục đơn giản và thường thu phí thấp nhờ hoạt động chủ yếu trên nền tảng số.\nㄹ sai: Ngân hàng Trung ương Hàn Quốc không trực tiếp nhận tiền gửi thông thường của cá nhân mà chủ yếu thực hiện chức năng ngân hàng trung ương và giao dịch với các tổ chức tài chính.\nVì vậy chỉ có ㄱ và ㄷ đúng — khớp với đáp án B."
     },
     {
       "num": 29,

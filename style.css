@@ -205,6 +205,31 @@ h1 {
 .feedback-status.success { color: var(--good); }
 .feedback-status.error { color: var(--bad); }
 
+.quiz-quick-actions {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 7px;
+  margin: -5px 0 14px;
+}
+.quiz-quick-actions button {
+  min-width: 0;
+  padding: 8px 7px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.quiz-quick-actions button:hover {
+  border-color: var(--primary);
+  color: var(--text);
+}
+
 @media (max-width: 390px) {
   .support-actions { grid-template-columns: 1fr; }
 }
@@ -294,6 +319,21 @@ button.secondary {
   border-radius: var(--radius);
   cursor: pointer;
   margin-top: 8px;
+}
+button.secondary:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.quiz-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+.quiz-nav button.primary,
+.quiz-nav button.secondary {
+  margin-top: 0;
 }
 
 .progress-row {
