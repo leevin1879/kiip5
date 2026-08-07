@@ -8,87 +8,94 @@
 QUESTIONS = [
     dict(num=1, correct='D', options_source='docx',
          stem='아침에 출근하다가 가벼운 접촉 사고를 내서 ( )으로 10만 원을 주었다.',
-         options=[('A', '등록금'), ('B', '조의금'), ('C', '축의금'), ('D', '합의금')],
-         explanation=(
-             'Khi xảy ra va chạm giao thông nhẹ (접촉 사고), người ta thường đưa "tiền thỏa thuận/bồi thường" (합의금) để '
-             'giải quyết nhanh — khớp với D.\n'
-             'A 등록금(học phí), B 조의금(tiền phúng điếu), C 축의금(tiền mừng cưới) đều là loại tiền dùng trong dịp khác.'
-         )),
+         options=[
+             ('A', '등록금'),
+             ('B', '조의금'),
+             ('C', '축의금'),
+             ('D', '합의금'),
+         ],
+         explanation='Khi xảy ra va chạm giao thông nhẹ (접촉 사고), người ta thường đưa "tiền thỏa thuận/bồi thường" (합의금) để giải quyết nhanh — khớp với D.\nA 등록금(học phí), B 조의금(tiền phúng điếu), C 축의금(tiền mừng cưới) đều là loại tiền dùng trong dịp khác.'),
     dict(num=2, correct='D', options_source='docx',
          stem='투이 씨는 대기업에 ( ) 위해서 이력서와 자기소개서를 준비하고 있다.',
-         options=[('A', '모집하기'), ('B', '작성하기'), ('C', '졸업하기'), ('D', '지원하기')],
-         explanation=(
-             'Chuẩn bị sơ yếu lý lịch và thư giới thiệu bản thân là để "ứng tuyển" (지원하다) vào công ty lớn — khớp với D.\n'
-             'A 모집하기(tuyển dụng) là việc của công ty chứ không phải người xin việc.\n'
-             'B 작성하기(viết) không đi với trợ từ "에" theo cấu trúc câu này.\n'
-             'C 졸업하기(tốt nghiệp) không liên quan đến việc chuẩn bị hồ sơ xin việc.'
-         )),
+         options=[
+             ('A', '모집하기'),
+             ('B', '작성하기'),
+             ('C', '졸업하기'),
+             ('D', '지원하기'),
+         ],
+         explanation='Chuẩn bị sơ yếu lý lịch và thư giới thiệu bản thân là để "ứng tuyển" (지원하다) vào công ty lớn — khớp với D.\nA 모집하기(tuyển dụng) là việc của công ty chứ không phải người xin việc.\nB 작성하기(viết) không đi với trợ từ "에" theo cấu trúc câu này.\nC 졸업하기(tốt nghiệp) không liên quan đến việc chuẩn bị hồ sơ xin việc.'),
     dict(num=3, correct='D', options_source='docx',
          stem='아파트에 사는 사람들이 많아지면서 위층과 아래층 사이에 ( ) 문제가 많이 발생했다.',
-         options=[('A', '무단 횡단'), ('B', '음주 운전'), ('C', '불법 주차'), ('D', '층간 소음')],
-         explanation=(
-             'Vấn đề phổ biến nhất giữa tầng trên và tầng dưới ở chung cư là tiếng ồn giữa các tầng (층간 소음) — khớp với D.\n'
-             'A 무단횡단(băng qua đường trái phép), B 음주운전(lái xe say rượu), C 불법주차(đậu xe trái phép) đều là vấn đề '
-             'giao thông, không liên quan đến hàng xóm trên dưới.'
-         )),
+         options=[
+             ('A', '무단 횡단'),
+             ('B', '음주 운전'),
+             ('C', '불법 주차'),
+             ('D', '층간 소음'),
+         ],
+         explanation='Vấn đề phổ biến nhất giữa tầng trên và tầng dưới ở chung cư là tiếng ồn giữa các tầng (층간 소음) — khớp với D.\nA 무단횡단(băng qua đường trái phép), B 음주운전(lái xe say rượu), C 불법주차(đậu xe trái phép) đều là vấn đề giao thông, không liên quan đến hàng xóm trên dưới.'),
     dict(num=4, correct='A', options_source='docx',
          stem='그 영화는 배우들이 연기도 잘하고 영상미도 ( ) 인기가 많다.',
-         options=[('A', '뛰어나서'), ('B', '평범해서'), ('C', '부정확해서'), ('D', '흥미로워서')],
-         explanation=(
-             '"영상미가 뛰어나다" = hình ảnh/góc quay rất đẹp, xuất sắc — khớp với việc phim đang được khen (diễn xuất tốt + '
-             'hình ảnh đẹp → nổi tiếng) — khớp với A.\n'
-             'B 평범해서(bình thường), C 부정확해서(không chính xác) đều mang nghĩa tiêu cực/trung tính, không hợp lý do "인기가 많다".\n'
-             'D 흥미로워서(thú vị) ít khi dùng để miêu tả "영상미" (thường dùng cho nội dung/cốt truyện hơn).'
-         )),
+         options=[
+             ('A', '뛰어나서'),
+             ('B', '평범해서'),
+             ('C', '부정확해서'),
+             ('D', '흥미로워서'),
+         ],
+         explanation='"영상미가 뛰어나다" = hình ảnh/góc quay rất đẹp, xuất sắc — khớp với việc phim đang được khen (diễn xuất tốt + hình ảnh đẹp → nổi tiếng) — khớp với A.\nB 평범해서(bình thường), C 부정확해서(không chính xác) đều mang nghĩa tiêu cực/trung tính, không hợp lý do "인기가 많다".\nD 흥미로워서(thú vị) ít khi dùng để miêu tả "영상미" (thường dùng cho nội dung/cốt truyện hơn).'),
     dict(num=5, correct='D', options_source='docx',
          stem='가: 여기에 쓰레기를 버려도 돼요?\n나: 아니요, 여기에 쓰레기를 ( ) 안 돼요.',
-         options=[('A', '버려도'), ('B', '버려서'), ('C', '버려야'), ('D', '버리면')],
-         explanation=(
-             'Cấu trúc cấm đoán "-(으)면 안 되다" (không được làm gì) — "không được vứt rác ở đây" — khớp với D.\n'
-             'A 버려도(dù vứt), B 버려서(vì vứt), C 버려야(phải vứt) đều không tạo được cấu trúc cấm đoán đúng ngữ pháp.'
-         )),
+         options=[
+             ('A', '버려도'),
+             ('B', '버려서'),
+             ('C', '버려야'),
+             ('D', '버리면'),
+         ],
+         explanation='Cấu trúc cấm đoán "-(으)면 안 되다" (không được làm gì) — "không được vứt rác ở đây" — khớp với D.\nA 버려도(dù vứt), B 버려서(vì vứt), C 버려야(phải vứt) đều không tạo được cấu trúc cấm đoán đúng ngữ pháp.'),
     dict(num=6, correct='A', options_source='docx',
          stem='가: 돈을 많이 ( ) 뭘 하고 싶어요?\n나: 새집으로 이사를 가고 싶어요.',
-         options=[('A', '벌면'), ('B', '벌도록'), ('C', '벌려면'), ('D', '벌지만')],
-         explanation=(
-             'Câu hỏi giả định "-(으)면": "nếu kiếm được nhiều tiền thì muốn làm gì?" — khớp với A.\n'
-             'B 벌도록(để kiếm), C 벌려면(nếu muốn kiếm), D 벌지만(dù kiếm) đều không hợp cấu trúc giả định "nếu...thì" này.'
-         )),
+         options=[
+             ('A', '벌면'),
+             ('B', '벌도록'),
+             ('C', '벌려면'),
+             ('D', '벌지만'),
+         ],
+         explanation='Câu hỏi giả định "-(으)면": "nếu kiếm được nhiều tiền thì muốn làm gì?" — khớp với A.\nB 벌도록(để kiếm), C 벌려면(nếu muốn kiếm), D 벌지만(dù kiếm) đều không hợp cấu trúc giả định "nếu...thì" này.'),
     dict(num=7, correct='B', options_source='docx',
          stem='가: 무슨 일 있었어요? 왜 이렇게 늦은 거예요?\n나: 미안해요. 버스를 반대 방향으로 잘못 ( ) 늦었어요.',
-         options=[('A', '타고'), ('B', '타서'), ('C', '타되'), ('D', '타다가')],
-         explanation=(
-             'Cấu trúc chỉ nguyên nhân "-아/어서": "vì lên nhầm xe buýt theo hướng ngược lại nên đã đến trễ" — khớp với B.\n'
-             'A 타고(lên và...) chỉ liệt kê hành động nối tiếp, không rõ nguyên nhân.\n'
-             'C 타되(lên nhưng...) và D 타다가(đang lên thì...) đều không diễn tả đúng quan hệ nguyên nhân-kết quả cần thiết.'
-         )),
+         options=[
+             ('A', '타고'),
+             ('B', '타서'),
+             ('C', '타되'),
+             ('D', '타다가'),
+         ],
+         explanation='Cấu trúc chỉ nguyên nhân "-아/어서": "vì lên nhầm xe buýt theo hướng ngược lại nên đã đến trễ" — khớp với B.\nA 타고(lên và...) chỉ liệt kê hành động nối tiếp, không rõ nguyên nhân.\nC 타되(lên nhưng...) và D 타다가(đang lên thì...) đều không diễn tả đúng quan hệ nguyên nhân-kết quả cần thiết.'),
     dict(num=8, correct='C', options_source='docx',
          stem='가: 영민 씨와 같은 회사에서 일한다면서요? 자주 만나지요?\n나: 아니요, 같은 회사에서 ( ) 자주 못 만나요.',
-         options=[('A', '일해서'), ('B', '일하더니'), ('C', '일하는데'), ('D', '일하므로')],
-         explanation=(
-             'Cấu trúc "-(으)ㄴ/는데" dùng để nối hai vế có ý nghĩa tương phản — "làm cùng công ty đấy nhưng không gặp nhau '
-             'thường xuyên đâu" — khớp với C.\n'
-             'A 일해서(vì làm) và D 일하므로(vì làm) đều chỉ nguyên nhân, không hợp ý tương phản.\n'
-             'B 일하더니(làm thế mà...) dùng cho một sự thay đổi/kết quả tiếp diễn theo thời gian, không hợp ngữ cảnh này.'
-         )),
+         options=[
+             ('A', '일해서'),
+             ('B', '일하더니'),
+             ('C', '일하는데'),
+             ('D', '일하므로'),
+         ],
+         explanation='Cấu trúc "-(으)ㄴ/는데" dùng để nối hai vế có ý nghĩa tương phản — "làm cùng công ty đấy nhưng không gặp nhau thường xuyên đâu" — khớp với C.\nA 일해서(vì làm) và D 일하므로(vì làm) đều chỉ nguyên nhân, không hợp ý tương phản.\nB 일하더니(làm thế mà...) dùng cho một sự thay đổi/kết quả tiếp diễn theo thời gian, không hợp ngữ cảnh này.'),
     dict(num=9, correct='B', options_source='docx',
          stem='청계천에서 하는 서울 등 축제에 갔는데 물 위에 띄운 유등이 아름답고 ( ).',
-         options=[('A', '구경할 뻔했다'), ('B', '구경할 만했다'), ('C', '구경할지도 모른다'), ('D', '구경하기 마련이다')],
-         explanation=(
-             'Cấu trúc "-ㄹ 만하다" nghĩa là "đáng để làm gì" — đèn lồng thả trên mặt nước đẹp và đáng để ngắm — khớp với B.\n'
-             'A 구경할 뻔했다(suýt ngắm — nghĩa là cuối cùng không xem được, sai logic), C 구경할지도 모른다(không biết chừng sẽ '
-             'ngắm — mang tính phỏng đoán, sai ngữ cảnh vì người nói đã đi xem rồi), D 구경하기 마련이다(hiển nhiên là ngắm) đều '
-             'không hợp.'
-         )),
+         options=[
+             ('A', '구경할 뻔했다'),
+             ('B', '구경할 만했다'),
+             ('C', '구경할지도 모른다'),
+             ('D', '구경하기 마련이다'),
+         ],
+         explanation='Cấu trúc "-ㄹ 만하다" nghĩa là "đáng để làm gì" — đèn lồng thả trên mặt nước đẹp và đáng để ngắm — khớp với B.\nA 구경할 뻔했다(suýt ngắm — nghĩa là cuối cùng không xem được, sai logic), C 구경할지도 모른다(không biết chừng sẽ ngắm — mang tính phỏng đoán, sai ngữ cảnh vì người nói đã đi xem rồi), D 구경하기 마련이다(hiển nhiên là ngắm) đều không hợp.'),
     dict(num=10, correct='B', options_source='docx',
          stem='선생님께서 공연이 9시에 시작하니까 8시 40분까지 ( ).',
-         options=[('A', '오냐고 하셨다'), ('B', '오라고 하셨다'), ('C', '온다고 하셨다'), ('D', '왔다고 하셨다')],
-         explanation=(
-             'Câu trần thuật gián tiếp của câu mệnh lệnh: giáo viên bảo "hãy đến" → "오라고 하셨다" — khớp với B.\n'
-             'A 오냐고 하셨다(đã hỏi là có đến không) là câu gián tiếp của câu HỎI, không phải mệnh lệnh.\n'
-             'C 온다고 하셨다(nói là thầy sẽ đến) và D 왔다고 하셨다(nói là đã đến) là câu gián tiếp của câu TRẦN THUẬT, không '
-             'hợp ngữ cảnh giáo viên đang RA LỆNH cho học sinh đến sớm.'
-         )),
+         options=[
+             ('A', '오냐고 하셨다'),
+             ('B', '오라고 하셨다'),
+             ('C', '온다고 하셨다'),
+             ('D', '왔다고 하셨다'),
+         ],
+         explanation='Câu trần thuật gián tiếp của câu mệnh lệnh: giáo viên bảo "hãy đến" → "오라고 하셨다" — khớp với B.\nA 오냐고 하셨다(đã hỏi là có đến không) là câu gián tiếp của câu HỎI, không phải mệnh lệnh.\nC 온다고 하셨다(nói là thầy sẽ đến) và D 왔다고 하셨다(nói là đã đến) là câu gián tiếp của câu TRẦN THUẬT, không hợp ngữ cảnh giáo viên đang RA LỆNH cho học sinh đến sớm.'),
     dict(num=11, correct='B', options_source='reconstructed',
          stem='열심히 준비하다 / 입사시험에 떨어지다',
          options=[
@@ -97,13 +104,7 @@ QUESTIONS = [
              ('C', '열심히 준비하는 대신 입사시험에 떨어지고 말았다.'),
              ('D', '열심히 준비하다가 입사시험에 떨어지도록 했다.'),
          ],
-         explanation=(
-             'Nối 2 vế có ý nghĩa đối lập bằng "-지만" (tuy... nhưng...): "đã chuẩn bị chăm chỉ nhưng có vẻ sẽ rớt" — khớp '
-             'với B. Đây là câu hợp lý nhất về ngữ nghĩa dù thì của động từ có thay đổi một chút so với 2 vế gốc.\n'
-             'A "-으려고...ㄹ 뻔하다"(định làm... suýt...) sai nghĩa hoàn toàn. C "-는 대신"(thay vì) không hợp quan hệ đối '
-             'lập cần có. D "-다가...도록 하다"(đang làm thì... để cho...) sai ngữ pháp và nghĩa.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, C, D là do Claude tự dựng lại.'
-         )),
+         explanation='Nối 2 vế có ý nghĩa đối lập bằng "-지만" (tuy... nhưng...): "đã chuẩn bị chăm chỉ nhưng có vẻ sẽ rớt" — khớp với B. Đây là câu hợp lý nhất về ngữ nghĩa dù thì của động từ có thay đổi một chút so với 2 vế gốc.\nA "-으려고...ㄹ 뻔하다"(định làm... suýt...) sai nghĩa hoàn toàn. C "-는 대신"(thay vì) không hợp quan hệ đối lập cần có. D "-다가...도록 하다"(đang làm thì... để cho...) sai ngữ pháp và nghĩa.'),
     dict(num=12, correct='C', options_source='reconstructed',
          stem='서울은 대중교통이 발달하다 / 자가용 없이 여행하다 / 가능하다',
          options=[
@@ -112,90 +113,43 @@ QUESTIONS = [
              ('C', '서울은 대중교통이 발달해서 자가용 없이 여행하는 것이 가능하다.'),
              ('D', '서울은 대중교통이 발달하도록 자가용 없이 여행할 수밖에 없다.'),
          ],
-         explanation=(
-             'Nối 3 vế bằng quan hệ nguyên nhân-kết quả "-아/어서" và cấu trúc danh từ hóa "-는 것이 가능하다": "vì giao '
-             'thông công cộng phát triển nên có thể du lịch không cần xe riêng" — khớp với C.\n'
-             'A dùng "-지만"(nhưng) sai vì hai vế không đối lập mà là nhân-quả. B đảo ngược thành "불가능하다"(không thể) sai '
-             'nghĩa hoàn toàn. D sai ngữ pháp/nghĩa.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, D là do Claude tự dựng lại.'
-         )),
+         explanation='Nối 3 vế bằng quan hệ nguyên nhân-kết quả "-아/어서" và cấu trúc danh từ hóa "-는 것이 가능하다": "vì giao thông công cộng phát triển nên có thể du lịch không cần xe riêng" — khớp với C.\nA dùng "-지만"(nhưng) sai vì hai vế không đối lập mà là nhân-quả. B đảo ngược thành "불가능하다"(không thể) sai nghĩa hoàn toàn. D sai ngữ pháp/nghĩa.'),
     dict(num=13, correct='C', options_source='reconstructed',
-         stem=(
-             '돌잔치에서는 아기 앞에 실, 돈, 연필, 마이크 등 여러 가지 물건을 놓고 아기가 그중 하나를 고르게 하는 순서가 '
-             '있다. 사람들은 아기가 어떤 물건을 집는지 보면서 아기의 미래를 상상해 보곤 한다. 이것은 ( ).'
-         ),
+         stem='돌잔치에서는 아기 앞에 실, 돈, 연필, 마이크 등 여러 가지 물건을 놓고 아기가 그중 하나를 고르게 하는 순서가 있다. 사람들은 아기가 어떤 물건을 집는지 보면서 아기의 미래를 상상해 보곤 한다. 이것은 ( ).',
          options=[
              ('A', '아기의 건강을 기원하는 백일잔치였다'),
              ('B', '부모의 결혼을 기념하는 행사였다'),
              ('C', '아기의 장래를 추측하는 돌잡이 행사였다'),
              ('D', '아기의 이름을 짓는 작명 행사였다'),
          ],
-         explanation=(
-             'Đoạn văn giải thích việc em bé chọn tiền, bút chì, micro... trong tiệc thôi nôi — đây chính là nghi thức '
-             'Doljabi (돌잡이) để đoán tương lai của bé — khớp với C.\n'
-             'A(tiệc mừng 100 ngày tuổi, khác dịp), B(kỷ niệm hôn nhân cha mẹ, không liên quan), D(lễ đặt tên, khác nghi '
-             'thức) đều sai chủ đề.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, D là do Claude tự dựng lại.'
-         )),
+         explanation='Đoạn văn giải thích việc em bé chọn tiền, bút chì, micro... trong tiệc thôi nôi — đây chính là nghi thức Doljabi (돌잡이) để đoán tương lai của bé — khớp với C.\nA(tiệc mừng 100 ngày tuổi, khác dịp), B(kỷ niệm hôn nhân cha mẹ, không liên quan), D(lễ đặt tên, khác nghi thức) đều sai chủ đề.'),
     dict(num=14, correct='A', options_source='reconstructed',
-         stem=(
-             '[선거 포스터]\n○○시장 선거\n투표일: 6월 14일(수) 오전 6시 ~ 오후 6시\n사전투표일: 6월 9일(금) ~ 10일(토)\n'
-             '준비물: 신분증 지참\n\n다음 선거 포스터의 내용과 같은 것은?'
-         ),
+         stem='[선거 포스터]\n○○시장 선거\n투표일: 6월 14일(수) 오전 6시 ~ 오후 6시\n사전투표일: 6월 9일(금) ~ 10일(토)\n준비물: 신분증 지참\n\n다음 선거 포스터의 내용과 같은 것은?',
          options=[
              ('A', '투표를 하려면 주민등록증을 가져가야 한다.'),
              ('B', '국회의원을 뽑는 선거이다.'),
              ('C', '저녁 8시까지 투표할 수 있다.'),
              ('D', '14일은 사전투표일이다.'),
          ],
-         explanation=(
-             'Poster ghi rõ "준비물: 신분증 지참" (mang theo giấy tờ tùy thân) — CMND (주민등록증) là một loại giấy tờ tùy thân '
-             '— khớp với A.\n'
-             'B sai: đây là bầu cử ĐỊA PHƯƠNG, không phải bầu quốc hội.\n'
-             'C sai: giờ bỏ phiếu kết thúc lúc 18:00 (6 giờ chiều), không phải 20:00 (8 giờ tối).\n'
-             'D sai: ngày 14 là ngày bỏ phiếu CHÍNH THỨC, không phải ngày bỏ phiếu sớm.\n'
-             'Lưu ý: câu chữ chính xác trên poster không có trong tài liệu nguồn — Claude viết lại các phương án dựa theo '
-             'đúng nội dung đối chiếu đúng/sai đã cho.'
-         )),
+         explanation='Poster ghi rõ "준비물: 신분증 지참" (mang theo giấy tờ tùy thân) — CMND (주민등록증) là một loại giấy tờ tùy thân — khớp với A.\nB sai: đây là bầu cử ĐỊA PHƯƠNG, không phải bầu quốc hội.\nC sai: giờ bỏ phiếu kết thúc lúc 18:00 (6 giờ chiều), không phải 20:00 (8 giờ tối).\nD sai: ngày 14 là ngày bỏ phiếu CHÍNH THỨC, không phải ngày bỏ phiếu sớm.'),
     dict(num=15, correct='A', options_source='reconstructed',
-         stem=(
-             '스마트폰은 이제 우리 생활에서 없어서는 안 될 물건이 되었다. 스마트폰 하나만 있으면 길을 찾거나 물건을 사거나 '
-             '은행 업무를 보는 등 많은 일을 신속하고 편리하게 해결할 수 있게 되었다. 하지만 스마트폰에 지나치게 의존하다 '
-             '보면 사람들과 직접 얼굴을 보고 대화하는 시간이 줄어들고, 심한 경우에는 스마트폰 중독으로 이어지기도 한다.\n'
-             '윗글의 제목으로 가장 알맞은 것을 고르시오.'
-         ),
+         stem='스마트폰은 이제 우리 생활에서 없어서는 안 될 물건이 되었다. 스마트폰 하나만 있으면 길을 찾거나 물건을 사거나 은행 업무를 보는 등 많은 일을 신속하고 편리하게 해결할 수 있게 되었다. 하지만 스마트폰에 지나치게 의존하다 보면 사람들과 직접 얼굴을 보고 대화하는 시간이 줄어들고, 심한 경우에는 스마트폰 중독으로 이어지기도 한다.\n윗글의 제목으로 가장 알맞은 것을 고르시오.',
          options=[
              ('A', '스마트폰의 장점과 단점'),
              ('B', '스마트폰 중독의 위험성'),
              ('C', '스마트폰을 올바르게 사용하는 방법'),
              ('D', '최신 스마트폰의 다양한 기능'),
          ],
-         explanation=(
-             'Bài đọc có 2 phần rõ rệt: ưu điểm (tiện lợi) và nhược điểm (ít giao tiếp, gây nghiện) — tiêu đề bao quát nhất '
-             'là A "Ưu điểm và nhược điểm của smartphone".\n'
-             'B chỉ đề cập nhược điểm (nghiện), C và D không khớp với nội dung 2 phần đối lập được mô tả.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — B, C, D là do Claude tự dựng lại.'
-         )),
+         explanation='Bài đọc có 2 phần rõ rệt: ưu điểm (tiện lợi) và nhược điểm (ít giao tiếp, gây nghiện) — tiêu đề bao quát nhất là A "Ưu điểm và nhược điểm của smartphone".\nB chỉ đề cập nhược điểm (nghiện), C và D không khớp với nội dung 2 phần đối lập được mô tả.'),
     dict(num=16, correct='D', options_source='reconstructed',
-         stem=(
-             '스마트폰은 이제 우리 생활에서 없어서는 안 될 물건이 되었다. 스마트폰 하나만 있으면 길을 찾거나 물건을 사거나 '
-             '은행 업무를 보는 등 ( ). 하지만 스마트폰에 지나치게 의존하다 보면 사람들과 직접 얼굴을 보고 대화하는 시간이 '
-             '줄어들고, 심한 경우에는 스마트폰 중독으로 이어지기도 한다.\n'
-             '윗글의 ( )에 들어갈 내용으로 알맞은 것을 고르시오.'
-         ),
+         stem='스마트폰은 이제 우리 생활에서 없어서는 안 될 물건이 되었다. 스마트폰 하나만 있으면 길을 찾거나 물건을 사거나 은행 업무를 보는 등 ( ). 하지만 스마트폰에 지나치게 의존하다 보면 사람들과 직접 얼굴을 보고 대화하는 시간이 줄어들고, 심한 경우에는 스마트폰 중독으로 이어지기도 한다.\n윗글의 ( )에 들어갈 내용으로 알맞은 것을 고르시오.',
          options=[
              ('A', '사람들과의 대화가 줄어들게 되었다'),
              ('B', '스마트폰 중독 문제가 심각해지고 있다'),
              ('C', '예전보다 눈 건강이 나빠지고 있다'),
              ('D', '많은 일을 신속하고 편리하게 해결할 수 있게 되었다'),
          ],
-         explanation=(
-             'Chỗ trống nằm trong phần nói về ƯU ĐIỂM của smartphone, cần một câu tóm tắt sự tiện lợi — khớp với D "có thể '
-             'giải quyết nhiều việc nhanh chóng, tiện lợi".\n'
-             'A, B, C đều là các câu đúng về smartphone nhưng mô tả NHƯỢC điểm (ít giao tiếp, gây nghiện, hại mắt), sai vị '
-             'trí vì chỗ trống thuộc phần ưu điểm.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, C là do Claude tự dựng lại.'
-         )),
+         explanation='Chỗ trống nằm trong phần nói về ƯU ĐIỂM của smartphone, cần một câu tóm tắt sự tiện lợi — khớp với D "có thể giải quyết nhiều việc nhanh chóng, tiện lợi".\nA, B, C đều là các câu đúng về smartphone nhưng mô tả NHƯỢC điểm (ít giao tiếp, gây nghiện, hại mắt), sai vị trí vì chỗ trống thuộc phần ưu điểm.'),
     dict(num=17, correct='A', options_source='reconstructed',
          stem='한국의 주거 문화의 변화에 대한 설명으로 옳지 않은 것은?',
          options=[
@@ -204,12 +158,7 @@ QUESTIONS = [
              ('C', '1인 가구가 증가하면서 소형 주택에 대한 수요도 늘고 있다.'),
              ('D', '직장과 가까운 곳에 거주하려는 경향이 강해지고 있다.'),
          ],
-         explanation=(
-             'Ở Hàn Quốc hiện nay, loại hình nhà ở phổ biến nhất là chung cư (아파트), không phải nhà riêng (단독 주택) — nên '
-             'A là câu SAI, đây là đáp án đúng.\n'
-             'B, C, D đều là xu hướng thực tế đúng trong sự thay đổi văn hóa cư trú của Hàn Quốc.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án đúng còn lại — B, C, D là do Claude tự dựng lại.'
-         )),
+         explanation='Ở Hàn Quốc hiện nay, loại hình nhà ở phổ biến nhất là chung cư (아파트), không phải nhà riêng (단독 주택) — nên A là câu SAI, đây là đáp án đúng.\nB, C, D đều là xu hướng thực tế đúng trong sự thay đổi văn hóa cư trú của Hàn Quốc.'),
     dict(num=18, correct='A', options_source='reconstructed',
          stem='<보기>의 (가), (나)에 들어갈 용어로 적절한 것은?',
          options=[
@@ -218,25 +167,16 @@ QUESTIONS = [
              ('C', '(가) 동네 의원 - (나) 종합병원'),
              ('D', '(가) 보건소 - (나) 동네 의원'),
          ],
-         explanation=(
-             'Bệnh nhẹ thì đến phòng khám khu phố (동네 의원). Cơ quan y tế công cộng do nhà nước điều hành, phí rẻ, chuyên '
-             'tiêm phòng là Trạm y tế (보건소) — khớp với A.\n'
-             'B, C, D đều thay một hoặc cả hai vị trí bằng cơ sở y tế khác không đúng vai trò được mô tả trong <보기>.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — B, C, D là do Claude tự dựng lại.'
-         )),
+         explanation='Bệnh nhẹ thì đến phòng khám khu phố (동네 의원). Cơ quan y tế công cộng do nhà nước điều hành, phí rẻ, chuyên tiêm phòng là Trạm y tế (보건소) — khớp với A.\nB, C, D đều thay một hoặc cả hai vị trí bằng cơ sở y tế khác không đúng vai trò được mô tả trong <보기>.'),
     dict(num=19, correct='A', options_source='reconstructed',
-         stem=(
-             '<보기>\n· 나이에 관계없이 배울 수 있다\n· 문해 교육, 직업 교육 등을 포함한다\n· 도서관, 문화센터 등에서 '
-             '이루어진다\n<보기>의 내용과 가장 관계가 깊은 것은?'
-         ),
-         options=[('A', '평생교육'), ('B', '직업교육'), ('C', '의무교육'), ('D', '특수교육')],
-         explanation=(
-             'Việc học tập không ngừng nghỉ ở mọi lứa tuổi, tại nhiều địa điểm khác nhau (thư viện, trung tâm văn hóa) '
-             'chính là "giáo dục suốt đời" (평생교육) — khớp với A.\n'
-             'B 직업교육(giáo dục nghề nghiệp) chỉ là MỘT phần trong nội dung <보기>, không bao quát được "học bất kể tuổi '
-             'tác". C 의무교육(giáo dục bắt buộc) và D 특수교육(giáo dục đặc biệt) là khái niệm khác hẳn.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — B, C, D là do Claude tự dựng lại.'
-         )),
+         stem='<보기>\n· 나이에 관계없이 배울 수 있다\n· 문해 교육, 직업 교육 등을 포함한다\n· 도서관, 문화센터 등에서 이루어진다\n<보기>의 내용과 가장 관계가 깊은 것은?',
+         options=[
+             ('A', '평생교육'),
+             ('B', '직업교육'),
+             ('C', '의무교육'),
+             ('D', '특수교육'),
+         ],
+         explanation='Việc học tập không ngừng nghỉ ở mọi lứa tuổi, tại nhiều địa điểm khác nhau (thư viện, trung tâm văn hóa) chính là "giáo dục suốt đời" (평생교육) — khớp với A.\nB 직업교육(giáo dục nghề nghiệp) chỉ là MỘT phần trong nội dung <보기>, không bao quát được "học bất kể tuổi tác". C 의무교육(giáo dục bắt buộc) và D 특수교육(giáo dục đặc biệt) là khái niệm khác hẳn.'),
     dict(num=20, correct='B', options_source='reconstructed',
          stem='한국의 교육에 대한 설명으로 옳은 것은?',
          options=[
@@ -245,50 +185,25 @@ QUESTIONS = [
              ('C', '고등학교까지 무상 의무 교육이 시행되고 있어 사교육이 거의 없다.'),
              ('D', '대학 진학보다 취업을 목표로 하는 특성화고 진학률이 훨씬 높다.'),
          ],
-         explanation=(
-             'Giáo dục được coi là con đường chính để nâng cao địa vị xã hội — đặc điểm nổi bật của văn hóa "nhiệt huyết '
-             'giáo dục cao" (교육열) ở Hàn Quốc — khớp với B.\n'
-             'A sai: Hàn Quốc có tỷ lệ vào đại học thuộc hàng cao nhất thế giới, không phải thấp.\n'
-             'C sai: dù có giáo dục công miễn phí đến cấp 3, giáo dục tư (사교육/học thêm) vẫn cực kỳ phổ biến.\n'
-             'D sai: đa số học sinh vẫn hướng đến vào đại học hơn là trường nghề (특성화고).\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, C, D là do Claude tự dựng lại.'
-         )),
+         explanation='Giáo dục được coi là con đường chính để nâng cao địa vị xã hội — đặc điểm nổi bật của văn hóa "nhiệt huyết giáo dục cao" (교육열) ở Hàn Quốc — khớp với B.\nA sai: Hàn Quốc có tỷ lệ vào đại học thuộc hàng cao nhất thế giới, không phải thấp.\nC sai: dù có giáo dục công miễn phí đến cấp 3, giáo dục tư (사교육/học thêm) vẫn cực kỳ phổ biến.\nD sai: đa số học sinh vẫn hướng đến vào đại học hơn là trường nghề (특성화고).'),
     dict(num=21, correct='C', options_source='reconstructed',
-         stem=(
-             '한국의 식사 예절에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?\n'
-             '<보기>\n'
-             'ㄱ. 밥그릇을 손에 들고 먹는다.\n'
-             'ㄴ. 웃어른이 수저를 든 후에 식사를 시작한다.\n'
-             'ㄷ. 음식을 먹을 때 큰 소리를 내도 예의에 어긋나지 않는다.\n'
-             'ㄹ. 기침이 나올 때는 고개를 돌리고 입을 가린다.'
-         ),
-         options=[('A', 'ㄱ, ㄷ'), ('B', 'ㄱ, ㄴ'), ('C', 'ㄴ, ㄹ'), ('D', 'ㄷ, ㄹ')],
-         explanation=(
-             'ㄴ đúng: phải đợi người lớn tuổi cầm đũa/thìa lên trước rồi mới bắt đầu ăn. ㄹ đúng: khi ho phải quay mặt '
-             'sang bên và che miệng — khớp với C.\n'
-             'ㄱ sai: bát cơm phải để trên bàn, không được cầm lên tay khi ăn (khác với văn hóa một số nước châu Á khác).\n'
-             'ㄷ sai: ăn phát ra tiếng to bị coi là thiếu lịch sự trong văn hóa Hàn Quốc.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê nguyên văn 4 câu ㄱㄴㄷㄹ và 4 phương án tổ hợp — nội dung trên do Claude '
-             'dựng lại, chỉ đáp án đúng (C) là chắc chắn khớp nguồn.'
-         )),
+         stem='한국의 식사 예절에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?\n<보기>\nㄱ. 밥그릇을 손에 들고 먹는다.\nㄴ. 웃어른이 수저를 든 후에 식사를 시작한다.\nㄷ. 음식을 먹을 때 큰 소리를 내도 예의에 어긋나지 않는다.\nㄹ. 기침이 나올 때는 고개를 돌리고 입을 가린다.',
+         options=[
+             ('A', 'ㄱ, ㄷ'),
+             ('B', 'ㄱ, ㄴ'),
+             ('C', 'ㄴ, ㄹ'),
+             ('D', 'ㄷ, ㄹ'),
+         ],
+         explanation='ㄴ đúng: phải đợi người lớn tuổi cầm đũa/thìa lên trước rồi mới bắt đầu ăn. ㄹ đúng: khi ho phải quay mặt sang bên và che miệng — khớp với C.\nㄱ sai: bát cơm phải để trên bàn, không được cầm lên tay khi ăn (khác với văn hóa một số nước châu Á khác).\nㄷ sai: ăn phát ra tiếng to bị coi là thiếu lịch sự trong văn hóa Hàn Quốc.'),
     dict(num=22, correct='D', options_source='reconstructed',
-         stem=(
-             '한국인이 중시하는 연고에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?\n'
-             '<보기>\n'
-             'ㄱ. 지연은 같은 학교를 졸업한 사람들 사이의 인연이다.\n'
-             'ㄴ. 학연은 고향이 같은 사람들 사이의 인연이다.\n'
-             'ㄷ. 혈연은 부모, 형제 등 혈연 관계로 맺어진 인연이다.\n'
-             'ㄹ. 한국인은 공동체 의식과 관련된 인연을 중요하게 생각한다.'
-         ),
-         options=[('A', 'ㄱ, ㄴ'), ('B', 'ㄱ, ㄷ'), ('C', 'ㄴ, ㄹ'), ('D', 'ㄷ, ㄹ')],
-         explanation=(
-             'ㄷ đúng: 혈연 (huyết duyên) là nhân duyên ruột thịt. ㄹ đúng: người Hàn coi trọng các mối nhân duyên liên quan '
-             'đến ý thức cộng đồng — khớp với D.\n'
-             'ㄱ sai: định nghĩa "cùng trường" thực ra là 학연 (học duyên), không phải 지연.\n'
-             'ㄴ sai: định nghĩa "cùng quê" thực ra là 지연 (địa duyên), không phải 학연 — hai khái niệm này bị đảo ngược.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê nguyên văn 4 câu ㄱㄴㄷㄹ và 4 phương án tổ hợp — nội dung trên do Claude '
-             'dựng lại, chỉ đáp án đúng (D) là chắc chắn khớp nguồn.'
-         )),
+         stem='한국인이 중시하는 연고에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?\n<보기>\nㄱ. 지연은 같은 학교를 졸업한 사람들 사이의 인연이다.\nㄴ. 학연은 고향이 같은 사람들 사이의 인연이다.\nㄷ. 혈연은 부모, 형제 등 혈연 관계로 맺어진 인연이다.\nㄹ. 한국인은 공동체 의식과 관련된 인연을 중요하게 생각한다.',
+         options=[
+             ('A', 'ㄱ, ㄴ'),
+             ('B', 'ㄱ, ㄷ'),
+             ('C', 'ㄴ, ㄹ'),
+             ('D', 'ㄷ, ㄹ'),
+         ],
+         explanation='ㄷ đúng: 혈연 (huyết duyên) là nhân duyên ruột thịt. ㄹ đúng: người Hàn coi trọng các mối nhân duyên liên quan đến ý thức cộng đồng — khớp với D.\nㄱ sai: định nghĩa "cùng trường" thực ra là 학연 (học duyên), không phải 지연.\nㄴ sai: định nghĩa "cùng quê" thực ra là 지연 (địa duyên), không phải 학연 — hai khái niệm này bị đảo ngược.'),
     dict(num=23, correct='B', options_source='reconstructed',
          stem='한국의 종교에 대한 설명으로 옳은 것은?',
          options=[
@@ -297,15 +212,7 @@ QUESTIONS = [
              ('C', '제사를 지내는 문화는 기독교에서 유래한 것이다.'),
              ('D', '자비를 강조하는 종교는 개신교이다.'),
          ],
-         explanation=(
-             'Các trường như Yonsei, Ewha hay bệnh viện Severance đều do các nhà truyền giáo Tin lành (개신교) thành lập '
-             'vào thế kỷ 19 — khớp với B.\n'
-             'A sai: thực tế có rất nhiều người Hàn Quốc không theo tôn giáo nào.\n'
-             'C sai: văn hóa cúng giỗ (제사) bắt nguồn từ Nho giáo, không phải Cơ Đốc giáo.\n'
-             'D sai: tinh thần từ bi (자비) là đặc trưng của Phật giáo, không phải đạo Tin lành.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê nguyên văn 3 phương án sai đầy đủ (chỉ nêu lý do ngắn gọn) — câu chữ đầy '
-             'đủ do Claude viết lại giữ đúng ý.'
-         )),
+         explanation='Các trường như Yonsei, Ewha hay bệnh viện Severance đều do các nhà truyền giáo Tin lành (개신교) thành lập vào thế kỷ 19 — khớp với B.\nA sai: thực tế có rất nhiều người Hàn Quốc không theo tôn giáo nào.\nC sai: văn hóa cúng giỗ (제사) bắt nguồn từ Nho giáo, không phải Cơ Đốc giáo.\nD sai: tinh thần từ bi (자비) là đặc trưng của Phật giáo, không phải đạo Tin lành.'),
     dict(num=24, correct='C', options_source='reconstructed',
          stem='삼권분립에 대한 설명으로 옳지 않은 것은?',
          options=[
@@ -314,52 +221,25 @@ QUESTIONS = [
              ('C', '대통령이 모든 권력을 가지고 다른 기관들을 견제한다.'),
              ('D', '법원은 법에 따라 재판하는 사법부의 역할을 한다.'),
          ],
-         explanation=(
-             'Tam quyền phân lập chia quyền lực làm 3 nhánh để kiềm chế và cân bằng lẫn nhau — Tổng thống (thuộc nhánh '
-             'Hành pháp) KHÔNG nắm mọi quyền lực — nên C là câu SAI, đây là đáp án đúng.\n'
-             'A, B, D đều là mô tả đúng về hệ thống tam quyền phân lập (lập pháp - hành pháp - tư pháp) của Hàn Quốc.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án đúng còn lại — A, B, D là do Claude tự dựng lại.'
-         )),
+         explanation='Tam quyền phân lập chia quyền lực làm 3 nhánh để kiềm chế và cân bằng lẫn nhau — Tổng thống (thuộc nhánh Hành pháp) KHÔNG nắm mọi quyền lực — nên C là câu SAI, đây là đáp án đúng.\nA, B, D đều là mô tả đúng về hệ thống tam quyền phân lập (lập pháp - hành pháp - tư pháp) của Hàn Quốc.'),
     dict(num=25, correct='B', options_source='reconstructed',
-         stem=(
-             '한국의 선거에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?\n'
-             '<보기>\n'
-             'ㄱ. 직접선거는 유권자가 대리인 없이 직접 투표하는 것이다.\n'
-             'ㄴ. 평등선거는 유권자마다 투표권의 수가 다르게 부여되는 것이다.\n'
-             'ㄷ. 비밀선거는 누구에게 투표했는지 다른 사람이 알 수 없게 하는 것이다.\n'
-             'ㄹ. 보통선거는 일정 재산을 가진 사람만 투표할 수 있는 것이다.'
-         ),
-         options=[('A', 'ㄱ, ㄴ'), ('B', 'ㄱ, ㄷ'), ('C', 'ㄴ, ㄹ'), ('D', 'ㄷ, ㄹ')],
-         explanation=(
-             'ㄱ đúng: bầu cử trực tiếp nghĩa là tự mình bỏ phiếu, không qua đại diện. ㄷ đúng: bầu cử kín nghĩa là không '
-             'để người khác biết mình bầu cho ai — khớp với B.\n'
-             'ㄴ sai: đây thực ra là định nghĩa NGƯỢC của bầu cử bình đẳng — bình đẳng nghĩa là MỌI người có SỐ PHIẾU NGANG '
-             'NHAU, không phải khác nhau.\n'
-             'ㄹ sai: đây là định nghĩa NGƯỢC của bầu cử phổ thông — phổ thông đầu phiếu nghĩa là KHÔNG phân biệt tài sản, '
-             'ai đủ tuổi cũng được bầu.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê nguyên văn 4 câu ㄱㄴㄷㄹ và 4 phương án tổ hợp — nội dung trên do Claude '
-             'dựng lại, chỉ đáp án đúng (B) là chắc chắn khớp nguồn.'
-         )),
+         stem='한국의 선거에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?\n<보기>\nㄱ. 직접선거는 유권자가 대리인 없이 직접 투표하는 것이다.\nㄴ. 평등선거는 유권자마다 투표권의 수가 다르게 부여되는 것이다.\nㄷ. 비밀선거는 누구에게 투표했는지 다른 사람이 알 수 없게 하는 것이다.\nㄹ. 보통선거는 일정 재산을 가진 사람만 투표할 수 있는 것이다.',
+         options=[
+             ('A', 'ㄱ, ㄴ'),
+             ('B', 'ㄱ, ㄷ'),
+             ('C', 'ㄴ, ㄹ'),
+             ('D', 'ㄷ, ㄹ'),
+         ],
+         explanation='ㄱ đúng: bầu cử trực tiếp nghĩa là tự mình bỏ phiếu, không qua đại diện. ㄷ đúng: bầu cử kín nghĩa là không để người khác biết mình bầu cho ai — khớp với B.\nㄴ sai: đây thực ra là định nghĩa NGƯỢC của bầu cử bình đẳng — bình đẳng nghĩa là MỌI người có SỐ PHIẾU NGANG NHAU, không phải khác nhau.\nㄹ sai: đây là định nghĩa NGƯỢC của bầu cử phổ thông — phổ thông đầu phiếu nghĩa là KHÔNG phân biệt tài sản, ai đủ tuổi cũng được bầu.'),
     dict(num=26, correct='C', options_source='reconstructed',
-         stem=(
-             '<보기>는 한국의 수출 상품들이다.\n'
-             '(가) 1980년대: 철강, 조선\n'
-             '(나) 1970년대: 옷, 신발\n'
-             '(다) 2000년대 이후: 반도체, 휴대폰\n'
-             '(라) 1990년대: 자동차, 전자제품\n'
-             '이를 연도 순서대로 배열한 것은?'
-         ),
+         stem='<보기>는 한국의 수출 상품들이다.\n(가) 1980년대: 철강, 조선\n(나) 1970년대: 옷, 신발\n(다) 2000년대 이후: 반도체, 휴대폰\n(라) 1990년대: 자동차, 전자제품\n이를 연도 순서대로 배열한 것은?',
          options=[
              ('A', '(가)-(나)-(다)-(라)'),
              ('B', '(나)-(다)-(가)-(라)'),
              ('C', '(나)-(가)-(라)-(다)'),
              ('D', '(다)-(라)-(가)-(나)'),
          ],
-         explanation=(
-             'Thứ tự xuất khẩu đúng theo thời gian: thập niên 1970 (나, quần áo/giày dép) → thập niên 1980 (가, thép/đóng '
-             'tàu) → thập niên 1990 (라, ô tô/điện tử) → 2000 trở đi (다, bán dẫn/điện thoại) — khớp với C.\n'
-             'A, B, D đều sắp xếp sai thứ tự thời gian giữa các mặt hàng.'
-         )),
+         explanation='Thứ tự xuất khẩu đúng theo thời gian: thập niên 1970 (나, quần áo/giày dép) → thập niên 1980 (가, thép/đóng tàu) → thập niên 1990 (라, ô tô/điện tử) → 2000 trở đi (다, bán dẫn/điện thoại) — khớp với C.\nA, B, D đều sắp xếp sai thứ tự thời gian giữa các mặt hàng.'),
     dict(num=27, correct='C', options_source='reconstructed',
          stem='<보기>의 (가), (나)에 해당하는 제도의 명칭으로 옳은 것은?',
          options=[
@@ -368,120 +248,70 @@ QUESTIONS = [
              ('C', '(가) 의무표시제 - (나) 리콜 제도'),
              ('D', '(가) 품질보증제 - (나) 리콜 제도'),
          ],
-         explanation=(
-             '(가) Bắt buộc hiển thị xuất xứ, hạn sử dụng là 의무표시제 (chế độ hiển thị bắt buộc). (나) Thu hồi/sửa chữa '
-             'sản phẩm lỗi là 리콜 제도 (chế độ Recall) — khớp với C.\n'
-             'A đảo ngược vị trí (가)(나). B, D thay một vị trí bằng tên chế độ khác không đúng vai trò mô tả.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, D là do Claude tự dựng lại.'
-         )),
+         explanation='(가) Bắt buộc hiển thị xuất xứ, hạn sử dụng là 의무표시제 (chế độ hiển thị bắt buộc). (나) Thu hồi/sửa chữa sản phẩm lỗi là 리콜 제도 (chế độ Recall) — khớp với C.\nA đảo ngược vị trí (가)(나). B, D thay một vị trí bằng tên chế độ khác không đúng vai trò mô tả.'),
     dict(num=28, correct='C', options_source='reconstructed',
-         stem=(
-             '<보기>\n결혼을 하는 두 사람은 주민센터나 구청에 가서 ( )를 해야 한다. ( )를 하지 않으면 재산이나 자녀 '
-             '양육 등에서 법의 보호를 받을 수 없다. ( )를 하면 부부로 인정받아 법의 보호를 받을 수 있다.\n'
-             '<보기>의 ( )에 공통으로 들어갈 말은?'
-         ),
-         options=[('A', '출생 신고'), ('B', '이혼 신고'), ('C', '혼인 신고'), ('D', '전입 신고')],
-         explanation=(
-             'Thủ tục đăng ký để được pháp luật công nhận là vợ chồng gọi là "혼인 신고" (đăng ký kết hôn) — khớp với C. '
-             '(Lưu ý: 결혼식/đám cưới chỉ là nghi lễ, không có giá trị pháp lý nếu chưa đăng ký).\n'
-             'A 출생 신고(khai sinh), B 이혼 신고(khai ly hôn), D 전입 신고(khai chuyển hộ khẩu) đều là thủ tục hành chính '
-             'khác, không liên quan đến việc công nhận quan hệ vợ chồng.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, D là do Claude tự dựng lại.'
-         )),
+         stem='<보기>\n결혼을 하는 두 사람은 주민센터나 구청에 가서 ( )를 해야 한다. ( )를 하지 않으면 재산이나 자녀 양육 등에서 법의 보호를 받을 수 없다. ( )를 하면 부부로 인정받아 법의 보호를 받을 수 있다.\n<보기>의 ( )에 공통으로 들어갈 말은?',
+         options=[
+             ('A', '출생 신고'),
+             ('B', '이혼 신고'),
+             ('C', '혼인 신고'),
+             ('D', '전입 신고'),
+         ],
+         explanation='Thủ tục đăng ký để được pháp luật công nhận là vợ chồng gọi là "혼인 신고" (đăng ký kết hôn) — khớp với C. (Lưu ý: 결혼식/đám cưới chỉ là nghi lễ, không có giá trị pháp lý nếu chưa đăng ký).\nA 출생 신고(khai sinh), B 이혼 신고(khai ly hôn), D 전입 신고(khai chuyển hộ khẩu) đều là thủ tục hành chính khác, không liên quan đến việc công nhận quan hệ vợ chồng.'),
     dict(num=29, correct='D', options_source='reconstructed',
-         stem=(
-             '<보기>\n국가인권위원회\n국민권익위원회\n<보기>의 내용에 공통적으로 해당되는 것은?'
-         ),
+         stem='<보기>\n국가인권위원회\n국민권익위원회\n<보기>의 내용에 공통적으로 해당되는 것은?',
          options=[
              ('A', '국가 기관의 잘못으로 피해를 입었을 때 소송을 제기할 수 있는 기관이다.'),
              ('B', '이민자가 한국 사회에 적응하도록 돕는 기관이다.'),
              ('C', '외국인을 보호하기 위한 전문 기관이다.'),
              ('D', '한국은 민주주의 국가로서 국민의 권리를 보호하기 위해 노력하고 있다.'),
          ],
-         explanation=(
-             'Cả hai ủy ban trên đều được lập ra với mục đích bảo vệ quyền lợi, nhân quyền của người dân khỏi sự lạm '
-             'quyền/bất công — thể hiện việc "Hàn Quốc là quốc gia dân chủ, nỗ lực bảo vệ quyền lợi người dân" — khớp với D.\n'
-             'A, B, C mỗi câu chỉ đúng với MỘT trong hai cơ quan (không phải điểm CHUNG của cả hai), nên không phải đáp án '
-             'đúng cho câu hỏi "công cộng chung cho cả hai".\n'
-             'Lưu ý: ý nghĩa của cả 4 phương án được dịch trực tiếp từ tài liệu nguồn, nhưng câu chữ tiếng Hàn cụ thể do '
-             'Claude viết lại vì tài liệu gốc chỉ ghi bằng tiếng Việt.'
-         )),
+         explanation='Cả hai ủy ban trên đều được lập ra với mục đích bảo vệ quyền lợi, nhân quyền của người dân khỏi sự lạm quyền/bất công — thể hiện việc "Hàn Quốc là quốc gia dân chủ, nỗ lực bảo vệ quyền lợi người dân" — khớp với D.\nA, B, C mỗi câu chỉ đúng với MỘT trong hai cơ quan (không phải điểm CHUNG của cả hai), nên không phải đáp án đúng cho câu hỏi "công cộng chung cho cả hai".'),
     dict(num=30, correct='A', options_source='reconstructed',
-         stem=(
-             '<보기>\n한국 국민과 혼인하여 한국에 2년 이상 계속 거주하고 있는 외국인\n<보기>의 설명에 해당하는 것은?'
-         ),
-         options=[('A', '간이귀화'), ('B', '일반귀화'), ('C', '특별귀화'), ('D', '인지')],
-         explanation=(
-             'Nhập tịch thông qua kết hôn với người Hàn Quốc chỉ yêu cầu thời gian cư trú ngắn hơn (2 năm) so với nhập '
-             'tịch thông thường (5 năm) — gọi là 간이귀화 (nhập tịch giản lược/rút gọn) — khớp với A.\n'
-             'B 일반귀화(nhập tịch thông thường) yêu cầu cư trú 5 năm, không cần thân nhân là người Hàn. C 특별귀화(nhập '
-             'tịch đặc biệt) dành cho người có công lao đặc biệt hoặc có cha/mẹ là người Hàn. D 인지(nhận con) là thủ tục '
-             'khác về quan hệ cha/mẹ - con, không liên quan hôn nhân.\n'
-             'Lưu ý: tài liệu nguồn không liệt kê 3 phương án sai — B, C, D là do Claude tự dựng lại.'
-         )),
+         stem='<보기>\n한국 국민과 혼인하여 한국에 2년 이상 계속 거주하고 있는 외국인\n<보기>의 설명에 해당하는 것은?',
+         options=[
+             ('A', '간이귀화'),
+             ('B', '일반귀화'),
+             ('C', '특별귀화'),
+             ('D', '인지'),
+         ],
+         explanation='Nhập tịch thông qua kết hôn với người Hàn Quốc chỉ yêu cầu thời gian cư trú ngắn hơn (2 năm) so với nhập tịch thông thường (5 năm) — gọi là 간이귀화 (nhập tịch giản lược/rút gọn) — khớp với A.\nB 일반귀화(nhập tịch thông thường) yêu cầu cư trú 5 năm, không cần thân nhân là người Hàn. C 특별귀화(nhập tịch đặc biệt) dành cho người có công lao đặc biệt hoặc có cha/mẹ là người Hàn. D 인지(nhận con) là thủ tục khác về quan hệ cha/mẹ - con, không liên quan hôn nhân.'),
     dict(num=31, correct='D', options_source='docx',
          stem='나라의 이름과 나라를 건국한 사람을 바르게 연결한 것은?',
-         options=[('A', '신라 - 단군'), ('B', '발해 - 왕건'), ('C', '고려 - 대조영'), ('D', '조선 - 이성계')],
-         explanation=(
-             'Yi Seong-gye (Lý Thành Quế) là người sáng lập ra triều đại Joseon (조선) — khớp với D.\n'
-             'A sai: Dangun (단군) lập ra Gojoseon, không phải Silla — Silla do Park Hyeokgeose lập.\n'
-             'B sai: Wang Geon (왕건) lập ra Goryeo, không phải Balhae — Balhae do Dae Jo-yeong lập.\n'
-             'C sai: Goryeo (고려) do Wang Geon lập, không phải Dae Jo-yeong.'
-         )),
+         options=[
+             ('A', '신라 - 단군'),
+             ('B', '발해 - 왕건'),
+             ('C', '고려 - 대조영'),
+             ('D', '조선 - 이성계'),
+         ],
+         explanation='Yi Seong-gye (Lý Thành Quế) là người sáng lập ra triều đại Joseon (조선) — khớp với D.\nA sai: Dangun (단군) lập ra Gojoseon, không phải Silla — Silla do Park Hyeokgeose lập.\nB sai: Wang Geon (왕건) lập ra Goryeo, không phải Balhae — Balhae do Dae Jo-yeong lập.\nC sai: Goryeo (고려) do Wang Geon lập, không phải Dae Jo-yeong.'),
     dict(num=32, correct='A', options_source='docx',
-         stem=(
-             '<보기>\n· 삼국을 통일하였다\n· 삼국 중 가장 늦게 발전하였다\n<보기>에 해당하는 나라에 대한 설명으로 옳지 않은 것은?'
-         ),
+         stem='<보기>\n· 삼국을 통일하였다\n· 삼국 중 가장 늦게 발전하였다\n<보기>에 해당하는 나라에 대한 설명으로 옳지 않은 것은?',
          options=[
              ('A', '유교 사상을 바탕으로 나라를 다스렸다.'),
              ('B', '화랑도를 만들어 통일의 기반이 되었다.'),
              ('C', '동양에서 가장 오래된 천문대인 첨성대를 세웠다.'),
              ('D', '석굴암, 불국사 등 불교 문화가 크게 발전했다.'),
          ],
-         explanation=(
-             'Nước cai trị dựa trên tư tưởng Nho giáo là Joseon (조선), không phải Silla — Silla chủ yếu sùng bái Phật '
-             'giáo — nên A là câu SAI, đây là đáp án đúng.\n'
-             'B, C, D đều là thành tựu/đặc điểm có thật của Silla: tổ chức Hwarangdo làm nền tảng thống nhất Tam Quốc, xây '
-             'đài thiên văn cổ nhất phương Đông (Cheomseongdae), và văn hóa Phật giáo phát triển mạnh (Seokguram, Bulguksa).'
-         )),
+         explanation='Nước cai trị dựa trên tư tưởng Nho giáo là Joseon (조선), không phải Silla — Silla chủ yếu sùng bái Phật giáo — nên A là câu SAI, đây là đáp án đúng.\nB, C, D đều là thành tựu/đặc điểm có thật của Silla: tổ chức Hwarangdo làm nền tảng thống nhất Tam Quốc, xây đài thiên văn cổ nhất phương Đông (Cheomseongdae), và văn hóa Phật giáo phát triển mạnh (Seokguram, Bulguksa).'),
     dict(num=33, correct='A', options_source='reconstructed',
-         stem=(
-             '한국의 역사적인 인물에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?\n'
-             '<보기>\n'
-             'ㄱ. 서희는 싸우지 않고 외교로 전쟁을 막았다.\n'
-             'ㄴ. 허난설헌은 1919년 3.1운동에 참여하였다.\n'
-             'ㄷ. 이순신 장군은 거북선을 만들어서 일본군을 물리쳤다.\n'
-             'ㄹ. 김만덕은 제주도에 심한 흉년이 들었을 때 이 사실을 왕에게 알렸다.'
-         ),
-         options=[('A', 'ㄱ, ㄷ'), ('B', 'ㄱ, ㄴ'), ('C', 'ㄴ, ㄹ'), ('D', 'ㄷ, ㄹ')],
-         explanation=(
-             'ㄱ đúng: Seo Hui dùng ngoại giao ngăn chặn chiến tranh, không cần giao tranh. ㄷ đúng: tướng Yi Sun-sin chế '
-             'tạo thuyền rùa (거북선) đánh bại quân Nhật — khớp với A.\n'
-             'ㄴ sai: Heo Nanseolheon là nữ thi sĩ thời Joseon (thế kỷ 16), không thể tham gia phong trào 1/3 năm 1919 '
-             '(cách nhau hơn 300 năm) — người nổi tiếng tham gia phong trào đó là Yu Gwan-sun (유관순).\n'
-             'ㄹ sai: Kim Man-deok là nữ thương gia dùng chính tài sản của mình mua gạo cứu đói cho dân Jeju khi mất mùa, '
-             'không phải người "báo tin cho vua".\n'
-             'Lưu ý: nội dung 4 câu ㄱㄴㄷㄹ được lấy trực tiếp từ tài liệu nguồn (chỉ 4 phương án tổ hợp là do Claude dựng '
-             'lại theo kiểu chuẩn của đề thi).'
-         )),
+         stem='한국의 역사적인 인물에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?\n<보기>\nㄱ. 서희는 싸우지 않고 외교로 전쟁을 막았다.\nㄴ. 허난설헌은 1919년 3.1운동에 참여하였다.\nㄷ. 이순신 장군은 거북선을 만들어서 일본군을 물리쳤다.\nㄹ. 김만덕은 제주도에 심한 흉년이 들었을 때 이 사실을 왕에게 알렸다.',
+         options=[
+             ('A', 'ㄱ, ㄷ'),
+             ('B', 'ㄱ, ㄴ'),
+             ('C', 'ㄴ, ㄹ'),
+             ('D', 'ㄷ, ㄹ'),
+         ],
+         explanation='ㄱ đúng: Seo Hui dùng ngoại giao ngăn chặn chiến tranh, không cần giao tranh. ㄷ đúng: tướng Yi Sun-sin chế tạo thuyền rùa (거북선) đánh bại quân Nhật — khớp với A.\nㄴ sai: Heo Nanseolheon là nữ thi sĩ thời Joseon (thế kỷ 16), không thể tham gia phong trào 1/3 năm 1919 (cách nhau hơn 300 năm) — người nổi tiếng tham gia phong trào đó là Yu Gwan-sun (유관순).\nㄹ sai: Kim Man-deok là nữ thương gia dùng chính tài sản của mình mua gạo cứu đói cho dân Jeju khi mất mùa, không phải người "báo tin cho vua".'),
     dict(num=34, correct='D', options_source='docx',
-         stem=(
-             '<보기>\n· 2018년 평창 동계 올림픽을 개최하였다\n· 설악산, 경포대, 낙산해수욕장이 있다\n<보기>와 관련된 지역에 '
-             '대한 설명으로 옳지 않은 것은?'
-         ),
+         stem='<보기>\n· 2018년 평창 동계 올림픽을 개최하였다\n· 설악산, 경포대, 낙산해수욕장이 있다\n<보기>와 관련된 지역에 대한 설명으로 옳지 않은 것은?',
          options=[
              ('A', '산이 많아 고랭지 농업과 축산업이 발달했다.'),
              ('B', '강릉 단오제와 대관령 눈꽃 축제가 열린다.'),
              ('C', '태백산맥을 기준으로 영동과 영서로 나뉜다.'),
              ('D', '과학 도시가 만들어져서 사이언스 페스티벌이 열리고 있다.'),
          ],
-         explanation=(
-             'Thành phố khoa học (과학 도시) nổi tiếng của Hàn Quốc là Daejeon, thuộc vùng Chungcheong, không phải Gangwon '
-             '— nên D là câu SAI, đây là đáp án đúng.\n'
-             'A, B, C đều là đặc điểm có thật của vùng Gangwon: nhiều núi nên phát triển nông nghiệp vùng cao/chăn nuôi, '
-             'có lễ hội Danoje ở Gangneung và lễ hội tuyết Daegwallyeong, và được chia thành Yeongdong/Yeongseo theo dãy '
-             'núi Taebaek.'
-         )),
+         explanation='Thành phố khoa học (과학 도시) nổi tiếng của Hàn Quốc là Daejeon, thuộc vùng Chungcheong, không phải Gangwon — nên D là câu SAI, đây là đáp án đúng.\nA, B, C đều là đặc điểm có thật của vùng Gangwon: nhiều núi nên phát triển nông nghiệp vùng cao/chăn nuôi, có lễ hội Danoje ở Gangneung và lễ hội tuyết Daegwallyeong, và được chia thành Yeongdong/Yeongseo theo dãy núi Taebaek.'),
     dict(num=35, correct='B', options_source='docx',
          stem='다음 중 각 지역의 축제에 대한 설명으로 옳지 않은 것은?',
          options=[
@@ -490,29 +320,14 @@ QUESTIONS = [
              ('C', '충청지역에서는 보령 머드 축제와 백제 문화제가 열린다.'),
              ('D', '서울에서는 등불 축제와 거리 예술 축제가 열린다.'),
          ],
-         explanation=(
-             'Lễ hội Gốm sứ Thế giới (세계 도자기 엑스포) được tổ chức tại Icheon, Gwangju, Yeoju — thuộc vùng Gyeonggi '
-             '(경기도), không phải Jeolla — nên B là câu SAI, đây là đáp án đúng.\n'
-             'A, C, D đều là mô tả đúng: lễ hội múa mặt nạ Andong (Gyeongsang), lễ hội bùn Boryeong + văn hóa Baekje '
-             '(Chungcheong), lễ hội đèn lồng + nghệ thuật đường phố (Seoul).'
-         )),
+         explanation='Lễ hội Gốm sứ Thế giới (세계 도자기 엑스포) được tổ chức tại Icheon, Gwangju, Yeoju — thuộc vùng Gyeonggi (경기도), không phải Jeolla — nên B là câu SAI, đây là đáp án đúng.\nA, C, D đều là mô tả đúng: lễ hội múa mặt nạ Andong (Gyeongsang), lễ hội bùn Boryeong + văn hóa Baekje (Chungcheong), lễ hội đèn lồng + nghệ thuật đường phố (Seoul).'),
     dict(num=36, correct='C', options_source='reconstructed',
-         stem=(
-             '<보기>\n(가) 사람들이 단풍을 구경하러 많이 간다\n(나) 폭설과 같은 자연재해가 발생하기도 한다\n(가), (나)에서 '
-             '설명하는 계절의 현상에 알맞은 날씨는?'
-         ),
+         stem='<보기>\n(가) 사람들이 단풍을 구경하러 많이 간다\n(나) 폭설과 같은 자연재해가 발생하기도 한다\n(가), (나)에서 설명하는 계절의 현상에 알맞은 날씨는?',
          options=[
              ('A', '(가) 따뜻하고 습한 날씨 - (나) 덥고 습한 날씨'),
              ('B', '(가) 덥고 습한 날씨 - (나) 춥고 습한 날씨'),
              ('C', '(가) 화창하고 건조한 날씨 - (나) 춥고 건조한 날씨'),
              ('D', '(가) 따뜻하고 건조한 날씨 - (나) 덥고 습한 날씨'),
          ],
-         explanation=(
-             'Mùa Thu (가) ở Hàn Quốc: thời tiết trong xanh và hanh khô (화창하고 건조하다). Mùa Đông (나): thời tiết lạnh '
-             'và hanh khô (춥고 건조하다) — khớp với C.\n'
-             'B sai đặc biệt vì mùa đông Hàn Quốc thực chất rất KHÔ chứ không ẩm. A và D mô tả sai mùa/sai đặc điểm nhiệt '
-             'độ so với 2 hiện tượng "ngắm lá đỏ" và "bão tuyết" đã cho.\n'
-             'Lưu ý: câu chữ chính xác của các phương án không có trong tài liệu nguồn (chỉ có gợi ý ngắn gọn) — Claude đã '
-             'viết lại đầy đủ theo đúng cấu trúc của đáp án đúng.'
-         )),
+         explanation='Mùa Thu (가) ở Hàn Quốc: thời tiết trong xanh và hanh khô (화창하고 건조하다). Mùa Đông (나): thời tiết lạnh và hanh khô (춥고 건조하다) — khớp với C.\nB sai đặc biệt vì mùa đông Hàn Quốc thực chất rất KHÔ chứ không ẩm. A và D mô tả sai mùa/sai đặc điểm nhiệt độ so với 2 hiện tượng "ngắm lá đỏ" và "bão tuyết" đã cho.'),
 ]

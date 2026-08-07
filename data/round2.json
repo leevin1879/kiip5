@@ -286,7 +286,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Nối 2 vế có ý nghĩa đối lập bằng \"-지만\" (tuy... nhưng...): \"đã chuẩn bị chăm chỉ nhưng có vẻ sẽ rớt\" — khớp với B. Đây là câu hợp lý nhất về ngữ nghĩa dù thì của động từ có thay đổi một chút so với 2 vế gốc.\nA \"-으려고...ㄹ 뻔하다\"(định làm... suýt...) sai nghĩa hoàn toàn. C \"-는 대신\"(thay vì) không hợp quan hệ đối lập cần có. D \"-다가...도록 하다\"(đang làm thì... để cho...) sai ngữ pháp và nghĩa.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, C, D là do Claude tự dựng lại."
+      "explanation": "Nối 2 vế có ý nghĩa đối lập bằng \"-지만\" (tuy... nhưng...): \"đã chuẩn bị chăm chỉ nhưng có vẻ sẽ rớt\" — khớp với B. Đây là câu hợp lý nhất về ngữ nghĩa dù thì của động từ có thay đổi một chút so với 2 vế gốc.\nA \"-으려고...ㄹ 뻔하다\"(định làm... suýt...) sai nghĩa hoàn toàn. C \"-는 대신\"(thay vì) không hợp quan hệ đối lập cần có. D \"-다가...도록 하다\"(đang làm thì... để cho...) sai ngữ pháp và nghĩa."
     },
     {
       "num": 12,
@@ -312,7 +312,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Nối 3 vế bằng quan hệ nguyên nhân-kết quả \"-아/어서\" và cấu trúc danh từ hóa \"-는 것이 가능하다\": \"vì giao thông công cộng phát triển nên có thể du lịch không cần xe riêng\" — khớp với C.\nA dùng \"-지만\"(nhưng) sai vì hai vế không đối lập mà là nhân-quả. B đảo ngược thành \"불가능하다\"(không thể) sai nghĩa hoàn toàn. D sai ngữ pháp/nghĩa.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, D là do Claude tự dựng lại."
+      "explanation": "Nối 3 vế bằng quan hệ nguyên nhân-kết quả \"-아/어서\" và cấu trúc danh từ hóa \"-는 것이 가능하다\": \"vì giao thông công cộng phát triển nên có thể du lịch không cần xe riêng\" — khớp với C.\nA dùng \"-지만\"(nhưng) sai vì hai vế không đối lập mà là nhân-quả. B đảo ngược thành \"불가능하다\"(không thể) sai nghĩa hoàn toàn. D sai ngữ pháp/nghĩa."
     },
     {
       "num": 13,
@@ -338,7 +338,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Đoạn văn giải thích việc em bé chọn tiền, bút chì, micro... trong tiệc thôi nôi — đây chính là nghi thức Doljabi (돌잡이) để đoán tương lai của bé — khớp với C.\nA(tiệc mừng 100 ngày tuổi, khác dịp), B(kỷ niệm hôn nhân cha mẹ, không liên quan), D(lễ đặt tên, khác nghi thức) đều sai chủ đề.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, D là do Claude tự dựng lại."
+      "explanation": "Đoạn văn giải thích việc em bé chọn tiền, bút chì, micro... trong tiệc thôi nôi — đây chính là nghi thức Doljabi (돌잡이) để đoán tương lai của bé — khớp với C.\nA(tiệc mừng 100 ngày tuổi, khác dịp), B(kỷ niệm hôn nhân cha mẹ, không liên quan), D(lễ đặt tên, khác nghi thức) đều sai chủ đề."
     },
     {
       "num": 14,
@@ -364,7 +364,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Poster ghi rõ \"준비물: 신분증 지참\" (mang theo giấy tờ tùy thân) — CMND (주민등록증) là một loại giấy tờ tùy thân — khớp với A.\nB sai: đây là bầu cử ĐỊA PHƯƠNG, không phải bầu quốc hội.\nC sai: giờ bỏ phiếu kết thúc lúc 18:00 (6 giờ chiều), không phải 20:00 (8 giờ tối).\nD sai: ngày 14 là ngày bỏ phiếu CHÍNH THỨC, không phải ngày bỏ phiếu sớm.\nLưu ý: câu chữ chính xác trên poster không có trong tài liệu nguồn — Claude viết lại các phương án dựa theo đúng nội dung đối chiếu đúng/sai đã cho."
+      "explanation": "Poster ghi rõ \"준비물: 신분증 지참\" (mang theo giấy tờ tùy thân) — CMND (주민등록증) là một loại giấy tờ tùy thân — khớp với A.\nB sai: đây là bầu cử ĐỊA PHƯƠNG, không phải bầu quốc hội.\nC sai: giờ bỏ phiếu kết thúc lúc 18:00 (6 giờ chiều), không phải 20:00 (8 giờ tối).\nD sai: ngày 14 là ngày bỏ phiếu CHÍNH THỨC, không phải ngày bỏ phiếu sớm."
     },
     {
       "num": 15,
@@ -390,7 +390,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Bài đọc có 2 phần rõ rệt: ưu điểm (tiện lợi) và nhược điểm (ít giao tiếp, gây nghiện) — tiêu đề bao quát nhất là A \"Ưu điểm và nhược điểm của smartphone\".\nB chỉ đề cập nhược điểm (nghiện), C và D không khớp với nội dung 2 phần đối lập được mô tả.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — B, C, D là do Claude tự dựng lại."
+      "explanation": "Bài đọc có 2 phần rõ rệt: ưu điểm (tiện lợi) và nhược điểm (ít giao tiếp, gây nghiện) — tiêu đề bao quát nhất là A \"Ưu điểm và nhược điểm của smartphone\".\nB chỉ đề cập nhược điểm (nghiện), C và D không khớp với nội dung 2 phần đối lập được mô tả."
     },
     {
       "num": 16,
@@ -416,7 +416,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Chỗ trống nằm trong phần nói về ƯU ĐIỂM của smartphone, cần một câu tóm tắt sự tiện lợi — khớp với D \"có thể giải quyết nhiều việc nhanh chóng, tiện lợi\".\nA, B, C đều là các câu đúng về smartphone nhưng mô tả NHƯỢC điểm (ít giao tiếp, gây nghiện, hại mắt), sai vị trí vì chỗ trống thuộc phần ưu điểm.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, C là do Claude tự dựng lại."
+      "explanation": "Chỗ trống nằm trong phần nói về ƯU ĐIỂM của smartphone, cần một câu tóm tắt sự tiện lợi — khớp với D \"có thể giải quyết nhiều việc nhanh chóng, tiện lợi\".\nA, B, C đều là các câu đúng về smartphone nhưng mô tả NHƯỢC điểm (ít giao tiếp, gây nghiện, hại mắt), sai vị trí vì chỗ trống thuộc phần ưu điểm."
     },
     {
       "num": 17,
@@ -442,7 +442,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Ở Hàn Quốc hiện nay, loại hình nhà ở phổ biến nhất là chung cư (아파트), không phải nhà riêng (단독 주택) — nên A là câu SAI, đây là đáp án đúng.\nB, C, D đều là xu hướng thực tế đúng trong sự thay đổi văn hóa cư trú của Hàn Quốc.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án đúng còn lại — B, C, D là do Claude tự dựng lại."
+      "explanation": "Ở Hàn Quốc hiện nay, loại hình nhà ở phổ biến nhất là chung cư (아파트), không phải nhà riêng (단독 주택) — nên A là câu SAI, đây là đáp án đúng.\nB, C, D đều là xu hướng thực tế đúng trong sự thay đổi văn hóa cư trú của Hàn Quốc."
     },
     {
       "num": 18,
@@ -468,7 +468,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Bệnh nhẹ thì đến phòng khám khu phố (동네 의원). Cơ quan y tế công cộng do nhà nước điều hành, phí rẻ, chuyên tiêm phòng là Trạm y tế (보건소) — khớp với A.\nB, C, D đều thay một hoặc cả hai vị trí bằng cơ sở y tế khác không đúng vai trò được mô tả trong <보기>.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — B, C, D là do Claude tự dựng lại."
+      "explanation": "Bệnh nhẹ thì đến phòng khám khu phố (동네 의원). Cơ quan y tế công cộng do nhà nước điều hành, phí rẻ, chuyên tiêm phòng là Trạm y tế (보건소) — khớp với A.\nB, C, D đều thay một hoặc cả hai vị trí bằng cơ sở y tế khác không đúng vai trò được mô tả trong <보기>."
     },
     {
       "num": 19,
@@ -494,7 +494,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Việc học tập không ngừng nghỉ ở mọi lứa tuổi, tại nhiều địa điểm khác nhau (thư viện, trung tâm văn hóa) chính là \"giáo dục suốt đời\" (평생교육) — khớp với A.\nB 직업교육(giáo dục nghề nghiệp) chỉ là MỘT phần trong nội dung <보기>, không bao quát được \"học bất kể tuổi tác\". C 의무교육(giáo dục bắt buộc) và D 특수교육(giáo dục đặc biệt) là khái niệm khác hẳn.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — B, C, D là do Claude tự dựng lại."
+      "explanation": "Việc học tập không ngừng nghỉ ở mọi lứa tuổi, tại nhiều địa điểm khác nhau (thư viện, trung tâm văn hóa) chính là \"giáo dục suốt đời\" (평생교육) — khớp với A.\nB 직업교육(giáo dục nghề nghiệp) chỉ là MỘT phần trong nội dung <보기>, không bao quát được \"học bất kể tuổi tác\". C 의무교육(giáo dục bắt buộc) và D 특수교육(giáo dục đặc biệt) là khái niệm khác hẳn."
     },
     {
       "num": 20,
@@ -520,7 +520,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Giáo dục được coi là con đường chính để nâng cao địa vị xã hội — đặc điểm nổi bật của văn hóa \"nhiệt huyết giáo dục cao\" (교육열) ở Hàn Quốc — khớp với B.\nA sai: Hàn Quốc có tỷ lệ vào đại học thuộc hàng cao nhất thế giới, không phải thấp.\nC sai: dù có giáo dục công miễn phí đến cấp 3, giáo dục tư (사교육/học thêm) vẫn cực kỳ phổ biến.\nD sai: đa số học sinh vẫn hướng đến vào đại học hơn là trường nghề (특성화고).\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, C, D là do Claude tự dựng lại."
+      "explanation": "Giáo dục được coi là con đường chính để nâng cao địa vị xã hội — đặc điểm nổi bật của văn hóa \"nhiệt huyết giáo dục cao\" (교육열) ở Hàn Quốc — khớp với B.\nA sai: Hàn Quốc có tỷ lệ vào đại học thuộc hàng cao nhất thế giới, không phải thấp.\nC sai: dù có giáo dục công miễn phí đến cấp 3, giáo dục tư (사교육/học thêm) vẫn cực kỳ phổ biến.\nD sai: đa số học sinh vẫn hướng đến vào đại học hơn là trường nghề (특성화고)."
     },
     {
       "num": 21,
@@ -546,7 +546,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "ㄴ đúng: phải đợi người lớn tuổi cầm đũa/thìa lên trước rồi mới bắt đầu ăn. ㄹ đúng: khi ho phải quay mặt sang bên và che miệng — khớp với C.\nㄱ sai: bát cơm phải để trên bàn, không được cầm lên tay khi ăn (khác với văn hóa một số nước châu Á khác).\nㄷ sai: ăn phát ra tiếng to bị coi là thiếu lịch sự trong văn hóa Hàn Quốc.\nLưu ý: tài liệu nguồn không liệt kê nguyên văn 4 câu ㄱㄴㄷㄹ và 4 phương án tổ hợp — nội dung trên do Claude dựng lại, chỉ đáp án đúng (C) là chắc chắn khớp nguồn."
+      "explanation": "ㄴ đúng: phải đợi người lớn tuổi cầm đũa/thìa lên trước rồi mới bắt đầu ăn. ㄹ đúng: khi ho phải quay mặt sang bên và che miệng — khớp với C.\nㄱ sai: bát cơm phải để trên bàn, không được cầm lên tay khi ăn (khác với văn hóa một số nước châu Á khác).\nㄷ sai: ăn phát ra tiếng to bị coi là thiếu lịch sự trong văn hóa Hàn Quốc."
     },
     {
       "num": 22,
@@ -572,7 +572,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "ㄷ đúng: 혈연 (huyết duyên) là nhân duyên ruột thịt. ㄹ đúng: người Hàn coi trọng các mối nhân duyên liên quan đến ý thức cộng đồng — khớp với D.\nㄱ sai: định nghĩa \"cùng trường\" thực ra là 학연 (học duyên), không phải 지연.\nㄴ sai: định nghĩa \"cùng quê\" thực ra là 지연 (địa duyên), không phải 학연 — hai khái niệm này bị đảo ngược.\nLưu ý: tài liệu nguồn không liệt kê nguyên văn 4 câu ㄱㄴㄷㄹ và 4 phương án tổ hợp — nội dung trên do Claude dựng lại, chỉ đáp án đúng (D) là chắc chắn khớp nguồn."
+      "explanation": "ㄷ đúng: 혈연 (huyết duyên) là nhân duyên ruột thịt. ㄹ đúng: người Hàn coi trọng các mối nhân duyên liên quan đến ý thức cộng đồng — khớp với D.\nㄱ sai: định nghĩa \"cùng trường\" thực ra là 학연 (học duyên), không phải 지연.\nㄴ sai: định nghĩa \"cùng quê\" thực ra là 지연 (địa duyên), không phải 학연 — hai khái niệm này bị đảo ngược."
     },
     {
       "num": 23,
@@ -598,7 +598,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Các trường như Yonsei, Ewha hay bệnh viện Severance đều do các nhà truyền giáo Tin lành (개신교) thành lập vào thế kỷ 19 — khớp với B.\nA sai: thực tế có rất nhiều người Hàn Quốc không theo tôn giáo nào.\nC sai: văn hóa cúng giỗ (제사) bắt nguồn từ Nho giáo, không phải Cơ Đốc giáo.\nD sai: tinh thần từ bi (자비) là đặc trưng của Phật giáo, không phải đạo Tin lành.\nLưu ý: tài liệu nguồn không liệt kê nguyên văn 3 phương án sai đầy đủ (chỉ nêu lý do ngắn gọn) — câu chữ đầy đủ do Claude viết lại giữ đúng ý."
+      "explanation": "Các trường như Yonsei, Ewha hay bệnh viện Severance đều do các nhà truyền giáo Tin lành (개신교) thành lập vào thế kỷ 19 — khớp với B.\nA sai: thực tế có rất nhiều người Hàn Quốc không theo tôn giáo nào.\nC sai: văn hóa cúng giỗ (제사) bắt nguồn từ Nho giáo, không phải Cơ Đốc giáo.\nD sai: tinh thần từ bi (자비) là đặc trưng của Phật giáo, không phải đạo Tin lành."
     },
     {
       "num": 24,
@@ -624,7 +624,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Tam quyền phân lập chia quyền lực làm 3 nhánh để kiềm chế và cân bằng lẫn nhau — Tổng thống (thuộc nhánh Hành pháp) KHÔNG nắm mọi quyền lực — nên C là câu SAI, đây là đáp án đúng.\nA, B, D đều là mô tả đúng về hệ thống tam quyền phân lập (lập pháp - hành pháp - tư pháp) của Hàn Quốc.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án đúng còn lại — A, B, D là do Claude tự dựng lại."
+      "explanation": "Tam quyền phân lập chia quyền lực làm 3 nhánh để kiềm chế và cân bằng lẫn nhau — Tổng thống (thuộc nhánh Hành pháp) KHÔNG nắm mọi quyền lực — nên C là câu SAI, đây là đáp án đúng.\nA, B, D đều là mô tả đúng về hệ thống tam quyền phân lập (lập pháp - hành pháp - tư pháp) của Hàn Quốc."
     },
     {
       "num": 25,
@@ -650,7 +650,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "ㄱ đúng: bầu cử trực tiếp nghĩa là tự mình bỏ phiếu, không qua đại diện. ㄷ đúng: bầu cử kín nghĩa là không để người khác biết mình bầu cho ai — khớp với B.\nㄴ sai: đây thực ra là định nghĩa NGƯỢC của bầu cử bình đẳng — bình đẳng nghĩa là MỌI người có SỐ PHIẾU NGANG NHAU, không phải khác nhau.\nㄹ sai: đây là định nghĩa NGƯỢC của bầu cử phổ thông — phổ thông đầu phiếu nghĩa là KHÔNG phân biệt tài sản, ai đủ tuổi cũng được bầu.\nLưu ý: tài liệu nguồn không liệt kê nguyên văn 4 câu ㄱㄴㄷㄹ và 4 phương án tổ hợp — nội dung trên do Claude dựng lại, chỉ đáp án đúng (B) là chắc chắn khớp nguồn."
+      "explanation": "ㄱ đúng: bầu cử trực tiếp nghĩa là tự mình bỏ phiếu, không qua đại diện. ㄷ đúng: bầu cử kín nghĩa là không để người khác biết mình bầu cho ai — khớp với B.\nㄴ sai: đây thực ra là định nghĩa NGƯỢC của bầu cử bình đẳng — bình đẳng nghĩa là MỌI người có SỐ PHIẾU NGANG NHAU, không phải khác nhau.\nㄹ sai: đây là định nghĩa NGƯỢC của bầu cử phổ thông — phổ thông đầu phiếu nghĩa là KHÔNG phân biệt tài sản, ai đủ tuổi cũng được bầu."
     },
     {
       "num": 26,
@@ -702,7 +702,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "(가) Bắt buộc hiển thị xuất xứ, hạn sử dụng là 의무표시제 (chế độ hiển thị bắt buộc). (나) Thu hồi/sửa chữa sản phẩm lỗi là 리콜 제도 (chế độ Recall) — khớp với C.\nA đảo ngược vị trí (가)(나). B, D thay một vị trí bằng tên chế độ khác không đúng vai trò mô tả.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, D là do Claude tự dựng lại."
+      "explanation": "(가) Bắt buộc hiển thị xuất xứ, hạn sử dụng là 의무표시제 (chế độ hiển thị bắt buộc). (나) Thu hồi/sửa chữa sản phẩm lỗi là 리콜 제도 (chế độ Recall) — khớp với C.\nA đảo ngược vị trí (가)(나). B, D thay một vị trí bằng tên chế độ khác không đúng vai trò mô tả."
     },
     {
       "num": 28,
@@ -728,7 +728,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Thủ tục đăng ký để được pháp luật công nhận là vợ chồng gọi là \"혼인 신고\" (đăng ký kết hôn) — khớp với C. (Lưu ý: 결혼식/đám cưới chỉ là nghi lễ, không có giá trị pháp lý nếu chưa đăng ký).\nA 출생 신고(khai sinh), B 이혼 신고(khai ly hôn), D 전입 신고(khai chuyển hộ khẩu) đều là thủ tục hành chính khác, không liên quan đến việc công nhận quan hệ vợ chồng.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — A, B, D là do Claude tự dựng lại."
+      "explanation": "Thủ tục đăng ký để được pháp luật công nhận là vợ chồng gọi là \"혼인 신고\" (đăng ký kết hôn) — khớp với C. (Lưu ý: 결혼식/đám cưới chỉ là nghi lễ, không có giá trị pháp lý nếu chưa đăng ký).\nA 출생 신고(khai sinh), B 이혼 신고(khai ly hôn), D 전입 신고(khai chuyển hộ khẩu) đều là thủ tục hành chính khác, không liên quan đến việc công nhận quan hệ vợ chồng."
     },
     {
       "num": 29,
@@ -754,7 +754,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Cả hai ủy ban trên đều được lập ra với mục đích bảo vệ quyền lợi, nhân quyền của người dân khỏi sự lạm quyền/bất công — thể hiện việc \"Hàn Quốc là quốc gia dân chủ, nỗ lực bảo vệ quyền lợi người dân\" — khớp với D.\nA, B, C mỗi câu chỉ đúng với MỘT trong hai cơ quan (không phải điểm CHUNG của cả hai), nên không phải đáp án đúng cho câu hỏi \"công cộng chung cho cả hai\".\nLưu ý: ý nghĩa của cả 4 phương án được dịch trực tiếp từ tài liệu nguồn, nhưng câu chữ tiếng Hàn cụ thể do Claude viết lại vì tài liệu gốc chỉ ghi bằng tiếng Việt."
+      "explanation": "Cả hai ủy ban trên đều được lập ra với mục đích bảo vệ quyền lợi, nhân quyền của người dân khỏi sự lạm quyền/bất công — thể hiện việc \"Hàn Quốc là quốc gia dân chủ, nỗ lực bảo vệ quyền lợi người dân\" — khớp với D.\nA, B, C mỗi câu chỉ đúng với MỘT trong hai cơ quan (không phải điểm CHUNG của cả hai), nên không phải đáp án đúng cho câu hỏi \"công cộng chung cho cả hai\"."
     },
     {
       "num": 30,
@@ -780,7 +780,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Nhập tịch thông qua kết hôn với người Hàn Quốc chỉ yêu cầu thời gian cư trú ngắn hơn (2 năm) so với nhập tịch thông thường (5 năm) — gọi là 간이귀화 (nhập tịch giản lược/rút gọn) — khớp với A.\nB 일반귀화(nhập tịch thông thường) yêu cầu cư trú 5 năm, không cần thân nhân là người Hàn. C 특별귀화(nhập tịch đặc biệt) dành cho người có công lao đặc biệt hoặc có cha/mẹ là người Hàn. D 인지(nhận con) là thủ tục khác về quan hệ cha/mẹ - con, không liên quan hôn nhân.\nLưu ý: tài liệu nguồn không liệt kê 3 phương án sai — B, C, D là do Claude tự dựng lại."
+      "explanation": "Nhập tịch thông qua kết hôn với người Hàn Quốc chỉ yêu cầu thời gian cư trú ngắn hơn (2 năm) so với nhập tịch thông thường (5 năm) — gọi là 간이귀화 (nhập tịch giản lược/rút gọn) — khớp với A.\nB 일반귀화(nhập tịch thông thường) yêu cầu cư trú 5 năm, không cần thân nhân là người Hàn. C 특별귀화(nhập tịch đặc biệt) dành cho người có công lao đặc biệt hoặc có cha/mẹ là người Hàn. D 인지(nhận con) là thủ tục khác về quan hệ cha/mẹ - con, không liên quan hôn nhân."
     },
     {
       "num": 31,
@@ -858,7 +858,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "ㄱ đúng: Seo Hui dùng ngoại giao ngăn chặn chiến tranh, không cần giao tranh. ㄷ đúng: tướng Yi Sun-sin chế tạo thuyền rùa (거북선) đánh bại quân Nhật — khớp với A.\nㄴ sai: Heo Nanseolheon là nữ thi sĩ thời Joseon (thế kỷ 16), không thể tham gia phong trào 1/3 năm 1919 (cách nhau hơn 300 năm) — người nổi tiếng tham gia phong trào đó là Yu Gwan-sun (유관순).\nㄹ sai: Kim Man-deok là nữ thương gia dùng chính tài sản của mình mua gạo cứu đói cho dân Jeju khi mất mùa, không phải người \"báo tin cho vua\".\nLưu ý: nội dung 4 câu ㄱㄴㄷㄹ được lấy trực tiếp từ tài liệu nguồn (chỉ 4 phương án tổ hợp là do Claude dựng lại theo kiểu chuẩn của đề thi)."
+      "explanation": "ㄱ đúng: Seo Hui dùng ngoại giao ngăn chặn chiến tranh, không cần giao tranh. ㄷ đúng: tướng Yi Sun-sin chế tạo thuyền rùa (거북선) đánh bại quân Nhật — khớp với A.\nㄴ sai: Heo Nanseolheon là nữ thi sĩ thời Joseon (thế kỷ 16), không thể tham gia phong trào 1/3 năm 1919 (cách nhau hơn 300 năm) — người nổi tiếng tham gia phong trào đó là Yu Gwan-sun (유관순).\nㄹ sai: Kim Man-deok là nữ thương gia dùng chính tài sản của mình mua gạo cứu đói cho dân Jeju khi mất mùa, không phải người \"báo tin cho vua\"."
     },
     {
       "num": 34,
@@ -936,7 +936,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Mùa Thu (가) ở Hàn Quốc: thời tiết trong xanh và hanh khô (화창하고 건조하다). Mùa Đông (나): thời tiết lạnh và hanh khô (춥고 건조하다) — khớp với C.\nB sai đặc biệt vì mùa đông Hàn Quốc thực chất rất KHÔ chứ không ẩm. A và D mô tả sai mùa/sai đặc điểm nhiệt độ so với 2 hiện tượng \"ngắm lá đỏ\" và \"bão tuyết\" đã cho.\nLưu ý: câu chữ chính xác của các phương án không có trong tài liệu nguồn (chỉ có gợi ý ngắn gọn) — Claude đã viết lại đầy đủ theo đúng cấu trúc của đáp án đúng."
+      "explanation": "Mùa Thu (가) ở Hàn Quốc: thời tiết trong xanh và hanh khô (화창하고 건조하다). Mùa Đông (나): thời tiết lạnh và hanh khô (춥고 건조하다) — khớp với C.\nB sai đặc biệt vì mùa đông Hàn Quốc thực chất rất KHÔ chứ không ẩm. A và D mô tả sai mùa/sai đặc điểm nhiệt độ so với 2 hiện tượng \"ngắm lá đỏ\" và \"bão tuyết\" đã cho."
     }
   ],
   "tables": []

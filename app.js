@@ -255,7 +255,7 @@
     return button;
   }
 
-  function renderQuizQuickActions(questionNum) {
+  function renderQuizQuickActions(questionNum, setTitle) {
     const actions = el(`
       <div class="quiz-quick-actions" aria-label="Góp ý và ủng hộ admin">
         <button type="button" data-action="feedback">💬 <span>Góp ý câu ${questionNum}</span></button>
@@ -264,7 +264,7 @@
       </div>
     `);
     actions.querySelector('[data-action="feedback"]').addEventListener('click', () => {
-      showFeedbackModal(`Góp ý về câu ${questionNum}: `);
+      showFeedbackModal(`Góp ý về câu ${questionNum} - bộ đề "${setTitle}": `);
     });
     actions.querySelector('[data-action="coffee"]').addEventListener('click', () => {
       showSupportQr('Mời admin ly cà phê', '10.000₫', 'assets/qr-coffee-10k.jpg');
@@ -391,7 +391,7 @@
     topBar.appendChild(exitBtn);
     topBar.appendChild(el(`<div class="meta" style="color:var(--muted);font-size:13px">${escapeHtml(s.setTitle)}</div>`));
     wrap.appendChild(topBar);
-    wrap.appendChild(renderQuizQuickActions(q.num));
+    wrap.appendChild(renderQuizQuickActions(q.num, s.setTitle));
 
     const pct = Math.round((s.index / s.questions.length) * 100);
     wrap.appendChild(el(`
