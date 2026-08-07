@@ -27,13 +27,9 @@ export default async request => {
   const store = getStore('kiip5-visits');
 
   let entries = [];
-  let cursor;
   try {
-    do {
-      const page = await store.list({ prefix: 'visits/', cursor, paginate: true });
-      entries = entries.concat(page.blobs || []);
-      cursor = page.cursor;
-    } while (cursor && entries.length < 50000);
+    const result = await store.list({ prefix: 'visits/' });
+    entries = (result.blobs || []).slice(0, 50000);
   } catch (error) {
     console.error('Blob list failed:', error.message);
     return response(502, { error: 'Không thể đọc dữ liệu thống kê.' });

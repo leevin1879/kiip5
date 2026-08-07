@@ -31,13 +31,9 @@ export default async request => {
   const progressStore = getStore('kiip5-progress');
 
   let entries = [];
-  let cursor;
   try {
-    do {
-      const page = await usersStore.list({ prefix: 'users/', cursor, paginate: true });
-      entries = entries.concat(page.blobs || []);
-      cursor = page.cursor;
-    } while (cursor && entries.length < 20000);
+    const result = await usersStore.list({ prefix: 'users/' });
+    entries = (result.blobs || []).slice(0, 20000);
   } catch (error) {
     console.error('User list failed:', error.message);
     return response(502, { error: 'Không thể đọc danh sách người dùng.' });
