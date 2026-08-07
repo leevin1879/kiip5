@@ -33,6 +33,10 @@
     localStorage.removeItem(AUTH_KEY);
   }
 
+  function statsStorageKey(username = state.auth?.username) {
+    return username ? `${STATS_KEY}:${username}` : `${STATS_KEY}:guest`;
+  }
+
   async function hydrateGoogleAuth() {
     if (!supabaseClient) return;
     const { data, error } = await supabaseClient.auth.getSession();
@@ -60,44 +64,65 @@
     }
   }
 
-  function loadStats() {
+  function loadStats(username = state.auth?.username) {
     try {
-      return JSON.parse(localStorage.getItem(STATS_KEY)) || {};
+      const key = statsStorageKey(username);
+      const saved = localStorage.getItem(key);
+      if (saved) return JSON.parse(saved) || {};
+      if (!username) {
+        const legacy = localStorage.getItem(STATS_KEY);
+        if (legacy) {
+          localStorage.setItem(key, legacy);
+          return JSON.parse(legacy) || {};
+        }
+      }
+      return {};
     } catch (e) {
       return {};
     }
   }
 
-  function saveStats(stats) {
-    localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+  function saveStats(stats, username = state.auth?.username) {
+    localStorage.setItem(statsStorageKey(username), JSON.stringify(stats));
   }
 
   let syncTimer = null;
   function syncPush() {
     if (!state.auth) return;
+    const auth = state.auth;
+    const stats = loadStats(auth.username);
     clearTimeout(syncTimer);
     syncTimer = setTimeout(() => {
       fetch('/.netlify/functions/sync-progress', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${state.auth.token}` },
-        body: JSON.stringify({ stats: loadStats() }),
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${auth.token}` },
+        body: JSON.stringify({ stats }),
       }).catch(() => {});
     }, 800);
   }
 
   async function syncPull() {
     if (!state.auth) return;
+    const auth = state.auth;
     try {
       const res = await fetch('/.netlify/functions/sync-progress', {
-        headers: { Authorization: `Bearer ${state.auth.token}` },
+        headers: { Authorization: `Bearer ${auth.token}` },
       });
-      if (res.status === 401) { clearAuth(); state.auth = null; return; }
+      if (res.status === 401) {
+        if (state.auth?.token === auth.token) { clearAuth(); state.auth = null; }
+        return;
+      }
       if (!res.ok) return;
       const data = await res.json();
       if (data.stats && Object.keys(data.stats).length > 0) {
-        saveStats(data.stats);
+        saveStats(data.stats, auth.username);
       } else {
-        syncPush();
+        const localStats = loadStats(auth.username);
+        fetch('/.netlify/functions/sync-progress', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${auth.token}` },
+          body: JSON.stringify({ stats: localStats }),
+        }).catch(() => {});
       }
     } catch (e) { /* offline or unreachable, keep local data */ }
   }
@@ -304,7 +329,7 @@
       bar.style.cursor = 'default';
       bar.appendChild(logoutBtn);
       logoutBtn.addEventListener('click', async () => {
-        if (state.auth?.provider === 'google' && supabaseClient) await supabaseClient.auth.signOut();
+        if (state.auth?.provider === 'google' && supabaseClient) await supabaseClient.auth.signOut({ scope: 'local' });
         clearAuth();
         state.auth = null;
         render();
