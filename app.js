@@ -218,7 +218,7 @@
         <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
           <div>
             <div class="title" style="font-weight:600;">Bắt đầu từ câu số</div>
-            <div class="meta">Bỏ qua các câu trước nếu đã làm rồi</div>
+            <div class="meta">Mở tại câu đã chọn, vẫn có thể quay lại câu trước</div>
           </div>
           <input type="number" class="start-from-input" min="1" max="${max}" value="${state.startFrom}">
         </div>
@@ -544,6 +544,7 @@
   function startQuiz() {
     const data = window.QUIZ_DATA[state.selectedSetId];
     let questions = data.questions.slice();
+    let startIndex = 0;
     if (state.mode === 'wrong') {
       const nums = new Set(wrongNums(state.selectedSetId));
       questions = questions.filter(q => nums.has(q.num));
@@ -551,7 +552,8 @@
     } else if (state.mode === 'shuffle') {
       questions = shuffle(questions);
     } else if (state.mode === 'all' && state.startFrom > 1) {
-      questions = questions.slice(state.startFrom - 1);
+      const selectedIndex = questions.findIndex(q => q.num === state.startFrom);
+      startIndex = selectedIndex >= 0 ? selectedIndex : Math.min(state.startFrom - 1, questions.length - 1);
     }
     if (questions.length === 0) return;
     state.session = {
@@ -559,7 +561,7 @@
       setTitle: data.title,
       total: data.questions.length,
       questions,
-      index: 0,
+      index: startIndex,
       answers: [],
     };
     state.screen = 'quiz';
