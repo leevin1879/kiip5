@@ -5,6 +5,7 @@ const WINDOW_MS = 60 * 1000;
 const MAX_ATTEMPTS = 20;
 
 function response(statusCode, body) {
+  if (statusCode === 204) return new Response(null, { status: 204 });
   return new Response(JSON.stringify(body), {
     status: statusCode,
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
