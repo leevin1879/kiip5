@@ -155,6 +155,12 @@
     };
   }
 
+  function nextUnseenQuestion(setId, questions) {
+    const setStats = loadStats()[setId] || {};
+    const next = questions.find(question => !(setStats[question.num]?.seen > 0));
+    return next ? next.num : questions[0]?.num || 1;
+  }
+
   function shuffle(arr) {
     const a = arr.slice();
     for (let i = a.length - 1; i > 0; i--) {
@@ -230,7 +236,8 @@
     (window.QUIZ_INDEX || []).forEach(set => {
       const data = window.QUIZ_DATA[set.id];
       const selected = set.id === state.selectedSetId;
-      const progress = state.auth ? setProgress(set.id, data.questions.length) : null;
+      const learning = setProgress(set.id, data.questions.length);
+      const progress = state.auth ? learning : null;
       const card = el(`
         <button type="button" class="card set-card ${selected ? 'selected' : ''}">
           <div class="set-card-main">
@@ -254,9 +261,27 @@
       `);
       card.addEventListener('click', () => {
         state.selectedSetId = set.id;
+        state.mode = 'all';
+        state.startFrom = nextUnseenQuestion(set.id, data.questions);
         render();
       });
       setsWrap.appendChild(card);
+      if (selected) {
+        const resumeFrom = nextUnseenQuestion(set.id, data.questions);
+        const completed = learning.total > 0 && learning.learned >= learning.total;
+        const quickStart = el(`
+          <button type="button" class="primary set-quick-start">
+            ${completed ? 'Học lại từ câu 1' : resumeFrom > 1 ? `Học tiếp từ câu ${resumeFrom}` : 'Bắt đầu từ câu 1'} →
+          </button>
+        `);
+        quickStart.addEventListener('click', () => {
+          state.selectedSetId = set.id;
+          state.mode = 'all';
+          state.startFrom = completed ? 1 : resumeFrom;
+          startQuiz();
+        });
+        setsWrap.appendChild(quickStart);
+      }
     });
     wrap.appendChild(setsWrap);
 

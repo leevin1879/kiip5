@@ -371,6 +371,11 @@ h1 {
 .set-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .set-card:active { transform: translateY(0) scale(.99); }
 .set-card.selected { border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary) inset; background: var(--primary-light); }
+.set-quick-start {
+  width: 100%;
+  margin: -6px 0 14px;
+  padding: 11px 16px;
+}
 
 .set-card-main { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .set-emoji {
