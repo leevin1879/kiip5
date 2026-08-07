@@ -16,7 +16,7 @@ function clean(value, maxLength) {
 export default async request => {
   if (request.method !== 'POST') return response(405, { error: 'Phương thức không được hỗ trợ.' });
 
-  const botToken = process.env.TELEGRAM_BOT_TOKEN_membership;
+  const botToken = process.env.TELEGRAM_TOKEN_membership || process.env.TELEGRAM_BOT_TOKEN_membership;
   const chatId = process.env.TELEGRAM_CHAT_ID_membership;
   if (!botToken || !chatId) {
     console.error('Missing Telegram environment variables.');
