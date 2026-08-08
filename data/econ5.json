@@ -468,7 +468,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "리콜제도 (Chế độ thu hồi sản phẩm): khi phát hiện lỗi sản phẩm, nhà sản xuất phải chủ động thông báo và thu hồi/sửa chữa/đổi mới cho người tiêu dùng (ㄴ). 의무표시제 (Chế độ ghi nhãn bắt buộc): bắt buộc ghi xuất xứ, hạn sử dụng, thành phần dinh dưỡng... để bảo vệ người tiêu dùng (ㄷ). 제조물 책임법 (Luật Trách nhiệm sản phẩm): quy định nhà sản xuất phải bồi thường khi sản phẩm gây thiệt hại (ㄱ) — khớp với A.\nB, C, D đều ghép sai ít nhất một cặp chế độ-giải thích.\nLưu ý: tài liệu nguồn chỉ cho bảng ghép đôi đúng (không có sẵn 4 phương án trắc nghiệm dạng câu hỏi thi) — B, C, D là do Claude tự dựng lại bằng cách hoán đổi các cặp trong bảng gốc."
+      "explanation": "리콜제도 (Chế độ thu hồi sản phẩm): khi phát hiện lỗi sản phẩm, nhà sản xuất phải chủ động thông báo và thu hồi/sửa chữa/đổi mới cho người tiêu dùng (ㄴ). 의무표시제 (Chế độ ghi nhãn bắt buộc): bắt buộc ghi xuất xứ, hạn sử dụng, thành phần dinh dưỡng... để bảo vệ người tiêu dùng (ㄷ). 제조물 책임법 (Luật Trách nhiệm sản phẩm): quy định nhà sản xuất phải bồi thường khi sản phẩm gây thiệt hại (ㄱ) — khớp với A.\nB, C, D đều ghép sai ít nhất một cặp chế độ-giải thích."
     },
     {
       "num": 19,
@@ -494,7 +494,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "재화 (Hàng hóa): sản phẩm hữu hình có thể chạm vào được như điện thoại, mỹ phẩm (ㄷ). 물가 (Mức giá): mức giá trung bình chung của hàng hóa và dịch vụ trong nền kinh tế (ㄴ). 서비스 (Dịch vụ): hoạt động vô hình tạo ra giá trị như vận chuyển, khám bệnh (ㄱ) — khớp với A.\nB, C, D đều ghép sai ít nhất một cặp thuật ngữ-giải thích.\nLưu ý: tài liệu nguồn chỉ cho bảng ghép đôi đúng (không có sẵn 4 phương án trắc nghiệm dạng câu hỏi thi) — B, C, D là do Claude tự dựng lại bằng cách hoán đổi các cặp trong bảng gốc."
+      "explanation": "재화 (Hàng hóa): sản phẩm hữu hình có thể chạm vào được như điện thoại, mỹ phẩm (ㄷ). 물가 (Mức giá): mức giá trung bình chung của hàng hóa và dịch vụ trong nền kinh tế (ㄴ). 서비스 (Dịch vụ): hoạt động vô hình tạo ra giá trị như vận chuyển, khám bệnh (ㄱ) — khớp với A.\nB, C, D đều ghép sai ít nhất một cặp thuật ngữ-giải thích."
     },
     {
       "num": 20,
@@ -520,7 +520,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "Chế độ giao dịch tài chính bằng tên thật (금융실명제) yêu cầu tất cả các giao dịch tài chính phải được thực hiện bằng tên thật của người giao dịch — khi mở tài khoản, người dùng phải đến trực tiếp ngân hàng và xác minh danh tính — chế độ này áp dụng từ năm 1993 nhằm ngăn chặn tham nhũng, trốn thuế và rửa tiền — khớp với A.\nB là chế độ bảo vệ tiền gửi khi ngân hàng phá sản, không liên quan đến việc xác minh danh tính khi mở tài khoản. C, D là các chế độ tài chính/thương mại khác, không liên quan trực tiếp.\nLưu ý: tài liệu nguồn chỉ cho đáp án đúng dạng điền từ, không có sẵn 4 phương án trắc nghiệm — B, C, D là do Claude tự dựng lại để tăng tính thử thách."
+      "explanation": "Chế độ giao dịch tài chính bằng tên thật (금융실명제) yêu cầu tất cả các giao dịch tài chính phải được thực hiện bằng tên thật của người giao dịch — khi mở tài khoản, người dùng phải đến trực tiếp ngân hàng và xác minh danh tính — chế độ này áp dụng từ năm 1993 nhằm ngăn chặn tham nhũng, trốn thuế và rửa tiền — khớp với A.\nB là chế độ bảo vệ tiền gửi khi ngân hàng phá sản, không liên quan đến việc xác minh danh tính khi mở tài khoản. C, D là các chế độ tài chính/thương mại khác, không liên quan trực tiếp."
     }
   ],
   "tables": []

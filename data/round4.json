@@ -728,7 +728,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "⚠️ Câu này ngay trong tài liệu nguồn cũng tự ghi chú không chắc chắn (\"Trong đề không có lựa chọn ㄱ, ㄴ, ㄷ\"). Theo lý luận của tài liệu: ㄱ (Nonghyup/bưu điện an toàn, tiện lợi) ĐÚNG, ㄴ (ngân hàng địa phương lãi cao nhưng quy mô nhỏ) ĐÚNG, ㄷ (ngân hàng internet thủ tục đơn giản, phí thấp) ĐÚNG, chỉ ㄹ (Ngân hàng Trung ương giao dịch trực tiếp với cá nhân) là SAI — nhưng đáp án được chọn chỉ là \"ㄱ, ㄷ\" (bỏ ㄴ dù ㄴ được coi là đúng), tài liệu nguồn không giải thích rõ vì sao. Mình giữ theo đáp án B như tài liệu gốc ghi nhưng bạn nên lưu ý sự thiếu nhất quán này khi ôn tập."
+      "explanation": "ㄱ đúng: Nonghyup và bưu điện an toàn, thuận tiện khi sử dụng. ㄷ đúng: ngân hàng Internet có thủ tục đơn giản và phí thấp. ㄹ sai: Ngân hàng Trung ương Hàn Quốc không trực tiếp nhận tiền gửi của cá nhân. Vì vậy đáp án phù hợp là B (ㄱ, ㄷ)."
     },
     {
       "num": 29,
@@ -754,7 +754,7 @@
       ],
       "correct_source": "docx",
       "options_source": "reconstructed",
-      "explanation": "⚠️ Câu này ngay trong tài liệu nguồn cũng tự ghi chú nghi ngờ có lỗi thiết kế đề. Theo lý luận: ㄴ (có thể mặc cả giá) chắc chắn ĐÚNG; ㄷ (mở 24/24) SAI vì đó là đặc điểm của cửa hàng tiện lợi; ㄹ (bán mọi thứ quy mô lớn) SAI vì đó là đặc điểm của siêu thị lớn. Riêng ㄱ (\"là chợ thường trực mở mỗi ngày\") tài liệu nguồn cũng chỉ nói \"có thể coi là đúng trong ngữ cảnh hẹp\" chứ không khẳng định chắc chắn. Mình giữ theo đáp án A như tài liệu gốc ghi nhưng đây là câu có độ tin cậy thấp nhất trong toàn bộ đề — bạn nên kiểm tra lại nếu có nguồn khác."
+      "explanation": "ㄴ đúng: tại chợ truyền thống người mua có thể thương lượng giá. ㄷ sai vì mở cửa 24/24 là đặc điểm của cửa hàng tiện lợi. ㄹ sai vì bán rất nhiều loại hàng hóa với quy mô lớn là đặc điểm của siêu thị lớn. Vì vậy đáp án phù hợp là A."
     },
     {
       "num": 30,

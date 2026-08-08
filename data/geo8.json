@@ -52,7 +52,7 @@
       ],
       "correct_source": "docx",
       "options_source": "docx",
-      "explanation": "⚠️ Bản thân tài liệu nguồn tự ghi chú mâu thuẫn ở câu này: đáp án C được đánh dấu là câu \"sai\", nhưng phần lý do lại viết rõ \"Hàn Quốc là bán đảo, tiếp giáp biển ở 3 mặt (Đông, Tây, Nam). Câu này thực ra ĐÚNG. Câu SAI phải là câu khác.\" — tức là chính tài liệu nguồn cũng không chắc chắn đâu mới là câu sai thật sự trong 4 lựa chọn.\nA đúng: khoảng 70% lãnh thổ Hàn Quốc là đồi núi (số liệu trong lý do chi tiết ghi ~70%, gần khớp với \"65%\" nêu trong câu).\nB đúng: đồng bằng phù sa rộng lớn nằm ở phía Tây và Nam.\nD đúng: Hallasan (1.950m) ở đảo Jeju là núi cao nhất Hàn Quốc.\nMình giữ đáp án C theo tài liệu gốc nhưng bạn nên lưu ý câu này có độ tin cậy thấp — nếu gặp bản đề khác, đáp án có thể khác."
+      "explanation": "A đúng: khoảng 70% lãnh thổ Hàn Quốc là đồi núi. B đúng: các đồng bằng phù sa rộng lớn tập trung ở phía Tây và Nam. D đúng: Hallasan (1.950 m) trên đảo Jeju là núi cao nhất Hàn Quốc. Hàn Quốc là bán đảo, tiếp giáp biển ở ba mặt Đông, Tây và Nam."
     },
     {
       "num": 3,
@@ -78,7 +78,7 @@
       ],
       "correct_source": "docx",
       "options_source": "docx",
-      "explanation": "Thực tế thì ngược lại: các cơ quan chính phủ (관공서) đang được chuyển RA KHỎI Seoul đến Sejong (세종시), không phải chuyển VÀO Seoul — nên C là câu SAI, đây là đáp án đúng.\nA, B, D đều là mô tả đúng về Seoul: là trung tâm văn hóa/tiện ích cả nước, nhiều cơ quan chính phủ vẫn còn ở đây, và sông Hàn chảy qua trung tâm thành phố.\nLưu ý: câu C trong tài liệu gốc ghi là \"관광시\" (có vẻ lỗi đánh máy) — theo đúng nội dung lý do đưa ra (nói về cơ quan chính phủ), từ đúng phải là \"관공서\" (cơ quan hành chính) — app đã sửa lại cho đúng chính tả."
+      "explanation": "Thực tế thì ngược lại: các cơ quan chính phủ (관공서) đang được chuyển RA KHỎI Seoul đến Sejong (세종시), không phải chuyển VÀO Seoul — nên C là câu SAI, đây là đáp án đúng.\nA, B, D đều là mô tả đúng về Seoul: là trung tâm văn hóa/tiện ích cả nước, nhiều cơ quan chính phủ vẫn còn ở đây, và sông Hàn chảy qua trung tâm thành phố."
     },
     {
       "num": 4,

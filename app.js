@@ -876,10 +876,7 @@
     wrap.appendChild(el(`<div class="progress-bar"><div style="width:${pct}%"></div></div>`));
 
     const card = el('<div class="card"></div>');
-    if (q.correct_source === 'corrected') {
-      card.appendChild(el('<div class="badge">Đáp án đã được sửa lại — khác với chỗ đánh dấu đậm trong file gốc</div>'));
-    }
-    card.appendChild(el(`<div class="stem">${escapeHtml(String(q.num) + '. ' + q.stem)}</div>`));
+    card.appendChild(el(`<div class="stem">${escapeHtml(String(q.num) + '. ' + formatQuestionStem(q.stem))}</div>`));
 
     const optsWrap = el('<div class="options"></div>');
     let currentAnswer = s.answers.find(answer => answer.num === q.num) || null;
@@ -1019,7 +1016,7 @@
         const item = el(`
           <div class="review-item">
             <div class="q-num">Câu ${q.num}</div>
-            <div class="q-stem">${escapeHtml(q.stem)}</div>
+            <div class="q-stem">${escapeHtml(formatQuestionStem(q.stem))}</div>
             <div class="ans-line wrong">Bạn chọn: ${CIRCLE[chosenOpt.label]} ${escapeHtml(chosenOpt.text)}</div>
             <div class="ans-line correct">Đáp án đúng: ${CIRCLE[correctOpt.label]} ${escapeHtml(correctOpt.text)}</div>
           </div>
@@ -1037,6 +1034,12 @@
     }
 
     return wrap;
+  }
+
+  function formatQuestionStem(stem) {
+    return String(stem || '')
+      .replace(/<보기>[ \t]*(?=ㄱ[.．])/g, '<보기>\n')
+      .replace(/[^\n](?=[ㄱㄴㄷㄹㅁ][.．][ \t]*)/g, match => `${match}\n`);
   }
 
   function escapeHtml(str) {
