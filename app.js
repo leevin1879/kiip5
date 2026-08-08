@@ -18,6 +18,7 @@
   };
 
   let completingSupabaseAccessToken = null;
+  let quizTimerId = null;
 
   function loadAuth() {
     try {
@@ -117,6 +118,31 @@
     localStorage.setItem(statsStorageKey(username), JSON.stringify(stats));
   }
 
+  function mergeStats(localStats = {}, remoteStats = {}) {
+    const merged = JSON.parse(JSON.stringify(remoteStats || {}));
+    Object.entries(localStats || {}).forEach(([setId, questions]) => {
+      if (!merged[setId]) merged[setId] = {};
+      Object.entries(questions || {}).forEach(([num, localItem]) => {
+        const remoteItem = merged[setId][num];
+        if (!remoteItem) {
+          merged[setId][num] = { ...localItem };
+          return;
+        }
+        const localSeen = Number(localItem.seen) || 0;
+        const remoteSeen = Number(remoteItem.seen) || 0;
+        merged[setId][num] = {
+          ...remoteItem,
+          ...localItem,
+          seen: Math.max(localSeen, remoteSeen),
+          correct: Math.max(Number(localItem.correct) || 0, Number(remoteItem.correct) || 0),
+          wrong: Math.max(Number(localItem.wrong) || 0, Number(remoteItem.wrong) || 0),
+          lastWrong: localSeen >= remoteSeen ? Boolean(localItem.lastWrong) : Boolean(remoteItem.lastWrong),
+        };
+      });
+    });
+    return merged;
+  }
+
   let syncTimer = null;
   function syncPush() {
     if (!state.auth) return;
@@ -146,7 +172,10 @@
       if (!res.ok) return;
       const data = await res.json();
       if (data.stats && Object.keys(data.stats).length > 0) {
-        saveStats(data.stats, auth.username);
+        const localStats = loadStats(auth.username);
+        const mergedStats = mergeStats(localStats, data.stats);
+        saveStats(mergedStats, auth.username);
+        if (JSON.stringify(mergedStats) !== JSON.stringify(data.stats)) syncPush();
       } else {
         const localStats = loadStats(auth.username);
         fetch('/.netlify/functions/sync-progress', {
@@ -166,6 +195,26 @@
     s.seen += 1;
     if (isCorrect) { s.correct += 1; s.lastWrong = false; }
     else { s.wrong += 1; s.lastWrong = true; }
+    saveStats(stats);
+    syncPush();
+  }
+
+  function ensureSessionProgress(session = state.session) {
+    if (!session?.setId || !Array.isArray(session.answers) || session.answers.length === 0) return;
+    const stats = loadStats();
+    if (!stats[session.setId]) stats[session.setId] = {};
+    let changed = false;
+    session.answers.forEach(answer => {
+      if (stats[session.setId][answer.num]?.seen > 0) return;
+      stats[session.setId][answer.num] = {
+        seen: 1,
+        correct: answer.correct ? 1 : 0,
+        wrong: answer.correct ? 0 : 1,
+        lastWrong: !answer.correct,
+      };
+      changed = true;
+    });
+    if (!changed) return;
     saveStats(stats);
     syncPush();
   }
@@ -215,6 +264,7 @@
   }
 
   function render() {
+    clearQuizTimer();
     root.innerHTML = '';
     if (state.screen === 'home') root.appendChild(renderHome());
     else if (state.screen === 'quiz') root.appendChild(renderQuiz());
@@ -282,7 +332,7 @@
             <div class="set-emoji">${getSetEmoji(set)}</div>
             <div class="set-card-content">
               <div class="title">${escapeHtml(set.title)}</div>
-              <div class="meta">${data.questions.length} câu</div>
+              <div class="meta">${data.questions.length} câu${data.durationMinutes ? ` · ${data.durationMinutes} phút` : ''}</div>
               ${progress ? `
                 <div class="set-progress-row">
                   <span>Đã học ${progress.learned}/${progress.total} câu</span>
@@ -849,6 +899,9 @@
       questions,
       index: startIndex,
       answers: [],
+      durationMinutes: Number(data.durationMinutes) || 0,
+      timerStartedAt: data.durationMinutes ? Date.now() : null,
+      timerEndsAt: data.durationMinutes ? Date.now() + Number(data.durationMinutes) * 60 * 1000 : null,
     };
     state.screen = 'quiz';
     render();
@@ -867,6 +920,16 @@
     topBar.appendChild(exitBtn);
     topBar.appendChild(el(`<div class="meta" style="color:var(--muted);font-size:13px">${escapeHtml(s.setTitle)}</div>`));
     wrap.appendChild(topBar);
+    if (s.timerEndsAt) {
+      const timer = el(`
+        <div class="quiz-timer" role="timer" aria-live="off" aria-label="Thời gian làm bài còn lại">
+          <span>⏱️ 필기시험 · Còn lại</span>
+          <strong>--:--</strong>
+        </div>
+      `);
+      wrap.appendChild(timer);
+      startQuizTimer(timer, s);
+    }
     wrap.appendChild(renderQuizQuickActions(q.num, s.setTitle));
 
     const pct = Math.round((s.index / s.questions.length) * 100);
@@ -945,6 +1008,7 @@
         s.index += 1;
         render();
       } else {
+        ensureSessionProgress(s);
         state.screen = 'result';
         render();
       }
@@ -1003,7 +1067,13 @@
     }
 
     const homeBtn = el('<button class="secondary">Về trang chủ</button>');
-    homeBtn.addEventListener('click', () => { state.screen = 'home'; render(); });
+    homeBtn.addEventListener('click', () => {
+      ensureSessionProgress(s);
+      state.selectedSetId = s.setId;
+      state.startFrom = nextResumeQuestion(s.setId, window.QUIZ_DATA[s.setId].questions);
+      state.screen = 'home';
+      render();
+    });
     wrap.appendChild(homeBtn);
 
     if (wrongList.length > 0) {
@@ -1040,6 +1110,33 @@
     return String(stem || '')
       .replace(/<보기>[ \t]*(?=ㄱ[.．])/g, '<보기>\n')
       .replace(/[^\n](?=[ㄱㄴㄷㄹㅁ][.．][ \t]*)/g, match => `${match}\n`);
+  }
+
+  function clearQuizTimer() {
+    if (!quizTimerId) return;
+    clearInterval(quizTimerId);
+    quizTimerId = null;
+  }
+
+  function startQuizTimer(element, session) {
+    const value = element.querySelector('strong');
+    const update = () => {
+      const remainingMs = Math.max(0, session.timerEndsAt - Date.now());
+      const totalSeconds = Math.ceil(remainingMs / 1000);
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      value.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      element.classList.toggle('warning', totalSeconds > 300 && totalSeconds <= 600);
+      element.classList.toggle('danger', totalSeconds <= 300);
+      if (totalSeconds === 0) {
+        element.classList.add('expired');
+        element.querySelector('span').textContent = '⏰ 필기시험 · Hết giờ';
+        session.timeExpired = true;
+        clearQuizTimer();
+      }
+    };
+    update();
+    if (!session.timeExpired) quizTimerId = setInterval(update, 1000);
   }
 
   function escapeHtml(str) {

@@ -1,258 +1,871 @@
 {
   "title": "KIIP 영주용 종합평가 (KINAT)",
   "source": "KIIP 영주용 종합평가 (KINAT)",
+  "durationMinutes": 50,
   "questions": [
     {
       "num": 1,
       "correct": "C",
       "stem": "옆집에서 피아노를 치는 ( )이/가 들려서 잠을 못 잤다.",
-      "options": [{"label":"A","text":"느낌"},{"label":"B","text":"냄새"},{"label":"C","text":"소리"},{"label":"D","text":"모양"}],
-      "explanation": "소리 là âm thanh và kết hợp tự nhiên với 들리다 (nghe thấy). Câu hoàn chỉnh có nghĩa: Vì nghe thấy tiếng đàn piano từ nhà bên nên tôi không ngủ được."
+      "options": [
+        {
+          "label": "A",
+          "text": "느낌"
+        },
+        {
+          "label": "B",
+          "text": "냄새"
+        },
+        {
+          "label": "C",
+          "text": "소리"
+        },
+        {
+          "label": "D",
+          "text": "모양"
+        }
+      ],
+      "explanation": "C đúng: 소리 là âm thanh và kết hợp tự nhiên với 들리다 (nghe thấy).\nA sai: 느낌 là cảm giác chủ quan, không phải thứ nghe được bằng tai.\nB sai: 냄새 là mùi, được cảm nhận bằng mũi.\nD sai: 모양 là hình dạng, được nhận biết bằng mắt."
     },
     {
       "num": 2,
       "correct": "B",
       "stem": "다음 달이면 지금 살고 있는 아파트의 ( ) 기간이 끝나서 이사를 해야 한다.",
-      "options": [{"label":"A","text":"할부"},{"label":"B","text":"계약"},{"label":"C","text":"주택"},{"label":"D","text":"신청"}],
-      "explanation": "계약 기간 nghĩa là thời hạn hợp đồng. Các từ còn lại lần lượt mang nghĩa trả góp, nhà ở và đăng ký nên không phù hợp."
+      "options": [
+        {
+          "label": "A",
+          "text": "할부"
+        },
+        {
+          "label": "B",
+          "text": "계약"
+        },
+        {
+          "label": "C",
+          "text": "주택"
+        },
+        {
+          "label": "D",
+          "text": "신청"
+        }
+      ],
+      "explanation": "B đúng: 계약 기간 nghĩa là thời hạn hợp đồng, phù hợp với việc sắp hết hạn và phải chuyển nhà.\nA sai: 할부 là hình thức trả góp, không chỉ thời hạn thuê nhà.\nC sai: 주택 nghĩa là nhà ở; 주택 기간 không phải cách kết hợp tự nhiên.\nD sai: 신청 là đăng ký hoặc nộp đơn, không phù hợp với ngữ cảnh hợp đồng thuê nhà."
     },
     {
       "num": 3,
       "correct": "D",
       "stem": "한국어를 처음 배울 때에는 내 발음이 ( ) 한국 사람들이 내 말을 알아듣지 못했었다.",
-      "options": [{"label":"A","text":"뿌듯해서"},{"label":"B","text":"서먹해서"},{"label":"C","text":"유창해서"},{"label":"D","text":"부정확해서"}],
-      "explanation": "부정확하다 nghĩa là không chính xác. Vì phát âm không chuẩn nên người Hàn không hiểu lời nói — phù hợp với D."
+      "options": [
+        {
+          "label": "A",
+          "text": "뿌듯해서"
+        },
+        {
+          "label": "B",
+          "text": "서먹해서"
+        },
+        {
+          "label": "C",
+          "text": "유창해서"
+        },
+        {
+          "label": "D",
+          "text": "부정확해서"
+        }
+      ],
+      "explanation": "D đúng: 부정확해서 nghĩa là vì không chính xác; phát âm không chuẩn nên người Hàn không hiểu.\nA sai: 뿌듯해서 nghĩa là vì cảm thấy tự hào, không liên quan đến độ chính xác của phát âm.\nB sai: 서먹해서 nghĩa là vì ngượng ngùng hoặc xa cách trong quan hệ.\nC sai: 유창해서 nghĩa là vì lưu loát; nếu nói lưu loát thì không phù hợp với kết quả người nghe không hiểu."
     },
     {
       "num": 4,
       "correct": "B",
       "stem": "공장에서 나오는 더러운 물 때문에 강물이 ( ).",
-      "options": [{"label":"A","text":"빠졌다"},{"label":"B","text":"오염됐다"},{"label":"C","text":"말랐다"},{"label":"D","text":"위반했다"}],
-      "explanation": "오염되다 nghĩa là bị ô nhiễm. Nước bẩn từ nhà máy làm cho nước sông bị ô nhiễm."
+      "options": [
+        {
+          "label": "A",
+          "text": "빠졌다"
+        },
+        {
+          "label": "B",
+          "text": "오염됐다"
+        },
+        {
+          "label": "C",
+          "text": "말랐다"
+        },
+        {
+          "label": "D",
+          "text": "위반했다"
+        }
+      ],
+      "explanation": "B đúng: 오염됐다 nghĩa là đã bị ô nhiễm; nước thải bẩn từ nhà máy làm ô nhiễm nước sông.\nA sai: 빠졌다 nghĩa là rơi, chìm hoặc bị thiếu, không diễn tả ô nhiễm.\nC sai: 말랐다 nghĩa là đã khô cạn, không phải kết quả trực tiếp được nhấn mạnh từ nước bẩn.\nD sai: 위반했다 nghĩa là đã vi phạm; chủ thể thường là người hoặc tổ chức, không phải nước sông."
     },
     {
       "num": 5,
       "correct": "A",
       "stem": "가: 잃어버린 가방이 비싼 거예요?\n나: 그렇지는 않은데 가방에 ( ) 물건이 들어 있어서 꼭 찾아야 해요.",
-      "options": [{"label":"A","text":"소중한"},{"label":"B","text":"소중할"},{"label":"C","text":"소중하니까"},{"label":"D","text":"소중하던"}],
-      "explanation": "소중하다 chuyển thành định ngữ hiện tại 소중한 trước danh từ 물건. 소중한 물건 nghĩa là đồ vật quý giá."
+      "options": [
+        {
+          "label": "A",
+          "text": "소중한"
+        },
+        {
+          "label": "B",
+          "text": "소중할"
+        },
+        {
+          "label": "C",
+          "text": "소중하니까"
+        },
+        {
+          "label": "D",
+          "text": "소중하던"
+        }
+      ],
+      "explanation": "A đúng: 소중하다 chuyển thành định ngữ hiện tại 소중한 trước danh từ 물건, nghĩa là đồ vật quý giá.\nB sai: 소중할 là định ngữ mang sắc thái tương lai hoặc phỏng đoán, không phù hợp với đồ vật đang có trong túi.\nC sai: 소중하니까 là cấu trúc nêu lý do và cần nối với một mệnh đề, không thể đứng trực tiếp trước 물건.\nD sai: 소중하던 gợi trạng thái được hồi tưởng trong quá khứ, trong khi đồ vật hiện vẫn quý giá."
     },
     {
       "num": 6,
       "correct": "C",
       "stem": "가: 내일은 아침에 회의가 있으니까 평소보다 30분 일찍 깨워 주세요.\n나: 네, 일찍 ( ).",
-      "options": [{"label":"A","text":"깨우기로 해요"},{"label":"B","text":"깨웠어요"},{"label":"C","text":"깨울게요"},{"label":"D","text":"깨운 적이 있어요"}],
-      "explanation": "-ㄹ/을게요 diễn tả lời hứa hoặc ý định của người nói đối với người nghe. 깨울게요 nghĩa là tôi sẽ đánh thức."
+      "options": [
+        {
+          "label": "A",
+          "text": "깨우기로 해요"
+        },
+        {
+          "label": "B",
+          "text": "깨웠어요"
+        },
+        {
+          "label": "C",
+          "text": "깨울게요"
+        },
+        {
+          "label": "D",
+          "text": "깨운 적이 있어요"
+        }
+      ],
+      "explanation": "C đúng: -ㄹ/을게요 diễn tả lời hứa hoặc ý định của người nói đối với người nghe; 깨울게요 là tôi sẽ đánh thức.\nA sai: 깨우기로 해요 nghĩa là quyết định sẽ đánh thức, kém tự nhiên hơn một lời hứa trực tiếp trong hội thoại này.\nB sai: 깨웠어요 là thì quá khứ, trong khi việc đánh thức sẽ xảy ra vào sáng mai.\nD sai: 깨운 적이 있어요 diễn tả kinh nghiệm từng đánh thức ai đó, không phải lời hứa cho tương lai."
     },
     {
       "num": 7,
       "correct": "B",
       "stem": "가: 밍밍 씨는 인기가 많은가 봐요.\n나: 네, 성격이 ( ) 한국말도 잘하거든요.",
-      "options": [{"label":"A","text":"밝아도"},{"label":"B","text":"밝은 데다가"},{"label":"C","text":"밝을 정도로"},{"label":"D","text":"밝을 테니까"}],
-      "explanation": "-ㄴ/은 데다가 dùng để bổ sung thêm thông tin cùng chiều: tính cách vui vẻ, hơn nữa còn giỏi tiếng Hàn."
+      "options": [
+        {
+          "label": "A",
+          "text": "밝아도"
+        },
+        {
+          "label": "B",
+          "text": "밝은 데다가"
+        },
+        {
+          "label": "C",
+          "text": "밝을 정도로"
+        },
+        {
+          "label": "D",
+          "text": "밝을 테니까"
+        }
+      ],
+      "explanation": "B đúng: -ㄴ/은 데다가 bổ sung hai đặc điểm cùng chiều: tính cách vui vẻ, hơn nữa còn giỏi tiếng Hàn.\nA sai: 밝아도 nghĩa là dù vui vẻ, tạo quan hệ nhượng bộ không phù hợp.\nC sai: 밝을 정도로 diễn tả mức độ, không nối tự nhiên với 한국말도 잘하다 trong câu này.\nD sai: 밝을 테니까 mang sắc thái suy đoán hoặc nêu căn cứ cho lời đề nghị, không phù hợp với đặc điểm đã biết."
     },
     {
       "num": 8,
       "correct": "A",
       "stem": "가: 주말인데 할 일도 없고 심심해요.\n나: 그래요? 이 영화가 정말 재미있다고 하던데 같이 ( )?",
-      "options": [{"label":"A","text":"볼래요"},{"label":"B","text":"봤어요"},{"label":"C","text":"보라고 해요"},{"label":"D","text":"보는 척해요"}],
-      "explanation": "같이 볼래요? là cách rủ người nghe cùng xem phim rất tự nhiên. Các lựa chọn khác không mang nghĩa lời mời phù hợp."
+      "options": [
+        {
+          "label": "A",
+          "text": "볼래요"
+        },
+        {
+          "label": "B",
+          "text": "봤어요"
+        },
+        {
+          "label": "C",
+          "text": "보라고 해요"
+        },
+        {
+          "label": "D",
+          "text": "보는 척해요"
+        }
+      ],
+      "explanation": "A đúng: 같이 볼래요? là cách rủ người nghe cùng xem phim rất tự nhiên.\nB sai: 봤어요? hỏi việc đã xem trong quá khứ, không phải lời rủ cùng xem.\nC sai: 보라고 해요 là lời nói gián tiếp, nghĩa là bảo ai đó xem.\nD sai: 보는 척해요 nghĩa là giả vờ xem, không phù hợp với ngữ cảnh rủ xem phim."
     },
     {
       "num": 9,
       "correct": "B",
       "stem": "나는 아무리 바쁜 일이 있어도 ( ).",
-      "options": [{"label":"A","text":"약속을 지키지 못한다"},{"label":"B","text":"약속을 꼭 지킨다"},{"label":"C","text":"약속을 취소했다"},{"label":"D","text":"약속을 지키기 때문이다"}],
-      "explanation": "아무리 -아도/어도 nghĩa là dù thế nào cũng. Dù bận đến đâu vẫn nhất định giữ lời hẹn — B là câu tự nhiên nhất."
+      "options": [
+        {
+          "label": "A",
+          "text": "약속을 지키지 못한다"
+        },
+        {
+          "label": "B",
+          "text": "약속을 꼭 지킨다"
+        },
+        {
+          "label": "C",
+          "text": "약속을 취소했다"
+        },
+        {
+          "label": "D",
+          "text": "약속을 지키기 때문이다"
+        }
+      ],
+      "explanation": "B đúng: 아무리 -아도/어도 nghĩa là dù thế nào cũng; dù bận đến đâu vẫn nhất định giữ lời hẹn.\nA sai: nói dù bận đến đâu cũng không giữ được hẹn không phù hợp với ý nhấn mạnh ý chí giữ hẹn.\nC sai: 취소했다 ở thì quá khứ và mang nghĩa đã hủy, không phù hợp với nguyên tắc chung của câu.\nD sai: -기 때문이다 dùng để giải thích nguyên nhân, không hoàn thành cấu trúc nhượng bộ 아무리 -아도."
     },
     {
       "num": 10,
       "correct": "A",
       "stem": "친구가 찾아왔을 때 나도 막 그 친구에게 ( ).",
-      "options": [{"label":"A","text":"전화하려던 참이었다"},{"label":"B","text":"전화하려야 할 수가 없었다"},{"label":"C","text":"전화하곤 했다"},{"label":"D","text":"전화할지도 모른다"}],
-      "explanation": "-려던 참이었다 nghĩa là đúng lúc đang định làm việc gì. Khi bạn tới thì tôi cũng vừa định gọi cho bạn."
+      "options": [
+        {
+          "label": "A",
+          "text": "전화하려던 참이었다"
+        },
+        {
+          "label": "B",
+          "text": "전화하려야 할 수가 없었다"
+        },
+        {
+          "label": "C",
+          "text": "전화하곤 했다"
+        },
+        {
+          "label": "D",
+          "text": "전화할지도 모른다"
+        }
+      ],
+      "explanation": "A đúng: -려던 참이었다 nghĩa là đúng lúc đang định làm; khi bạn tới thì tôi cũng vừa định gọi cho bạn.\nB sai: 전화하려야 할 수가 없었다 diễn tả muốn gọi nhưng không thể gọi, không phù hợp với cuộc gặp đúng lúc.\nC sai: 전화하곤 했다 diễn tả thói quen thường gọi trong quá khứ.\nD sai: 전화할지도 모른다 diễn tả khả năng có thể sẽ gọi trong tương lai, không phù hợp với 막 và sự việc đã xảy ra."
     },
     {
       "num": 11,
       "correct": "B",
       "stem": "다음 두 문장을 알맞게 연결한 것을 고르시오.\n끝까지 포기하지 않다 / 결국 꿈을 이루다",
-      "options": [{"label":"A","text":"끝까지 포기하지 않으려면 결국 꿈을 이룰 수 있을 것이다."},{"label":"B","text":"끝까지 포기하지 않는다면 결국 꿈을 이룰 수 있을 것이다."},{"label":"C","text":"끝까지 포기하지 않은 탓에 결국 꿈을 이룰 수 있을 것이다."},{"label":"D","text":"끝까지 포기하지 않을 정도로 결국 꿈을 이룰 수 있을 것이다."}],
-      "explanation": "-ㄴ/는다면 diễn tả điều kiện giả định. Nếu không bỏ cuộc đến cùng thì cuối cùng có thể thực hiện được ước mơ."
+      "options": [
+        {
+          "label": "A",
+          "text": "끝까지 포기하지 않으려면 결국 꿈을 이룰 수 있을 것이다."
+        },
+        {
+          "label": "B",
+          "text": "끝까지 포기하지 않는다면 결국 꿈을 이룰 수 있을 것이다."
+        },
+        {
+          "label": "C",
+          "text": "끝까지 포기하지 않은 탓에 결국 꿈을 이룰 수 있을 것이다."
+        },
+        {
+          "label": "D",
+          "text": "끝까지 포기하지 않을 정도로 결국 꿈을 이룰 수 있을 것이다."
+        }
+      ],
+      "explanation": "B đúng: -ㄴ/는다면 diễn tả điều kiện giả định; nếu không bỏ cuộc đến cùng thì cuối cùng có thể đạt được ước mơ.\nA sai: -으려면 thường diễn tả điều kiện để thực hiện ý định; 포기하지 않으려면 không nối tự nhiên với kết quả trong câu này.\nC sai: -ㄴ/은 탓에 thường nêu nguyên nhân tiêu cực, nhưng thực hiện ước mơ là kết quả tích cực.\nD sai: -ㄹ/을 정도로 diễn tả mức độ, không tạo được quan hệ điều kiện–kết quả cần thiết."
     },
     {
       "num": 12,
       "correct": "D",
       "stem": "다음 두 문장을 알맞게 연결한 것을 고르시오.\n오래간만에 고향에 가다 / 기쁘다",
-      "options": [{"label":"A","text":"오래간만에 고향에 가더니 기뻐졌다."},{"label":"B","text":"오래간만에 고향에 가더니 기쁜 적이 있다."},{"label":"C","text":"오래간만에 고향에 가게 돼서 기쁠래야 기쁠 수가 없다."},{"label":"D","text":"오래간만에 고향에 가게 돼서 얼마나 기쁜지 모르겠다."}],
-      "explanation": "얼마나 -ㄴ/는지 모르겠다 nhấn mạnh mức độ cảm xúc. Vì được về quê sau một thời gian dài nên vui không biết bao nhiêu."
+      "options": [
+        {
+          "label": "A",
+          "text": "오래간만에 고향에 가더니 기뻐졌다."
+        },
+        {
+          "label": "B",
+          "text": "오래간만에 고향에 가더니 기쁜 적이 있다."
+        },
+        {
+          "label": "C",
+          "text": "오래간만에 고향에 가게 돼서 기쁠래야 기쁠 수가 없다."
+        },
+        {
+          "label": "D",
+          "text": "오래간만에 고향에 가게 돼서 얼마나 기쁜지 모르겠다."
+        }
+      ],
+      "explanation": "D đúng: 얼마나 -ㄴ/는지 모르겠다 nhấn mạnh mức độ cảm xúc; được về quê sau lâu ngày nên vui không biết bao nhiêu.\nA sai: -더니 thường dùng khi người nói quan sát sự thay đổi của người khác, không tự nhiên để kể cảm xúc trực tiếp của chính mình ở đây.\nB sai: 기쁜 적이 있다 chỉ nói từng có kinh nghiệm vui, không diễn tả niềm vui hiện tại vì được về quê.\nC sai: 기쁠래야 기쁠 수가 없다 nghĩa là muốn vui cũng không thể vui, trái với ngữ cảnh."
     },
     {
       "num": 13,
       "correct": "C",
       "stem": "다음 안내문의 ( )에 들어갈 말로 알맞은 것을 고르시오.\n다음 주 토요일 오전 10시에 서울숲에서 체육 대회를 엽니다. 오전에는 축구, 배구, 장기 경기가 있고 오후에는 요리 대회가 있습니다. 참가를 원하는 직원은 이번 주 금요일까지 신청해 주십시오. ( )",
-      "options": [{"label":"A","text":"초대해 주셔서 감사합니다."},{"label":"B","text":"참석하지 못해서 죄송합니다."},{"label":"C","text":"여러분의 많은 참가를 바랍니다."},{"label":"D","text":"토요일까지 신청을 받겠습니다."}],
-      "explanation": "여러분의 많은 참가를 바랍니다 là câu kết phổ biến trong thông báo mời tham gia sự kiện. D sai vì hạn đăng ký là thứ Sáu."
+      "options": [
+        {
+          "label": "A",
+          "text": "초대해 주셔서 감사합니다."
+        },
+        {
+          "label": "B",
+          "text": "참석하지 못해서 죄송합니다."
+        },
+        {
+          "label": "C",
+          "text": "여러분의 많은 참가를 바랍니다."
+        },
+        {
+          "label": "D",
+          "text": "토요일까지 신청을 받겠습니다."
+        }
+      ],
+      "explanation": "C đúng: 여러분의 많은 참가를 바랍니다 là câu kết tự nhiên của thông báo mời mọi người tham gia sự kiện.\nA sai: 초대해 주셔서 감사합니다 là lời cảm ơn của người được mời, không phải lời của ban tổ chức.\nB sai: 참석하지 못해서 죄송합니다 là lời xin lỗi vì không tham dự, trái với mục đích kêu gọi đăng ký.\nD sai: thông báo quy định đăng ký đến thứ Sáu, không phải thứ Bảy."
     },
     {
       "num": 14,
       "correct": "D",
       "stem": "다음 글의 ( )에 들어갈 내용으로 알맞은 것을 고르시오.\n한국 사람들이 처음부터 '빨리빨리'를 좋아한 것은 아니다. 조선시대에는 ( ). 그러나 1960~1970년대 산업화 시대를 거치면서 '빨리빨리 하자'라는 말을 하기 시작했다.",
-      "options": [{"label":"A","text":"무척 부지런했다고 한다"},{"label":"B","text":"무슨 일이든지 빨리빨리 했다고 한다"},{"label":"C","text":"놀랄 정도로 성격이 적극적이었다고 한다"},{"label":"D","text":"여유 있게 행동하는 것을 좋아했다고 한다"}],
-      "explanation": "Bài viết đối lập thời Joseon thong thả với văn hóa 빨리빨리 xuất hiện trong thời kỳ công nghiệp hóa, nên D phù hợp."
+      "options": [
+        {
+          "label": "A",
+          "text": "무척 부지런했다고 한다"
+        },
+        {
+          "label": "B",
+          "text": "무슨 일이든지 빨리빨리 했다고 한다"
+        },
+        {
+          "label": "C",
+          "text": "놀랄 정도로 성격이 적극적이었다고 한다"
+        },
+        {
+          "label": "D",
+          "text": "여유 있게 행동하는 것을 좋아했다고 한다"
+        }
+      ],
+      "explanation": "D đúng: đoạn văn đối lập cách hành động thong thả thời Joseon với văn hóa 빨리빨리 phát triển trong thời kỳ công nghiệp hóa.\nA sai: chăm chỉ không phải nội dung đối lập trực tiếp với 빨리빨리 trong đoạn văn.\nB sai: nói thời Joseon việc gì cũng làm nhanh mâu thuẫn với câu người Hàn không thích 빨리빨리 ngay từ đầu.\nC sai: đoạn văn không đề cập tính cách tích cực đến mức đáng ngạc nhiên."
     },
     {
       "num": 15,
       "correct": "D",
       "stem": "공공장소에서 휴대전화 소리를 줄이고, 다른 사람에게 피해를 주지 않으며, 반려동물과 함께 있을 때에도 주변 사람을 배려해야 한다는 글의 제목으로 알맞은 것은?",
-      "options": [{"label":"A","text":"공공장소에서 이것만은 꼭 지킵시다"},{"label":"B","text":"내가 가장 싫어하는 행동들"},{"label":"C","text":"공공장소에서 금연하기"},{"label":"D","text":"우리 모두 질서를 지킵시다"}],
-      "explanation": "Đoạn văn đề cập nhiều phép lịch sự khác nhau ở nơi công cộng, nên tiêu đề bao quát nhất là 우리 모두 질서를 지킵시다."
+      "options": [
+        {
+          "label": "A",
+          "text": "공공장소에서 이것만은 꼭 지킵시다"
+        },
+        {
+          "label": "B",
+          "text": "내가 가장 싫어하는 행동들"
+        },
+        {
+          "label": "C",
+          "text": "공공장소에서 금연하기"
+        },
+        {
+          "label": "D",
+          "text": "우리 모두 질서를 지킵시다"
+        }
+      ],
+      "explanation": "D đúng: 우리 모두 질서를 지킵시다 bao quát các phép lịch sự về điện thoại, tiếng ồn và thú cưng ở nơi công cộng.\nA sai: 이것만은 chỉ một quy tắc cụ thể, trong khi đoạn văn nói về nhiều hành vi.\nB sai: tiêu đề mang tính cảm xúc cá nhân, không phù hợp với một chiến dịch cộng đồng.\nC sai: đoạn văn không chỉ nói về việc cấm hút thuốc."
     },
     {
       "num": 16,
       "correct": "D",
       "stem": "다음 중 공공장소에서 지켜야 할 휴대전화 예절과 관계없는 것은?",
-      "options": [{"label":"A","text":"휴대전화를 진동으로 하고 시끄럽게 통화하지 않는다."},{"label":"B","text":"음악을 들을 때에는 이어폰을 사용한다."},{"label":"C","text":"휴대전화로 게임을 하면서 다른 사람에게 피해를 주지 않는다."},{"label":"D","text":"반려견을 싫어하는 사람이 있는지 신경 쓴다."}],
-      "explanation": "D là phép lịch sự liên quan đến thú cưng, không phải phép lịch sự khi sử dụng điện thoại. A, B, C đều liên quan trực tiếp đến điện thoại ở nơi công cộng."
+      "options": [
+        {
+          "label": "A",
+          "text": "휴대전화를 진동으로 하고 시끄럽게 통화하지 않는다."
+        },
+        {
+          "label": "B",
+          "text": "음악을 들을 때에는 이어폰을 사용한다."
+        },
+        {
+          "label": "C",
+          "text": "휴대전화로 게임을 하면서 다른 사람에게 피해를 주지 않는다."
+        },
+        {
+          "label": "D",
+          "text": "반려견을 싫어하는 사람이 있는지 신경 쓴다."
+        }
+      ],
+      "explanation": "D đúng: quan tâm đến người không thích chó là phép lịch sự liên quan đến thú cưng, không phải cách sử dụng điện thoại.\nA sai với yêu cầu chọn nội dung không liên quan: để điện thoại rung và không nói chuyện ồn ào chính là phép lịch sự dùng điện thoại.\nB sai với yêu cầu: dùng tai nghe khi nghe nhạc tránh làm phiền người khác và thuộc phép lịch sự sử dụng thiết bị.\nC sai với yêu cầu: không chơi game gây ồn trên điện thoại cũng là phép lịch sự ở nơi công cộng."
     },
     {
       "num": 17,
       "correct": "D",
       "stem": "한국의 국기 ㉠과 국화 ㉡을 바르게 연결한 것은?",
-      "options": [{"label":"A","text":"㉠ 태극기  ㉡ 들국화"},{"label":"B","text":"㉠ 만국기  ㉡ 무궁화"},{"label":"C","text":"㉠ 만국기  ㉡ 들국화"},{"label":"D","text":"㉠ 태극기  ㉡ 무궁화"}],
-      "explanation": "Quốc kỳ Hàn Quốc là 태극기 và quốc hoa là 무궁화, nên đáp án D đúng."
+      "options": [
+        {
+          "label": "A",
+          "text": "㉠ 태극기  ㉡ 들국화"
+        },
+        {
+          "label": "B",
+          "text": "㉠ 만국기  ㉡ 무궁화"
+        },
+        {
+          "label": "C",
+          "text": "㉠ 만국기  ㉡ 들국화"
+        },
+        {
+          "label": "D",
+          "text": "㉠ 태극기  ㉡ 무궁화"
+        }
+      ],
+      "explanation": "D đúng: quốc kỳ Hàn Quốc là 태극기 và quốc hoa là 무궁화.\nA sai: 들국화 là hoa cúc dại, không phải quốc hoa Hàn Quốc.\nB sai: 만국기 chỉ cờ của nhiều quốc gia, không phải tên quốc kỳ Hàn Quốc.\nC sai: cả 만국기 và 들국화 đều không phải đáp án cần điền."
     },
     {
       "num": 18,
       "correct": "A",
       "stem": "과거 한국의 가족 모습에 대한 설명으로 옳은 것은?",
-      "options": [{"label":"A","text":"과거에는 자녀를 보통 3~5명 정도씩 낳았다."},{"label":"B","text":"첫째 딸은 결혼한 후에도 부모와 같이 사는 경우가 많았다."},{"label":"C","text":"부모와 미혼 자녀만 사는 핵가족이 많았다."},{"label":"D","text":"고등학교를 졸업하면 부모와 떨어져 사는 것이 일반적이었다."}],
-      "explanation": "Gia đình Hàn Quốc truyền thống thường có nhiều con. Việc sống cùng và phụng dưỡng cha mẹ thường gắn với con trai cả, đồng thời gia đình nhiều thế hệ phổ biến hơn gia đình hạt nhân."
+      "options": [
+        {
+          "label": "A",
+          "text": "과거에는 자녀를 보통 3~5명 정도씩 낳았다."
+        },
+        {
+          "label": "B",
+          "text": "첫째 딸은 결혼한 후에도 부모와 같이 사는 경우가 많았다."
+        },
+        {
+          "label": "C",
+          "text": "부모와 미혼 자녀만 사는 핵가족이 많았다."
+        },
+        {
+          "label": "D",
+          "text": "고등학교를 졸업하면 부모와 떨어져 사는 것이 일반적이었다."
+        }
+      ],
+      "explanation": "A đúng: trong xã hội Hàn Quốc truyền thống, gia đình thường sinh khoảng 3~5 người con.\nB sai: người thường sống cùng và phụng dưỡng cha mẹ sau khi kết hôn là con trai cả, không phải con gái đầu.\nC sai: gia đình hạt nhân chỉ gồm cha mẹ và con chưa kết hôn phổ biến hơn trong xã hội hiện đại; trước đây gia đình nhiều thế hệ phổ biến.\nD sai: việc rời cha mẹ ngay sau khi tốt nghiệp trung học không phải hình thức sinh hoạt phổ biến trong gia đình truyền thống."
     },
     {
       "num": 19,
       "correct": "C",
       "stem": "한국의 출산 및 자녀 양육 지원 정책에 대한 설명으로 옳은 것은?",
-      "options": [{"label":"A","text":"중앙 정부에서는 임산부의 출산 비용을 전액 지원해 준다."},{"label":"B","text":"지자체에서는 출산 지원금이나 장려금을 지원하지 않는다."},{"label":"C","text":"출산 이후 영유아 보육비도 일부 지원받을 수 있다."},{"label":"D","text":"집에서 자녀를 양육할 경우에는 아무런 지원을 받을 수 없다."}],
-      "explanation": "Sau khi sinh, gia đình có thể nhận hỗ trợ một phần chi phí chăm sóc trẻ sơ sinh và trẻ nhỏ. Các lựa chọn còn lại dùng từ tuyệt đối như toàn bộ hoặc không có bất kỳ hỗ trợ nào nên sai."
+      "options": [
+        {
+          "label": "A",
+          "text": "중앙 정부에서는 임산부의 출산 비용을 전액 지원해 준다."
+        },
+        {
+          "label": "B",
+          "text": "지자체에서는 출산 지원금이나 장려금을 지원하지 않는다."
+        },
+        {
+          "label": "C",
+          "text": "출산 이후 영유아 보육비도 일부 지원받을 수 있다."
+        },
+        {
+          "label": "D",
+          "text": "집에서 자녀를 양육할 경우에는 아무런 지원을 받을 수 없다."
+        }
+      ],
+      "explanation": "C đúng: sau khi sinh, gia đình có thể được hỗ trợ chi phí chăm sóc và nuôi dưỡng trẻ qua 보육료 và 부모급여.\nA sai: chính phủ có chương trình hỗ trợ mang thai và sinh con nhưng không thanh toán toàn bộ mọi chi phí cho tất cả thai phụ; 전액 khiến câu sai.\nB sai: nhiều chính quyền địa phương có 출산지원금 hoặc 출산장려금 riêng, với mức hỗ trợ tùy nơi.\nD sai: gia đình tự chăm sóc con tại nhà vẫn có thể nhận hỗ trợ theo tuổi và điều kiện, chẳng hạn 부모급여 cho trẻ 0~23 tháng."
     },
     {
       "num": 20,
       "correct": "D",
       "stem": "입학시험을 앞둔 사람에게 주는 선물로 적절하지 않은 것은?",
-      "options": [{"label":"A","text":"찹쌀떡"},{"label":"B","text":"초콜릿"},{"label":"C","text":"엿"},{"label":"D","text":"포크"}],
-      "explanation": "찹쌀떡 và 엿 mang ý nghĩa 'dính' vào trường, còn sô-cô-la cũng là quà cổ vũ phổ biến. 포크 không có ý nghĩa liên quan đến thi cử."
+      "options": [
+        {
+          "label": "A",
+          "text": "찹쌀떡"
+        },
+        {
+          "label": "B",
+          "text": "초콜릿"
+        },
+        {
+          "label": "C",
+          "text": "엿"
+        },
+        {
+          "label": "D",
+          "text": "포크"
+        }
+      ],
+      "explanation": "D đúng: 포크 không có ý nghĩa cổ vũ thi đỗ và không phải món quà thi cử phổ biến.\nA sai với yêu cầu chọn món không phù hợp: 찹쌀떡 có độ dính, tượng trưng cho việc 'dính' vào trường mong muốn.\nB sai với yêu cầu: 초콜릿 là món quà động viên phổ biến trước kỳ thi.\nC sai với yêu cầu: 엿 cũng có độ dính và mang ý nghĩa chúc thi đỗ."
     },
     {
       "num": 21,
       "correct": "D",
       "stem": "한국의 식사 예절에 대한 설명으로 옳은 것은?",
-      "options": [{"label":"A","text":"밥그릇을 손에 들고 먹는다."},{"label":"B","text":"큰 소리를 내며 음식을 먹는다."},{"label":"C","text":"윗사람과 식사를 할 때 아랫사람이 먼저 수저를 든다."},{"label":"D","text":"기침을 할 때 얼굴을 옆으로 돌리고 손으로 입을 가린다."}],
-      "explanation": "Khi ho cần quay mặt sang bên và che miệng. Người Hàn thường để bát trên bàn, ăn không gây tiếng động lớn và chờ người lớn cầm thìa đũa trước."
+      "options": [
+        {
+          "label": "A",
+          "text": "밥그릇을 손에 들고 먹는다."
+        },
+        {
+          "label": "B",
+          "text": "큰 소리를 내며 음식을 먹는다."
+        },
+        {
+          "label": "C",
+          "text": "윗사람과 식사를 할 때 아랫사람이 먼저 수저를 든다."
+        },
+        {
+          "label": "D",
+          "text": "기침을 할 때 얼굴을 옆으로 돌리고 손으로 입을 가린다."
+        }
+      ],
+      "explanation": "D đúng: khi ho cần quay mặt sang bên và che miệng để giữ vệ sinh, không làm phiền người khác.\nA sai: trong phép ăn uống Hàn Quốc, bát cơm thường được đặt trên bàn chứ không bưng lên tay.\nB sai: ăn phát ra tiếng lớn bị xem là bất lịch sự.\nC sai: khi ăn cùng người lớn tuổi, người nhỏ tuổi chờ người lớn cầm thìa đũa trước."
     },
     {
       "num": 22,
       "correct": "C",
       "stem": "다음 설명에 해당하는 주택의 종류는?\n5층 이상이며 대규모로 건설되고 놀이터와 상가 등 편의 시설을 갖추고 있다.",
-      "options": [{"label":"A","text":"단독 주택"},{"label":"B","text":"연립 주택"},{"label":"C","text":"아파트"},{"label":"D","text":"다가구 주택"}],
-      "explanation": "아파트 là khu nhà ở cao tầng được xây dựng quy mô lớn và thường có sân chơi, cửa hàng cùng nhiều tiện ích."
+      "options": [
+        {
+          "label": "A",
+          "text": "단독 주택"
+        },
+        {
+          "label": "B",
+          "text": "연립 주택"
+        },
+        {
+          "label": "C",
+          "text": "아파트"
+        },
+        {
+          "label": "D",
+          "text": "다가구 주택"
+        }
+      ],
+      "explanation": "C đúng: 아파트 thường cao từ 5 tầng, được xây theo khu quy mô lớn và có sân chơi, cửa hàng cùng nhiều tiện ích.\nA sai: 단독 주택 là nhà riêng cho một hộ, không phải khu cao tầng quy mô lớn.\nB sai: 연립 주택 thường có quy mô và số tầng nhỏ hơn chung cư.\nD sai: 다가구 주택 là nhà nhiều hộ nhưng không mang đặc điểm khu chung cư lớn với nhiều tiện ích."
     },
     {
       "num": 23,
       "correct": "B",
       "stem": "대한민국 헌법 제1조의 ( )에 들어갈 말로 알맞은 것은?\n대한민국의 주권은 ( )에게 있고, 모든 권력은 ( )으로부터 나온다.",
-      "options": [{"label":"A","text":"대통령"},{"label":"B","text":"국민"},{"label":"C","text":"국회의원"},{"label":"D","text":"시민혁명"}],
-      "explanation": "Điều 1 Khoản 2 Hiến pháp quy định chủ quyền thuộc về 국민 và mọi quyền lực xuất phát từ 국민."
+      "options": [
+        {
+          "label": "A",
+          "text": "대통령"
+        },
+        {
+          "label": "B",
+          "text": "국민"
+        },
+        {
+          "label": "C",
+          "text": "국회의원"
+        },
+        {
+          "label": "D",
+          "text": "시민혁명"
+        }
+      ],
+      "explanation": "B đúng: Hiến pháp quy định chủ quyền thuộc về 국민 và mọi quyền lực xuất phát từ 국민.\nA sai: Tổng thống thực thi quyền lực được nhân dân trao, không phải chủ thể sở hữu chủ quyền.\nC sai: nghị sĩ là đại diện của nhân dân, không phải nguồn gốc của mọi quyền lực.\nD sai: 시민혁명 là một khái niệm hoặc sự kiện lịch sử, không phải chủ thể được điền vào điều khoản."
     },
     {
       "num": 24,
       "correct": "B",
       "stem": "행정부의 각 부처의 책임자로서 대통령과 국무총리의 지휘와 감독을 받는 사람은?",
-      "options": [{"label":"A","text":"차관"},{"label":"B","text":"장관"},{"label":"C","text":"국회의원"},{"label":"D","text":"국무총리"}],
-      "explanation": "장관 là người đứng đầu mỗi bộ trong nhánh hành pháp và chịu sự chỉ đạo, giám sát của Tổng thống cùng Thủ tướng."
+      "options": [
+        {
+          "label": "A",
+          "text": "차관"
+        },
+        {
+          "label": "B",
+          "text": "장관"
+        },
+        {
+          "label": "C",
+          "text": "국회의원"
+        },
+        {
+          "label": "D",
+          "text": "국무총리"
+        }
+      ],
+      "explanation": "B đúng: 장관 là người đứng đầu mỗi bộ và chịu sự chỉ đạo, giám sát của Tổng thống cùng Thủ tướng.\nA sai: 차관 là thứ trưởng, cấp phó hỗ trợ bộ trưởng.\nC sai: 국회의원 thuộc cơ quan lập pháp, không đứng đầu một bộ hành pháp.\nD sai: 국무총리 giám sát và điều phối các bộ trưởng, không phải chức danh đứng đầu từng bộ."
     },
     {
       "num": 25,
       "correct": "D",
       "stem": "1970년대부터 발달한 중화학 공업에 해당하지 않는 것은?",
-      "options": [{"label":"A","text":"조선"},{"label":"B","text":"제철"},{"label":"C","text":"석유화학"},{"label":"D","text":"옷과 신발"}],
-      "explanation": "Đóng tàu, luyện thép và hóa dầu thuộc công nghiệp nặng và hóa chất phát triển mạnh trong thập niên 1970. Quần áo và giày dép thuộc công nghiệp nhẹ."
+      "options": [
+        {
+          "label": "A",
+          "text": "조선"
+        },
+        {
+          "label": "B",
+          "text": "제철"
+        },
+        {
+          "label": "C",
+          "text": "석유화학"
+        },
+        {
+          "label": "D",
+          "text": "옷과 신발"
+        }
+      ],
+      "explanation": "D đúng: quần áo và giày dép thuộc công nghiệp nhẹ, không phải công nghiệp nặng và hóa chất phát triển mạnh từ thập niên 1970.\nA sai với yêu cầu chọn ngành không thuộc nhóm: 조선 (đóng tàu) là ngành công nghiệp nặng tiêu biểu.\nB sai với yêu cầu: 제철 (luyện thép) thuộc công nghiệp nặng.\nC sai với yêu cầu: 석유화학 (hóa dầu) thuộc công nghiệp hóa chất."
     },
     {
       "num": 26,
       "correct": "A",
       "stem": "다음 중 시중은행이 아닌 것은?",
-      "options": [{"label":"A","text":"한국은행"},{"label":"B","text":"신한은행"},{"label":"C","text":"하나은행"},{"label":"D","text":"우리은행"}],
-      "explanation": "한국은행 là Ngân hàng Trung ương, có chức năng phát hành tiền và thực hiện chính sách tiền tệ; không phải ngân hàng thương mại."
+      "options": [
+        {
+          "label": "A",
+          "text": "한국은행"
+        },
+        {
+          "label": "B",
+          "text": "신한은행"
+        },
+        {
+          "label": "C",
+          "text": "하나은행"
+        },
+        {
+          "label": "D",
+          "text": "우리은행"
+        }
+      ],
+      "explanation": "A đúng: 한국은행 là Ngân hàng Trung ương, phụ trách phát hành tiền và chính sách tiền tệ, không phải 시중은행.\nB sai với yêu cầu chọn ngân hàng không phải thương mại: 신한은행 là ngân hàng thương mại.\nC sai với yêu cầu: 하나은행 là ngân hàng thương mại.\nD sai với yêu cầu: 우리은행 là ngân hàng thương mại."
     },
     {
       "num": 27,
       "correct": "A",
       "stem": "주택가와 가깝고 가격이 저렴하며 상인과 흥정할 수 있는 곳은?",
-      "options": [{"label":"A","text":"재래시장"},{"label":"B","text":"슈퍼마켓"},{"label":"C","text":"대형마트"},{"label":"D","text":"편의점"}],
-      "explanation": "재래시장 là chợ truyền thống, thường gần khu dân cư, giá phải chăng và có thể thương lượng giá với người bán."
+      "options": [
+        {
+          "label": "A",
+          "text": "재래시장"
+        },
+        {
+          "label": "B",
+          "text": "슈퍼마켓"
+        },
+        {
+          "label": "C",
+          "text": "대형마트"
+        },
+        {
+          "label": "D",
+          "text": "편의점"
+        }
+      ],
+      "explanation": "A đúng: 재래시장 thường gần khu dân cư, giá phải chăng và người mua có thể thương lượng với người bán.\nB sai: 슈퍼마켓 bán hàng theo giá niêm yết, thông thường không mặc cả.\nC sai: 대형마트 là siêu thị lớn với giá cố định.\nD sai: 편의점 chú trọng sự tiện lợi và mở cửa lâu, giá hàng hóa được niêm yết."
     },
     {
       "num": 28,
       "correct": "D",
       "stem": "한국에 체류하는 외국인에 대한 설명으로 옳은 것은?",
-      "options": [{"label":"A","text":"한국에 30일 이상 체류하려면 외국인 등록을 해야 한다."},{"label":"B","text":"한국에 3년 이상 계속 체류하면 누구나 영주권을 신청할 수 있다."},{"label":"C","text":"미화 10만 달러 이상을 투자하면 누구나 영주권을 신청할 수 있다."},{"label":"D","text":"체류지 변경 신고는 관할 출입국·외국인관서 또는 읍·면·동 행정복지센터에서 할 수 있다."}],
-      "explanation": "Khai báo thay đổi nơi cư trú có thể thực hiện tại cơ quan xuất nhập cảnh có thẩm quyền hoặc trung tâm hành chính cấp 읍·면·동. Người dự định lưu trú quá 90 ngày phải đăng ký người nước ngoài trong vòng 90 ngày; các điều kiện ở B và C cũng bị đơn giản hóa nên không đúng."
+      "options": [
+        {
+          "label": "A",
+          "text": "한국에 30일 이상 체류하려면 외국인 등록을 해야 한다."
+        },
+        {
+          "label": "B",
+          "text": "한국에 3년 이상 계속 체류하면 누구나 영주권을 신청할 수 있다."
+        },
+        {
+          "label": "C",
+          "text": "미화 10만 달러 이상을 투자하면 누구나 영주권을 신청할 수 있다."
+        },
+        {
+          "label": "D",
+          "text": "체류지 변경 신고는 관할 출입국·외국인관서 또는 읍·면·동 행정복지센터에서 할 수 있다."
+        }
+      ],
+      "explanation": "D đúng: thay đổi nơi cư trú có thể được khai báo tại cơ quan xuất nhập cảnh có thẩm quyền hoặc trung tâm hành chính 읍·면·동.\nA sai: người dự định lưu trú quá 90 ngày phải đăng ký người nước ngoài trong vòng 90 ngày; không phải cứ trên 30 ngày.\nB sai: không phải bất kỳ ai cư trú 3 năm cũng tự động đủ điều kiện xin thường trú; điều kiện phụ thuộc loại tư cách và nhiều yêu cầu khác.\nC sai: đầu tư 100.000 USD không khiến mọi người đương nhiên đủ điều kiện xin thường trú; diện đầu tư có điều kiện và mức vốn riêng."
     },
     {
       "num": 29,
       "correct": "B",
       "stem": "귀화에 대한 설명으로 옳지 않은 것은?",
-      "options": [{"label":"A","text":"한국 국민인 배우자와 혼인한 상태로 일정 기간 한국에 거주하면 귀화를 신청할 수 있다."},{"label":"B","text":"한국 국민과의 국제결혼을 통한 혼인귀화는 특별귀화에 해당한다."},{"label":"C","text":"귀화에는 일반귀화, 간이귀화, 특별귀화의 세 가지 유형이 있다."},{"label":"D","text":"일반귀화는 대한민국과 혈연적 관계가 없는 외국인이 국적을 취득하는 절차이다."}],
-      "explanation": "Nhập tịch thông qua hôn nhân với công dân Hàn Quốc thuộc 간이귀화 (nhập tịch giản lược), không phải 특별귀화, nên B là phát biểu sai."
+      "options": [
+        {
+          "label": "A",
+          "text": "한국 국민인 배우자와 혼인한 상태로 일정 기간 한국에 거주하면 귀화를 신청할 수 있다."
+        },
+        {
+          "label": "B",
+          "text": "한국 국민과의 국제결혼을 통한 혼인귀화는 특별귀화에 해당한다."
+        },
+        {
+          "label": "C",
+          "text": "귀화에는 일반귀화, 간이귀화, 특별귀화의 세 가지 유형이 있다."
+        },
+        {
+          "label": "D",
+          "text": "일반귀화는 대한민국과 혈연적 관계가 없는 외국인이 국적을 취득하는 절차이다."
+        }
+      ],
+      "explanation": "B đúng: câu hỏi yêu cầu chọn phát biểu sai; nhập tịch thông qua hôn nhân với công dân Hàn Quốc thuộc 간이귀화, không phải 특별귀화.\nA sai với yêu cầu chọn phát biểu không đúng: người kết hôn với công dân Hàn Quốc và đáp ứng thời gian cư trú cùng các điều kiện luật định có thể xin nhập tịch.\nC sai với yêu cầu: 귀화 được phân thành 일반귀화, 간이귀화 và 특별귀화.\nD sai với yêu cầu: 일반귀화 là thủ tục dành cho người nước ngoài không có quan hệ huyết thống đặc biệt với Hàn Quốc và đáp ứng các điều kiện chung."
     },
     {
       "num": 30,
       "correct": "D",
       "stem": "다음 중 법을 집행하는 기관으로 바르게 짝지어진 것은?",
-      "options": [{"label":"A","text":"경찰과 군대"},{"label":"B","text":"검찰과 국회"},{"label":"C","text":"국회와 경찰"},{"label":"D","text":"경찰과 검찰"}],
-      "explanation": "Cảnh sát điều tra và Viện Kiểm sát thực hiện chức năng truy tố, nên 경찰과 검찰 là cặp cơ quan thực thi pháp luật phù hợp."
+      "options": [
+        {
+          "label": "A",
+          "text": "경찰과 군대"
+        },
+        {
+          "label": "B",
+          "text": "검찰과 국회"
+        },
+        {
+          "label": "C",
+          "text": "국회와 경찰"
+        },
+        {
+          "label": "D",
+          "text": "경찰과 검찰"
+        }
+      ],
+      "explanation": "D đúng: 경찰 điều tra và giữ trật tự; 검찰 thực hiện chức năng công tố, nên đây là cặp cơ quan thực thi pháp luật phù hợp.\nA sai: 군대 phụ trách quốc phòng, không phải cơ quan thực thi pháp luật dân sự thông thường.\nB sai: 국회 là cơ quan lập pháp.\nC sai: 국회 làm luật, không phải cơ quan trực tiếp thực thi pháp luật."
     },
     {
       "num": 31,
       "correct": "C",
       "stem": "한반도에 세워진 최초의 국가는?",
-      "options": [{"label":"A","text":"고려"},{"label":"B","text":"신라"},{"label":"C","text":"고조선"},{"label":"D","text":"고구려"}],
-      "explanation": "고조선 được xem là nhà nước đầu tiên trong lịch sử Hàn Quốc và gắn với truyền thuyết Dangun Wanggeom."
+      "options": [
+        {
+          "label": "A",
+          "text": "고려"
+        },
+        {
+          "label": "B",
+          "text": "신라"
+        },
+        {
+          "label": "C",
+          "text": "고조선"
+        },
+        {
+          "label": "D",
+          "text": "고구려"
+        }
+      ],
+      "explanation": "C đúng: 고조선 được xem là nhà nước đầu tiên trong lịch sử Hàn Quốc và gắn với truyền thuyết Dangun.\nA sai: 고려 được thành lập năm 918, muộn hơn rất nhiều.\nB sai: 신라 là một quốc gia thuộc thời Tam Quốc, xuất hiện sau Gojoseon.\nD sai: 고구려 cũng là một quốc gia thời Tam Quốc và ra đời sau Gojoseon."
     },
     {
       "num": 32,
       "correct": "D",
       "stem": "조선 후기에 나타나 정치 개혁과 상공업 발전 등 실생활에 도움이 되는 학문을 강조한 것은?",
-      "options": [{"label":"A","text":"과학"},{"label":"B","text":"유학"},{"label":"C","text":"동학"},{"label":"D","text":"실학"}],
-      "explanation": "실학 xuất hiện cuối thời Joseon, nhấn mạnh kiến thức thực tiễn, cải cách chính trị, phát triển thương nghiệp và cải thiện đời sống nhân dân."
+      "options": [
+        {
+          "label": "A",
+          "text": "과학"
+        },
+        {
+          "label": "B",
+          "text": "유학"
+        },
+        {
+          "label": "C",
+          "text": "동학"
+        },
+        {
+          "label": "D",
+          "text": "실학"
+        }
+      ],
+      "explanation": "D đúng: 실학 xuất hiện cuối thời Joseon, nhấn mạnh kiến thức thực tiễn, cải cách và phát triển đời sống kinh tế.\nA sai: 과학 là tên lĩnh vực khoa học nói chung, không phải tên trường phái học thuật được mô tả.\nB sai: 유학 là Nho học đã giữ vai trò quan trọng từ đầu thời Joseon, không phải trào lưu mới cuối thời kỳ này.\nC sai: 동학 là phong trào tư tưởng–tôn giáo xuất hiện vào cuối thế kỷ 19, không phải trường phái cải cách thực tiễn được mô tả."
     },
     {
       "num": 33,
       "correct": "A",
       "stem": "일본에 불교, 한자, 예술과 건축 등 많은 문화를 전해 준 고대 국가는?",
-      "options": [{"label":"A","text":"백제"},{"label":"B","text":"신라"},{"label":"C","text":"발해"},{"label":"D","text":"고구려"}],
-      "explanation": "백제 có quan hệ giao lưu văn hóa mật thiết với Nhật Bản và truyền bá Phật giáo, chữ Hán, nghệ thuật cùng kiến trúc sang Nhật."
+      "options": [
+        {
+          "label": "A",
+          "text": "백제"
+        },
+        {
+          "label": "B",
+          "text": "신라"
+        },
+        {
+          "label": "C",
+          "text": "발해"
+        },
+        {
+          "label": "D",
+          "text": "고구려"
+        }
+      ],
+      "explanation": "A đúng: 백제 giao lưu mật thiết và truyền bá Phật giáo, chữ Hán, nghệ thuật cùng kiến trúc sang Nhật Bản.\nB sai: 신라 giao lưu nhiều với nhà Đường nhưng không nổi bật nhất trong việc truyền văn hóa sang Nhật theo nội dung câu hỏi.\nC sai: 발해 nằm ở phía Bắc và không phải quốc gia được nhắc đến với vai trò này.\nD sai: 고구려 cũng có ảnh hưởng nhất định nhưng vai trò cầu nối văn hóa với Nhật nổi bật nhất thuộc về Baekje."
     },
     {
       "num": 34,
       "correct": "A",
       "stem": "경상 지역을 다르게 부르는 말은?",
-      "options": [{"label":"A","text":"영남"},{"label":"B","text":"경남"},{"label":"C","text":"호남"},{"label":"D","text":"충남"}],
-      "explanation": "Vùng Gyeongsang được gọi là 영남, nghĩa là khu vực nằm phía nam đèo Joryeong. 호남 là tên gọi của vùng Jeolla."
+      "options": [
+        {
+          "label": "A",
+          "text": "영남"
+        },
+        {
+          "label": "B",
+          "text": "경남"
+        },
+        {
+          "label": "C",
+          "text": "호남"
+        },
+        {
+          "label": "D",
+          "text": "충남"
+        }
+      ],
+      "explanation": "A đúng: vùng Gyeongsang được gọi là 영남, nghĩa là khu vực phía nam đèo Joryeong.\nB sai: 경남 là tên viết tắt của 경상남도, chỉ Nam Gyeongsang chứ không phải toàn vùng.\nC sai: 호남 là tên gọi của vùng Jeolla.\nD sai: 충남 là tên viết tắt của 충청남도."
     },
     {
       "num": 35,
       "correct": "C",
       "stem": "지역 주민들이 필요성은 인정하지만 자기 지역에 설치하는 것을 반대하는 시설은?",
-      "options": [{"label":"A","text":"지하철역"},{"label":"B","text":"고속도로"},{"label":"C","text":"하수도 처리 시설"},{"label":"D","text":"공공기관"}],
-      "explanation": "Nhà máy xử lý nước thải là ví dụ điển hình của hiện tượng NIMBY: người dân công nhận sự cần thiết nhưng phản đối đặt gần nơi mình sinh sống."
+      "options": [
+        {
+          "label": "A",
+          "text": "지하철역"
+        },
+        {
+          "label": "B",
+          "text": "고속도로"
+        },
+        {
+          "label": "C",
+          "text": "하수도 처리 시설"
+        },
+        {
+          "label": "D",
+          "text": "공공기관"
+        }
+      ],
+      "explanation": "C đúng: nhà máy xử lý nước thải là cơ sở cần thiết nhưng thường bị phản đối khi đặt gần khu dân cư, một ví dụ của NIMBY.\nA sai: ga tàu điện ngầm thường được người dân mong muốn vì tăng tiện lợi giao thông.\nB sai: đường cao tốc nhìn chung cải thiện kết nối; không phải ví dụ điển hình nhất trong các lựa chọn.\nD sai: cơ quan công quyền thường mang lại tiện ích và việc làm nên thường được địa phương chào đón."
     },
     {
       "num": 36,
       "correct": "A",
       "stem": "정동진, 설악산, 대관령이 있는 지역은?",
-      "options": [{"label":"A","text":"강원"},{"label":"B","text":"경기"},{"label":"C","text":"제주"},{"label":"D","text":"충청"}],
-      "explanation": "정동진, 설악산 và 대관령 đều nằm ở tỉnh Gangwon (강원도), nên A đúng."
+      "options": [
+        {
+          "label": "A",
+          "text": "강원"
+        },
+        {
+          "label": "B",
+          "text": "경기"
+        },
+        {
+          "label": "C",
+          "text": "제주"
+        },
+        {
+          "label": "D",
+          "text": "충청"
+        }
+      ],
+      "explanation": "A đúng: 정동진, 설악산 và 대관령 đều nằm tại 강원도.\nB sai: 경기도 bao quanh Seoul nhưng không có ba địa danh này.\nC sai: 제주 là đảo phía nam và có các địa danh du lịch khác.\nD sai: 충청 nằm ở miền trung, không bao gồm Jeongdongjin, Seoraksan hoặc Daegwallyeong."
     }
   ],
   "tables": []
