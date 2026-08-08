@@ -37,31 +37,38 @@
     return username ? `${STATS_KEY}:${username}` : `${STATS_KEY}:guest`;
   }
 
-  async function hydrateGoogleAuth() {
-    if (!supabaseClient) return;
-    const { data, error } = await supabaseClient.auth.getSession();
-    if (error || !data.session || (state.auth && state.auth.provider !== 'google')) return;
+  async function completeSupabaseAuth(session) {
+    if (!session || (state.auth && !['google', 'email'].includes(state.auth.provider))) return;
     try {
       const res = await fetch('/.netlify/functions/auth-supabase', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ accessToken: data.session.access_token }),
+        body: JSON.stringify({ accessToken: session.access_token }),
       });
       const result = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(result.error || 'Không thể hoàn tất đăng nhập Google.');
+      if (!res.ok) throw new Error(result.error || 'Không thể hoàn tất đăng nhập.');
       state.auth = {
         token: result.token,
         username: result.username,
         displayName: result.displayName,
         role: result.role || 'user',
-        provider: 'google',
+        provider: result.provider || 'email',
       };
       saveAuth(state.auth);
       await syncPull();
       render();
+      return state.auth;
     } catch (authError) {
-      console.error('Google session exchange failed:', authError.message);
+      console.error('Supabase session exchange failed:', authError.message);
+      throw authError;
     }
+  }
+
+  async function hydrateSupabaseAuth() {
+    if (!supabaseClient) return;
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (error || !data.session) return;
+    await completeSupabaseAuth(data.session).catch(() => {});
   }
 
   function loadStats(username = state.auth?.username) {
@@ -275,19 +282,43 @@
       setsWrap.appendChild(card);
       if (selected) {
         const resumeFrom = nextResumeQuestion(set.id, data.questions);
-        const completed = learning.total > 0 && learning.learned >= learning.total;
-        const quickStart = el(`
-          <button type="button" class="primary set-quick-start">
-            ${completed ? 'Học lại từ câu 1' : resumeFrom > 1 ? `Học tiếp từ câu ${resumeFrom}` : 'Bắt đầu từ câu 1'} →
-          </button>
+        const quickActions = el(`
+          <div class="set-quick-actions">
+            <button type="button" class="primary set-resume-button">Học tiếp từ câu ${resumeFrom} →</button>
+            <button type="button" class="secondary set-restart-button">↺ Học lại từ câu 1</button>
+            <div class="set-custom-start">
+              <label for="custom-start-${escapeHtml(set.id)}">Chọn câu bắt đầu</label>
+              <div>
+                <input id="custom-start-${escapeHtml(set.id)}" type="number" min="1" max="${data.questions.length}" value="${resumeFrom}" inputmode="numeric">
+                <button type="button" class="secondary set-custom-start-button">Bắt đầu</button>
+              </div>
+            </div>
+          </div>
         `);
-        quickStart.addEventListener('click', () => {
+        quickActions.querySelector('.set-resume-button').addEventListener('click', () => {
           state.selectedSetId = set.id;
           state.mode = 'all';
-          state.startFrom = completed ? 1 : resumeFrom;
+          state.startFrom = resumeFrom;
           startQuiz();
         });
-        setsWrap.appendChild(quickStart);
+        quickActions.querySelector('.set-restart-button').addEventListener('click', () => {
+          state.selectedSetId = set.id;
+          state.mode = 'all';
+          state.startFrom = 1;
+          startQuiz();
+        });
+        const customInput = quickActions.querySelector('.set-custom-start input');
+        quickActions.querySelector('.set-custom-start-button').addEventListener('click', () => {
+          let chosen = parseInt(customInput.value, 10);
+          if (!chosen || chosen < 1) chosen = 1;
+          if (chosen > data.questions.length) chosen = data.questions.length;
+          customInput.value = chosen;
+          state.selectedSetId = set.id;
+          state.mode = 'all';
+          state.startFrom = chosen;
+          startQuiz();
+        });
+        setsWrap.appendChild(quickActions);
       }
     });
     wrap.appendChild(setsWrap);
@@ -317,30 +348,6 @@
     });
     wrap.appendChild(modeWrap);
 
-    if (state.mode === 'all') {
-      const data = window.QUIZ_DATA[state.selectedSetId];
-      const max = data.questions.length;
-      if (state.startFrom > max) state.startFrom = 1;
-      const startFromWrap = el(`
-        <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
-          <div>
-            <div class="title" style="font-weight:600;">Bắt đầu từ câu số</div>
-            <div class="meta">Mở tại câu đã chọn, vẫn có thể quay lại câu trước</div>
-          </div>
-          <input type="number" class="start-from-input" min="1" max="${max}" value="${state.startFrom}">
-        </div>
-      `);
-      const input = startFromWrap.querySelector('input');
-      input.addEventListener('change', () => {
-        let v = parseInt(input.value, 10);
-        if (!v || v < 1) v = 1;
-        if (v > max) v = max;
-        state.startFrom = v;
-        input.value = v;
-      });
-      wrap.appendChild(startFromWrap);
-    }
-
     const startBtn = el('<button class="primary">Bắt đầu</button>');
     startBtn.addEventListener('click', startQuiz);
     wrap.appendChild(startBtn);
@@ -368,7 +375,7 @@
       accountActions.appendChild(logoutBtn);
       bar.appendChild(accountActions);
       logoutBtn.addEventListener('click', async () => {
-        if (state.auth?.provider === 'google' && supabaseClient) await supabaseClient.auth.signOut({ scope: 'local' });
+        if (['google', 'email'].includes(state.auth?.provider) && supabaseClient) await supabaseClient.auth.signOut({ scope: 'local' });
         clearAuth();
         state.auth = null;
         render();
@@ -401,9 +408,13 @@
               Tên hiển thị <span>(không bắt buộc)</span>
               <input name="displayName" type="text" maxlength="60" autocomplete="nickname" placeholder="Ví dụ: Minh">
             </label>
-            <label>
-              Tên đăng nhập
+            <label class="auth-username-label">
+              <span class="auth-username-text">Tên đăng nhập</span>
               <input name="username" type="text" maxlength="20" autocomplete="username" placeholder="3-20 ký tự, chữ thường/số/gạch dưới" required>
+            </label>
+            <label class="auth-email-label" style="display:none;">
+              Email
+              <input name="email" type="email" maxlength="254" autocomplete="email" placeholder="ten@example.com">
             </label>
             <label>
               Mật khẩu
@@ -426,6 +437,10 @@
     const submitBtn = modal.querySelector('.auth-submit');
     const toggleBtn = modal.querySelector('.auth-toggle');
     const displayNameLabel = modal.querySelector('.auth-display-name-label');
+    const emailLabel = modal.querySelector('.auth-email-label');
+    const emailInput = modal.querySelector('input[name="email"]');
+    const usernameInput = modal.querySelector('input[name="username"]');
+    const usernameText = modal.querySelector('.auth-username-text');
     const status = modal.querySelector('.feedback-status');
     const googleBtn = modal.querySelector('.google-auth-button');
 
@@ -437,11 +452,21 @@
         submitBtn.textContent = 'Đăng nhập';
         toggleBtn.textContent = 'Chưa có tài khoản? Đăng ký ngay';
         displayNameLabel.style.display = 'none';
+        emailLabel.style.display = 'none';
+        emailInput.required = false;
+        usernameText.textContent = 'Tên đăng nhập hoặc email';
+        usernameInput.maxLength = 254;
+        usernameInput.placeholder = 'Tên đăng nhập cũ hoặc email';
       } else {
         titleEl.textContent = 'Đăng ký tài khoản';
         submitBtn.textContent = 'Đăng ký';
         toggleBtn.textContent = 'Đã có tài khoản? Đăng nhập';
         displayNameLabel.style.display = 'block';
+        emailLabel.style.display = 'block';
+        emailInput.required = true;
+        usernameText.textContent = 'Tên đăng nhập';
+        usernameInput.maxLength = 20;
+        usernameInput.placeholder = '3-20 ký tự, chữ thường/số/gạch dưới';
       }
     };
     applyMode();
@@ -482,14 +507,44 @@
       const username = String(formData.get('username') || '').trim();
       const password = String(formData.get('password') || '');
       const displayName = String(formData.get('displayName') || '').trim();
+      const email = String(formData.get('email') || '').trim().toLowerCase();
 
       submitBtn.disabled = true;
       submitBtn.textContent = mode === 'login' ? 'Đang đăng nhập...' : 'Đang đăng ký...';
       status.textContent = '';
 
       try {
+        if (mode === 'register') {
+          if (!supabaseClient) throw new Error('Đăng ký email chưa tải được. Vui lòng tải lại trang.');
+          if (!/^[a-z0-9_]{3,20}$/.test(username)) throw new Error('Tên đăng nhập phải dài 3-20 ký tự, chỉ gồm chữ thường/số/gạch dưới.');
+          if (!email || !email.includes('@')) throw new Error('Vui lòng nhập email hợp lệ.');
+          const { data, error } = await supabaseClient.auth.signUp({
+            email,
+            password,
+            options: {
+              emailRedirectTo: `${window.location.origin}/`,
+              data: { username, display_name: displayName || username },
+            },
+          });
+          if (error) throw error;
+          if (data.session) throw new Error('Máy chủ chưa bật xác nhận email. Tài khoản chưa được kích hoạt.');
+          status.className = 'feedback-status success';
+          status.textContent = 'Đã gửi email xác nhận. Hãy mở email và bấm liên kết để kích hoạt tài khoản.';
+          submitBtn.textContent = 'Đã gửi email xác nhận';
+          return;
+        }
+
+        if (username.includes('@')) {
+          if (!supabaseClient) throw new Error('Đăng nhập email chưa tải được. Vui lòng tải lại trang.');
+          const { data, error } = await supabaseClient.auth.signInWithPassword({ email: username.toLowerCase(), password });
+          if (error) throw error;
+          await completeSupabaseAuth(data.session);
+          close();
+          return;
+        }
+
         const endpoint = mode === 'login' ? '/.netlify/functions/auth-login' : '/.netlify/functions/auth-register';
-        const payload = mode === 'login' ? { username, password } : { username, password, displayName };
+        const payload = { username, password };
         const res = await fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -908,7 +963,7 @@
 
   render();
   trackVisit();
-  hydrateGoogleAuth();
+  hydrateSupabaseAuth();
   if (state.auth) {
     syncPull().then(() => { if (state.screen === 'home') render(); });
   }

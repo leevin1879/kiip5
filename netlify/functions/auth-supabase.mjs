@@ -36,10 +36,14 @@ export default async request => {
   if (!userResponse.ok) return response(401, { error: 'Phiên đăng nhập Google không hợp lệ hoặc đã hết hạn.' });
 
   const user = await userResponse.json();
-  if (!user.id || !user.email) return response(401, { error: 'Tài khoản Google không cung cấp đủ thông tin.' });
+  if (!user.id || !user.email) return response(401, { error: 'Tài khoản không cung cấp đủ thông tin.' });
 
-  const username = `google_${String(user.id).replace(/[^a-zA-Z0-9_-]/g, '')}`;
-  const displayName = String(user.user_metadata?.full_name || user.user_metadata?.name || user.email)
+  const provider = user.app_metadata?.provider === 'google' ? 'google' : 'email';
+  if (provider === 'email' && !user.email_confirmed_at) {
+    return response(403, { error: 'Bạn cần xác nhận email trước khi đăng nhập.' });
+  }
+  const username = `${provider}_${String(user.id).replace(/[^a-zA-Z0-9_-]/g, '')}`;
+  const displayName = String(user.user_metadata?.display_name || user.user_metadata?.full_name || user.user_metadata?.name || user.email)
     .trim()
     .slice(0, 60);
   const store = getStore('kiip5-users');
@@ -51,12 +55,13 @@ export default async request => {
       displayName,
       email: String(user.email).slice(0, 254),
       role: 'user',
-      provider: 'google',
+      requestedUsername: String(user.user_metadata?.username || '').slice(0, 20),
+      provider,
       supabaseUserId: user.id,
       createdAt: new Date().toISOString(),
     });
   }
 
   const token = signToken({ u: username, r: 'user' }, secret);
-  return response(200, { ok: true, token, username, displayName, role: 'user', provider: 'google' });
+  return response(200, { ok: true, token, username, displayName, role: 'user', provider });
 };
