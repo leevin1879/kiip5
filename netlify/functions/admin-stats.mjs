@@ -11,7 +11,10 @@ function response(statusCode, body) {
 function parseKey(key) {
   // visits/{date}/{ipKey}/{time}-{rand}
   const parts = key.split('/');
-  return { date: parts[1] || '', ipKey: parts[2] || '' };
+  const date = parts[1] || '';
+  const ipKey = parts[2] || '';
+  const time = parts[3] || '';
+  return { date, ipKey, time, chronologicalKey: `${date}/${time}` };
 }
 
 function decodeCursor(value) {
@@ -70,8 +73,11 @@ export default async request => {
 
   const recentKeys = entries
     .map(entry => entry.key)
-    .sort()
-    .reverse();
+    .sort((a, b) => {
+      const aKey = parseKey(a).chronologicalKey;
+      const bKey = parseKey(b).chronologicalKey;
+      return bKey.localeCompare(aKey);
+    });
 
   const uniqueRecentKeys = [];
   const recentIpKeys = new Set();
@@ -84,7 +90,9 @@ export default async request => {
 
   const pageKeys = uniqueRecentKeys.slice(pageOffset, pageOffset + 20);
   const pageData = await Promise.all(pageKeys.map(key => store.get(key, { type: 'json' }).catch(() => null)));
-  const recent = pageData.filter(Boolean);
+  const recent = pageData
+    .filter(Boolean)
+    .sort((a, b) => Date.parse(b.ts || 0) - Date.parse(a.ts || 0));
   const nextOffset = pageOffset + pageKeys.length;
   const nextCursor = nextOffset < uniqueRecentKeys.length ? encodeCursor(nextOffset) : null;
 

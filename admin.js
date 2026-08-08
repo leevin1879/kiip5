@@ -155,20 +155,22 @@
     `);
     const tbody = table.querySelector('tbody');
     const appendVisits = visits => {
-      visits.forEach(v => {
-        const time = v.ts ? new Date(v.ts).toLocaleString('vi-VN') : '';
-        const loc = [v.city, v.country].filter(Boolean).join(', ') || '—';
-        const row = el(`
-          <tr>
-            <td>${escapeHtml(time)}</td>
-            <td>${escapeHtml(v.ip || '')}</td>
-            <td>${escapeHtml(loc)}</td>
-            <td>${escapeHtml(v.page || '')}</td>
-            <td title="${escapeHtml(v.userAgent || '')}">${escapeHtml((v.userAgent || '').slice(0, 40))}</td>
-          </tr>
-        `);
-        tbody.appendChild(row);
-      });
+      [...visits]
+        .sort((a, b) => Date.parse(b.ts || 0) - Date.parse(a.ts || 0))
+        .forEach(v => {
+          const time = v.ts ? new Date(v.ts).toLocaleString('vi-VN') : '';
+          const loc = [v.city, v.country].filter(Boolean).join(', ') || '—';
+          const row = el(`
+            <tr>
+              <td>${escapeHtml(time)}</td>
+              <td>${escapeHtml(v.ip || '')}</td>
+              <td>${escapeHtml(loc)}</td>
+              <td>${escapeHtml(v.page || '')}</td>
+              <td title="${escapeHtml(v.userAgent || '')}">${escapeHtml((v.userAgent || '').slice(0, 40))}</td>
+            </tr>
+          `);
+          tbody.appendChild(row);
+        });
     };
     appendVisits(data.recent || []);
     tableWrap.appendChild(table);
