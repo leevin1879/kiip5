@@ -48,5 +48,10 @@
     "id": "edu2",
     "file": "edu2.json",
     "title": "Ôn tập Giáo dục - 5단계 bài 2"
+  },
+  {
+    "id": "soc1",
+    "file": "soc1.json",
+    "title": "Ôn tập Xã hội - 5단계 bài 1"
   }
 ]
