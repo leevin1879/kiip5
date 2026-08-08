@@ -154,10 +154,8 @@
       </table>
     `);
     const tbody = table.querySelector('tbody');
-    const visits = data.recent || [];
-    let visibleCount = 0;
-    const renderMore = () => {
-      visits.slice(visibleCount, visibleCount + 20).forEach(v => {
+    const appendVisits = visits => {
+      visits.forEach(v => {
         const time = v.ts ? new Date(v.ts).toLocaleString('vi-VN') : '';
         const loc = [v.city, v.country].filter(Boolean).join(', ') || '—';
         const row = el(`
@@ -171,17 +169,44 @@
         `);
         tbody.appendChild(row);
       });
-      visibleCount = Math.min(visibleCount + 20, visits.length);
     };
-    renderMore();
+    appendVisits(data.recent || []);
     tableWrap.appendChild(table);
     root.appendChild(tableWrap);
 
-    if (visits.length > 20) {
+    if (data.nextCursor) {
       const moreBtn = el('<button class="secondary" style="display:block;margin:12px auto;">더보기</button>');
-      moreBtn.addEventListener('click', () => {
-        renderMore();
-        if (visibleCount >= visits.length) moreBtn.remove();
+      let nextCursor = data.nextCursor;
+      moreBtn.addEventListener('click', async () => {
+        moreBtn.disabled = true;
+        moreBtn.textContent = 'Đang tải...';
+        try {
+          const key = getSavedKey();
+          const adminAuth = getAdminAuth();
+          const headers = adminAuth ? { Authorization: `Bearer ${adminAuth.token}` } : {};
+          const params = new URLSearchParams({ cursor: nextCursor });
+          if (key) params.set('key', key);
+          const res = await fetch(`/.netlify/functions/admin-stats?${params}`, { headers });
+          if (res.status === 401) {
+            clearKey();
+            clearAdminAuth();
+            renderLogin('Phiên quản trị không hợp lệ hoặc đã hết hạn.');
+            return;
+          }
+          if (!res.ok) throw new Error('Không thể tải thêm dữ liệu.');
+          const page = await res.json();
+          appendVisits(page.recent || []);
+          nextCursor = page.nextCursor;
+          if (!nextCursor) {
+            moreBtn.remove();
+            return;
+          }
+          moreBtn.disabled = false;
+          moreBtn.textContent = '더보기';
+        } catch (error) {
+          moreBtn.disabled = false;
+          moreBtn.textContent = 'Thử lại';
+        }
       });
       root.appendChild(moreBtn);
     }

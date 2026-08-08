@@ -14,9 +14,24 @@ function parseKey(key) {
   return { date: parts[1] || '', ipKey: parts[2] || '' };
 }
 
+function decodeCursor(value) {
+  if (!value) return 0;
+  try {
+    const parsed = JSON.parse(Buffer.from(value, 'base64url').toString('utf8'));
+    return Number.isInteger(parsed.offset) && parsed.offset >= 0 ? parsed.offset : 0;
+  } catch {
+    return 0;
+  }
+}
+
+function encodeCursor(offset) {
+  return Buffer.from(JSON.stringify({ offset })).toString('base64url');
+}
+
 export default async request => {
   const adminKey = process.env.ADMIN_STATS_KEY;
   const url = new URL(request.url);
+  const pageOffset = decodeCursor(url.searchParams.get('cursor'));
   const providedKey = url.searchParams.get('key') || request.headers.get('x-admin-key') || '';
   const auth = request.headers.get('authorization') || '';
   const token = auth.startsWith('Bearer ') ? auth.slice(7) : '';
@@ -58,22 +73,20 @@ export default async request => {
     .sort()
     .reverse();
 
-  const recent = [];
+  const uniqueRecentKeys = [];
   const recentIpKeys = new Set();
   for (const key of recentKeys) {
     const { ipKey } = parseKey(key);
     if (!ipKey || recentIpKeys.has(ipKey)) continue;
-    try {
-      const data = await store.get(key, { type: 'json' });
-      if (data) {
-        recent.push(data);
-        recentIpKeys.add(ipKey);
-      }
-    } catch {
-      // skip unreadable entry
-    }
-    if (recent.length >= 500) break;
+    uniqueRecentKeys.push(key);
+    recentIpKeys.add(ipKey);
   }
+
+  const pageKeys = uniqueRecentKeys.slice(pageOffset, pageOffset + 20);
+  const pageData = await Promise.all(pageKeys.map(key => store.get(key, { type: 'json' }).catch(() => null)));
+  const recent = pageData.filter(Boolean);
+  const nextOffset = pageOffset + pageKeys.length;
+  const nextCursor = nextOffset < uniqueRecentKeys.length ? encodeCursor(nextOffset) : null;
 
   return response(200, {
     total: uniqueIps.size,
@@ -82,5 +95,6 @@ export default async request => {
     today: perDayIps.get(todayKey)?.size || 0,
     perDay: perDayList,
     recent,
+    nextCursor,
   });
 };

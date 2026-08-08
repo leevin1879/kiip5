@@ -17,6 +17,8 @@
     auth: loadAuth(),
   };
 
+  let completingSupabaseAccessToken = null;
+
   function loadAuth() {
     try {
       return JSON.parse(localStorage.getItem(AUTH_KEY)) || null;
@@ -38,7 +40,9 @@
   }
 
   async function completeSupabaseAuth(session) {
-    if (!session || (state.auth && !['google', 'email'].includes(state.auth.provider))) return;
+    if (!session?.access_token) return;
+    if (completingSupabaseAccessToken === session.access_token) return;
+    completingSupabaseAccessToken = session.access_token;
     try {
       const res = await fetch('/.netlify/functions/auth-supabase', {
         method: 'POST',
@@ -61,6 +65,10 @@
     } catch (authError) {
       console.error('Supabase session exchange failed:', authError.message);
       throw authError;
+    } finally {
+      if (completingSupabaseAccessToken === session.access_token) {
+        completingSupabaseAccessToken = null;
+      }
     }
   }
 
@@ -69,6 +77,22 @@
     const { data, error } = await supabaseClient.auth.getSession();
     if (error || !data.session) return;
     await completeSupabaseAuth(data.session).catch(() => {});
+  }
+
+  function listenForSupabaseAuthChanges() {
+    if (!supabaseClient) return;
+    supabaseClient.auth.onAuthStateChange((event, session) => {
+      if (session && ['INITIAL_SESSION', 'SIGNED_IN', 'TOKEN_REFRESHED', 'USER_UPDATED'].includes(event)) {
+        // Run after Supabase finishes processing the OAuth redirect and persisting the session.
+        setTimeout(() => completeSupabaseAuth(session).catch(() => {}), 0);
+        return;
+      }
+      if (event === 'SIGNED_OUT' && ['google', 'facebook', 'kakao', 'email'].includes(state.auth?.provider)) {
+        clearAuth();
+        state.auth = null;
+        if (state.screen === 'home') render();
+      }
+    });
   }
 
   function loadStats(username = state.auth?.username) {
@@ -1033,6 +1057,7 @@
     } catch (e) { /* ignore */ }
   }
 
+  listenForSupabaseAuthChanges();
   render();
   trackVisit();
   hydrateSupabaseAuth();
