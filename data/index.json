@@ -54,4 +54,10 @@
     "file": "soc1.json",
     "title": "Ôn tập Xã hội - 5단계 bài 1"
   }
+  ,
+  {
+    "id": "kinat",
+    "file": "kinat.json",
+    "title": "KIIP 영주용 종합평가 (KINAT)"
+  }
 ]
