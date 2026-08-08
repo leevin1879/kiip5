@@ -25,7 +25,7 @@ export default async request => {
   }
 
   const accessToken = String(body.accessToken || '');
-  if (!accessToken) return response(401, { error: 'Thiếu phiên đăng nhập Google.' });
+  if (!accessToken) return response(401, { error: 'Thiếu phiên đăng nhập.' });
 
   const userResponse = await fetch(`${SUPABASE_URL}/auth/v1/user`, {
     headers: {
@@ -33,17 +33,20 @@ export default async request => {
       apikey: SUPABASE_PUBLISHABLE_KEY,
     },
   });
-  if (!userResponse.ok) return response(401, { error: 'Phiên đăng nhập Google không hợp lệ hoặc đã hết hạn.' });
+  if (!userResponse.ok) return response(401, { error: 'Phiên đăng nhập không hợp lệ hoặc đã hết hạn.' });
 
   const user = await userResponse.json();
-  if (!user.id || !user.email) return response(401, { error: 'Tài khoản không cung cấp đủ thông tin.' });
-
-  const provider = user.app_metadata?.provider === 'google' ? 'google' : 'email';
+  if (!user.id) return response(401, { error: 'Tài khoản không cung cấp đủ thông tin.' });
+  const providerName = String(user.app_metadata?.provider || '').toLowerCase();
+  const provider = ['google', 'facebook', 'kakao'].includes(providerName) ? providerName : 'email';
+  if (!user.email && provider !== 'kakao') {
+    return response(401, { error: 'Tài khoản không cung cấp email.' });
+  }
   if (provider === 'email' && !user.email_confirmed_at) {
     return response(403, { error: 'Bạn cần xác nhận email trước khi đăng nhập.' });
   }
   const username = `${provider}_${String(user.id).replace(/[^a-zA-Z0-9_-]/g, '')}`;
-  const displayName = String(user.user_metadata?.display_name || user.user_metadata?.full_name || user.user_metadata?.name || user.email)
+  const displayName = String(user.user_metadata?.display_name || user.user_metadata?.full_name || user.user_metadata?.name || user.email || 'Người dùng Kakao')
     .trim()
     .slice(0, 60);
   const store = getStore('kiip5-users');
@@ -53,7 +56,7 @@ export default async request => {
     await store.setJSON(key, {
       username,
       displayName,
-      email: String(user.email).slice(0, 254),
+      email: user.email ? String(user.email).slice(0, 254) : '',
       role: 'user',
       requestedUsername: String(user.user_metadata?.username || '').slice(0, 20),
       provider,

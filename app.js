@@ -375,7 +375,7 @@
       accountActions.appendChild(logoutBtn);
       bar.appendChild(accountActions);
       logoutBtn.addEventListener('click', async () => {
-        if (['google', 'email'].includes(state.auth?.provider) && supabaseClient) await supabaseClient.auth.signOut({ scope: 'local' });
+        if (['google', 'facebook', 'kakao', 'email'].includes(state.auth?.provider) && supabaseClient) await supabaseClient.auth.signOut({ scope: 'local' });
         clearAuth();
         state.auth = null;
         render();
@@ -391,6 +391,32 @@
     `);
     button.addEventListener('click', () => showAuthModal('login'));
     return button;
+  }
+
+  function showEmailConfirmationModal() {
+    const modal = el(`
+      <div class="support-modal" role="dialog" aria-modal="true" aria-label="Đã gửi email xác nhận">
+        <div class="support-backdrop"></div>
+        <div class="support-dialog feedback-dialog">
+          <button type="button" class="support-close" aria-label="Đóng">×</button>
+          <div class="feedback-modal-icon" aria-hidden="true">✉️</div>
+          <div class="support-modal-title">Đã gửi email xác nhận</div>
+          <div class="feedback-intro">Hãy mở email và bấm liên kết để kích hoạt tài khoản.</div>
+          <button type="button" class="primary email-confirmation-close">Đã hiểu</button>
+        </div>
+      </div>
+    `);
+    const close = () => {
+      document.removeEventListener('keydown', onKeydown);
+      modal.remove();
+    };
+    const onKeydown = event => { if (event.key === 'Escape') close(); };
+    modal.querySelector('.support-close').addEventListener('click', close);
+    modal.querySelector('.support-backdrop').addEventListener('click', close);
+    modal.querySelector('.email-confirmation-close').addEventListener('click', close);
+    document.addEventListener('keydown', onKeydown);
+    document.body.appendChild(modal);
+    modal.querySelector('.email-confirmation-close').focus();
   }
 
   function showAuthModal(initialMode) {
@@ -428,6 +454,14 @@
             <span class="google-g" aria-hidden="true">G</span>
             Đăng nhập bằng Google
           </button>
+          <button type="button" class="facebook-auth-button">
+            <span class="facebook-f" aria-hidden="true">f</span>
+            Đăng nhập bằng Facebook
+          </button>
+          <button type="button" class="kakao-auth-button">
+            <span class="kakao-symbol" aria-hidden="true">💬</span>
+            Đăng nhập bằng Kakao
+          </button>
           <button type="button" class="link-btn auth-toggle" style="display:block;margin:10px auto 0;"></button>
         </div>
       </div>
@@ -443,6 +477,8 @@
     const usernameText = modal.querySelector('.auth-username-text');
     const status = modal.querySelector('.feedback-status');
     const googleBtn = modal.querySelector('.google-auth-button');
+    const facebookBtn = modal.querySelector('.facebook-auth-button');
+    const kakaoBtn = modal.querySelector('.kakao-auth-button');
 
     const applyMode = () => {
       status.textContent = '';
@@ -489,6 +525,42 @@
         status.textContent = error.message || 'Không thể đăng nhập bằng Google.';
       }
     });
+    facebookBtn.addEventListener('click', async () => {
+      if (!supabaseClient) {
+        status.className = 'feedback-status error';
+        status.textContent = 'Đăng nhập Facebook chưa tải được. Vui lòng tải lại trang.';
+        return;
+      }
+      facebookBtn.disabled = true;
+      status.textContent = 'Đang chuyển tới Facebook...';
+      const { error } = await supabaseClient.auth.signInWithOAuth({
+        provider: 'facebook',
+        options: { redirectTo: `${window.location.origin}/` },
+      });
+      if (error) {
+        facebookBtn.disabled = false;
+        status.className = 'feedback-status error';
+        status.textContent = error.message || 'Không thể đăng nhập bằng Facebook.';
+      }
+    });
+    kakaoBtn.addEventListener('click', async () => {
+      if (!supabaseClient) {
+        status.className = 'feedback-status error';
+        status.textContent = 'Đăng nhập Kakao chưa tải được. Vui lòng tải lại trang.';
+        return;
+      }
+      kakaoBtn.disabled = true;
+      status.textContent = 'Đang chuyển tới Kakao...';
+      const { error } = await supabaseClient.auth.signInWithOAuth({
+        provider: 'kakao',
+        options: { redirectTo: `${window.location.origin}/` },
+      });
+      if (error) {
+        kakaoBtn.disabled = false;
+        status.className = 'feedback-status error';
+        status.textContent = error.message || 'Không thể đăng nhập bằng Kakao.';
+      }
+    });
 
     const close = () => {
       document.removeEventListener('keydown', onKeydown);
@@ -528,9 +600,9 @@
           });
           if (error) throw error;
           if (data.session) throw new Error('Máy chủ chưa bật xác nhận email. Tài khoản chưa được kích hoạt.');
-          status.className = 'feedback-status success';
-          status.textContent = 'Đã gửi email xác nhận. Hãy mở email và bấm liên kết để kích hoạt tài khoản.';
-          submitBtn.textContent = 'Đã gửi email xác nhận';
+          form.reset();
+          close();
+          showEmailConfirmationModal();
           return;
         }
 

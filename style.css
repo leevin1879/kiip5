@@ -768,6 +768,49 @@ button.secondary:disabled {
   font-weight: 700;
   cursor: pointer;
 }
+.facebook-auth-button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 10px;
+  border: 1px solid #1877f2;
+  border-radius: 12px;
+  background: #1877f2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.facebook-auth-button:hover { background: #166fe5; }
+.facebook-auth-button:disabled { opacity: .6; cursor: wait; }
+.facebook-f {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #1877f2;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+.kakao-auth-button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 10px;
+  border: 1px solid #fee500;
+  border-radius: 12px;
+  background: #fee500;
+  color: #191919;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.kakao-auth-button:hover { background: #f5dc00; }
+.kakao-auth-button:disabled { opacity: .6; cursor: wait; }
+.kakao-symbol { margin-right: 8px; font-size: 18px; }
 .google-auth-button:hover { background: #f8f9fa; }
 .google-auth-button:disabled { opacity: .6; cursor: wait; }
 .google-g { color: #4285f4; font-size: 18px; font-weight: 900; }
