@@ -130,13 +130,18 @@
         }
         const localSeen = Number(localItem.seen) || 0;
         const remoteSeen = Number(remoteItem.seen) || 0;
+        const localAnsweredAt = Number(localItem.lastAnsweredAt) || 0;
+        const remoteAnsweredAt = Number(remoteItem.lastAnsweredAt) || 0;
         merged[setId][num] = {
           ...remoteItem,
           ...localItem,
           seen: Math.max(localSeen, remoteSeen),
           correct: Math.max(Number(localItem.correct) || 0, Number(remoteItem.correct) || 0),
           wrong: Math.max(Number(localItem.wrong) || 0, Number(remoteItem.wrong) || 0),
-          lastWrong: localSeen >= remoteSeen ? Boolean(localItem.lastWrong) : Boolean(remoteItem.lastWrong),
+          lastAnsweredAt: Math.max(localAnsweredAt, remoteAnsweredAt) || undefined,
+          lastWrong: localAnsweredAt || remoteAnsweredAt
+            ? (localAnsweredAt >= remoteAnsweredAt ? Boolean(localItem.lastWrong) : Boolean(remoteItem.lastWrong))
+            : (localSeen >= remoteSeen ? Boolean(localItem.lastWrong) : Boolean(remoteItem.lastWrong)),
         };
       });
     });
@@ -195,6 +200,7 @@
     s.seen += 1;
     if (isCorrect) { s.correct += 1; s.lastWrong = false; }
     else { s.wrong += 1; s.lastWrong = true; }
+    s.lastAnsweredAt = Date.now();
     saveStats(stats);
     syncPush();
   }
@@ -211,6 +217,7 @@
         correct: answer.correct ? 1 : 0,
         wrong: answer.correct ? 0 : 1,
         lastWrong: !answer.correct,
+        lastAnsweredAt: Date.now(),
       };
       changed = true;
     });
@@ -225,9 +232,12 @@
     return Object.keys(setStats).filter(n => setStats[n].lastWrong).map(Number);
   }
 
-  function setProgress(setId, total) {
+  function setProgress(setId, questions) {
     const setStats = loadStats()[setId] || {};
-    const learned = Object.values(setStats).filter(item => (item.seen || 0) > 0).length;
+    const total = questions.length;
+    const validLearned = questions.filter(question => setStats[question.num]?.seen > 0).length;
+    const recordedLearned = Object.values(setStats).filter(item => (item?.seen || 0) > 0).length;
+    const learned = Math.min(total, Math.max(validLearned, recordedLearned));
     return {
       learned,
       total,
@@ -237,10 +247,24 @@
 
   function nextResumeQuestion(setId, questions) {
     const setStats = loadStats()[setId] || {};
-    const seenNums = questions
-      .filter(question => setStats[question.num]?.seen > 0)
-      .map(question => question.num);
+    const seenQuestions = questions.filter(question => setStats[question.num]?.seen > 0);
+    const seenNums = seenQuestions.map(question => question.num);
     if (seenNums.length === 0) return questions[0]?.num || 1;
+
+    const latest = seenQuestions
+      .map(question => ({ question, answeredAt: Number(setStats[question.num]?.lastAnsweredAt) || 0 }))
+      .sort((a, b) => b.answeredAt - a.answeredAt)[0];
+    if (latest?.answeredAt > 0) {
+      const latestIndex = questions.findIndex(question => question.num === latest.question.num);
+      if (latestIndex >= 0 && latestIndex + 1 < questions.length) return questions[latestIndex + 1].num;
+      const firstUnseen = questions.find(question => !(setStats[question.num]?.seen > 0));
+      return firstUnseen ? firstUnseen.num : questions[0]?.num || 1;
+    }
+
+    const recordedLearned = Object.values(setStats).filter(item => (item?.seen || 0) > 0).length;
+    if (recordedLearned > seenNums.length && recordedLearned < questions.length) {
+      return questions[recordedLearned]?.num || questions[0]?.num || 1;
+    }
     const highestSeen = Math.max(...seenNums);
     const next = questions.find(question => question.num > highestSeen);
     if (next) return next.num;
@@ -324,7 +348,7 @@
     (window.QUIZ_INDEX || []).forEach(set => {
       const data = window.QUIZ_DATA[set.id];
       const selected = set.id === state.selectedSetId;
-      const learning = setProgress(set.id, data.questions.length);
+      const learning = setProgress(set.id, data.questions);
       const progress = state.auth ? learning : null;
       const card = el(`
         <button type="button" class="card set-card ${selected ? 'selected' : ''}">
