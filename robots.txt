@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /.netlify/functions/
+
+Sitemap: https://kiip5.netlify.app/sitemap.xml
